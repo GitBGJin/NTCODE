@@ -1,0 +1,309 @@
+.RadScheduler_Neptune {
+  color: black;
+  font: normal 12px/16px "Segoe UI", Arial, Helvetica, sans-serif; }
+  .RadScheduler_Neptune .rsSubHeader {
+    border-top: 1px solid #688caf;
+    color: #567db0;
+    background-color: #d7e6f7; }
+  .RadScheduler_Neptune,
+  .RadScheduler_Neptune a,
+  .RadScheduler_Neptune input,
+  .RadScheduler_Neptune select,
+  .RadScheduler_Neptune textarea {
+    color: #333;
+    font: normal 12px/14px "Segoe UI", Arial, sans-serif; }
+  .RadScheduler_Neptune textarea {
+    background: #fff; }
+  .RadScheduler_Neptune .rsHeader,
+  .RadScheduler_Neptune .rsHeader ul a:hover,
+  .RadScheduler_Neptune .rsHeader ul a:hover span,
+  .RadScheduler_Neptune .rsHeader .rsSelected,
+  .RadScheduler_Neptune .rsHeader .rsSelected em,
+  .RadScheduler_Neptune .rsHeader .rsDatePickerActivator,
+  .RadScheduler_Neptune .rsHeader .rsPrevDay,
+  .RadScheduler_Neptune .rsHeader .rsNextDay {
+    background-image: url('Scheduler/rsSprites.png'); }
+  .RadScheduler_Neptune .rsHeader {
+    border: 1px solid #688caf; }
+  .RadScheduler_Neptune .rsHeader,
+  .RadScheduler_Neptune .rsHeader a:hover {
+    color: #000; }
+  .RadScheduler_Neptune .rsHeader a {
+    color: #239; }
+  .RadScheduler_Neptune div.rsHeader .rsPrevDay {
+    margin: 6px 0 0 3px;
+    background-position: 0 -48px; }
+  .RadScheduler_Neptune div.rsHeader .rsNextDay {
+    margin: 6px 6px 0 3px;
+    background-position: -16px -48px; }
+  .RadScheduler_Neptune div.rsHeader a.rsPrevDay:hover {
+    background-position: -70px -48px; }
+  .RadScheduler_Neptune div.rsHeader a.rsNextDay:hover {
+    background-position: -86px -48px; }
+  .RadScheduler_Neptune .rsContent {
+    background: #fff; }
+  .RadScheduler_Neptune .rsHorizontalHeaderTable {
+    color: #239;
+    background: #e4e4e4; }
+  .RadScheduler_Neptune .rsHorizontalHeaderWrapper {
+    border-color: #a7bac5;
+    background: #d6e5f3; }
+  .RadScheduler_Neptune .rsSpacerCell,
+  .RadScheduler_Neptune .rsAllDayHeader,
+  .RadScheduler_Neptune .rsVerticalHeaderWrapper,
+  .RadScheduler_Neptune .rsVerticalHeaderTable {
+    background: #e3efff; }
+  .RadScheduler_Neptune .rsVerticalHeaderTable th {
+    border-color: #868686 #5d8cc9;
+    color: #6593cf; }
+  .RadScheduler_Neptune .rsHorizontalHeaderTable th {
+    border-color: #a7bac5;
+    background-color: #C3D9F1;
+    background-image: url('Scheduler/rsSprites.png'); }
+  .RadScheduler_Neptune .rsVerticalHeaderTable th {
+    border-color: transparent #5d8cc9;
+    border-top: 0; }
+  .RadScheduler_Neptune .rsVerticalHeaderTable .rsAlt th {
+    border-color: #6593cf #5d8cc9; }
+  .RadScheduler_Neptune .rsAllDayRow {
+    background: #d6e5f3; }
+  .RadScheduler_Neptune .rsSpacerCell,
+  .RadScheduler_Neptune .rsAllDayHeader,
+  .RadScheduler_Neptune .rsVerticalHeaderTable .rsAllDayHeader {
+    color: #6593cf;
+    border-color: #a7bac5 #5d8cc9; }
+  .RadScheduler_Neptune .rsAllDayRow td,
+  .RadScheduler_Neptune .rsContentTable .rsAllDayRow td {
+    border-color: #a7bac5;
+    border-style: solid; }
+  .RadScheduler_Neptune .rsVerticalHeaderTable .rsMainHeader th {
+    border-bottom-color: #A7BAC5; }
+  .RadScheduler_Neptune .rsSpacerCell,
+  .RadScheduler_Neptune .rsContent .rsAllDayHeader {
+    border-bottom-color: #6593cf; }
+  .RadScheduler_Neptune .rsContent,
+  .RadScheduler_Neptune .rsTopWrap .rsFooter {
+    border: 1px solid #688caf;
+    border-top: 0; }
+  .RadScheduler_Neptune .rsContentTable td {
+    border-color: #e8eaec #d0d7e5;
+    border-bottom-style: dotted; }
+  .RadScheduler_Neptune .rsContentTable .rsAlt td {
+    border-color: #d0d7e5;
+    border-bottom-style: solid; }
+  .RadScheduler_Neptune .rsMonthView .rsOtherMonth {
+    background-color: #F5F5F5; }
+  .RadScheduler_Neptune .rsApt .rsArrowTop,
+  .RadScheduler_Neptune .rsApt .rsArrowBottom,
+  .RadScheduler_Neptune .rsApt .rsArrowLeft,
+  .RadScheduler_Neptune .rsApt .rsArrowRight,
+  .RadScheduler_Neptune .rsApt .rsAptDelete,
+  .RadScheduler_Neptune .rsApt .rsAptResize,
+  .RadScheduler_Neptune .rsApt .rsAptReminder,
+  .RadScheduler_Neptune .rsApt .rsAptRecurrence,
+  .RadScheduler_Neptune .rsApt .rsAptRecurrenceException {
+    background-color: transparent;
+    background-image: url('Scheduler/rsSprites.png');
+    background-repeat: no-repeat; }
+  .RadScheduler_Neptune .rsApt .rsAptDelete {
+    width: 22px; }
+  .RadScheduler_Neptune .rsAptCreate,
+  .RadScheduler_Neptune .rsMonthView .rsAptCreate {
+    background-color: #ECF4FF;
+    background-image: url('Scheduler/rsSprites.png');
+    background-repeat: repeat-x; }
+  .RadScheduler_Neptune .rsAptCreateRow2,
+  .RadScheduler_Neptune .rsMonthView .rsAptCreateRow2 {
+    background-color: #ECF4FF;
+    background-image: url('Scheduler/rsSprites.png');
+    background-repeat: repeat-x; }
+  .RadScheduler_Neptune .rsNonWorkHour,
+  .RadScheduler_Neptune .rsSunCol,
+  .RadScheduler_Neptune .rsSatCol {
+    background-color: #f5fcff; }
+  .RadScheduler_Neptune .rsAptCreateRow3,
+  .RadScheduler_Neptune .rsMonthView .rsAptCreateRow3,
+  .RadScheduler_Neptune .rsAptCreateRow4,
+  .RadScheduler_Neptune .rsMonthView .rsAptCreateRow4,
+  .RadScheduler_Neptune .rsAptCreateRow5,
+  .RadScheduler_Neptune .rsMonthView .rsAptCreateRow5 {
+    background: #ECF4FF; }
+  .RadScheduler_Neptune .rsSelectedSlot,
+  .RadScheduler_Neptune .rsMonthView .rsSelectedSlot {
+    background: #ffda96;
+    border-color: #efca86; }
+  .RadScheduler_Neptune .rsContentTable td.rsAptCreate.rsSelectedSlot {
+    background: #efca86;
+    border-color: #dfba76; }
+  .RadScheduler_Neptune .rsContentTable td.rsSelectedSlot {
+    background: #ffda96;
+    border-color: #efca86; }
+  .RadScheduler_Neptune .rsAptIn,
+  .RadScheduler_Neptune .rsAptMid,
+  .RadScheduler_Neptune .rsAptContent {
+    background-color: #c7d8ed;
+    border-color: #6187b8; }
+  .RadScheduler_Neptune .rsAptIn {
+    background-color: #e8eff8; }
+  .RadScheduler_Neptune .rsAptContent {
+    background-image: url('Scheduler/rsAppointmentBg.png'); }
+  .RadScheduler_Neptune .rsAptSimple {
+    background-color: #c7d8ed;
+    border-color: #6187b8; }
+  .RadScheduler_Neptune .rsMonthView .rsDateBox {
+    background-color: #d0dbed;
+    background-image: url('Scheduler/rsSprites.png');
+    border-bottom: 1px solid #81a5da; }
+  .RadScheduler_Neptune .rsMonthView .rsAptCreate .rsDateBox {
+    border-bottom: 1px solid #f99331; }
+  .RadScheduler_Neptune .rsMonthView .rsAptCreate {
+    background-image: none; }
+  .RadScheduler_Neptune .rsMonthView .rsContentTable td {
+    border-color: #d0d7e5;
+    border-style: solid; }
+  .RadScheduler_Neptune div.rsFooter {
+    background-color: #f0fafd;
+    background-image: url('Scheduler/rsSprites.png');
+    background-repeat: repeat-x;
+    border-color: #a2a2a2; }
+  .RadScheduler_Neptune div.rsFooter a {
+    color: #239;
+    background-color: transparent;
+    background-image: url('Scheduler/rsSprites.png');
+    background-repeat: no-repeat; }
+  .RadScheduler_Neptune div.rsFooter a:hover {
+    color: #000; }
+  .RadScheduler_Neptune .rsEditOptions a,
+  .RadScheduler_Neptune .rsAptEditResizeHandle,
+  .RadScheduler_Neptune .rsAptEditFormWrapper {
+    background-image: url('Scheduler/rsSprites.png'); }
+  .RadScheduler_Neptune .rsAptEditFormOuter,
+  .RadScheduler_Neptune .rsAptEditFormInner {
+    background-image: url('Scheduler/rsInlineEditHSprite.png'); }
+  .RadScheduler_Neptune .rsAptEditFormMiddle,
+  .RadScheduler_Neptune .rsAptEditFormMiddle2 {
+    background-image: url('Scheduler/rsInlineEditVSprite.png'); }
+  .RadScheduler_Neptune .rsAptEditFormWrapper .rsAptEditTextareaWrapper {
+    border-color: #9cb6c5;
+    background: #fff; }
+  .RadScheduler_Neptune .rsAptEditFormWrapper .rsAptEditTextareaWrapper textarea {
+    background: #fff; }
+  .RadScheduler_Neptune .rsAptEditFormWrapper .rsTemplateWrapper,
+  .RadScheduler_Neptune .rsAptEditFormWrapper .rsEditOptions {
+    background: #BFD3EB; }
+  .RadScheduler_Neptune .rsAdvancedEdit .rsAdvContentWrapper {
+    background: #fff;
+    border: 1px solid #9ebfdb;
+    border-top-color: #9BAFCA; }
+  .RadScheduler_Neptune div.rsAdvancedModal div.rsAdvContentWrapper {
+    border-top: 0; }
+  .RadScheduler_Neptune div.rsAdvancedModal .rsAdvButtonWrapper {
+    padding: 10px 10px 18px 0;
+    _padding: 10px 10px 10px 0; }
+  * html .RadScheduler_Neptune div.rsAdvancedModal div.rsAdvContentWrapper {
+    margin-top: -2px;
+    background: #fff;
+    border: 1px solid #9bafca; }
+  .RadScheduler_Neptune .rsAdvancedEdit .rsAdvInput,
+  .RadScheduler_Neptune .rsAdvancedEdit select,
+  .RadScheduler_Neptune .rsAdvancedEdit .textareaWrapper {
+    border-color: #abc1de; }
+  .RadScheduler_Neptune .rsAdvancedEdit .rsInvalid textarea,
+  .RadScheduler_Neptune .rsAdvancedEdit .rsInvalid input,
+  .RadScheduler_Neptune .rsAdvancedEdit .rsAdvTimePicker .riEmpty {
+    background-image: url('Input/sprite.gif'); }
+  .RadScheduler_Neptune .rsAdvancedEdit .textareaWrapper {
+    background: #fff; }
+  .RadScheduler_Neptune .rsAdvancedEdit .rsInvalid {
+    border-color: #F32800;
+    color: #F32800; }
+  .RadScheduler_Neptune .rsAdvancedEdit h2,
+  .RadScheduler_Neptune .rsAdvancedEdit h3 {
+    color: #6d8ebb; }
+  .RadScheduler_Neptune .rsAdvancedEdit h2 {
+    border-bottom: 1px solid #CCC; }
+  .RadScheduler_Neptune .rsAdvancedEdit h2 span {
+    background: #fff; }
+  .RadScheduler_Neptune .rsAdvancedEdit .rsAdvancedSubmitArea {
+    border-color: #CCC; }
+  .RadScheduler_Neptune .rsAdvancedEdit div.rsAdvancedSubmitArea a {
+    color: #333;
+    background-image: url('Scheduler/rsSprites.png'); }
+  .RadScheduler_Neptune .rsTimePick .RadInput_Neptune input.riEnabled,
+  .RadScheduler_Neptune .rsTimePick .RadInput_Neptune input.riHover,
+  .RadScheduler_Neptune .rsTimePick .RadInput_Neptune input.riFocused {
+    background-image: url('Scheduler/rsSprites.png'); }
+  .RadScheduler_Neptune .rsModalBgTopLeft,
+  .RadScheduler_Neptune .rsModalBgTopRight,
+  .RadScheduler_Neptune .rsModalBgBottomLeft,
+  .RadScheduler_Neptune .rsModalBgBottomRight {
+    background-image: url('Scheduler/rsModalBg.png');
+    _background-image: url('Scheduler/rsModalBgIE6.png'); }
+  .RadScheduler_Neptune .rsAnimating {
+    background-image: url('Scheduler/rsModalBgIE6.png'); }
+  .RadScheduler_Neptune .rsAdvancedEdit .rsAdvTitle,
+  .RadScheduler_Neptune .rsAdvancedEdit .rsAdvInnerTitle {
+    background-image: url('Scheduler/rsModalTitleBg.png'); }
+  .RadScheduler_Neptune .rsAdvancedEdit a.rsAdvEditClose,
+  .RadScheduler_Neptune div.rsModalWrapper .rsModalWindowClose {
+    background-image: url('Scheduler/rsSprites.png');
+    height: 19px;
+    margin-top: -26px;
+    width: 30px; }
+  .RadScheduler_Neptune div.rsModalWrapper .rsModalWindowClose {
+    margin-top: -24px; }
+  .RadScheduler_Neptune .rsAdvancedEdit a.rsAdvEditClose:hover,
+  .RadScheduler_Neptune .rsModalWrapper a.rsModalWindowClose:hover {
+    background-position: -78px -526px; }
+  .RadScheduler_Neptune .rsModalWrapper .rsModalTitle {
+    color: #000;
+    background-image: url('Scheduler/rsSprites.png'); }
+  .RadScheduler_Neptune .rsModalWrapper .rsModalInner {
+    border-color: #688caf;
+    background: #fff; }
+  .RadScheduler_Neptune .rsModalWrapper .rsModalIcon,
+  .RadScheduler_Neptune .rsModalWrapper .rsModalButtons a {
+    background-image: url('Scheduler/rsSprites.png'); }
+  .RadScheduler_Neptune .rsModalWrapper .rsModalButtons a,
+  .RadScheduler_Neptune .rsTopWrap .rsAptEditFormWrapper .rsEditOptions a {
+    color: #333; }
+  .RadScheduler_Neptune .rsBottomIndicator .rsOvertimeArrow {
+    background: transparent url('Scheduler/rsSprites.png') no-repeat -180px -31px; }
+  .RadScheduler_Neptune .rsTopIndicator .rsOvertimeArrow {
+    background: transparent url('Scheduler/rsSprites.png') no-repeat -134px -31px; }
+  .RadScheduler_Neptune .rsAptSelected .rsAptIn,
+  .RadScheduler_Neptune .rsAptSelected .rsAptMid,
+  .RadScheduler_Neptune .rsAptSelected .rsAptContent {
+    border-color: #000f4f;
+    background-image: none; }
+  .RadScheduler_Neptune .rsAgendaView {
+    color: #333333;
+    background-color: #ffffff; }
+    .RadScheduler_Neptune .rsAgendaView .rsAptContent {
+      color: inherit; }
+    .RadScheduler_Neptune .rsAgendaView .rsDateBox small {
+      color: #567db0; }
+  .RadScheduler_Neptune .rsAgendaTable th, .RadScheduler_Neptune .rsAgendaTable td {
+    border-bottom-color: #d0d7e5;
+    border-right-color: #d0d7e5; }
+  .RadScheduler_Neptune .rsAgendaTable th {
+    color: #333333;
+    background-color: #e3efff; }
+  .RadScheduler_Neptune .rsAgendaTable .rsAgendaRowHovered {
+    border-color: #d8ca95;
+    color: #00156e;
+    background-color: #ffe18a;
+    background-image: -webkit-linear-gradient(top, #fffce8 0%, #ffe18a 100%);
+    background-image: -moz-linear-gradient(top, #fffce8 0%, #ffe18a 100%);
+    background-image: -ms-linear-gradient(top, #fffce8 0%, #ffe18a 100%);
+    background-image: -o-linear-gradient(top, #fffce8 0%, #ffe18a 100%);
+    background-image: linear-gradient(top, #fffce8 0%, #ffe18a 100%); }
+  .RadScheduler_Neptune .rsAgendaTable .rsAgendaRowSelected {
+    border-color: #8f8267;
+    color: black;
+    background-color: #fde292;
+    background-image: -webkit-linear-gradient(top, #fdd3a7 0%, #fde292 100%);
+    background-image: -moz-linear-gradient(top, #fdd3a7 0%, #fde292 100%);
+    background-image: -ms-linear-gradient(top, #fdd3a7 0%, #fde292 100%);
+    background-image: -o-linear-gradient(top, #fdd3a7 0%, #fde292 100%);
+    background-image: linear-gradient(top, #fdd3a7 0%, #fde292 100%); }

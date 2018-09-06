@@ -1,0 +1,5 @@
+D:\NTCODE\Web\Services\SmartEP.Service.Communication\bin\Debug\SmartEP.Service.Communication.dll.config
+D:\NTCODE\Web\Services\SmartEP.Service.Communication\bin\Debug\SmartEP.Service.Communication.dll
+D:\NTCODE\Web\Services\SmartEP.Service.Communication\bin\Debug\SmartEP.Service.Communication.pdb
+D:\NTCODE\Web\Services\SmartEP.Service.Communication\obj\x86\Debug\SmartEP.Service.Communication.dll
+D:\NTCODE\Web\Services\SmartEP.Service.Communication\obj\x86\Debug\SmartEP.Service.Communication.pdb

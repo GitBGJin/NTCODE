@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  有关如何配置 ASP.NET 应用程序的详细信息，请访问
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+
+<configuration>
+  <configSections>
+    <section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler, log4net" />
+    <section name="dataConfiguration" type="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DatabaseSettings, Microsoft.Practices.EnterpriseLibrary.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <section name="enterpriseLibrary.ConfigurationSource" type="Microsoft.Practices.EnterpriseLibrary.Common.Configuration.ConfigurationSourceSection, Microsoft.Practices.EnterpriseLibrary.Common, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <sectionGroup name="ajaxNet">
+      <section name="ajaxSettings" type="AjaxPro.AjaxSettingsSectionHandler,AjaxPro" />
+    </sectionGroup>
+    <section name="Telerik.Reporting" type="Telerik.Reporting.Configuration.ReportingConfigurationSection, Telerik.Reporting, Version=9.0.15.324, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" allowLocation="true" allowDefinition="Everywhere" />
+  </configSections>
+  <connectionStrings>
+
+    <!--<add name="Frame_Connection" connectionString="data source=.;initial catalog=EQMS_Framework;user id=sa;password=11111" providerName="System.Data.SqlClient" />
+    <add name="AMS_BaseDataConnection" connectionString="data source=.;initial catalog=AMS_BaseData;user id=sa;password=11111" providerName="System.Data.SqlClient" />
+    <add name="AMS_AirAutoMonitorConnection" connectionString="data source=.;initial catalog=AMS_AirAutoMonitor;user id=sa;password=11111" providerName="System.Data.SqlClient" />
+    <add name="AMS_MonitoringBusinessConnection" connectionString="data source=.;initial catalog=AMS_MonitorBusiness;user id=sa;password=11111" providerName="System.Data.SqlClient" />-->
+    <add name="Frame_Connection" connectionString="data source=192.168.90.199;initial catalog=EQMS_Framework;user id=sa;password=sinoyd123!@#" providerName="System.Data.SqlClient"/>
+    <add name="AMS_BaseDataConnection" connectionString="data source=192.168.90.199;initial catalog=AMS_BaseData;user id=sa;password=sinoyd123!@#" providerName="System.Data.SqlClient"/>
+    <add name="AMS_AirAutoMonitorConnection" connectionString="data source=192.168.90.199;initial catalog=AMS_AirAutoMonitor;user id=sa;password=sinoyd123!@#" providerName="System.Data.SqlClient"/>
+    <add name="AMS_MonitoringBusinessConnection" connectionString="data source=192.168.90.199;initial catalog=AMS_MonitorBusiness;user id=sa;password=sinoyd123!@#" providerName="System.Data.SqlClient"/>
+    <!--<add name="Frame_Connection" connectionString="data source=192.168.12.239;initial catalog=EQMS_Framework;user id=nantong;password=nt123!@#" providerName="System.Data.SqlClient" />
+    <add name="AMS_BaseDataConnection" connectionString="data source=192.168.12.239;initial catalog=AMS_BaseData;user id=nantong;password=nt123!@#" providerName="System.Data.SqlClient" />
+    <add name="AMS_AirAutoMonitorConnection" connectionString="data source=192.168.12.239;initial catalog=AMS_AirAutoMonitor;user id=nantong;password=nt123!@#" providerName="System.Data.SqlClient" />
+    <add name="AMS_WaterAutoMonitorConnection" connectionString="data source=192.168.12.239;initial catalog=AMS_WaterAutoMonitor;user id=nantong;password=nt123!@#" providerName="System.Data.SqlClient" />
+    <add name="AMS_MonitoringBusinessConnection" connectionString="data source=192.168.12.239;initial catalog=AMS_MonitorBusiness;user id=nantong;password=nt123!@#" providerName="System.Data.SqlClient" />
+    <add name="GuoJia_Air_Conn" connectionString="Data Source=192.168.0.44;initial catalog=EnvDataCity;persist security info=True;user id=SA;password=gjkqzl2014!" providerName="System.Data.SqlClient" />-->
+  </connectionStrings>
+  <appSettings>
+
+    <!--超级站管理角色-->
+    <add key="SuperStationRole" value="19e4f4d2-0b40-4bc8-bc60-738ed4f745a1"/>
+    <!--常规参数角色-->
+    <add key="GeneralParaRole" value="158601fc-d1a3-4085-a8a4-fecafffee33c"/>
+    <!--关联性分析角色-->
+    <add key="RelevanceRole" value="7818e1d9-e848-4b0c-8133-1cbeca87d98b"/>
+    <!--数据审核角色-->
+    <add key="AuditRole" value="a8879908-95ca-4a7a-88e8-f5d6e483931d"/>
+    <!--系统管理角色-->
+    <add key="SysConfigRole" value="894fafec-1809-4c49-b0c7-d9a2355d52ad"/>
+    <!--统计角色-->
+    <add key="StatisticRole" value="9e558868-8872-451a-b3cc-3fdd7de91a80"/>
+    <!--Gis角色-->
+    <add key="GisRole" value="1a1215f9-47ad-48af-b79d-b416101167ef"/>
+    <!--视频角色-->
+    <add key="VideoRole" value="e6a8a1da-3d23-4608-9e4e-7fdc7cd06318"/>
+    <!--后台角色-->
+    <add key="MgrRole" value="08aae886-b845-4379-84a9-4e4e0ff46e68"/>
+    <!--超级管理员角色-->
+    <add key="SuperRole" value="4f9ab883-86a0-4d86-9fca-7223b78edbb8"/>
+
+    <!--城市摄影/能见度图片地址-->
+    <add key="UrbanPhoto" value="D:\CSYC\00001\" />
+    <!--VOC空气样/外标-->
+    <add key="VOCsKW" value="a24001;a24002;a24038;a24037;a24125;a24041;a24039"/>
+    <!--TVOCs因子-->
+    <add key="TVOCsCode" value="a25002,a24036,a25003,a02514"/>
+    <add key="TVOCsName" value="苯;环己烷;甲苯;对-甲乙苯;"/>
+    <add key="PollutantCode4" value="a06013;a06012;a06010;a06011;a51007;a06006;a06005;a06008;"/>
+    <!--南通市区测点-->
+    <add key="NTRegionPointId" value="187,188,189,190"/>
+    <add key="NTRegionPointName" value="虹桥;城中;紫琅学院;星湖花园"/>
+    <add key="PortId" value="虹桥" />
+
+    <add key="AirPollutantName" value="二氧化硫;二氧化氮;一氧化碳;臭氧;PM10;PM2.5;温度;湿度;气压;风向;风速"/>
+    <add key="WeatherFactor" value="a01001,a01002,a01006,a01007,a01008" />
+    <add key="SuperSolarRadiation" value="紫外平均辐射;太阳总辐射;臭氧"/>
+    <!--超级站审核因子类型-->
+    <add key="SuperCategory" value="Vocs:fbc6dyta-d06c-678g-b5y0-89b12be5bda3;EC/OC有机碳元素碳:14b38adf-d899-4362-99ff-6a9e9dd35485;粒径谱仪:da92c7c1-4932-4007-a6d5-2866aa8c63f1;黑碳分析仪:e5b6d666-24d1-473a-b15a-33a36245d44f;离子色谱仪:5575a0e1-d948-4566-9dcd-4b4767688add;太阳辐射仪:aabe91e0-29a4-427c-becc-0b29f1224422;三波长浊度仪:59f02681-093f-48f0-9cac-ac59acd7038f"/>
+    <add key="PointId" value="南郊" />
+
+    <add key="NT_RTPointName" value="虹桥;城中;紫琅学院;星湖花园;南郊"/>
+    <!--颗粒物专题气象参数默认因子-->
+    <add key="PMCode" value="a34004"/>
+    <!--颗粒物专题多因子-->
+    <add key="PollutantCode" value="a06013;a06012;a06010;a06011;a51007;a06006;a06005;a06008;a21024;a51005;a51006;a21028;a21001;a01042;a01041;a01039;a01040;a01043;a99089;a99085;a99081;a99087;a99083;a99079;"/>
+    <add key="PollutantCode1" value="a51008;a51009;a51010;a51011;a51012;"/>
+    <add key="PollutantCode2" value="a51013;a51014;a51015;a51016;a51017;a51018;a51019;a51020;a51021;a51022;a51023;a51023;"/>
+    <add key="PollutantCode3" value="a51024;a51025;a51026;a51027;a51028;a51029;a51030;a51031;a51032;a51033;a51034;a51035;a51026;"/>
+    
+    <!--粒径谱仪饼图分类-->
+    <add key="ljpyPie1" value="a51010;a51011;a51012;a51013;a51014;a51015;a51016;a51017;a51018;a51019;a51020;a51021;a51022;a51023;a51024;a51025;a51026;a51027;a51028;a51029;a51030;a51031;a51032;a51033;a51034;a51035;a51036;a51037;a51038"/>
+    <add key="ljpyPie2" value="a51024;a51025;a51026;a51027;a51028;a51029;a51030;a51031;a51032;a51033;a51034;a51035;a51036;a51037;a51038"/>
+    
+    <!--臭氧专题多因子默认-->
+    <add key="SolarRadiationCode" value="a21002;a05024;a04003;"/>
+    <!--臭氧专题气象参数默认因子-->
+    <add key="O3Code" value="a05024"/>
+
+    <!--激光雷达消光默认图片绝对路径-->
+    <add key="NTJGLDXG" value="D:\Sinoyd\南通超级站\NTJGLDXG\image" />
+    <!--激光雷达消光默认图片网址-->
+    <add key="_path" value="http://218.91.209.251:1117/NTJGLDXG/image/" />
+    <!--空气默认因子-->
+    <add key="AirPollutant1" value="a34004;a34002;a21026;a21004;a21005;a05024;a34005"/>
+    <!--蓝藻预警角色-->
+    <add key="WaterLZRole" value="ce5eb9d6-83ef-4ac7-8787-7afd76f0cb2b" />
+
+    <!--蓝藻默认因子-->
+    <add key="WaterLZFactor" value="藻密度;" />
+
+    <!--试剂打印地址-->
+    <add key="ReagentPrintUrl" value="http://192.168.90.199"/>
+    <!--区县上报时间间隔-->
+    <add key="TimeInterval" value="1" />
+    <!--中意项空气默认因子-->
+    <add key="AirPollutantCode1" value="a21026;a21004;a21005;a05024;a34002;a90969"/>
+    <!--9-->
+    <add key="AirPollutantCode2" value="a21026;a21004;a21005;a34002"/>
+    <!--33-->
+    <add key="AirPollutantCode3" value="a21026;a21004;a21005;a05024;a34002"/>
+    <!--34，38-->
+    <add key="AirPollutantCode4" value="a21026;a21004;a21005;a34002;a05024;a34004"/>
+    <!--35，36-->
+    <add key="AirPollutantCode5" value="a21026;a21004;a05024;a34002"/>
+    <!--39-->
+    <add key="AirPollutantCode6" value="a21026;a21028;a21004;a21001;a34002;a34004"/>
+    <!--24-->
+
+    <add key="ManagerRole" value="cfb9e1aa-1461-49f4-beeb-2401ae7d4357" />
+
+    <add key="AreaSelect" value="f320aa73-7c55-45d4-a363-e21408e0aac3" />
+
+   
+
+    <!--短信帐号-->
+    <!--企业账号-->
+    <add key="JCSpcode" value="238698"/>
+    <!--用户名-->
+    <add key="JCLoginName" value="sz_hjjczx"/>
+    <!--密码-->
+    <add key="JCPassword" value="sz2015!"/>
+    <!--接入号扩展号-->
+    <add key="JCExtendAccessNum" value="2061012028025"/>
+
+    <!--地表水空白页角色权限-->
+    <add key="WhitePageRoleWater" value="41d0561c-5231-4ab0-ad0d-3c1f731c4f2b" />
+    <!--环境空气空白页角色权限-->
+    <add key="WhitePageRoleAir" value="2be04b96-c364-4355-8e51-b7c5077dbdb7" />
+    <!--地表水首页权限-->
+    <add key="LoginID" value="shang_y" />
+
+    <add key="PointName" value="监测站"/>
+    <add key="Flag" value="sinoyd12345678" />
+    <!--噪声管理员-->
+    <add key="NoiseM" value="76bee9cb-f9bf-4071-8c2a-7191df892c42"/>
+    <add key="FrameRoleWebServiceUrl" value="http://localhost/EQMSFrameNT/WebService/Role.asmx"/>
+    <add key="ImageShowUrl" value="http://192.168.0.21:8083/GetImage/"/>
+    <add key="DesKey" value="12345678" />
+    <add key="Ladar" value="~/Files/jiguangleida" />
+    <!--出错界面地址-->
+    <add key="SsoErrorUrl" value="http://localhost/EQMSPortalNT/Portal/Error.aspx"/>
+    <!--登录界面地址-->
+    <add key="SsoLoginUrl" value="http://localhost/EQMSPortalNT/Portal/Login.aspx" />
+    <!--框架部署名称-->
+    <add key="FrameworkName" value="EQMSFrameNT" />
+    <!--框架首页：树形菜单-->
+    <add key="FrameTreeName" value="FrameAll1" />
+    <!--框架首页：手风琴菜单-->
+    <add key="FrameAccordionName" value="FrameAll2" />
+    <!--集成界面地址、名称-->
+    <add key="PortalName" value="EQMSPortalNT" />
+    <add key="PortalUrl" value="http://localhost/" />
+    <add key="InnerPortalUrl" value="http://localhost/" />
+    <add key="InnerIP" value="192.168.90.199" />
+    <add key="GISUrl" value="http://218.91.209.251:1117/NTGIS"/>
+    <add key="NoiseUrl" value="http://222.92.77.253:9030/SoundEIA/" />
+    <add key="SqlCmdTimeOut" value="600" />
+    <add key="GISLZUrl" value="http://192.168.90.199/EQMSGis.LZ/" />
+    <add key="SsoLZErrorUrl" value="http://192.168.90.199/EQMSPortalNT/Portal/LZError.aspx" />
+
+    <add key="AQIForecastDefaultUnit" value="苏州市环境监测中心、苏州市气象台" />
+
+    <!--telerik系统样式-->
+    <add key="Telerik.Skin" value="Neptune" />
+    <add key="Telerik.EnableEmbeddedSkins" value="false" />
+
+    <!--预审核历史数据迁移   格式:【是否启用（0不启用；1启用）：迁移天数（10前的数据即从历史表中导入预处理表）】-->
+    <add key="AuditTransfer" value="1:10" />
+    <add key="FileExcelPath" value="D:\Sinoyd\EnvSZ2\WebUI\EnvSZQualityOperatingFolder\"/>
+    <!--门禁信息中的图片路径-->
+    <add key="ImageUrl" value="D:\Sinoyd\EnvSZ2\WebUI\Files\menjin"/>
+
+    <!--因子限值-->
+    <add key="SO2" value="0.15"/>
+    <add key="NO2" value="0.08"/>
+    <add key="CO" value="4"/>
+    <add key="PM10" value="0.15"/>
+    <add key="PM25" value="0.075"/>
+    <add key="O3-1h" value="0.2"/>
+    <add key="O3-8h" value="0.16"/>
+
+    <!--svgPointID 环境空气点位配置-->
+    <add key="svgAirPoint" value="9"/>
+    <!--svgPointID 地表水点位配置-->
+    <add key="svgWaterPoint" value="41,43"/>
+
+    <!--框架相关-->
+    <add key="FrameUserServiceUrl" value="http://localhost/EQMSFrameNT/WebService/User.asmx" />
+    <add key="FrameRoleServiceUrl" value="http://localhost/EQMSFrameNT/WebService/Role.asmx" />
+
+    <!--运维平台接口-->
+    <add key="OperationOMMPGetDataWebServiceUrl" value="http://192.168.90.199/OMMP/WebService/OMMPGetDataWebService.asmx" />
+    <add key="OperationTaskWebServiceUrl" value="http://192.168.90.199/OMMP/WebService/GetTaskWebService.asmx" />
+    <add key="OperationSubmitWebServiceResourceInfoUrl" value="http://192.168.90.199/OMMP/WebService/SubmitWebServiceResourceInfo.asmx"/>
+    <add key="OperationDeviceWebServiceUrl" value="http://192.168.90.199/OMMP/WebService/GetDeviceWebService.asmx"/>
+    <add key="FormUrl" value="/EQMSPortalNT/Pages/EnvWater/OperatingMaintenance/"/>
+
+    <!--短信发送接口-->
+    <add key="MessageSendUrl" value="http://192.168.90.199/MessageSend/WebServiceMessageText.asmx"/>
+    <!--审核标记颜色配置-->
+    <add key="AuditGridColors" value="#FFE500,#FE9C91,#40E0D0,#b4aa38,#1a1a1a,#3c15a0,#b91afc,#f69d02,#f39292,#24bd2a,#1768fd,#DF5353,#d53535,#DDDF0D,#dc9702,#55BF3B, #DF5353,#c005ef" />
+    <!--审核图表颜色配置-->
+    <add key="AuditChartColors" value="#f39292,#24bd2a,#1768fd,#b91afc,#b4aa38,#DF5353,#1a1a1a,#3c15a0,#f69d02,#d53535,#DDDF0D,#dc9702,#55BF3B, #DF5353,#c005ef" />
+
+    <!--空气日报相关配置-->
+    <add key="TempPath_Day" value="Pages\\EnvAir\\Exchange\\临时数据\\上报日数据" />
+    <add key="DataPath_Day" value="Pages\\EnvAir\\Exchange\\上报数据\\上报日数据" />
+    <add key="TempPath_Hour" value="Pages\\EnvAir\\Exchange\\临时数据\\临时小时数据" />
+    <add key="DataPath_Hour" value="Pages\\EnvAir\\Exchange\\上报数据\\上报小时数据" />
+    <add key="TempPath_AQIDay" value="Pages\\EnvAir\\Exchange\\临时数据\\临时Excel数据" />
+    <add key="ExcelDataPath_AQIDay" value="Pages\\EnvAir\\Exchange\\上报Excel数据" />
+    <add key="DBFTemplatePath_AQIDay" value="Pages\\EnvAir\\Exchange\\Template\\JSSUR.Dbf" />
+    <add key="DBFTemplatePathS_AQIDay" value="Pages\\EnvAir\\Exchange\\Template\\JSSURS.Dbf" />
+    <add key="DBFTemplatePath_AQIHour" value="Pages\\EnvAir\\Exchange\\Template\\JSSU.Dbf" />
+    <add key="DBFTemplatePathS_AQIHour" value="Pages\\EnvAir\\Exchange\\Template\\JSSUS.Dbf"/>
+    <add key="ExcelTemplatePath_AQIDay" value="Pages\\EnvAir\\Exchange\\Template\\AQITemp.xls" />
+    <add key="StateUploadName_Day" value="JSSUR"/>
+    <add key="StateUploadName_hour" value="JSSU"/>
+    <add key="ProvincialUploadName_hour" value="XJSSU"/>
+    <add key="ProvincialUploadName_Day" value="xjsdsz"/>
+    <add key="StateUploadName_Day_Excel" value="AQI日报({0}).xls"/>
+    <add key="SavePath" value="~/Files/SyncFiles/"/>
+    <!--远程控制环境空气点位配置-->
+    <add key="RemoteAirPoint" value="1,9,24,33,34,35,36,38,39"></add>
+    <!--远程控制地表水点位配置-->
+    <add key="RemoteWaterPoint" value="41,43,51"></add>
+    <!--Web远程控制消息队列配置-->
+    <add key="MSMQEnvAir" value="FormatName:DIRECT=TCP:192.168.0.54\Private$\EQMSAirSendQueue" />
+    <!--Web远程控制消息队列配置-->
+    <add key="MSMQEnvWater" value="FormatName:DIRECT=TCP:192.168.0.54\Private$\EQMSWaterSendQueue" />
+
+    <!--审核天数范围设置-->
+    <add key="AuditDays" value="2" />
+
+    <!--Begin 同步国家审核数据配置项-->
+    <!--是否使用链接服务器（0：否、1：是）-->
+    <add key="IsUseLinkService" value="0"/>
+    <!--空气国家链接服务器名称-->
+    <add key="airLinkServiceName" value="192.168.0.44"/>
+    <!--空气国家数据库名称-->
+    <add key="airLinkDBName" value="EnvDataCity"/>
+    <!--全市AQI UID配置-->
+    <add key="CityAQI_MonitoringRegionUid" value="7e05b94c-bbd4-45c3-919c-42da2e63fd43"/>
+    <!--数据同步国家库状态分割符号-->
+    <add key="sourceStatusSplitChar" value=","/>
+    <!--数据同步远大库状态分割符号-->
+    <add key="localStatusSplitChar" value=","/>
+    <!--End 同步国家审核数据配置项-->
+
+    <!--钾, 钡, 铬 ,硒，镉,钙,锰，铜,锑,汞,镍,镓没有,锡,锌,钯没有,钒 银没有，金没有,铂没有,铅,铁，镓,钯,银，金,铊,PM2.5-->
+    <add key="HeavyMetalMonitorCode" value=" a20990, a20012,a20033, a20072, a20026, a20991, a20055, a20041, a20004,  a20058, a20064, a20092, a20104, a20101,a20044,a20995,a20996,a20997,a20998,a20999,a20089, a34004"/>
+    <add key="HeavyMetalMonitorName" value="K,Ba, Cr ,Se,Cd,Ca,Mn,Cu,Sb,Hg,Ni,Sn,Zn,V,Pb,Fe,Ga,Pd,Ag,Au,Tl,PM2.5"/>
+
+    <!--钾,钙,钠,镁,氯,铵离子,硝酸根离子,硫酸根离子-->
+    <add key="AerosolIonCode" value="a20068,a20029,a20075,a20052,a21022,a06009,a06006,a06005,a34010,a34009,a01041,a01042, a34004"/>
+    <add key="AerosolIonName" value="k,Ca,Na,Mg,Cl,NH4,NO3,SO4,OC*1.4(热学),EC(热学),OC*1.4(光学),EC(光学),PM2.5"/>
+
+    <!--非甲烷碳氢化合物-->
+    <add key="AlkaneCode" value="a25002,a24036,a25003,a02514"/>
+    <!--卤代烃类VOCs-->
+    <add key="OlefinCode" value="a24003,a24015,a25010"/>
+    <!--含氧（氮）类VOCs-->
+    <add key="AromaticHydrocarbonCode" value="a31004,a31003,a31005"/>
+    
+    <!--烷烃--><!--
+    <add key="AlkaneCode" value="a24001,a24002,a24003,a24004,a24005,a24006,a24007,a24008,a24009,a24010,a24011,a24012,a24013,a24014,a24015,a24016,a24017,a24018,a24019,a24020,a24021,a24022,a24023,a24024,a24025,a24026,a24027,a24028,a24029,a24030,a24031,a24032,a24033,a24034,a24035,a24036,a24037,a24038,a24039,a24040,a24041,a24042,a24043,a24044,a24068,a24070,a24071,a24072,a24073,a24082,a24083,a24084,a24090,a24091,a24092,a24093,a24094,a24095,a24099,a24100,a24101"/>
+    --><!--烯烃--><!--
+    <add key="OlefinCode" value="a24045,a24046,a24047,a24048,a24049,a24050,a24051,a24052,a24053,a24054,a24055,a24056,a24057,a24058,a24059,a24060,a24061,a24062,a24063,a24064,a24065,a24066,a24067,a24069,a24074,a24075,a24076,a24077,a24078,a24079,a24080,a24081,a24085,a24086,a24087,a24088,a24089,a24096,a24097,a24098"/>
+    --><!--芳香烃--><!--
+    <add key="AromaticHydrocarbonCode" value="a25001,a25002,a25003,a25004,a25005,a25006,a25007,a25008,a25009,a25010,a25011,a25012,a25013,a25014,a25015,a25016,a25017,a25018,a25019,a25020,a25021,a25022,a25023,a25024,a25025,a25026,a25027,a25028,a25029,a25030,a25031,a25032,a25033,a25034,a25035,a25036,a25037,a25038,a25039,a25040,a25041,a25042,a25043,a25044,a25045,a25046,a25047,a25048,a25049,a25050,a25051,a25052,a25053,a25054,a25055,a25056,a25057,a25058,a25059,a25060,a25061,a25062,a25063,a25064,a25065,a25066,a25067,a25068,a25069,a25070,a25071,a25072,a25073,a25074,a25075,a25076,a25077,a25078,a25079,a25080,a25081,a25082,a25083"/>-->
+    <!--总VOC、臭氧-->
+    <add key="Other" value="a99054,a05024"/>
+    
+    <!--常规站接入执行间隔时间，单位：分-->
+    <add key="time" value="1"/>
+    <!--常规站数据接入执行时刻，单位：分-->
+    <add key="AccessTime" value="08"/>
+    <!--常规站数据接入第二次执行时刻，单位：分-->
+    <add key="AccessNextTime" value="30"/>
+    <!--调用接口用户id-->
+    <add key="UserId" value="ybzx"/>
+    <!--调用接口用户密码-->
+    <add key="Password" value="321"/>
+    <!--星期几自动补数据-->
+    <add key="FillWeekDay" value="星期一"/>
+    <!--自动补周数据时刻-->
+    <add key="FillTime" value="01:10:00"/>
+    <!--自动补历史数据时刻,单位：分-->
+
+    <add key="FillHistoryTime" value="20"/>
+    <!--每小时补几天数据-->
+    <add key="FillDays" value="1"/>
+
+    <!--数据解析计算执行时刻-->
+    <add key="StartTime" value="06"/>
+    <!--分钟数据处理间隔时间，单位：秒-->
+    <add key="SpanBy1" value="1"/>
+    <!--小时数据处理间隔时间，单位：分-->
+    <add key="SpanBy60" value="1"/>
+    <!--日数据处理间隔时间，单位：小时-->
+    <add key="SpanByDay" value="1"/>
+    <!--月数据处理间隔时间，单位：天-->
+    <add key="SpanByMonth" value="1"/>
+
+    <!--超上限-->
+    <add key="HSp" value="HSp"/>
+    <!--超下限-->
+    <add key="LSp" value="LSp"/>
+    <!--数据延迟时间，单位：分-->
+    <add key="DataDelayTime" value="60"/>
+    <!--常规站批量处理原始表开关-->
+    <add key="CommonIfOriginal" value="true"/>
+    <!--常规站批量处理预审核表开关-->
+    <add key="CommonIfPreAudit" value="true"/>
+    <!--常规站批量处理数据计算表开关-->
+    <add key="CommonIfCalculate" value="true"/>
+    <!--超级站批量处理原始表开关-->
+    <add key="SuperIfOriginal" value="true"/>
+    <!--超级站批量处理预审核表开关-->
+    <add key="SuperIfPreAudit" value="true"/>
+    <!--超级站批量处理数据计算表开关-->
+    <add key="SuperIfCalculate" value="false"/>
+    <add key="SqlCmdTimeOut" value="600"/>
+
+    <!--地表水默认因子-->
+    <add key="WaterPollutant" value="pH值;溶解氧;高锰酸盐指数;电导率;浑浊度;氨氮;总磷;总氮;藻密度;叶绿素a;水温;浊度;氟化物;抑制率;总有机碳;总酚;挥发酚;"/>
+
+    <!--水质自动巡检试剂配置记录默认因子-->
+    <add key="ReagentPollutant" value="氨氮;总磷;总氮;高锰酸盐指数;" />
+
+    <!--地表水默认站点-->
+    <add key="WaterPoints" value="金墅港;望亭;渔洋山;" />
+
+    <!--水质自动巡检试剂配置记录默认站点-->
+    <add key="ReagentPoints" value="金墅港;渔洋山;" />
+
+    <!--比对开始年份-->
+    <add key="Year" value="2013"/>
+
+    <!--超级站站点-->
+    <add key="SuperStationPointName" value="超级站"/>
+    <add key="SuperStationPointId" value="204"/>
+
+    <!--城区河道默认因子-->
+    <add key="UrbanRiverPollutant" value="溶解氧;水温;浑浊度;pH值;电导率;氨氮;高锰酸盐指数;藻密度"/>
+    
+
+    <!--空气运行月报表默认因子-->
+    <add key="RunPollutant" value="二氧化硫;氮氧化物;二氧化氮;一氧化碳;臭氧;PM10;PM2.5;风向;气压;风速;温度;湿度;"/>
+    <!--气象参数CODE-->
+    <add key="WeatherPollutant" value="a01007,a01008,a01001,a01002,a01006"/>
+
+    <!--空气默认因子-->
+    <add key="AirPollutant" value="a34004;a34002;a21026;a21004;a21005;a05024"/>
+
+    <!--地表水查询默认站点-->
+    <add key="WaterSearchPoints" value="金墅港;"/>
+
+    <!--报表(年报)年份-->
+    <add key="YearAdd" value="5"/>
+    <!--地表水水质月报默认站点-->
+
+
+    <!--地表水值班记录默认站点-->
+    <add key="WaterDutyPoint" value="金墅港;渔洋山;金墅港(HF);龙塘港水文站;望亭;"/>
+
+    <!--视频登陆-->
+    <!--<add key="Account" value="szhjjc"/>
+    <add key="Password" value="8F6D19A79CC1DC7A9EB7ADD053BFFDAC"/>-->
+
+    <!--空气默认因子-->
+    <add key="AirPollutantCode" value="a21026;a21004;a21005;a05024;a05024;a34002;a34004;a01001;a01002;a01006;a01008;a01007"/>
+    
+    <add key="AirPollutantId" value="a01001;a01002;a01006;a01008;a01007"/>
+
+    <!--区县上报小时值报表站点名称以及对应站点ID-->
+    <add key="QXUpLoadSZHourPointNoAndNames" value="15:常熟兴福子站;14:常熟菱塘子站;13:常熟海虞子站;19:昆山第二中学;20:昆山震川中学;16:太仓监测站;17:科教新城实小;10:吴江区环保局;11:教师进修学校;12:开发区;21:张家港市监测站;22:张家港城北小学"/>
+
+    <!--区县上报日均值报表站点名称以及对应站点ID-->
+    <add key="QXUpLoadSZDayPointNoAndNames" value="15:兴福子站;14:菱塘子站;13:海虞子站;19:昆山第二中学;20:震川中学;16:太仓监测站;17:科教新城实小;10:吴江环保局;11:教师进修学校;12:吴江开发区;21:监测站;22:城北小学"/>
+
+  </appSettings>
+  <log4net>
+    <root>
+      <level value="WARN" />
+      <appender-ref ref="LogFileAppender" />
+      <appender-ref ref="ConsoleAppender" />
+    </root>
+    <logger name="FileLogging">
+      <level value="DEBUG" />
+    </logger>
+    <appender name="LogFileAppender" type="log4net.Appender.FileAppender">
+      <param name="File" value="log-file.txt" />
+      <param name="AppendToFile" value="true" />
+      <layout type="log4net.Layout.PatternLayout">
+        <param name="Header" value="[Header] " />
+        <param name="Footer" value="[Footer] " />
+        <param name="ConversionPattern" value="%d [%t] %-5p %c [%x]  - %m%n" />
+      </layout>
+      <filter type="log4net.Filter.LevelRangeFilter">
+       <param name="LevelMin" value="DEBUG" />
+        <param name="LevelMax" value="FATAL" />
+      </filter>
+    </appender>
+    <appender name="ConsoleAppender" type="log4net.Appender.ConsoleAppender">
+      <layout type="log4net.Layout.PatternLayout">
+        <param name="ConversionPattern" value="%d [%t] %-5p %c [%x] - %m%n" />
+      </layout>
+    </appender>
+  </log4net>
+  <system.web>
+    <httpRuntime   maxRequestLength="512000"   useFullyQualifiedRedirectUrl="true"   executionTimeout="1200"/>   
+    <sessionState mode="StateServer" stateConnectionString="tcpip=127.0.0.1:42424" sqlConnectionString="data source=127.0.0.1;Trusted_Connection=yes" cookieless="false" timeout="3600" />
+    <!--<customErrors defaultRedirect="Portal/Login.aspx" mode="RemoteOnly" >-->
+    <!--<error statusCode="500" redirect="http:/anotherhost/pages/callsupport.html"/>-->
+    <!--<error statusCode="404" redirect="http:/anotherhost/pages/adminmessage.html"/>-->
+    <!--<error statusCode="403" redirect="http:/anotherhost/pages/noaccess.html"/>-->
+    <!--</customErrors>-->
+    <customErrors mode="Off" />
+
+    <globalization requestEncoding="utf-8" responseEncoding="utf-8" />
+
+    <!--<authentication mode="Windows">
+      <forms loginUrl="~/Portal/Login.aspx" defaultUrl="Login.aspx" name=".ASPXAUTH"></forms>
+    </authentication>-->
+    <!--
+    <authorization>
+      <deny users="?"></deny>
+    </authorization>
+-->
+    <compilation targetFramework="4.0">
+      <!--targetFramework="4.0"-->
+      <assemblies>
+        <add assembly="System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+        <add assembly="System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+        <add assembly="System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+        <add assembly="System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+        <add assembly="System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+        <add assembly="System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System.Web.RegularExpressions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System.Web.Extensions.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+        <add assembly="System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System.Speech, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
+        <add assembly="System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+        <add assembly="System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+        <add assembly="System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+        <add assembly="System.Data.DataSetExtensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+        
+        
+      </assemblies>
+    </compilation>
+    <httpHandlers>
+      <add path="Telerik.Web.UI.WebResource.axd" type="Telerik.Web.UI.WebResource" verb="*" validate="false" />
+      <add path="ChartImage.axd" type="Telerik.Web.UI.ChartHttpHandler" verb="*" validate="false" />
+      <add path="Telerik.Web.UI.SpellCheckHandler.axd" type="Telerik.Web.UI.SpellCheckHandler" verb="*" validate="false" />
+      <add path="Telerik.Web.UI.DialogHandler.aspx" type="Telerik.Web.UI.DialogHandler" verb="*" validate="false" />
+      <add path="Telerik.RadUploadProgressHandler.ashx" type="Telerik.Web.UI.RadUploadProgressHandler" verb="*" validate="false" />
+      
+    </httpHandlers>
+    <pages theme="Neptune" enableEventValidation="false">
+      <controls>
+        <add tagPrefix="telerik" namespace="Telerik.Web.UI" assembly="Telerik.Web.UI" />
+      </controls>
+    </pages>
+    <httpModules>
+      <add name="RadUploadModule" type="Telerik.Web.UI.RadUploadHttpModule" />
+      <add name="RadCompression" type="Telerik.Web.UI.RadCompression" />
+    </httpModules>
+  </system.web>
+  <system.webServer>
+    <validation validateIntegratedModeConfiguration="false" />
+    <handlers>
+      <remove name="ChartImage_axd" />
+      <remove name="Telerik_Web_UI_SpellCheckHandler_axd" />
+      <remove name="Telerik_Web_UI_DialogHandler_aspx" />
+      <remove name="Telerik_RadUploadProgressHandler_ashx" />
+      <remove name="Telerik_Web_UI_WebResource_axd" />
+      <add name="Telerik_Web_UI_WebResource_axd" path="Telerik.Web.UI.WebResource.axd" type="Telerik.Web.UI.WebResource" verb="*" preCondition="integratedMode" />
+      <add name="ChartImage_axd" path="ChartImage.axd" type="Telerik.Web.UI.ChartHttpHandler" verb="*" preCondition="integratedMode" />
+      <add name="Telerik_Web_UI_SpellCheckHandler_axd" path="Telerik.Web.UI.SpellCheckHandler.axd" type="Telerik.Web.UI.SpellCheckHandler" verb="*" preCondition="integratedMode" />
+      <add name="Telerik_Web_UI_DialogHandler_aspx" path="Telerik.Web.UI.DialogHandler.aspx" type="Telerik.Web.UI.DialogHandler" verb="*" preCondition="integratedMode" />
+      <add name="Telerik_RadUploadProgressHandler_ashx" path="Telerik.RadUploadProgressHandler.ashx" type="Telerik.Web.UI.RadUploadProgressHandler" verb="*" preCondition="integratedMode" />
+      <add name="Telerik.ReportViewer.axd_*" path="Telerik.ReportViewer.axd" verb="*" type="Telerik.ReportViewer.WebForms.HttpHandler, Telerik.ReportViewer.WebForms, Version=9.0.15.324, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" preCondition="integratedMode,runtimeVersionv4.0" />
+    </handlers>
+
+    <directoryBrowse enabled="false" showFlags="Date, Time, Size, Extension" />
+    <defaultDocument>
+      <files>
+        <clear/>
+        <add value="login.aspx" />
+        <add value="root.html" />
+      </files>
+    </defaultDocument>
+    <staticContent>
+      <mimeMap fileExtension=".Dbf" mimeType="application/octet-stream" />
+    </staticContent>
+    <security>
+      <requestFiltering>
+        <requestLimits maxAllowedContentLength="52428800"></requestLimits>
+      </requestFiltering>
+    </security>
+    <modules runAllManagedModulesForAllRequests="true">
+      <remove name="RadUploadModule" />
+      <remove name="RadCompression" />
+      <add name="RadUploadModule" type="Telerik.Web.UI.RadUploadHttpModule" preCondition="integratedMode" />
+      <add name="RadCompression" type="Telerik.Web.UI.RadCompression" preCondition="integratedMode" />
+    </modules>
+  </system.webServer>
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="TempGetDataWebServiceSoap" maxBufferPoolSize="2147483647" maxReceivedMessageSize="2147483647" />
+        <binding name="AirQualityWebServiceSoap" />
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://192.168.90.199/OMMP/WebService/OMMPGetDataWebService.asmx" binding="basicHttpBinding" bindingConfiguration="TempGetDataWebServiceSoap" contract="ServiceReference.TempGetDataWebServiceSoap" name="TempGetDataWebServiceSoap" />
+      <endpoint address="http://218.91.209.251:8087/public/airqualitywebservice.asmx"
+        binding="basicHttpBinding" bindingConfiguration="AirQualityWebServiceSoap"
+        contract="ServiceReference1.AirQualityWebServiceSoap" name="AirQualityWebServiceSoap" />
+    </client>
+  </system.serviceModel>
+</configuration>

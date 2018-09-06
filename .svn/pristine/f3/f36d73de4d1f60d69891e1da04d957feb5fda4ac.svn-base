@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{89B8D570-DCFE-4265-B804-537324DE6745}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartEP.Data</RootNamespace>
+    <AssemblyName>SmartEP.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\..\..\Vendor\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.OpenAccess, Version=2015.1.225.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342">
+      <HintPath>C:\Program Files (x86)\Telerik\OpenAccess ORM\bin\Telerik.OpenAccess.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.35.Extensions, Version=2015.1.225.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342">
+      <HintPath>C:\Program Files (x86)\Telerik\OpenAccess ORM\bin\Telerik.OpenAccess.35.Extensions.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enums\DataEnum.cs" />
+    <Compile Include="Enums\EnumMapping.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServer\AutoMonitoring\DaoZhanLvTongJi.cs" />
+    <Compile Include="SqlServer\AutoMonitoring\Infectant5Or60AirDAL.cs" />
+    <Compile Include="SqlServer\AutoMonitoring\Infectant60WaterDAL.cs" />
+    <Compile Include="SqlServer\AutoMonitoring\InfectantDAL.cs" />
+    <Compile Include="SqlServer\AutoMonitoring\InstrumentDataDAL.cs" />
+    <Compile Include="SqlServer\AutoMonitoring\MicrowaveRadiationDAL.cs" />
+    <Compile Include="SqlServer\AutoMonitoring\OrigionAQIDAL.cs" />
+    <Compile Include="SqlServer\AutoMonitoring\SuperStation_lijingpuDAL.cs" />
+    <Compile Include="SqlServer\BaseData\AccessInfoDAL.cs" />
+    <Compile Include="SqlServer\BaseData\AirQualityDAL.cs" />
+    <Compile Include="SqlServer\BaseData\AlarmDAL.cs" />
+    <Compile Include="SqlServer\BaseData\BasicInformationDAL.cs" />
+    <Compile Include="SqlServer\BaseData\BreakSettingDAL.cs" />
+    <Compile Include="SqlServer\BaseData\EQIConcentrationLimitDAL.cs" />
+    <Compile Include="SqlServer\BaseData\FactorsConfigDAL.cs" />
+    <Compile Include="SqlServer\BaseData\MonitoringPointDAL.cs" />
+    <Compile Include="SqlServer\BaseData\PersonalizedSetDAL.cs" />
+    <Compile Include="SqlServer\BaseData\PollutantCodeDAL.cs" />
+    <Compile Include="SqlServer\BaseData\PortInfoDAL.cs" />
+    <Compile Include="SqlServer\BaseData\RemoteControlDAL.cs" />
+    <Compile Include="SqlServer\BaseData\WaterAnalyzeDAL.cs" />
+    <Compile Include="SqlServer\BaseData\WaterQualityDAL.cs" />
+    <Compile Include="SqlServer\Common\WebControl\CbxRsmControlDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Air\AirCalibrationDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Air\AQICalculateDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Air\AuditAirInfectantByHourDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Air\AuditAirInfectantByMinuteDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Air\DayReportDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Air\DustHazeDayDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Air\ExcessiveSettingDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Air\GranuleSpecialDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Air\HourReportDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Air\HourReportForUpLoadDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Air\HourReportForUpLoadSZDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Air\MonthReportDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Air\QualityControlDataSearchDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Air\RPT_AQIForecastDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Air\SeasonReportDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Air\SuperStationInterfaceDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Air\SyncGuoJiaDataDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Air\SyncTransferMappingDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Air\WeekReportDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Air\YearReportDAL.cs" />
+    <Compile Include="SqlServer\Common\GridView\GridViewPagerDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\AuditDataDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\AuditMonitoringPointDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\AuditPollutantDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\AuditPreDataDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\AuditReasonDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\CalibrationReportDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\DataOnlineDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\DataSamplingConditionDal.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\ELMAHDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Air\PortHourAQIDAL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlServer\MonitoringBusiness\Air\PortDayAQIDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\FrequencySettingDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\MaintenanceDataDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\MessageTextDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\PublicReportDal.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\ReportContentDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\ReportSummaryDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\WaterLZ\DayReportDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\WaterLZ\LZDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Water\AuditWaterInfectantByMinuteDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Water\AuditWaterInfectantByHourDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Water\AutoMonitoringMonthSummary.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Water\AutoMonitoringMonthSummaryDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Water\AutoPointMonthReportDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Water\BlueAlgaeDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Water\DayReportDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Water\DayReportManualDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Water\HourReportDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Water\MaintainFileManageDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Water\MonthReportDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Water\OM_ReagentInBillItemDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Water\SeasonReportDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Water\WeekReportDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Water\YearReportDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Air\RegionHourAQIDAL.cs" />
+    <Compile Include="SqlServer\MonitoringBusiness\Air\RegionDayAQIDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Air\InstrumentFaultDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Air\InstrumentOPDataDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Air\MaintenanceDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Air\OM_DeviceRepairDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Air\OM_DeviceRepairDetailDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Air\OM_TaskItemConfigDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Air\OM_TaskItemDataDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Water\AbnormalConfigDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Water\AbnormalDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Water\ActionConfigDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Water\ElectrodeCalibrationDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Water\InstrumentUsedRecordDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Water\MaterialRigisterDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Water\PartChangeDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Water\ReagentConfigRecordDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Water\ReagentFormulaDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Water\SamplingRecordDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Water\SamplingRecordDetailDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Water\StandardizationDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Water\StandardSolutionChangeDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Water\StandardSolutionCheckDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Water\StandardSolutionConfigDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Water\StatusDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Water\TaskActionConfigDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Water\TaskConfigDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Water\TaskFileInfoDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Water\UrbanRiverCourseInspectDAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Water\WaterInspectionBase2DAL.cs" />
+    <Compile Include="SqlServer\QualityControlOperation\Water\WaterInspectionBaseDAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\Interfaces\" />
+    <Folder Include="DB2\" />
+    <Folder Include="MySql\" />
+    <Folder Include="Oracle\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DomainModel\SmartEP.DomainModel\SmartEP.DomainModel.csproj">
+      <Project>{891378ea-1395-47f0-8b3b-14f35c6126a5}</Project>
+      <Name>SmartEP.DomainModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SmartEP.Core\SmartEP.Core.csproj">
+      <Project>{a16a68c3-0579-4927-91b3-d21c3631380b}</Project>
+      <Name>SmartEP.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SmartEP.Utilities\SmartEP.Utilities.csproj">
+      <Project>{fa8bdea2-3a34-4817-9db9-8bbc1a307dbc}</Project>
+      <Name>SmartEP.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

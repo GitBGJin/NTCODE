@@ -1,0 +1,113 @@
+﻿body {
+}
+
+.RadPanelBar_Silk .rpLink, .RadPanelBar_Silk .rpHeaderTemplate {
+    background: #B1D1EC none repeat scroll 0 0 !important;
+    box-shadow: none;
+    color: #373735 !important;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px !important;
+    line-height: 36px !important;
+    border-color: none !important;
+    box-shadow: none !important;
+    /*margin-bottom: 2px !important;*/
+}
+
+.RadPanelBar .rpLink {
+    border-bottom-style: none !important;
+    border-bottom-width: 0 !important;
+    cursor: pointer;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.RadPanelBar .rpRootGroup .rpItem {
+    display: block;
+    float: none;
+    padding-bottom: 2px;
+    overflow: hidden;
+    position: static;
+}
+
+.RadPanelBar_Silk .rpLink:hover, .RadPanelBar_Silk .rpHeaderTemplate:hover {
+    background-color: #3c98dc !important;
+    color: #fff !important;
+}
+
+.rpRootGroup .rpSelected {
+    background-color: #3c98dc !important;
+}
+
+.rpSlide .rpGroup .rpSelected {
+    background-color: #ffa544 !important;
+    color: #fff !important;
+}
+
+.RadPanelBar_Silk .rpRootGroup {
+    background: #fff none repeat scroll 0 0;
+    border-color: none !important;
+    border: none !important;
+}
+
+.rpSlide .rpLink {
+    background: #fff !important;
+    color: #333 !important;
+}
+
+    .rpSlide .rpLink:hover {
+        background: #ffa544 !important;
+        color: #fff !important;
+    }
+
+.RadPanelBar_Silk .rpRootGroup .rpItem .rpExpanded .rpExpandHandle {
+    background-image: url(../../Resources/Images/leftPanelBar/icon/icon_Downarrow.png);
+    background-position: 0px 0px;
+}
+
+.RadPanelBar_Silk .rpRootGroup .rpItem .rpHovered .rpOut .rpExpandHandle {
+    background-image: url(../../Resources/Images/leftPanelBar/icon/icon_Leftarrow.png);
+    background-position: 0px 0px;
+}
+
+.RadPanelBar_Silk .rpRootGroup .rpItem .rpExpanded.rpHovered .rpOut .rpExpandHandle {
+    background-image: url(../../Resources/Images/leftPanelBar/icon/icon_Downarrow.png);
+    background-position: 0px 0px;
+}
+
+.RadPanelBar_Silk .rpRootGroup .rpItem .rpExpandHandle {
+    background-image: url(../../Resources/Images/leftPanelBar/icon/icon_Leftarrow.png);
+    background-position: 0px 0px;
+}
+
+.RadPanelBar_Silk .rpRootGroup .rpGroup .rpItem .rpHovered .rpOut .rpExpandHandle {
+    background-image: url(../../Resources/Images/leftPanelBar/icon/radActionsSprite.png);
+}
+
+.RadPanelBar_Silk .rpRootGroup .rpGroup .rpItem .rpExpandable .rpExpandHandle {
+    background-image: url(../../Resources/Images/leftPanelBar/icon/radActionsSprite.png);
+}
+
+.RadPanelBar_Silk .rpRootGroup .rpGroup .rpItem .rpLink .rpExpandHandle {
+    background-image: url(../../Resources/Images/leftPanelBar/icon/radActionsSprite.png);
+}
+
+.RadPanelBar_Silk .rpRootGroup .rpGroup .rpExpanded .rpExpandHandle, .RadPanelBar_Silk .rpRootGroup .rpLevel1 .rpExpanded.rpDisabled:hover .rpExpandHandle {
+    background-position: -17px -17px;
+}
+
+.RadPanelBar_Silk .rpRootGroup .rpGroup .rpExpandable .rpExpandHandle, .RadPanelBar_Silk .rpGroup .rpExpandable.rpDisabled:hover .rpExpandHandle {
+    margin-top: 8px;
+    background-position: -17px -1067px;
+}
+
+.RadPanelBar_Silk .rpRootGroup .rpGroup .rpExpandable:hover .rpExpandHandle {
+    background-position: -67px -1067px;
+}
+
+.RadPanelBar_Silk .rpRootGroup .rpGroup .rpExpanded .rpExpandHandle, .RadPanelBar_Silk .rpGroup .rpExpanded.rpDisabled:hover .rpExpandHandle {
+    background-position: -17px -1017px;
+}
+
+.RadPanelBar_Silk .rpRootGroup .rpGroup .rpExpanded:hover .rpExpandHandle {
+    background-position: -67px -1017px;
+}

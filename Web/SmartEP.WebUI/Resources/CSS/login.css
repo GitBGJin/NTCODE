@@ -1,0 +1,124 @@
+html, body, form {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: none;
+}
+
+body {
+    background-color: #F5F4E5;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: static;
+    z-index: -10;
+}
+
+.divBgImg {
+    width: 100%; 
+    height: 100%; 
+    position: absolute; 
+    z-index: -20; 
+    left: 0px; 
+    top: 0px; 
+    overflow: hidden;
+    margin: auto;
+}
+
+div.LoginSHContainer {
+    /*background-image: url('../Images/login/BgSpliter.png');*/
+    background-repeat: repeat-x;
+    height: 100%;
+    overflow: hidden;
+}
+
+div.LoginSHContentContainer {
+    height: 100%;
+    overflow: hidden;
+    /*background-image: url('../Images/login/LoginSZ.jpg');*/
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+div.LoginSHCenterContainer {
+    height: 540px;
+    width: 990px;
+    margin: 0 auto;
+    /*margin-top: 130px;*/
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: 1px -1px;
+}
+
+div.LoginLogo {
+    margin:auto;
+    margin-top:7px;
+    width: 700px; 
+    height: 75px;
+    background-image:url('../Images/login/logo.png');
+    background-repeat:no-repeat;
+    position:relative;
+}
+div.LoginLogoLZ {
+    margin:auto;
+    margin-top:7px;
+    width: 627px; 
+    height: 75px;
+    background-image:url('../Images/login/logoLZ.png');
+    background-repeat:no-repeat;
+    position:relative;
+}
+
+table.LoginTB {
+    width: 100%;
+    height: 100%;
+    border-width: 0px;
+}
+
+div.LoginSH_Login {
+    text-align: right;
+    position:relative;
+}
+
+    div.LoginSH_Login div.m_left {
+        display: inline-block;
+        /*margin-right: 6px;
+        margin-top: 7px;*/
+        width: 642px;
+        height: 520px;
+        /*background-image: url('../Images/login/LoginLeftDiv.JPG');*/
+    }
+
+    div.LoginSH_Login div.m_right {
+        display: inline-block;
+        margin-top:100px;
+        /*margin-right: 6px;
+        margin-top: 7px;*/
+        width: 334px;
+        height: 289px;
+        margin-bottom: 180px;
+        background-image: url('../Images/login/loginDiv.png');
+        z-index:9999;
+    }
+
+        div.LoginSH_Login div.m_right div.itemUser {
+            margin-top: 94px;
+            margin-right: 34px;
+            z-index:9999;
+        }
+
+        div.LoginSH_Login div.m_right div.itemPwd {
+            margin-top: 30px;
+            margin-right: 34px;
+        }
+
+        div.LoginSH_Login div.m_right div.btns {
+            margin-top: 12px;
+            text-align: center;
+            /*margin-right: 0px;*/
+        }
+
+div.m_left div.RadImageGallery {
+    background-color: transparent;
+    /*background-image: url(../Images/login/realAQIBg.png);*/
+}

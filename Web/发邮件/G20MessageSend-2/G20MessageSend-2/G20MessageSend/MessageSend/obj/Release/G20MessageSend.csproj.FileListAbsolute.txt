@@ -1,0 +1,14 @@
+D:\NTCODE\Web\发邮件\G20MessageSend-2\G20MessageSend-2\G20MessageSend\MessageSend\bin\Release\G20MessageSend.exe.config
+D:\NTCODE\Web\发邮件\G20MessageSend-2\G20MessageSend-2\G20MessageSend\MessageSend\bin\Release\G20MessageSend.exe
+D:\NTCODE\Web\发邮件\G20MessageSend-2\G20MessageSend-2\G20MessageSend\MessageSend\bin\Release\G20MessageSend.pdb
+D:\NTCODE\Web\发邮件\G20MessageSend-2\G20MessageSend-2\G20MessageSend\MessageSend\bin\Release\Service.dll
+D:\NTCODE\Web\发邮件\G20MessageSend-2\G20MessageSend-2\G20MessageSend\MessageSend\bin\Release\Model.dll
+D:\NTCODE\Web\发邮件\G20MessageSend-2\G20MessageSend-2\G20MessageSend\MessageSend\bin\Release\Telerik.OpenAccess.35.Extensions.dll
+D:\NTCODE\Web\发邮件\G20MessageSend-2\G20MessageSend-2\G20MessageSend\MessageSend\bin\Release\Service.pdb
+D:\NTCODE\Web\发邮件\G20MessageSend-2\G20MessageSend-2\G20MessageSend\MessageSend\bin\Release\Model.pdb
+D:\NTCODE\Web\发邮件\G20MessageSend-2\G20MessageSend-2\G20MessageSend\MessageSend\obj\Release\G20MessageSend.csprojResolveAssemblyReference.cache
+D:\NTCODE\Web\发邮件\G20MessageSend-2\G20MessageSend-2\G20MessageSend\MessageSend\obj\Release\G20MessageSend.Form1.resources
+D:\NTCODE\Web\发邮件\G20MessageSend-2\G20MessageSend-2\G20MessageSend\MessageSend\obj\Release\G20MessageSend.Properties.Resources.resources
+D:\NTCODE\Web\发邮件\G20MessageSend-2\G20MessageSend-2\G20MessageSend\MessageSend\obj\Release\G20MessageSend.csproj.GenerateResource.Cache
+D:\NTCODE\Web\发邮件\G20MessageSend-2\G20MessageSend-2\G20MessageSend\MessageSend\obj\Release\G20MessageSend.exe
+D:\NTCODE\Web\发邮件\G20MessageSend-2\G20MessageSend-2\G20MessageSend\MessageSend\obj\Release\G20MessageSend.pdb

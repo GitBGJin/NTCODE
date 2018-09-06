@@ -1,0 +1,72 @@
+Time:    2017/7/26 18:50:29
+Action:  数据异常
+Message: 有站点没有启用
+-----------------------------------------------------------
+
+Time:    2017/7/26 18:52:13
+Action:  数据异常
+Message: 有站点没有启用
+-----------------------------------------------------------
+
+Time:    2017/7/26 20:39:30
+Action:  数据异常
+Message: 访问的因子不在权限范围内
+-----------------------------------------------------------
+
+Time:    2017/7/26 20:39:38
+Action:  数据异常
+Message: 访问的因子不在权限范围内
+-----------------------------------------------------------
+
+Time:    2017/7/26 20:39:48
+Action:  数据异常
+Message: 输入的参数不能为空
+-----------------------------------------------------------
+
+Time:    2017/7/26 21:41:43
+Action:  数据异常
+Message: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebServiceForGis.WebServiceForGis.GetAuditDayAQIData(String dataType, String PointId, String StartTime, String EndTime) 位置 e:\数据\WebServiceForGis\WebServiceForGis\WebServiceForGis\WebServiceForGis.asmx.cs:行号 211
+-----------------------------------------------------------
+
+Time:    2017/7/26 21:43:15
+Action:  数据异常
+Message: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebServiceForGis.WebServiceForGis.GetAuditDayAQIData(String dataType, String PointId, String StartTime, String EndTime) 位置 e:\数据\WebServiceForGis\WebServiceForGis\WebServiceForGis\WebServiceForGis.asmx.cs:行号 211
+-----------------------------------------------------------
+
+Time:    2017/7/26 21:52:39
+Action:  数据异常
+Message: 没有输入数据类型或者数据类型给的不正确
+-----------------------------------------------------------
+
+Time:    2017/7/26 21:59:11
+Action:  数据异常
+Message: 此接口未打开！
+-----------------------------------------------------------
+
+Time:    2017/7/26 21:59:33
+Action:  数据异常
+Message: 此接口未打开！
+-----------------------------------------------------------
+
+Time:    2017/7/26 21:59:46
+Action:  数据异常
+Message: 此接口未打开！
+-----------------------------------------------------------
+
+Time:    2017/7/26 22:11:32
+Action:  数据异常
+Message: 用户名或者密码不对！
+-----------------------------------------------------------
+
+Time:    2017/7/26 22:14:04
+Action:  数据异常
+Message: 用户名或者密码不对！
+-----------------------------------------------------------
+
+Time:    2017/7/26 22:15:09
+Action:  数据异常
+Message: 用户名或者密码不对！
+-----------------------------------------------------------
+

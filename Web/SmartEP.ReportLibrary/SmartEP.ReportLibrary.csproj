@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AF2ED843-5423-4226-B95C-F85525D0B122}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartEP.ReportLibrary</RootNamespace>
+    <AssemblyName>SmartEP.ReportLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SmartEP.Data">
+      <HintPath>..\..\..\南通\Src\SmartEP.WebUI\bin\SmartEP.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Reporting, Version=9.0.15.324, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" />
+    <Reference Include="Telerik.Reporting.OpenXmlRendering, Version=9.0.15.324, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Vendor\Telerik Control\Telerik Report\2015Q1\Telerik.Reporting.OpenXmlRendering.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Reporting.Service, Version=9.0.15.324, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Vendor\Telerik Control\Telerik Report\2015Q1\Telerik.Reporting.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.ReportViewer.WebForms, Version=9.0.15.324, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Vendor\Telerik Control\Telerik Report\2015Q1\Telerik.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlgaeWQEarlyWarnReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AlgaeWQEarlyWarnReport.Designer.cs">
+      <DependentUpon>AlgaeWQEarlyWarnReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report1.Designer.cs">
+      <DependentUpon>Report1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rep_MonthSelf.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rep_MonthSelf.Designer.cs">
+      <DependentUpon>Rep_MonthSelf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="THDrinkWaterMonitoringReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="THDrinkWaterMonitoringReport.Designer.cs">
+      <DependentUpon>THDrinkWaterMonitoringReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VillageMonthRep.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VillageMonthRep.Designer.cs">
+      <DependentUpon>VillageMonthRep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VillageWeekRep.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VillageWeekRep.Designer.cs">
+      <DependentUpon>VillageWeekRep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WatershedsWQWeekReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WatershedsWQWeekReport.Designer.cs">
+      <DependentUpon>WatershedsWQWeekReport.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AlgaeWQEarlyWarnReport.resx">
+      <DependentUpon>AlgaeWQEarlyWarnReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.resx">
+      <DependentUpon>Report1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rep_MonthSelf.resx">
+      <DependentUpon>Rep_MonthSelf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="THDrinkWaterMonitoringReport.resx">
+      <DependentUpon>THDrinkWaterMonitoringReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VillageMonthRep.resx">
+      <DependentUpon>VillageMonthRep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VillageWeekRep.resx">
+      <DependentUpon>VillageWeekRep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WatershedsWQWeekReport.resx">
+      <DependentUpon>WatershedsWQWeekReport.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SmartEP.Utilities\SmartEP.Utilities.csproj">
+      <Project>{fa8bdea2-3a34-4817-9db9-8bbc1a307dbc}</Project>
+      <Name>SmartEP.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

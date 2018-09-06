@@ -1,0 +1,74 @@
+.RadDataPager_Silk {
+  border: 1px solid #d7d7d7;
+  background: #e6e6e6;
+  color: #555555; }
+  .RadDataPager_Silk .rdpPageFirst, .RadDataPager_Silk .rdpPagePrev, .RadDataPager_Silk .rdpPageNext, .RadDataPager_Silk .rdpPageLast {
+    background: transparent no-repeat url('Grid/sprite.png');
+    width: 30px;
+    height: 30px; }
+  .RadDataPager_Silk .rdpPageFirst {
+    background-position: 0 -150px; }
+    .RadDataPager_Silk .rdpPageFirst:hover {
+      background-position: 0 -350px; }
+    .RadDataPager_Silk .rdpPageFirst:active {
+      background-position: 0 -550px; }
+  .RadDataPager_Silk .rdpPagePrev {
+    background-position: 0 -200px; }
+    .RadDataPager_Silk .rdpPagePrev:hover {
+      background-position: 0 -400px; }
+    .RadDataPager_Silk .rdpPagePrev:active {
+      background-position: 0 -600px; }
+  .RadDataPager_Silk .rdpPageNext {
+    background-position: 0 -250px; }
+    .RadDataPager_Silk .rdpPageNext:hover {
+      background-position: 0 -450px; }
+    .RadDataPager_Silk .rdpPageNext:active {
+      background-position: 0 -650px; }
+  .RadDataPager_Silk .rdpPageLast {
+    background-position: 0 -300px; }
+    .RadDataPager_Silk .rdpPageLast:hover {
+      background-position: 0 -500px; }
+    .RadDataPager_Silk .rdpPageLast:active {
+      background-position: 0 -700px; }
+  .RadDataPager_Silk .rdpPagerButton {
+    background-color: #d5d5d5;
+    background-image: url('../Common/Gradients/radGradientDarkV20.png');
+    _background-image: none;
+    background-repeat: repeat-x;
+    border-color: #c9c9c9;
+    color: #767676;
+    background-color: #e3e3e3;
+    background-image: linear-gradient(#fefefe, #e3e3e3);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    border: 1px solid #c9c9c9;
+    color: #767676;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 22px;
+    height: 28px; }
+  .RadDataPager_Silk .rdpNumPart a {
+    border-radius: 4px;
+    line-height: 28px;
+    color: #333333;
+    margin-right: 1px;
+    margin-top: 1px; }
+    .RadDataPager_Silk .rdpNumPart a:hover {
+      color: #000000;
+      background-color: #d5d5d5;
+      background-image: url('../Common/Gradients/radGradientDarkV20.png');
+      _background-image: none;
+      background-repeat: repeat-x;
+      background-image: -webkit-linear-gradient(top, #d6d6d6 0%, #929292 100%);
+      background-image: -moz-linear-gradient(top, #d6d6d6 0%, #929292 100%);
+      background-image: -ms-linear-gradient(top, #d6d6d6 0%, #929292 100%);
+      background-image: -o-linear-gradient(top, #d6d6d6 0%, #929292 100%);
+      background-image: linear-gradient(top, #d6d6d6 0%, #929292 100%); }
+    .RadDataPager_Silk .rdpNumPart a.rdpCurrentPage {
+      background: none repeat scroll 0 0 #cccccc;
+      border: 1px solid #f9f9f9;
+      box-shadow: 0 0 1px 1px rgba(72, 72, 72, 0.4) inset;
+      color: #000000;
+      margin-top: 0; }
+  .RadDataPager_Silk .rdpPagerLabel {
+    line-height: 28px; }

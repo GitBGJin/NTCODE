@@ -1,0 +1,75 @@
+﻿<?xml version="1.0"?>
+<configuration>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0" />
+  </startup>
+  <connectionStrings>
+    <add name="AMS_BaseDataSZConnection" connectionString="server=192.168.90.188;database=AMS_BaseData;uid=sa;pwd=sinoyd123!@#" providerName="System.Data.SqlClient" />
+    <!--<add name="AMS_BaseDataSZConnection" connectionString="server=.;database=AMS_BaseDataSZ;uid=sa;pwd=11111" providerName="System.Data.SqlClient" />-->
+  </connectionStrings>
+  <appSettings>
+    <!--短信发送接口-->
+    <add key="MessageSendUrl" value="http://222.92.77.250/EQMSWaterMessage/WebServiceMessageText.asmx"/>
+    <!--短信发送网关配置-->
+    <add key="SMSSendMode" value="Sinoyd" />
+    <add key="SinoydSMS_UserName" value="jsydxx" />
+    <add key="SinoydSMS_Password" value="jsydxtm" />
+    <add key="SinoydSMS_Url" value="http://116.213.72.20/SMSHttpService/send.aspx" />
+    <!--报警邮件配置信息-->
+    <add key="EmailSendMode" value="Sinoyd" />
+    <add key="SinoydEmailFromAddress" value="yanyn@sinoyd.com" />
+    <add key="SinoydEmailFromPassword" value="yan2015" />
+    <add key="SinoydEmailTitle" value="苏州环境质量二期报警信息" />
+<!--AQI预警是否发送标志-->
+    <add key="AQIIsSend" value="0"/>
+    <!--短信帐号-->
+    <!--企业账号-->
+    <add key="JCSpcode" value="238698"/>
+    <!--用户名-->
+    <add key="JCLoginName" value="sz_hjjczx"/>
+    <!--密码-->
+    <add key="JCPassword" value="sz2015!"/>
+    <!--接入号扩展号-->
+    <add key="JCExtendAccessNum" value="2061012028025"/>
+    <!--间隔时间-->
+    <add key="time" value="10" />
+    <add key="ClientSettingsProvider.ServiceUri" value="" />
+    <!--运行时间段-->
+    <add key="timeFrom" value="2016-08-10" />
+    <add key="timeTo" value="2016-09-07" />
+    <!--每天运行时间-->
+    <add key="startTime" value="05:00:00" />
+    <add key="endTime" value="22:00:00" />
+    <!--每天运行时间-->
+    <add key="startTimeAQI" value="12:00:00" />
+    <add key="endTimeAQI" value="22:00:00" />
+    <!--用户号码-->
+    <!--<add key="mobile" value="17751106878;18068006175;17706133037;13732644188;13862239997;13812766254;18962168567;18962168561;18962168591;18936088402;13656234392;15162438295;13913198465;18915538916;15862464008;15851475371;15162481087" />-->
+    <add key="mobile" value="13160103891"/>
+    <!--用户邮件-->
+    <!--<add key="mail" value="wangzheng@sinoyd.com;dousj@sinoyd.com;pangag@sinoyd.com;lvyun@sinoyd.com" />-->
+    <add key="mail" value="xuyang@sinoyd.com" />
+    <!--非国控站点的id-->
+    <add key="yys" value="4BF8C933-7F62-44F6-A95D-9FC67DB0007E"/>
+    <add key ="zzy" value="47D8CC8C-8A0A-472D-B786-D3E401824E54"/>
+    <add key="fzgy" value="5ED74863-F4B2-411E-89A3-4CDBC31AFDB4"/>
+    <add key="lygdz" value="19b7f805-f70a-46a7-ac92-527a01c2dc9c"/>
+    <!--非国控站点是否启用的标记-->
+    <add key="yysf" value="1"/>
+    <add key ="zzyf" value="1"/>
+    <add key="fzgyf" value="1"/>
+    <add key="lygdzf" value="1"/>
+  </appSettings>
+  <system.web>
+    <membership defaultProvider="ClientAuthenticationMembershipProvider">
+      <providers>
+        <add name="ClientAuthenticationMembershipProvider" type="System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" />
+      </providers>
+    </membership>
+    <roleManager defaultProvider="ClientRoleProvider" enabled="true">
+      <providers>
+        <add name="ClientRoleProvider" type="System.Web.ClientServices.Providers.ClientRoleProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" cacheTimeout="86400" />
+      </providers>
+    </roleManager>
+  </system.web>
+</configuration>

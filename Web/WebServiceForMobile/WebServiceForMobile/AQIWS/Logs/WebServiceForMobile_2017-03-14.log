@@ -1,0 +1,31 @@
+2017-03-14 15:55:50|INFO|Return GetLoginInfo loginId=[admin] Result=[{"Login":"True","UserUid":"4ce5bed9-78bd-489f-8b3f-a830098759c4"}]
+2017-03-14 15:57:52|INFO|Return GetLoginInfo loginId=[admin] Result=[{"Login":"True","UserUid":"4ce5bed9-78bd-489f-8b3f-a830098759c4"}]
+2017-03-14 16:02:19|INFO|When GetLatestHourWQ PortId=[50] Not Query data....
+2017-03-14 16:02:19|INFO|Return GetLatestHourWQ PortId=[50] Result=[{"PortHourWQ":[]}]
+2017-03-14 16:02:40|INFO|When GetLatestHourWQ PortId=[80] Not Query data....
+2017-03-14 16:02:40|INFO|Return GetLatestHourWQ PortId=[80] Result=[{"PortHourWQ":[]}]
+2017-03-14 16:02:59|INFO|Return GetLatestHourAQIByAll PortId=[16] Result=[{"PortHourAQI":[]}]
+2017-03-14 16:03:05|INFO|Return GetLatestHourAQIByAll PortId=[0] Result=[{"PortHourAQI":[]}]
+2017-03-14 16:03:18|INFO|Return GetLatestHourAQI PortId=[0] Result=[{"PortHourAQI":[]}]
+2017-03-14 16:03:45|INFO|When GetHourConcentration PortId=[0] Not Query Data....
+2017-03-14 16:03:45|INFO|Return GetHourConcentration PortId=[0] Result=[{"HourConcentration":[]}]
+2017-03-14 16:04:34|INFO|Return GetAirClassDayStruct PortId=[16] StartTime=[2017-02-01] EndTime=[2017-02-27] Result=[{"ClassInfo":[{"Value":"17","Class":"良","Percentage":"62.96"},{"Value":"7","Class":"轻度污染","Percentage":"25.93"},{"Value":"3","Class":"优","Percentage":"11.11"}]}]
+2017-03-14 16:14:27|ERROR|When GetLoginInfo LoginId=[admin] Error: 输入字符串的格式不正确。
+2017-03-14 16:14:27|INFO|Return GetLoginInfo loginId=[admin] Result=[{"Login":"False","UserId":""}]
+2017-03-14 16:15:44|ERROR|When GetLoginInfo LoginId=[admin] Error: 输入字符串的格式不正确。
+2017-03-14 16:15:44|INFO|Return GetLoginInfo loginId=[admin] Result=[{"Login":"False","UserId":""}]
+2017-03-14 16:16:57|ERROR|When GetLoginInfo LoginId=[admin] Error: 输入字符串的格式不正确。
+2017-03-14 16:16:57|INFO|Return GetLoginInfo loginId=[admin] Result=[{"Login":"False","UserId":""}]
+2017-03-14 16:20:38|INFO|Return GetLoginInfo loginId=[admin] Result=[{"IsSuccess":"true","Data":{0}}]
+2017-03-14 16:22:07|INFO|Return GetLoginInfo loginId=[admin] Result=[{"IsSuccess":"true","Data":{{"ErrorInfo":"","MenuInfo":"0000000001110"}}}]
+2017-03-14 16:26:29|INFO|Return GetLoginInfo loginId=[admin] Result=[{"IsSuccess":"true","Data":"{0}"}]
+2017-03-14 16:32:20|INFO|Return GetLoginInfo loginId=[admin] Result=[{"IsSuccess":"true","Data":"{"ErrorInfo":"","MenuInfo":"0000000001110"}"}]
+2017-03-14 16:33:41|INFO|Return GetLoginInfo loginId=[admin] Result=[{"IsSuccess":"true","Data":{"ErrorInfo":"","MenuInfo":"0000000001110"}}]
+2017-03-14 16:35:01|INFO|Return GetLoginInfo loginId=[admin] Result=[{"Login":"False","UserId":""}]
+2017-03-14 16:42:48|INFO|Return GetLoginInfo loginId=[admin] Result=[{"IsSuccess":"false","Data":{"ErrorInfo":"密码错误","MenuInfo":""}}]
+2017-03-14 16:49:14|INFO|Return GetLoginInfo loginId=[zuoning] Result=[{"IsSuccess":"false","Data":{"ErrorInfo":"密码错误","MenuInfo":""}}]
+2017-03-14 16:49:28|INFO|Return GetLoginInfo loginId=[zuoning] Result=[{"IsSuccess":"false","Data":{"ErrorInfo":"密码错误","MenuInfo":""}}]
+2017-03-14 16:51:42|INFO|Return GetLoginInfo loginId=[zuoning] Result=[{"IsSuccess":"false","Data":{"ErrorInfo":"没有权限","MenuInfo":""}}]
+2017-03-14 16:57:02|INFO|Return GetLoginInfo loginId=[zuoning] Result=[{"IsSuccess":"false","Data":{"ErrorInfo":"没有权限","MenuInfo":""}}]
+2017-03-14 17:02:27|INFO|Return GetLoginInfo loginId=[admin] Result=[{"Login":"True","UserUid":"4ce5bed9-78bd-489f-8b3f-a830098759c4"}]
+2017-03-14 17:03:01|INFO|Return GetLoginInfo loginId=[admin] Result=[{"IsSuccess":"true","Data":{"ErrorInfo":"","MenuInfo":"1111111111111"}}]

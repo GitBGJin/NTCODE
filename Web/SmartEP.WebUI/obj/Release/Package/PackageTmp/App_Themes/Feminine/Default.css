@@ -1,0 +1,1367 @@
+/*Main*/
+
+html, body, form {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /*background-color: #FFFBFF;*/
+    background-color: white;
+    font-family: Arial;
+    font-size: 12px;
+}
+
+.ScrollStyle {
+    scrollbar-base-color: #535353;
+    scrollbar-track-color: black;
+    scrollbar-face-color: #535353;
+    scrollbar-highlight-color: #535353;
+    scrollbar-shadow-color: #535353;
+    scrollbar-3dlight-color: #55A157;
+    scrollbar-darkshadow-color: #55A157;
+    scrollbar-arrow-color: black;
+}
+
+.PointerCursor {
+    cursor: pointer;
+}
+
+.InstrumentContainer {
+    width: 180px;
+    height: 300px;
+    overflow: auto;
+    overflow: hidden; /* Required to workaround IE rendering bug*/
+    position: fixed;
+    right: 29px;
+    z-index: 100000;
+}
+
+.FactorContainer {
+    width: 180px;
+    height: 300px;
+    overflow: auto;
+    overflow: hidden; /* Required to workaround IE rendering bug*/
+    position: fixed;
+    right: 29px;
+    z-index: 100000;
+}
+/*toopTip部分*/
+div.ToolTipContainer {
+    width: 100%;
+}
+
+    div.ToolTipContainer div.LostHoursContainer {
+        background-color: #F9F9F9;
+        padding: 10px;
+        color: #aaa;
+    }
+
+        div.ToolTipContainer div.LostHoursContainer span.item {
+            padding: 5px;
+        }
+
+        div.ToolTipContainer div.LostHoursContainer span.alteritem {
+            padding: 5px;
+        }
+
+    div.ToolTipContainer span.Title {
+        color: #000000;
+    }
+
+table.CommonTable {
+}
+
+    table.CommonTable td {
+    }
+
+        table.CommonTable td.TdSpecial1 {
+        }
+
+        table.CommonTable td.TdSpecial {
+        }
+
+.OFCCHKBoxListColor {
+    color: #ffffff;
+}
+
+table.tableBG {
+    background-image: url('images/tableBG.jpg');
+    background-repeat: repeat-x;
+}
+
+
+.multipleRowsColumns .rcbItem, .multipleRowsColumns .rcbHovered {
+    float: left;
+    margin: 0 1px;
+    min-height: 13px;
+    overflow: hidden;
+    padding: 0px 5px 0px 5px;
+    width: 100px;
+}
+
+.commonBgColor {
+    background-color: #F9F9F9;
+}
+
+.multipleRowsColumns .rcbItem, .multipleRowsColumns .rcbHovered {
+    float: left;
+    margin: 0 1px;
+    min-height: 13px;
+    overflow: hidden;
+    padding: 0px 5px 0px 5px;
+    width: 100px;
+}
+
+div.CommonContainer {
+    height: 100%;
+}
+
+div.CommonContainerScroll {
+    overflow: hidden;
+}
+
+
+/*首页元件Table*/
+* {
+    scrollbar-face-color: #CECBCE; /*scrollbar-highlight-color: #7f95be;*/
+    scrollbar-3dlight-color: #7f95be; /*scrollbar-darkshadow-color: #6b96c9;*/
+    scrollbar-shadow-color: #6b96c9;
+    scrollbar-arrow-color: #ffffff;
+    scrollbar-track-color: #F3F3F3;
+}
+/*首页元件Table:开始*/
+table.PageFront {
+    background-color: #F9F9F9;
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+    overflow: hidden;
+}
+/*首页元件Table:结束*/
+#slidingDiv1 {
+    background-color: #535353;
+}
+
+DIV.RadTreeView_RightMenuInstrument .rtMinus {
+    background-color: #8bbe06;
+}
+
+/*首页元件-数据采集情况*/
+.Recent24HourRecords, .Recent24HourRecords a {
+    text-decoration: underline;
+    color: #535353;
+}
+
+div.DataInfoHeader {
+    /*background-image: url(images/GridHeaderBg2.png);*/
+    background-repeat: repeat;
+}
+
+    div.DataInfoHeader table {
+        width: 100%;
+        border: 0px;
+    }
+
+        div.DataInfoHeader table tr {
+            height: 25px;
+        }
+
+    div.DataInfoHeader tr.HeaderOrFooter {
+        border: 0px;
+        background-image: url('images/RadGridHeaderBg.png');
+        background-position: 0px 0pt;
+        background-color: #85b4de;
+        color: #ffffff;
+    }
+
+    div.DataInfoHeader table tr.Title {
+        height: 28px;
+    }
+
+    div.DataInfoHeader table td {
+        font-size: 14px;
+        text-align: center;
+        empty-cells: show;
+    }
+
+    div.DataInfoHeader table.GetData td /*数据采集情况*/ {
+        width: 15%;
+    }
+
+    div.DataInfoHeader table.RecentData td /*最新数据*/ {
+        width: 12.5%;
+    }
+
+    div.DataInfoHeader table.GetData td.SpecialItem /*数据采集情况*/ {
+        width: 20%;
+    }
+
+    div.DataInfoHeader table.RecentData td.SpecialItem /*最新数据*/ {
+        width: 12.5%;
+    }
+
+    div.DataInfoHeader table.GetData td.LightBg {
+        background-image: url('images/lightbg.png');
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+div.DataInfoBody {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+    div.DataInfoBody table {
+        border-bottom: 1px solid #eef5fb;
+        border-collapse: collapse;
+    }
+
+        div.DataInfoBody table tr {
+            background-image: none;
+        }
+
+        div.DataInfoBody table td {
+            border-bottom: 1px solid #ffffff;
+            border-bottom-style: solid;
+            border-collapse: collapse;
+        }
+
+        div.DataInfoBody table tr.AlterItem {
+            background-color: #e3f0f8;
+        }
+
+        div.DataInfoBody table tr:hover {
+            background-color: #eeeeee;
+        }
+
+div.DataInfoHeader table tr.DataFooter {
+    background-image: none;
+}
+
+    div.DataInfoHeader table tr.DataFooter td {
+        background-image: none;
+    }
+
+.PointerCursor {
+    cursor: pointer;
+}
+
+/*显示图表*/
+div.ChartObj {
+    background-color: #F9F9F9;
+    display: none;
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.ChartPopup {
+    position: fixed;
+    top: 100px;
+    right: 0px;
+    cursor: pointer;
+    display: inline-block;
+    width: 18px;
+    overflow: hidden;
+}
+
+
+/*Liuzt 临时使用 Begin=====================================================================================================================================================*/
+.TdSpecial1 {
+    /* 	border-right: 0px solid #eae4d8; 	border-top: 0px solid #eae4d8; 	border-left: 0px solid #eae4d8; 	border-bottom: 0px solid #eae4d8; */
+    border-collapse: collapse;
+    background-color: #d6f0e7;
+    text-align: center;
+    color: #000000;
+    font-size: 14px;
+}
+
+.TdSpecial {
+    /* 	border-right: 0px  #181818; 	border-top: 0px  #181818; 	border-left: 0px  #181818; 	border-bottom: 0px  #181818; */
+    border-collapse: collapse;
+    background-color: #d6f0e7;
+    padding-left: 2px;
+    color: #000000;
+    font-size: 14px;
+}
+/*Liuzt 临时使用End=======================================================================================================================================================*/
+
+
+.multipleRowsColumns .rcbItem, .multipleRowsColumns .rcbHovered {
+    float: left;
+    margin: 0 1px;
+    min-height: 13px;
+    overflow: hidden;
+    padding: 0px 5px 0px 5px;
+    width: 100px;
+}
+
+/*Top*/
+.FormTop {
+    height: 70px;
+    background-image: url(images/BG.jpg);
+    background-repeat: repeat;
+}
+
+#DivTopContent {
+    width: 100%;
+    height: 100%;
+}
+
+#DivTopLogo {
+    float: left;
+    left: 0;
+    width: 99px;
+    height: 70px;
+    line-height: 70px;
+    overflow: hidden;
+    background-image: url(images/Logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#DivTopLinks {
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    vertical-align: middle;
+    text-align: center;
+    float: right;
+    margin-top: 20px;
+    margin-right: 15px;
+}
+
+    #DivTopLinks span {
+        margin: 0 15px;
+    }
+
+        #DivTopLinks span a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+            #DivTopLinks span a:hover {
+                color: #82b707;
+            }
+
+#DivTopCaption {
+    margin-left: 15px;
+    float: left;
+    vertical-align: bottom;
+    font-size: 28px;
+    font-weight: bold;
+    color: #82b707;
+    height: 70px;
+    line-height: 100%;
+    overflow: hidden;
+    width: 518px;
+    background-image: url(images/Caption.png);
+    background-position: left 20px;
+    background-repeat: no-repeat;
+}
+
+#DivTopPersonInfo {
+    position: absolute;
+    top: 0;
+    float: right;
+    right: 35px;
+    width: 90px;
+    height: 20px;
+    background-image: url(images/PersonInfo.jpg);
+    background-repeat: no-repeat;
+}
+
+#DivTopSkin {
+    float: right;
+    margin-right: 10px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+
+#DivTopSlid {
+    float: right;
+    overflow: hidden;
+    margin-top: 30px;
+    background-color: Black;
+}
+/*Left*/
+
+.CustomCssClass .rpText {
+    text-align: center;
+}
+
+.TbMainLeftTop_TR1 {
+    height: 20px;
+    background-image: url(images/Top_BG1.jpg);
+}
+
+.TbMainLeftTop_TR1_TD {
+    color: #8bbe06;
+}
+
+#DivLeft {
+    background-image: url(images/BG.jpg);
+    background-repeat: repeat;
+}
+
+/*right*/
+#tableMain {
+    border: 0px solid Red;
+    z-index: 100000;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+}
+
+#trMainRightTop {
+    width: 100%;
+    height: 28px;
+    background-image: url(images/Top_BG.jpg);
+    background-repeat: repeat-x;
+}
+
+
+#tdMainRightLogo {
+    background-repeat: no-repeat;
+    background-image: url(images/Top_Logo.jpg);
+}
+
+#tdMainRightCaption {
+    text-align: left;
+    vertical-align: middle;
+    color: #8bbe06;
+    font-family: 幼圆;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#tdMainRightSlid {
+    text-align: right;
+    vertical-align: middle;
+}
+
+#tdMainRightContent {
+    text-align: left;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.PointContainer {
+    width: 180px;
+    height: 500px;
+    overflow: auto;
+    overflow: hidden; /* Required to workaround IE rendering bug*/
+    position: absolute;
+    right: 29px;
+    z-index: 100000;
+    display: block;
+}
+
+.TunnelTitle {
+    color: #000;
+}
+
+Table.rcHeaderStyle .rcWeek th {
+    text-align: center;
+}
+
+/*左菜单开始*/
+DIV.PanelBar1_CustomCss {
+}
+
+    DIV.PanelBar1_CustomCss .rpRootGroup, DIV.PanelBar1_CustomCss .rpRootGroup .rpItem, DIV.PanelBar1_CustomCss .rpRootGroup .rpItem .rpSlide {
+        border: 0px;
+    }
+
+    DIV.PanelBar1_CustomCss .rpItem .rpGroup .rpLink {
+        background-image: none;
+    }
+
+        DIV.PanelBar1_CustomCss .rpItem .rpGroup .rpLink:hover {
+            background-image: none;
+        }
+
+    DIV.PanelBar1_CustomCss .rpItem .rpGroup .rpSelected {
+        background-image: none;
+    }
+
+    DIV.PanelBar1_CustomCss .rpItem .rpGroup .rpExpanded {
+        background-image: none;
+    }
+
+    DIV.PanelBar1_CustomCss .rpItem .rpGroup .rpDisabled {
+        background-image: none;
+    }
+
+        DIV.PanelBar1_CustomCss .rpItem .rpGroup .rpDisabled:hover {
+            background-image: none;
+        }
+
+    DIV.PanelBar1_CustomCss .rpItem .rpGroup .rpLink .rpOut {
+        background-image: none;
+    }
+
+    DIV.PanelBar1_CustomCss .rpRootGroup .rpLink {
+        background-position: 0px 0px;
+        background-image: url('images/leftmenubg.png');
+        background-repeat: repeat-x;
+        height: 32px;
+        background-color: transparent;
+    }
+
+    DIV.PanelBar1_CustomCss .rpRootGroup .rpFirst:hover {
+        background-position: 0px 0px;
+        background-image: url('images/leftmenubg.png');
+        background-repeat: repeat-y;
+    }
+
+    DIV.PanelBar1_CustomCss .rpRootGroup .rpFirst {
+        background-image: url('images/leftmenubg.png');
+        background-repeat: repeat-x;
+        /*display:none;*/
+    }
+
+    DIV.PanelBar1_CustomCss .rpRootGroup .rpLevel1 .rpLink {
+        /*padding-top:41px;*/
+    }
+
+    DIV.PanelBar1_CustomCss .rpSlide .rpGroup .rpFirst {
+        background-image: none;
+        background-color: transparent;
+    }
+
+    DIV.PanelBar1_CustomCss .rpRootGroup .rpSlide .rpFirst:hover {
+        background-image: none;
+        background-color: transparent;
+        background-repeat: no-repeat;
+    }
+
+    DIV.PanelBar1_CustomCss .rpRootGroup .rpLink:hover {
+        background-position: 0px 0px;
+        background-image: url('images/leftmenubg_selected.png');
+        background-repeat: repeat-x;
+    }
+
+    DIV.PanelBar1_CustomCss .rpRootGroup .rpSelected, DIV.PanelBar1_CustomCss .rpRootGroup .rpSelected:hover {
+        background-position: 0px 0px;
+        background-image: url('images/leftmenubg_selected.png');
+        background-repeat: repeat-x;
+        border: 0px;
+        height: 32px;
+    }
+
+    DIV.PanelBar1_CustomCss .rpRootGroup .rpLink .rpOut {
+        border: 0px;
+    }
+
+    Div.PanelBar1_CustomCss .rpRootGroup .rpText {
+        text-align: center;
+        display: block;
+    }
+
+    DIV.PanelBar1_CustomCss .rpExpandable {
+        border: 0px;
+    }
+
+    DIV.PanelBar1_CustomCss .rpRootGroup .rpItem .rpExpanded {
+        background-image: url('images/leftmenubg_selected.png');
+    }
+
+    DIV.PanelBar1_CustomCss .rpItem .rpSlide .rpGroup .rpItem {
+        height: 25px;
+        vertical-align: middle;
+    }
+
+        DIV.PanelBar1_CustomCss .rpItem .rpSlide .rpGroup .rpItem .rpOut {
+            height: 25px;
+            vertical-align: middle;
+        }
+
+            DIV.PanelBar1_CustomCss .rpItem .rpSlide .rpGroup .rpItem .rpOut .rpText {
+                vertical-align: middle;
+                margin: 0px;
+                /*padding-top:5px;*/
+            }
+
+    DIV.PanelBar1_CustomCss .rpRootGroup .rpItem .rpOut {
+        vertical-align: middle;
+        margin: 0px;
+        padding-top: 0px;
+    }
+
+    DIV.PanelBar1_CustomCss .rpRootGroup .rpGroup .rpItem .rpOut {
+        vertical-align: middle;
+        margin: 0px;
+        padding-top: 0px;
+    }
+
+    DIV.PanelBar1_CustomCss .rpItem .rpSlide .rpGroup .rpItem .rpSelected .rpOut {
+        /*background-image: url('images/leftmenubg_selected.png');*/
+        background-repeat: no-repeat;
+        background-color: #52CF00;
+    }
+
+    DIV.PanelBar1_CustomCss .rpRootGroup .rpImage {
+        margin-top: 0px;
+    }
+
+    DIV.PanelBar1_CustomCss .rpItem .rpSlide {
+        background-image: url('images/leftmenuslidebg.png');
+        background-position: top center;
+        background-repeat: repeat;
+        /*background-color: #0183be;*/
+    }
+
+        DIV.PanelBar1_CustomCss .rpItem .rpSlide .rpLevel1 {
+            background-color: transparent;
+        }
+
+    DIV.PanelBar1_CustomCss .rpRootGroup .rpLink .rpOut .rpText {
+        margin-top: 2px;
+        color: #FFFFFF; /*margin-left: 30px;*/
+        font-size: 16px;
+        font-family: 'Microsoft YaHei',SimSun;
+    }
+
+    DIV.PanelBar1_CustomCss .rpRootGroup .rpGroup .rpLink .rpOut .rpText {
+        margin-top: 2px;
+        color: #FFFFFF; /*margin-left: 30px;*/
+        font-size: 14px;
+        font-family: 'Microsoft YaHei',SimSun;
+    }
+    /*隐藏大图标开始*/
+
+    DIV.PanelBar1_CustomCss .rpItem .rpSlide .rpLevel1 .rpItem {
+        /*height: 85px;
+        *+height: 80px;*/
+    }
+
+    DIV.PanelBar1_CustomCss ul.rpLevel1 .rpItem .rpOut .rpText {
+        /*padding-top: 65px;
+        *+padding-top:0px;*/
+    }
+
+    DIV.PanelBar1_CustomCss .rpItem .rpSlide .rpLevel1 .rpItem a.rpLink {
+        display: block;
+        height: 100%;
+        text-align: center;
+    }
+
+    DIV.PanelBar1_CustomCss .rpLevel1 .rpItem .rpOut {
+        display: block;
+    }
+
+        DIV.PanelBar1_CustomCss .rpLevel1 .rpItem .rpOut .rpImage {
+            height: 36px;
+            margin-left: 55px;
+            margin-top: 10px;
+        }
+
+        DIV.PanelBar1_CustomCss .rpLevel1 .rpItem .rpOut .rpExpandHandle {
+            clear: both;
+        }
+
+        DIV.PanelBar1_CustomCss .rpLevel1 .rpItem .rpOut .rpText {
+            display: block;
+            text-align: center;
+            margin-left: 25px;
+            padding-left: 0px;
+        }
+
+    /*隐藏大图标结束*/
+    DIV.PanelBar1_CustomCss .rpRootGroup .rpFirst .rpLink {
+        background-image: url('images/leftmenubg2.png');
+        background-repeat: no-repeat;
+        background-color: transparent;
+    }
+
+    DIV.PanelBar1_CustomCss .rpRootGroup .rpItem .rpOut .rpExpandHandle {
+        background-image: url('images/arrow.gif');
+        background-position: 0px 4px;
+        background-repeat: no-repeat;
+    }
+
+    DIV.PanelBar1_CustomCss .rpRootGroup .rpItem .rpOut .rpExpandHandleHovered {
+        background-image: url('images/arrow_expand.gif');
+        background-position: 0px 4px;
+        background-repeat: no-repeat;
+    }
+
+    DIV.PanelBar1_CustomCss .rpRootGroup .rpItem .rpExpanded .rpOut .rpExpandHandle {
+        background-image: url('images/arrow_expand.gif');
+        background-position: 0px 4px;
+        background-repeat: no-repeat;
+    }
+
+    DIV.PanelBar1_CustomCss .rpItem .rpGroup .rpLink {
+        height: 18px;
+        overflow: hidden;
+    }
+
+    DIV.PanelBar1_CustomCss .rpItem .rpGroup .rpText:hover {
+        color: #FFCC66;
+    }
+/*左菜单结束*/
+
+/*RadGrid*/
+div.RadGrid_Customer {
+    border: 0px;
+    background-color: #F9F9F9;
+}
+
+    div.RadGrid_Customer .rgFooter td {
+        background-color: #DFDCD7;
+    }
+
+    div.RadGrid_Customer .rgHeader {
+        border-right: 0px;
+        border-top: 0px;
+        border-spacing: 1px;
+        border-color: #CECBCE;
+        border-style: solid;
+        background-image: url('images/RadGridHeaderBg.png');
+        background-position: 0px 0pt;
+        background-color: #F7F3F7;
+        color: #444444;
+    }
+
+    div.RadGrid_Customer .rgHeaderDiv {
+        margin-right: 0px;
+    }
+
+    div.RadGrid_Customer .rgHeaderWrapper .rgHeaderDiv {
+        background-image: none;
+        background: none;
+        margin-right: 0px;
+    }
+
+    div.RadGrid_Customer .rgHeaderDiv .rgSorted {
+        background-color: #EEF6FB;
+    }
+
+    div.RadGrid_Customer .rgHeaderDiv .rgSortAsc {
+        background-image: url('images/sort_asc.png');
+        height: 16px;
+        width: 16px;
+        background-repeat: repeat-y;
+    }
+
+    div.RadGrid_Customer .rgHeaderDiv .rgSortDesc {
+        background-image: url('images/sort_desc.png');
+        height: 16px;
+        width: 16px;
+        background-repeat: repeat-y;
+    }
+
+    div.RadGrid_Customer .rgHeader a {
+        color: #6190CD;
+    }
+
+    div.RadGrid_Customer .rgFilterRow {
+        background-color: #EDF4FE;
+    }
+
+    div.RadGrid_Customer .rgRow {
+        background-color: #FFFFFF;
+    }
+
+        div.RadGrid_Customer .rgRow:hover {
+            background-color: #DEEDF1;
+        }
+
+    div.RadGrid_Customer .rgDataDiv .rgRow .rgSorted {
+        background-color: transparent;
+    }
+
+        div.RadGrid_Customer .rgDataDiv .rgRow .rgSorted:hover {
+            background-color: transparent;
+        }
+
+    div.RadGrid_Customer .rgAltRow {
+        background-color: #FAFAFA;
+    }
+
+        div.RadGrid_Customer .rgAltRow:hover {
+            background-color: #DEEDF1;
+        }
+
+    div.RadGrid_Customer .rgDataDiv .rgAltRow .rgSorted {
+        background-color: transparent;
+    }
+
+        div.RadGrid_Customer .rgDataDiv .rgAltRow .rgSorted:hover {
+            background-color: transparent;
+        }
+
+    /*完整高亮显示*/
+    div.RadGrid_Customer .rgDataDiv .rgSelectedRow {
+        background-color: #C1DDF1 !important;
+        background-image: none;
+        background: none;
+    }
+
+        div.RadGrid_Customer .rgDataDiv .rgSelectedRow .rgSorted {
+            background-color: #C1DDF1 !important;
+            background-image: none;
+            background: none;
+        }
+
+    div.RadGrid_Customer .rgMasterTable .rgSelectedRow {
+        background-color: #C1DDF1 !important;
+        background-image: none;
+        background: none;
+    }
+
+    div.RadGrid_Customer .rgRow td, div.RadGrid_Customer .rgAltRow td, div.RadGrid_Customer .rgFooter td {
+        border-style: solid;
+        border-width: 0px;
+    }
+
+    div.RadGrid_Customer .rgRow td, div.RadGrid_Customer .rgAltRow td {
+        border-bottom: 1px solid #fff;
+    }
+
+    div.RadGrid_Customer tr.rgNoRecords {
+        /*background-color: #FFFBFF;*/
+        background-color: white;
+    }
+
+    div.RadGrid_Customer .rgPager {
+        background-color: #F7F3F7;
+        background-image: none;
+        border-color: #F7F3F7;
+        color: black;
+    }
+
+        div.RadGrid_Customer .rgPager .rgStatus {
+            background-color: #F7F3F7;
+            background-image: none;
+            border-color: #D6D3D6;
+        }
+
+        div.RadGrid_Customer .rgPager .rgPagerCell {
+            background-color: #F7F3F7;
+            background-image: none;
+            border-color: #D6D3D6;
+        }
+
+        div.RadGrid_Customer .rgPager .rgInfoPart {
+            background-color: #F7F3F7;
+            background-image: none;
+            border-color: #F7F3F7;
+            color: black;
+        }
+
+    div.RadGrid_Customer .rgHeaderWrapper {
+        border-top-width: 1px;
+        border-top-color: #D6D3D6;
+        border-bottom-width: 1px;
+        border-bottom-color: #D6D3D6;
+        background-color: #F7F3F7;
+        font-weight: bold;
+        background-image: none;
+    }
+
+    div.RadGrid_Customer .rgHeader {
+        font-weight: bold;
+    }
+
+    div.RadGrid_Customer .rgDataDiv {
+        border-width: 0px;
+        /*background-color: #FFFBFF;*/
+        background-color: white;
+    }
+
+    div.RadGrid_Customer .rgCommandRow .rgCommandCell {
+        border-width: 0px;
+    }
+
+    div.RadGrid_Customer THEAD .rgCommandRow .rgCommandCell {
+        /*border-width: 0px;*/
+        border-color: #157FCC;
+        border-left-width: 1px;
+        border-top-width: 1px;
+        border-right-width: 1px;
+        border-style: solid;
+    }
+
+    div.RadGrid_Customer .rgCommandRow {
+        border-width: 0px;
+        background-color: #DFEAF2;
+        background-image: none;
+    }
+
+    div.RadGrid_Customer .rgMasterTable {
+        font-size: 12px;
+    }
+
+div.RadGrid_Customer2 table {
+    border-collapse: separate;
+    border-bottom: 1px solid #fff;
+}
+
+    div.RadGrid_Customer2 table th, div.RadGrid_Customer2 table td, div.RadGrid_Customer2 .rgHeader {
+        border-top: 1px solid #fff;
+        border-left: 1px solid #fff;
+    }
+/*RadGrid中的HeaderCell*/
+div.RadGrid_Customer th.rgHeader_Customer {
+    background-image: none;
+    background-color: #85b4de;
+    color: #fff;
+    font-weight: normal;
+}
+
+div.RadGrid_Customer .RadToolBar_Customer .rtbOuter {
+    border-width: 0px;
+    background-color: #DFEAF2;
+}
+
+.RadToolBar_Customer .rtbOuter .rtbMiddle {
+    background-image: none;
+    background-color: #DFEAF2;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+}
+
+    .RadToolBar_Customer .rtbOuter .rtbMiddle .rtbMid {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .RadToolBar_Customer .rtbOuter .rtbMiddle .rtbIn {
+        background-color: #DFEAF2;
+        color: white;
+        background-image: none;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+        .RadToolBar_Customer .rtbOuter .rtbMiddle .rtbIn .rtbText {
+            /*background-color: #1886CE;*/
+            width: 0px;
+        }
+
+    .RadToolBar_Customer .rtbOuter .rtbMiddle .rtbItemHovered {
+        /*background-color: #104192;*/
+        color: white;
+        background-image: none;
+    }
+
+        .RadToolBar_Customer .rtbOuter .rtbMiddle .rtbItemHovered .rtbIn {
+            /*background-color: #104192;*/
+            color: white;
+            background-image: none;
+        }
+
+        .RadToolBar_Customer .rtbOuter .rtbMiddle .rtbItemHovered .rtbWrap {
+            /*background-color: #104192;*/
+            color: white;
+            background-image: none;
+        }
+
+        .RadToolBar_Customer .rtbOuter .rtbMiddle .rtbItemHovered .rtbText {
+            /*background-color: #104192;*/
+            color: white;
+            background-image: none;
+        }
+
+        .RadToolBar_Customer .rtbOuter .rtbMiddle .rtbItemHovered .rtbOut {
+            /*background-color: #104192;*/
+            color: white;
+            background-image: none;
+        }
+
+            .RadToolBar_Customer .rtbOuter .rtbMiddle .rtbItemHovered .rtbOut .rtbMid {
+                /*background-color: #104192;*/
+                color: white;
+                background-image: none;
+            }
+
+    .RadToolBar_Customer .rtbOuter .rtbMiddle .rtbItem {
+        margin: 0px 2px;
+    }
+
+    .RadToolBar_Customer .rtbOuter .rtbMiddle .rtbText {
+        width: 0px;
+    }
+
+/*RadDock*/
+div.RadDock_Customer table.rdTable tr.rdTop {
+}
+
+    div.RadDock_Customer table.rdTable tr.rdTop td.rdLeft {
+        background-image: url('images/RadDockTopLeft.gif');
+        background-position: 0pt 0pt;
+        background-repeat: no-repeat;
+        height: 37px;
+    }
+
+    div.RadDock_Customer table.rdTable tr.rdTop td.rdRight {
+        background-image: url('images/RadDockTopRight.gif');
+        background-position: right 0pt;
+        background-repeat: no-repeat;
+    }
+
+    div.RadDock_Customer table.rdTable tr.rdTop td.rdCenter {
+        background-image: url('images/RadDockTopMiddle.gif');
+        background-position: 0pt 0pt;
+        background-repeat: repeat-x;
+        height: 37px;
+    }
+
+div.RadDock_Customer .rdTitleBar em {
+    color:#fff;
+    padding-left: 10px;
+    font-size: 16px;
+    font-family:'Microsoft YaHei',SimSun;
+    padding-top: 3px;
+}
+
+div.RadDock_Customer table.rdTable tr.rdMiddle td.rdRoundedCorner {
+    background-color: #F9F9F9;
+    background-image: none;
+}
+
+div.RadDock_Customer table.rdTable tr.rdMiddle td.rdRight {
+    background-image: url('images/RadDockMiddleRight.gif');
+    background-repeat: repeat-y;
+    background-position: right top;
+}
+
+div.RadDock_Customer table.rdTable tr.rdMiddle td.rdLeft {
+    background-image: url('images/RadDockMiddleLeft.gif');
+    background-repeat: repeat-y;
+    background-position: left top;
+}
+
+div.RadDock_Customer table.rdTable tr.rdBottom td.rdLeft {
+    background-image: url('images/RadDockLeftCorner.gif');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+div.RadDock_Customer table.rdTable tr.rdBottom td.rdRight {
+    background-image: url('images/RadDockRightCorner.gif');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+div.RadDock_Customer table.rdTable tr.rdBottom td.rdCenter {
+    background-image: url('images/RadDockBottomCenter.gif');
+    background-repeat: repeat-x;
+    background-position: left bottom;
+}
+/*RadTabStrip*/
+div.RadTabStrip_Customer {
+    margin-top: 2px;
+    margin-bottom: 1px;
+    background-color: transparent;
+    border-bottom: 1px solid #66CCCC;
+}
+
+    div.RadTabStrip_Customer div.rtsLevel1 {
+        background-color: transparent;
+        background-image: none;
+        background-color: #F9F9F9;
+    }
+
+    div.RadTabStrip_Customer .rtsLink {
+        background-color: transparent;
+        background-image: none;
+    }
+
+    div.RadTabStrip_Customer div.rtsLevel1 .rtsLink {
+        background-image: url('images/RadTabStripOuterCommon.gif');
+        background-repeat: no-repeat;
+        background-position: left top;
+    }
+
+        div.RadTabStrip_Customer div.rtsLevel1 .rtsLink .rtsOut {
+            background-image: url('images/RadTabStripInnerCommon.gif');
+            background-position: right top;
+            background-repeat: no-repeat;
+        }
+
+        div.RadTabStrip_Customer div.rtsLevel1 .rtsLink .rtsIn {
+            background-image: url('images/RadTabStripInnerCommonM.gif');
+            background-position: left top;
+            background-repeat: repeat-x;
+        }
+
+        div.RadTabStrip_Customer div.rtsLevel1 .rtsLink:hover {
+            background-image: url('images/RadTabStripOuter.gif');
+            background-repeat: no-repeat;
+            background-position: left top;
+        }
+
+            div.RadTabStrip_Customer div.rtsLevel1 .rtsLink:hover .rtsOut {
+                background-image: url('images/RadTabStripInner.gif');
+                background-position: right top;
+            }
+
+            div.RadTabStrip_Customer div.rtsLevel1 .rtsLink:hover .rtsIn {
+                background-image: url('images/RadTabStripInnerM.gif');
+                background-position: left top;
+                background-repeat: repeat-x;
+            }
+
+    div.RadTabStrip_Customer div.rtsLevel1 .rtsSelected {
+        background-image: url('images/RadTabStripOuter.gif');
+        background-repeat: no-repeat;
+        background-position: left top;
+    }
+
+        div.RadTabStrip_Customer div.rtsLevel1 .rtsSelected .rtsOut {
+            background-image: url('images/RadTabStripInner.gif');
+            background-position: right top;
+        }
+
+        div.RadTabStrip_Customer div.rtsLevel1 .rtsSelected .rtsIn {
+            background-image: url('images/RadTabStripInnerM.gif');
+            background-position: left top;
+            background-repeat: repeat-x;
+        }
+
+    div.RadTabStrip_Customer .rtsTxt {
+        font-size: 14px;
+    }
+
+    div.RadTabStrip_Customer div.rtsLevel1 .rtsSelected:hover {
+        background-image: url('images/RadTabStripOuterCommon.gif');
+        background-repeat: no-repeat;
+        background-position: left top;
+    }
+
+        div.RadTabStrip_Customer div.rtsLevel1 .rtsSelected:hover .rtsOut {
+            background-image: url('images/RadTabStripInnerCommon.gif');
+            background-position: right top;
+            background-repeat: repeat-x;
+        }
+
+        div.RadTabStrip_Customer div.rtsLevel1 .rtsSelected:hover .rtsIn {
+            background-image: url('images/RadTabStripInnerCommonM.gif');
+            background-position: left top;
+            background-repeat: repeat-x;
+        }
+
+    div.RadTabStrip_Customer div.rtsLevel1 .rtsLI {
+        /*margin-left:2px;*/
+    }
+
+/*右边顶部开始*/
+div.RightContentMainContainer {
+    height: 100%;
+}
+
+div.RightTopInfo {
+    height: 24px;
+    background-image: url(images/currentpositionbg.png);
+    background-repeat: repeat-x;
+}
+
+    div.RightTopInfo div.icon {
+        display: none;
+    }
+
+    div.RightTopInfo div.title {
+        padding-left: 35px;
+        float: left;
+        height: 24px;
+        line-height: 24px;
+        width: 533px;
+        vertical-align: middle;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        background-image: url('images/currentpositionleft.png');
+        background-repeat: no-repeat;
+    }
+
+    div.RightTopInfo div.right {
+        height: 100%;
+        background-image: url('images/currentpositionright.png');
+        background-repeat: no-repeat;
+        background-position: right;
+        text-align: right;
+        overflow: hidden;
+    }
+
+        div.RightTopInfo div.right span.goback {
+            padding: 0px 20px;
+            background-image: url('images/back.png');
+            background-repeat: no-repeat;
+            background-position: left center;
+            display: inline-block;
+            padding-top: 7px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        div.RightTopInfo div.right span.fullscreen {
+            padding: 0px 20px;
+            background-image: url('images/full.png');
+            background-repeat: no-repeat;
+            background-position: left center;
+            display: inline-block;
+            padding-top: 7px;
+            color: #fff;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+div.RightContentContainer {
+    width:100%;
+    height:100%;
+}
+/*右边顶部结束*/
+
+/*右边弹出式菜单：开始*/
+#RightPopupMenu {
+    position: fixed;
+    right: -184px;
+    top: 80px;
+    z-index: 1000;
+    display: none;
+}
+
+/*右边弹出式菜单：结束*/
+
+
+/*开始：一般Table的样式*/
+
+table.Table_Customer {
+    /*border: 1px solid #FFFFFF;*/
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+    table.Table_Customer td.border {
+        border-bottom: 1px solid #fff;
+    }
+
+    table.Table_Customer td {
+        color: #000;
+        border-left: 1px solid #FFFFFF;
+        border-right: 1px solid #ffffff;
+        border-top: 1px solid #ffffff;
+    }
+
+    table.Table_Customer tr.btnTitle {
+        background-color: #DFEAF2;
+        height: 35px;
+    }
+
+    table.Table_Customer td.header {
+        text-align: left;
+        background-color: #d2e5f4;
+        height: 25px;
+        background-image: url('images/RadGridHeaderBg.png');
+        background-position: 0px 0pt;
+        background-color: #85b4de;
+        padding-left: 10px;
+    }
+
+    table.Table_Customer td.title {
+        /*background-color: #FFFBFF;*/
+        background-color: white;
+        text-align: center;
+        /*width: 120px;*/
+        height: 25px;
+    }
+
+    table.Table_Customer td.content {
+        height: 25px;
+        background-color: white;
+        /*background-color:#FFFBFF;*/
+    }
+
+    table.Table_Customer td.btns {
+        text-align: center;
+    }
+/*结束：一般Table的样式*/
+
+
+DIV.ReportViewer1 ReportViewer1_ReportToolbar {
+}
+
+/*div.RadWindow_Customer .rwShadow .rwTitleRow .rwTitlebar{
+    background-image:url('images/leftmenubg2.PNG');
+}
+div.RadWindow_Customer .rwShadow .rwTitleRow .rwTitlebar{
+    background-image:url('images/leftmenubg2.PNG');
+}*/
+
+.RadPivotGrid_Customer .rpgTable .rpgRowsZone {
+    background-image: url('images/RadGridHeaderBg.png');
+    background-color: #F7F3F7;
+}
+
+.RadPivotGrid_Customer .rpgRowsZone {
+    background-image: url('images/RadGridHeaderBg.png');
+    background-color: #F7F3F7;
+}
+
+.RadPivotGrid_Customer .rpgTable .rpgContentZone .rpgContentZoneDiv TH {
+    background-image: url('images/RadGridHeaderBg.png');
+    background-color: #F7F3F7;
+}
+
+.RadPivotGrid_Customer .rpgTable .rpgRowHeader {
+    background-color: #FFFFFF;
+}
+
+.RadPivotGrid_Customer .rpgTable .rpgRowHeaderTotal {
+    background-color: #FFFBFF;
+}
+
+.RadPivotGrid_Customer .rpgTable .rpgRowHeaderGrandTotal {
+    background-color: #FFFBFF;
+}
+
+.RadPivotGrid_Customer .rpgTable .rpgRowGrandTotalDataCell {
+    background-color: #FFFBFF;
+}
+
+.RadPivotGrid_Customer .rpgTable .rpgRowTotalDataCell {
+    background-color: #FFFBFF;
+}
+
+.RadPivotGrid_Customer .rpgTable .rpgFieldItem {
+    background-color: #F7F3F7;
+    background-image: none;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+}
+
+    .RadPivotGrid_Customer .rpgTable .rpgFieldItem:hover {
+        background-color: #F7F3F7;
+        background-image: none;
+        border-top-width: 0px;
+        border-left-width: 0px;
+        border-right-width: 0px;
+        border-bottom-width: 0px;
+    }
+
+.RadPivotGrid_Customer .rpgTable .rpgRowsZone {
+    background-color: #F7F3F7;
+}
+
+.RadSiteMap_Customer .rsmTwoLevels .rsmItem .rsmTemplate {
+    background-color:#E1EAF2;
+}
+
+.RadSiteMap_Customer .rsmColumnWrap .rsmItem .rsmTemplate {
+    background-color:white;
+}

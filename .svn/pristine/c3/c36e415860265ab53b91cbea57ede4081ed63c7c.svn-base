@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DomainModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="2.0.0.0" name="BaseDataModel" namespace="BaseDataModel" showPropertiesCompartment="true" xmlns="http://www.telerik.com/ORM">
+  <orm:orm name="BaseDataModel" backend="mssql" xmlns:orm="http://tempuri.org/ORM">
+    <orm:namespace name="BaseDataModel" default="true">
+      <orm:class name="TB_NotifySend" uniqueId="19de0309-de14-4118-bcf7-326b79dc2ef0">
+        <orm:table name="TB_NotifySend" schema="AlarmNotify" />
+        <orm:identity>
+          <orm:single-field field-name="_notifySendUid" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_id" property="Id" behavior="readwrite" uniqueId="0a7cca46-11e9-41d3-96e2-71f039794fae" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="id" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_rowGuid" property="RowGuid" behavior="readwrite" uniqueId="c81a0296-b1bc-464b-a74b-73c796fbc309" type="System.String">
+          <orm:column name="RowGuid" sql-type="nvarchar" nullable="false" length="50" scale="0" has-default-value="true" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_notifySendUid" property="NotifySendUid" behavior="readwrite" uniqueId="f40a24a3-d94c-4c5f-a1b0-5ebb4bde3d80" type="System.String">
+          <orm:column name="NotifySendUid" sql-type="nvarchar" nullable="false" length="50" scale="0" primary-key="true" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_applicationUid" property="ApplicationUid" behavior="readwrite" uniqueId="0c2b4a01-c59b-42d6-8ce3-6c43e95f6ebf" type="System.String">
+          <orm:column name="ApplicationUid" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_notifyTypeUid" property="NotifyTypeUid" behavior="readwrite" uniqueId="1b8b60f6-af1d-4224-859c-2da8655ee4b6" type="System.String">
+          <orm:column name="NotifyTypeUid" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_sendUserUid" property="SendUserUid" behavior="readwrite" uniqueId="c1b2b961-a893-4b2f-8ac0-32b5cce54168" type="System.String">
+          <orm:column name="SendUserUid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_sendUserName" property="SendUserName" behavior="readwrite" uniqueId="66ab4c5c-4f3f-4311-8b25-1f6572af9d3d" type="System.String">
+          <orm:column name="SendUserName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_receiveUserUids" property="ReceiveUserUids" behavior="readwrite" uniqueId="a908768c-009d-47ea-b60c-6030840add27" type="System.String">
+          <orm:column name="ReceiveUserUids" sql-type="nvarchar" nullable="true" length="4000" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_receiveUserNames" property="ReceiveUserNames" behavior="readwrite" uniqueId="8d7d0f9b-d4e9-4837-96fe-348dec916c0d" type="System.String">
+          <orm:column name="ReceiveUserNames" sql-type="nvarchar" nullable="true" length="4000" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_receiveUserAddresses" property="ReceiveUserAddresses" behavior="readwrite" uniqueId="ad02d26b-b029-4970-8257-34c75dbea6c5" type="System.String">
+          <orm:column name="ReceiveUserAddresses" sql-type="nvarchar" nullable="true" length="4000" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_mailUserUids" property="MailUserUids" behavior="readwrite" uniqueId="7b691cf1-9d49-45f3-9511-b17002880cfe" type="System.String">
+          <orm:column name="MailUserUids" sql-type="nvarchar" nullable="true" length="4000" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_mailUserAddresses" property="MailUserAddresses" behavior="readwrite" uniqueId="f08df2ad-9f28-425c-be0d-9cb09d77c1f9" type="System.String">
+          <orm:column name="MailUserAddresses" sql-type="nvarchar" nullable="true" length="4000" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_sendTitle" property="SendTitle" behavior="readwrite" uniqueId="c8bff652-4c3e-484c-b9e2-13e08f0d3714" type="System.String">
+          <orm:column name="SendTitle" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_sendContent" property="SendContent" behavior="readwrite" uniqueId="ba97ec84-207a-4582-beb1-437d91e54fa9" type="System.String">
+          <orm:column name="SendContent" sql-type="ntext" nullable="true" length="0" scale="0" ado-type="UnicodeStringInfiniteLength" />
+        </orm:field>
+        <orm:field name="_sendDateTime" property="SendDateTime" behavior="readwrite" uniqueId="732eb7e9-54ac-49ca-af9b-fb4d19d6cd26" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="SendDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_sendFinishOrNot" property="SendFinishOrNot" behavior="readwrite" uniqueId="deb006be-4d25-4804-b0b6-55840f0cb857" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="SendFinishOrNot" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="_handleFinishOrNot" property="HandleFinishOrNot" behavior="readwrite" uniqueId="6b4bf8be-3648-4f22-8a30-f536938e98b8" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="HandleFinishOrNot" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="_handleUrl" property="HandleUrl" behavior="readwrite" uniqueId="5aa6eae4-38a7-4b62-a1bf-0026dea51381" type="System.String">
+          <orm:column name="HandleUrl" sql-type="nvarchar" nullable="true" length="200" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_handleDateTime" property="HandleDateTime" behavior="readwrite" uniqueId="ba9ef5b0-f99e-47b9-ad29-1b82a3e79908" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="HandleDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_showOrNot" property="ShowOrNot" behavior="readwrite" uniqueId="f7f4a351-ae6b-4943-945f-d3e59a0704ff" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="ShowOrNot" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="_description" property="Description" behavior="readwrite" uniqueId="496360c2-f6e7-4505-a36f-47306d2273f6" type="System.String">
+          <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_orderByNum" property="OrderByNum" behavior="readwrite" uniqueId="15f20d74-8497-4370-b204-2cc3d9426a83" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_creatUser" property="CreatUser" behavior="readwrite" uniqueId="2c4dc3e0-d367-4e39-9c2a-5b3c4ad6a999" type="System.String">
+          <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_creatDateTime" property="CreatDateTime" behavior="readwrite" uniqueId="1969aa5c-c6e9-4a5e-a309-f5f4adb6c205" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_updateUser" property="UpdateUser" behavior="readwrite" uniqueId="0edae4d7-a617-43c1-b2f6-d83ff065767b" type="System.String">
+          <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_updateDateTime" property="UpdateDateTime" behavior="readwrite" uniqueId="f4d003fb-2514-415f-b687-91fb154a70ca" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_rowStatus" property="RowStatus" behavior="readwrite" uniqueId="fb631bf2-ab17-4200-a6a3-84e711dc1d30" type="System.String">
+          <orm:column name="RowStatus" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_itemCode" property="ItemCode" behavior="readwrite" uniqueId="e3b855f7-de45-4aed-96d3-aa6f6ee7afc5" type="System.String">
+          <orm:column name="ItemCode" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_itemName" property="ItemName" behavior="readwrite" uniqueId="fb94efdb-2195-4364-9799-a1be3bf881a7" type="System.String">
+          <orm:column name="ItemName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_itemValue" property="ItemValue" behavior="readwrite" uniqueId="a0bca149-054e-4ae3-9f7b-e333358e1a5b" type="System.String">
+          <orm:column name="ItemValue" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_monitoringPointUid" property="MonitoringPointUid" behavior="readwrite" uniqueId="689be6ed-4567-4087-89a9-2f6927c14c6a" type="System.String">
+          <orm:column name="MonitoringPointUid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_primaryPollutant" property="PrimaryPollutant" behavior="readwrite" uniqueId="f9a003b6-fdb3-43d7-a82a-827a4e7a9879" type="System.String">
+          <orm:column name="PrimaryPollutant" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+      </orm:class>
+      <orm:class name="TB_CreatAlarm" uniqueId="d658b19d-2cff-40b0-b718-8b25a0cfd6db">
+        <orm:table name="TB_CreatAlarm" schema="AlarmNotify" />
+        <orm:identity>
+          <orm:single-field field-name="_alarmUid" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_alarmUid" property="AlarmUid" behavior="readwrite" uniqueId="2544aaf6-2291-47da-8505-3c0cf744f811" type="System.String">
+          <orm:column name="AlarmUid" sql-type="nvarchar" nullable="false" length="50" scale="0" primary-key="true" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_applicationUid" property="ApplicationUid" behavior="readwrite" uniqueId="fc31ebd4-23a5-4e9b-8557-169161742dcb" type="System.String">
+          <orm:column name="ApplicationUid" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_monitoringPointUid" property="MonitoringPointUid" behavior="readwrite" uniqueId="d3e96b89-8e15-4dba-8735-50ff13e2f12e" type="System.String">
+          <orm:column name="MonitoringPointUid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_recordDateTime" property="RecordDateTime" behavior="readwrite" uniqueId="88de32f8-290c-447c-afac-84e6819886c0" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="RecordDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_alarmSourceUid" property="AlarmSourceUid" behavior="readwrite" uniqueId="8077d444-00cf-436a-bc50-5c2907d8ca1f" type="System.String">
+          <orm:column name="AlarmSourceUid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_alarmEventUid" property="AlarmEventUid" behavior="readwrite" uniqueId="23122327-0057-44a8-94bc-19031e347035" type="System.String">
+          <orm:column name="AlarmEventUid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_alarmGradeUid" property="AlarmGradeUid" behavior="readwrite" uniqueId="9a5468c2-0a74-4238-acbf-dc33077a4478" type="System.String">
+          <orm:column name="AlarmGradeUid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_dataTypeUid" property="DataTypeUid" behavior="readwrite" uniqueId="a70b1e7e-2660-455f-9848-78b9e9a9dab2" type="System.String">
+          <orm:column name="DataTypeUid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_content" property="Content" behavior="readwrite" uniqueId="334b72c2-6887-44fb-9fb9-a164009a32a9" type="System.String">
+          <orm:column name="Content" sql-type="nvarchar" nullable="true" length="2000" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_itemCode" property="ItemCode" behavior="readwrite" uniqueId="9b73eac1-666e-4f7b-bf25-12c4fc573383" type="System.String">
+          <orm:column name="ItemCode" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_itemName" property="ItemName" behavior="readwrite" uniqueId="e28c322d-0188-4581-bf39-b912ba07b3ae" type="System.String">
+          <orm:column name="ItemName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_itemValue" property="ItemValue" behavior="readwrite" uniqueId="5d0a92ae-23e9-4b38-ac13-f0f1e3b0ed21" type="System.String">
+          <orm:column name="ItemValue" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_orderByNum" property="OrderByNum" behavior="readwrite" uniqueId="38e37770-d205-446b-8e61-92d4b2270b80" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_description" property="Description" behavior="readwrite" uniqueId="bb49df45-6769-4e9b-ba43-b83cf72b2a58" type="System.String">
+          <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_creatUser" property="CreatUser" behavior="readwrite" uniqueId="2e6888ad-1cc1-47b8-9a11-d5c3015c3112" type="System.String">
+          <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_creatDateTime" property="CreatDateTime" behavior="readwrite" uniqueId="3ae531ae-83fd-4ff2-9f4d-dafb31390721" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_updateUser" property="UpdateUser" behavior="readwrite" uniqueId="42ddd1c1-7a21-4fe4-a7cb-01410a61ee4a" type="System.String">
+          <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_updateDateTime" property="UpdateDateTime" behavior="readwrite" uniqueId="d89ec16c-4c66-4f55-a2d0-f250d8df11cc" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_dealFlag" property="DealFlag" behavior="readwrite" uniqueId="0605ad78-2c3c-44a1-a8fd-88baacd6f37b" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="dealFlag" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="_dealMan" property="DealMan" behavior="readwrite" uniqueId="746f8613-d0e7-4bea-b9d4-6cc4faccb190" type="System.String">
+          <orm:column name="dealMan" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_dealTime" property="DealTime" behavior="readwrite" uniqueId="c1ace467-7835-4c82-b34f-1f0c3b655961" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="dealTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_dealContent" property="DealContent" behavior="readwrite" uniqueId="c0c76d15-9db1-4710-b3d2-0a78bf68b618" type="System.String">
+          <orm:column name="dealContent" sql-type="nvarchar" nullable="true" length="2000" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_auditFlag" property="AuditFlag" behavior="readwrite" uniqueId="eb6455d4-4442-4505-a599-a3e772e993c8" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="auditFlag" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="_auditMan" property="AuditMan" behavior="readwrite" uniqueId="c52dc777-2488-4dc6-bc50-87fae5df3f58" type="System.String">
+          <orm:column name="auditMan" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_auditTime" property="AuditTime" behavior="readwrite" uniqueId="5516c34f-e7a9-403e-aaf7-e50dbc82d537" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="auditTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_auditContent" property="AuditContent" behavior="readwrite" uniqueId="ce6e3035-183b-4cbb-82e5-65a83674aa61" type="System.String">
+          <orm:column name="auditContent" sql-type="nvarchar" nullable="true" length="2000" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_sendContent" property="SendContent" behavior="readwrite" uniqueId="f8927619-db60-4245-a739-2b698465ae54" type="System.String">
+          <orm:column name="SendContent" sql-type="nvarchar" nullable="true" length="2000" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_monitoringPoint" property="MonitoringPoint" behavior="readwrite" uniqueId="27c2d4fc-532d-4df2-a71f-afb0d27b9e41" type="System.String">
+          <orm:column name="MonitoringPoint" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:index name="Index_Alarm">
+          <orm:columnMapping>
+            <orm:column name="AlarmUid" sql-type="nvarchar" nullable="false" length="50" scale="0" primary-key="true" ado-type="UnicodeStringVariableLength" />
+          </orm:columnMapping>
+          <orm:columnMapping>
+            <orm:column name="ApplicationUid" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+          </orm:columnMapping>
+          <orm:columnMapping>
+            <orm:column name="MonitoringPointUid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="RecordDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+          <orm:columnMapping>
+            <orm:column name="AlarmEventUid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+          </orm:columnMapping>
+          <orm:columnMapping>
+            <orm:column name="ItemCode" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:class>
+    </orm:namespace>
+    <orm:schema schema="AlarmNotify">
+      <orm:table name="TB_NotifySend" schema="AlarmNotify">
+        <orm:column name="id" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="RowGuid" sql-type="nvarchar" nullable="false" length="50" scale="0" has-default-value="true" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="NotifySendUid" sql-type="nvarchar" nullable="false" length="50" scale="0" primary-key="true" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ApplicationUid" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="NotifyTypeUid" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="SendUserUid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="SendUserName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ReceiveUserUids" sql-type="nvarchar" nullable="true" length="4000" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ReceiveUserNames" sql-type="nvarchar" nullable="true" length="4000" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ReceiveUserAddresses" sql-type="nvarchar" nullable="true" length="4000" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="MailUserUids" sql-type="nvarchar" nullable="true" length="4000" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="MailUserAddresses" sql-type="nvarchar" nullable="true" length="4000" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="SendTitle" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="SendContent" sql-type="ntext" nullable="true" length="0" scale="0" ado-type="UnicodeStringInfiniteLength" />
+        <orm:column name="SendDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="SendFinishOrNot" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="HandleFinishOrNot" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="HandleUrl" sql-type="nvarchar" nullable="true" length="200" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="HandleDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="ShowOrNot" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="RowStatus" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ItemCode" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ItemName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ItemValue" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="MonitoringPointUid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PrimaryPollutant" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+      </orm:table>
+      <orm:table name="TB_CreatAlarm" schema="AlarmNotify">
+        <orm:column name="AlarmUid" sql-type="nvarchar" nullable="false" length="50" scale="0" primary-key="true" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ApplicationUid" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="MonitoringPointUid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="RecordDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="AlarmSourceUid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="AlarmEventUid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="AlarmGradeUid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="DataTypeUid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="Content" sql-type="nvarchar" nullable="true" length="2000" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ItemCode" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ItemName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ItemValue" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="dealFlag" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="dealMan" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="dealTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="dealContent" sql-type="nvarchar" nullable="true" length="2000" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="auditFlag" sql-type="bit" nullable="true" length="0" scale="0" ado-type="Bit" />
+        <orm:column name="auditMan" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="auditTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="auditContent" sql-type="nvarchar" nullable="true" length="2000" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="SendContent" sql-type="nvarchar" nullable="true" length="2000" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="MonitoringPoint" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:index name="Index_Alarm">
+          <orm:columnMapping>
+            <orm:column name="AlarmUid" sql-type="nvarchar" nullable="false" length="50" scale="0" primary-key="true" ado-type="UnicodeStringVariableLength" />
+          </orm:columnMapping>
+          <orm:columnMapping>
+            <orm:column name="ApplicationUid" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+          </orm:columnMapping>
+          <orm:columnMapping>
+            <orm:column name="MonitoringPointUid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="RecordDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+          <orm:columnMapping>
+            <orm:column name="AlarmEventUid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+          </orm:columnMapping>
+          <orm:columnMapping>
+            <orm:column name="ItemCode" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:table>
+    </orm:schema>
+    <orm:relational-naming-settings>
+      <orm:source-strategy>Property</orm:source-strategy>
+      <orm:remove-camel-case>False</orm:remove-camel-case>
+    </orm:relational-naming-settings>
+  </orm:orm>
+  <ModelSettings xmlns="">
+    <AppConfigConnectionPropertyName>AMS_BaseDataSZConnection</AppConfigConnectionPropertyName>
+    <AppConfigConnectionString>server=192.168.90.188;database=AMS_BaseDataSZ;uid=sa;pwd=sinoyd123!@#</AppConfigConnectionString>
+    <NamingSettings>
+      <ClassRules>
+        <CaseMode>PascalCase</CaseMode>
+        <PluralizationMode>Singularize</PluralizationMode>
+      </ClassRules>
+      <FieldRules>
+        <AddPrefix>_</AddPrefix>
+        <CaseMode>CamelCase</CaseMode>
+      </FieldRules>
+      <PropertyRules>
+        <CaseMode>PascalCase</CaseMode>
+      </PropertyRules>
+      <NavigationPropertyRules />
+    </NamingSettings>
+    <CodeGenerationSettings>
+      <GenerateDataAnnotationAttributes>true</GenerateDataAnnotationAttributes>
+      <OutputProjectName>Model</OutputProjectName>
+      <OutputProjectFolder>Properties\</OutputProjectFolder>
+      <OutputPath>Properties\</OutputPath>
+      <MappingDefinitionType>Xml</MappingDefinitionType>
+    </CodeGenerationSettings>
+    <SchemaUpdateSettings />
+    <BackendConfigurationSettings>
+      <BackendConfiguration>
+        <Backend>MsSql</Backend>
+        <ProviderName>System.Data.SqlClient</ProviderName>
+      </BackendConfiguration>
+    </BackendConfigurationSettings>
+  </ModelSettings>
+  <Types>
+    <DomainClass Id="19de0309-de14-4118-bcf7-326b79dc2ef0" name="TB_NotifySend" namespace="BaseDataModel" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="f40a24a3-d94c-4c5f-a1b0-5ebb4bde3d80" name="NotifySendUid" label="NotifySendUid : String" kind="Persistent" identity="true" fieldName="_notifySendUid" />
+      <Property Id="0c2b4a01-c59b-42d6-8ce3-6c43e95f6ebf" name="ApplicationUid" label="ApplicationUid : String" kind="Persistent" fieldName="_applicationUid" />
+      <Property Id="1969aa5c-c6e9-4a5e-a309-f5f4adb6c205" name="CreatDateTime" type="DateTime" label="CreatDateTime : DateTime" nullable="true" kind="Persistent" fieldName="_creatDateTime" />
+      <Property Id="2c4dc3e0-d367-4e39-9c2a-5b3c4ad6a999" name="CreatUser" label="CreatUser : String" kind="Persistent" fieldName="_creatUser" />
+      <Property Id="496360c2-f6e7-4505-a36f-47306d2273f6" name="Description" label="Description : String" kind="Persistent" fieldName="_description" />
+      <Property Id="ba9ef5b0-f99e-47b9-ad29-1b82a3e79908" name="HandleDateTime" type="DateTime" label="HandleDateTime : DateTime" nullable="true" kind="Persistent" fieldName="_handleDateTime" />
+      <Property Id="6b4bf8be-3648-4f22-8a30-f536938e98b8" name="HandleFinishOrNot" type="Boolean" label="HandleFinishOrNot : Boolean" nullable="true" kind="Persistent" fieldName="_handleFinishOrNot" />
+      <Property Id="5aa6eae4-38a7-4b62-a1bf-0026dea51381" name="HandleUrl" label="HandleUrl : String" kind="Persistent" fieldName="_handleUrl" />
+      <Property Id="0a7cca46-11e9-41d3-96e2-71f039794fae" name="Id" type="Int32" label="Id : Int32" nullable="true" kind="Persistent" fieldName="_id" />
+      <Property Id="e3b855f7-de45-4aed-96d3-aa6f6ee7afc5" name="ItemCode" label="ItemCode : String" kind="Persistent" fieldName="_itemCode" />
+      <Property Id="fb94efdb-2195-4364-9799-a1be3bf881a7" name="ItemName" label="ItemName : String" kind="Persistent" fieldName="_itemName" />
+      <Property Id="a0bca149-054e-4ae3-9f7b-e333358e1a5b" name="ItemValue" label="ItemValue : String" kind="Persistent" fieldName="_itemValue" />
+      <Property Id="f08df2ad-9f28-425c-be0d-9cb09d77c1f9" name="MailUserAddresses" label="MailUserAddresses : String" kind="Persistent" fieldName="_mailUserAddresses" />
+      <Property Id="7b691cf1-9d49-45f3-9511-b17002880cfe" name="MailUserUids" label="MailUserUids : String" kind="Persistent" fieldName="_mailUserUids" />
+      <Property Id="689be6ed-4567-4087-89a9-2f6927c14c6a" name="MonitoringPointUid" label="MonitoringPointUid : String" kind="Persistent" fieldName="_monitoringPointUid" />
+      <Property Id="1b8b60f6-af1d-4224-859c-2da8655ee4b6" name="NotifyTypeUid" label="NotifyTypeUid : String" kind="Persistent" fieldName="_notifyTypeUid" />
+      <Property Id="15f20d74-8497-4370-b204-2cc3d9426a83" name="OrderByNum" type="Int32" label="OrderByNum : Int32" nullable="true" kind="Persistent" fieldName="_orderByNum" />
+      <Property Id="f9a003b6-fdb3-43d7-a82a-827a4e7a9879" name="PrimaryPollutant" label="PrimaryPollutant : String" kind="Persistent" fieldName="_primaryPollutant" />
+      <Property Id="ad02d26b-b029-4970-8257-34c75dbea6c5" name="ReceiveUserAddresses" label="ReceiveUserAddresses : String" kind="Persistent" fieldName="_receiveUserAddresses" />
+      <Property Id="8d7d0f9b-d4e9-4837-96fe-348dec916c0d" name="ReceiveUserNames" label="ReceiveUserNames : String" kind="Persistent" fieldName="_receiveUserNames" />
+      <Property Id="a908768c-009d-47ea-b60c-6030840add27" name="ReceiveUserUids" label="ReceiveUserUids : String" kind="Persistent" fieldName="_receiveUserUids" />
+      <Property Id="c81a0296-b1bc-464b-a74b-73c796fbc309" name="RowGuid" label="RowGuid : String" kind="Persistent" fieldName="_rowGuid" />
+      <Property Id="fb631bf2-ab17-4200-a6a3-84e711dc1d30" name="RowStatus" label="RowStatus : String" kind="Persistent" fieldName="_rowStatus" />
+      <Property Id="ba97ec84-207a-4582-beb1-437d91e54fa9" name="SendContent" label="SendContent : String" kind="Persistent" fieldName="_sendContent" />
+      <Property Id="732eb7e9-54ac-49ca-af9b-fb4d19d6cd26" name="SendDateTime" type="DateTime" label="SendDateTime : DateTime" nullable="true" kind="Persistent" fieldName="_sendDateTime" />
+      <Property Id="deb006be-4d25-4804-b0b6-55840f0cb857" name="SendFinishOrNot" type="Boolean" label="SendFinishOrNot : Boolean" nullable="true" kind="Persistent" fieldName="_sendFinishOrNot" />
+      <Property Id="c8bff652-4c3e-484c-b9e2-13e08f0d3714" name="SendTitle" label="SendTitle : String" kind="Persistent" fieldName="_sendTitle" />
+      <Property Id="66ab4c5c-4f3f-4311-8b25-1f6572af9d3d" name="SendUserName" label="SendUserName : String" kind="Persistent" fieldName="_sendUserName" />
+      <Property Id="c1b2b961-a893-4b2f-8ac0-32b5cce54168" name="SendUserUid" label="SendUserUid : String" kind="Persistent" fieldName="_sendUserUid" />
+      <Property Id="f7f4a351-ae6b-4943-945f-d3e59a0704ff" name="ShowOrNot" type="Boolean" label="ShowOrNot : Boolean" nullable="true" kind="Persistent" fieldName="_showOrNot" />
+      <Property Id="f4d003fb-2514-415f-b687-91fb154a70ca" name="UpdateDateTime" type="DateTime" label="UpdateDateTime : DateTime" nullable="true" kind="Persistent" fieldName="_updateDateTime" />
+      <Property Id="0edae4d7-a617-43c1-b2f6-d83ff065767b" name="UpdateUser" label="UpdateUser : String" kind="Persistent" fieldName="_updateUser" />
+    </DomainClass>
+    <DomainClass Id="d658b19d-2cff-40b0-b718-8b25a0cfd6db" name="TB_CreatAlarm" namespace="BaseDataModel" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="2544aaf6-2291-47da-8505-3c0cf744f811" name="AlarmUid" label="AlarmUid : String" kind="Persistent" identity="true" fieldName="_alarmUid" />
+      <Property Id="23122327-0057-44a8-94bc-19031e347035" name="AlarmEventUid" label="AlarmEventUid : String" kind="Persistent" fieldName="_alarmEventUid" />
+      <Property Id="9a5468c2-0a74-4238-acbf-dc33077a4478" name="AlarmGradeUid" label="AlarmGradeUid : String" kind="Persistent" fieldName="_alarmGradeUid" />
+      <Property Id="8077d444-00cf-436a-bc50-5c2907d8ca1f" name="AlarmSourceUid" label="AlarmSourceUid : String" kind="Persistent" fieldName="_alarmSourceUid" />
+      <Property Id="fc31ebd4-23a5-4e9b-8557-169161742dcb" name="ApplicationUid" label="ApplicationUid : String" kind="Persistent" fieldName="_applicationUid" />
+      <Property Id="ce6e3035-183b-4cbb-82e5-65a83674aa61" name="AuditContent" label="AuditContent : String" kind="Persistent" fieldName="_auditContent" />
+      <Property Id="eb6455d4-4442-4505-a599-a3e772e993c8" name="AuditFlag" type="Boolean" label="AuditFlag : Boolean" nullable="true" kind="Persistent" fieldName="_auditFlag" />
+      <Property Id="c52dc777-2488-4dc6-bc50-87fae5df3f58" name="AuditMan" label="AuditMan : String" kind="Persistent" fieldName="_auditMan" />
+      <Property Id="5516c34f-e7a9-403e-aaf7-e50dbc82d537" name="AuditTime" type="DateTime" label="AuditTime : DateTime" nullable="true" kind="Persistent" fieldName="_auditTime" />
+      <Property Id="334b72c2-6887-44fb-9fb9-a164009a32a9" name="Content" label="Content : String" kind="Persistent" fieldName="_content" />
+      <Property Id="3ae531ae-83fd-4ff2-9f4d-dafb31390721" name="CreatDateTime" type="DateTime" label="CreatDateTime : DateTime" nullable="true" kind="Persistent" fieldName="_creatDateTime" />
+      <Property Id="2e6888ad-1cc1-47b8-9a11-d5c3015c3112" name="CreatUser" label="CreatUser : String" kind="Persistent" fieldName="_creatUser" />
+      <Property Id="a70b1e7e-2660-455f-9848-78b9e9a9dab2" name="DataTypeUid" label="DataTypeUid : String" kind="Persistent" fieldName="_dataTypeUid" />
+      <Property Id="c0c76d15-9db1-4710-b3d2-0a78bf68b618" name="DealContent" label="DealContent : String" kind="Persistent" fieldName="_dealContent" />
+      <Property Id="0605ad78-2c3c-44a1-a8fd-88baacd6f37b" name="DealFlag" type="Boolean" label="DealFlag : Boolean" nullable="true" kind="Persistent" fieldName="_dealFlag" />
+      <Property Id="746f8613-d0e7-4bea-b9d4-6cc4faccb190" name="DealMan" label="DealMan : String" kind="Persistent" fieldName="_dealMan" />
+      <Property Id="c1ace467-7835-4c82-b34f-1f0c3b655961" name="DealTime" type="DateTime" label="DealTime : DateTime" nullable="true" kind="Persistent" fieldName="_dealTime" />
+      <Property Id="bb49df45-6769-4e9b-ba43-b83cf72b2a58" name="Description" label="Description : String" kind="Persistent" fieldName="_description" />
+      <Property Id="9b73eac1-666e-4f7b-bf25-12c4fc573383" name="ItemCode" label="ItemCode : String" kind="Persistent" fieldName="_itemCode" />
+      <Property Id="e28c322d-0188-4581-bf39-b912ba07b3ae" name="ItemName" label="ItemName : String" kind="Persistent" fieldName="_itemName" />
+      <Property Id="5d0a92ae-23e9-4b38-ac13-f0f1e3b0ed21" name="ItemValue" label="ItemValue : String" kind="Persistent" fieldName="_itemValue" />
+      <Property Id="d3e96b89-8e15-4dba-8735-50ff13e2f12e" name="MonitoringPointUid" label="MonitoringPointUid : String" kind="Persistent" fieldName="_monitoringPointUid" />
+      <Property Id="38e37770-d205-446b-8e61-92d4b2270b80" name="OrderByNum" type="Int32" label="OrderByNum : Int32" nullable="true" kind="Persistent" fieldName="_orderByNum" />
+      <Property Id="88de32f8-290c-447c-afac-84e6819886c0" name="RecordDateTime" type="DateTime" label="RecordDateTime : DateTime" nullable="true" kind="Persistent" fieldName="_recordDateTime" />
+      <Property Id="f8927619-db60-4245-a739-2b698465ae54" name="SendContent" label="SendContent : String" kind="Persistent" fieldName="_sendContent" />
+      <Property Id="d89ec16c-4c66-4f55-a2d0-f250d8df11cc" name="UpdateDateTime" type="DateTime" label="UpdateDateTime : DateTime" nullable="true" kind="Persistent" fieldName="_updateDateTime" />
+      <Property Id="42ddd1c1-7a21-4fe4-a7cb-01410a61ee4a" name="UpdateUser" label="UpdateUser : String" kind="Persistent" fieldName="_updateUser" />
+      <Property Id="27c2d4fc-532d-4df2-a71f-afb0d27b9e41" name="MonitoringPoint" label="MonitoringPoint : String" kind="Persistent" fieldName="_monitoringPoint" />
+    </DomainClass>
+  </Types>
+  <domainContext>
+    <domainModelHasDomainContext Id="1aa320f1-d911-4d45-adb2-b65c2eb27757">
+      <domainContainer name="BaseDataModel" namespace="BaseDataModel" showPropertiesCompartment="true">
+        <entitySetProperty name="TB_NotifySends" namespace="BaseDataModel" type="TB_NotifySend" label="TB_NotifySends : IQueryable&lt;BaseDataModel.TB_NotifySend&gt;" />
+        <entitySetProperty name="TB_CreatAlarms" namespace="BaseDataModel" type="TB_CreatAlarm" label="TB_CreatAlarms : IQueryable&lt;BaseDataModel.TB_CreatAlarm&gt;" />
+      </domainContainer>
+    </domainModelHasDomainContext>
+  </domainContext>
+</DomainModel>

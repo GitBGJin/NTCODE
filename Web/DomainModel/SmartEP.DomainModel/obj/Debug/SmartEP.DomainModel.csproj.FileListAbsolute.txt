@@ -1,0 +1,11 @@
+D:\NTCODE\Web\DomainModel\SmartEP.DomainModel\bin\Debug\SmartEP.DomainModel.dll.config
+D:\NTCODE\Web\DomainModel\SmartEP.DomainModel\bin\Debug\SmartEP.DomainModel.dll
+D:\NTCODE\Web\DomainModel\SmartEP.DomainModel\bin\Debug\SmartEP.DomainModel.pdb
+D:\NTCODE\Web\DomainModel\SmartEP.DomainModel\bin\Debug\SmartEP.Core.dll
+D:\NTCODE\Web\DomainModel\SmartEP.DomainModel\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+D:\NTCODE\Web\DomainModel\SmartEP.DomainModel\bin\Debug\SmartEP.Core.pdb
+D:\NTCODE\Web\DomainModel\SmartEP.DomainModel\bin\Debug\SmartEP.Core.xml
+D:\NTCODE\Web\DomainModel\SmartEP.DomainModel\bin\Debug\Telerik.OpenAccess.35.Extensions.xml
+D:\NTCODE\Web\DomainModel\SmartEP.DomainModel\obj\Debug\SmartEP.DomainModel.csprojResolveAssemblyReference.cache
+D:\NTCODE\Web\DomainModel\SmartEP.DomainModel\obj\Debug\SmartEP.DomainModel.dll
+D:\NTCODE\Web\DomainModel\SmartEP.DomainModel\obj\Debug\SmartEP.DomainModel.pdb

@@ -1,0 +1,151 @@
+.RadFileExplorer_Silk {
+  padding-bottom: 16px;
+  /* Thumbnail view */
+  /* Thumbnail filter */ }
+  .RadFileExplorer_Silk .RadToolBar .rtbText {
+    background-image: url('FileExplorer/FileExplorerToolbarSprites.png');
+    _background-image: url('FileExplorer/FileExplorerToolbarSpritesIE6.gif') !important;
+    background-repeat: no-repeat; }
+  .RadFileExplorer_Silk span.rfeFileExtension, .RadFileExplorer_Silk div.rfeFileExtension {
+    background: transparent url('../Common/FileExplorer/FileExtensionMonoLightSprites.png') no-repeat -7px -681px;
+    _background: transparent url('../Common/FileExplorer/FileExtensionMonoLightSpritesIE6.png'); }
+  .RadFileExplorer_Silk, .RadFileExplorer_Silk .rfeAddressBox, .RadFileExplorer_Silk .rfeFilterTxt {
+    background-color: #ffffff;
+    color: #555555;
+    border-color: #d7d7d7; }
+  .RadFileExplorer_Silk .rfeAddressBox, .RadFileExplorer_Silk .rfeFilterTxt {
+    height: 26px !important; }
+  .RadFileExplorer_Silk div.selectedFileName {
+    border-top: 1px solid #d7d7d7; }
+  .RadFileExplorer_Silk .RadToolBar_Silk .rtbItem {
+    margin: 0 1px 0; }
+  .RadFileExplorer_Silk .RadToolBar_Silk .rtbWrap {
+    background-color: transparent;
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    background-image: none;
+    filter: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background-repeat: repeat-x; }
+  .RadFileExplorer_Silk .RadToolBar_Silk a.rtbWrap:hover {
+    background-image: url('../Common/Gradients/radGradientDarkV20.png');
+    _background-image: none;
+    background-color: #89D5E1;
+    background-image: -webkit-linear-gradient(top, #89D5E1 0%, #89D5E1 100%);
+    background-image: -moz-linear-gradient(top, #89D5E1 0%, #89D5E1 100%);
+    background-image: -ms-linear-gradient(top, #89D5E1 0%, #89D5E1 100%);
+    background-image: -o-linear-gradient(top, #89D5E1 0%, #89D5E1 100%);
+    background-image: linear-gradient(top, #89D5E1 0%, #89D5E1 100%);
+    border: 1px solid #68b8c5; }
+  .RadFileExplorer_Silk .RadToolBar_Silk .rtbIconOnly .rtbText {
+    margin: 5px 0 0 3px; }
+  .RadFileExplorer_Silk .RadToolBar_Silk .rtbDisabled .rtbWrap, .RadFileExplorer_Silk .RadToolBar_Silk .rtbDisabled .rtbWrap:hover {
+    background-color: transparent;
+    background-image: none;
+    filter: none;
+    border-color: transparent; }
+  .RadFileExplorer_Silk .RadToolBar_Silk .icnUpload {
+    width: auto;
+    padding: 0 2px; }
+  .RadFileExplorer_Silk .RadToolBar_Silk .icnUpload:hover {
+    color: #767676; }
+  .RadFileExplorer_Silk .RadToolBar_Silk .icnUpload .rtbOut {
+    margin-top: 5px; }
+  .RadFileExplorer_Silk .rfeThumbnailView .rfeThumbList a {
+    color: #767676;
+    background-repeat: repeat-x; }
+  .RadFileExplorer_Silk .rfeThumbnailView li.rfeThumbList a:hover, .RadFileExplorer_Silk .rfeThumbnailView li.rfeThumbList .rfeHoveredLink, .RadFileExplorer_Silk .rfeThumbnailView .rfeThumbList .rfeSelectedLink:hover {
+    background-image: url('../Common/Gradients/radGradientDarkV20.png');
+    _background-image: none;
+    background-color: #00a9c7;
+    background-image: -webkit-linear-gradient(top, #00a9c7 0%, #007d93 100%);
+    background-image: -moz-linear-gradient(top, #00a9c7 0%, #007d93 100%);
+    background-image: -ms-linear-gradient(top, #00a9c7 0%, #007d93 100%);
+    background-image: -o-linear-gradient(top, #00a9c7 0%, #007d93 100%);
+    background-image: linear-gradient(top, #00a9c7 0%, #007d93 100%);
+    border-color: #00a9c7;
+    background-position: 0 0;
+    color: #ffffff; }
+  .RadFileExplorer_Silk .rfeThumbnailView li.rfeThumbList .rfeSelectedLink, .RadFileExplorer_Silk .rfeThumbnailView li.rfeThumbList .rfeSelectedLink:hover, .RadFileExplorer_Silk .rfeThumbnailView .rfeThumbList .rfeSelectedLink {
+    background-color: #2dabc1;
+    background-image: -webkit-linear-gradient(top, #2dabc1 0%, #2dabc1 100%);
+    background-image: -moz-linear-gradient(top, #2dabc1 0%, #2dabc1 100%);
+    background-image: -ms-linear-gradient(top, #2dabc1 0%, #2dabc1 100%);
+    background-image: -o-linear-gradient(top, #2dabc1 0%, #2dabc1 100%);
+    background-image: linear-gradient(top, #2dabc1 0%, #2dabc1 100%);
+    border-color: #2292a8;
+    box-shadow: inset 0 0 4px #29a3b9;
+    background-position: 0 0;
+    color: #ffffff; }
+  .RadFileExplorer_Silk .rfeFilterContainer {
+    background-color: #ffffff; }
+  .RadFileExplorer_Silk .rfeThumbnailView span.rfeThumbTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 15px; }
+
+.RadWindow_Silk .RadUpload_rtl.RadUpload_Silk .ruRemove {
+  padding-right: 0; }
+
+.RadWindow_Silk .RadUpload_rtl.RadUpload_Silk .ruButton {
+  margin-right: 3px; }
+
+.RadWindow_Silk .rfeUploadContainer .RadUpload, .RadWindow_Silk .rfeUploadContainer .RadUploadProgressArea {
+  width: 430px; }
+
+div.rfeUploadInfoPanel {
+  background-color: #ffffff;
+  border: 1px solid #d7d7d7; }
+
+#ImagePreviewToolBar.RadToolBar_Silk .rtbItem {
+  margin: 0 1px 0; }
+
+#ImagePreviewToolBar.RadToolBar_Silk .rtbWrap {
+  background-color: transparent;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  background-image: none;
+  filter: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background-repeat: repeat-x; }
+
+#ImagePreviewToolBar.RadToolBar_Silk a.rtbWrap:hover {
+  background-image: url('../Common/Gradients/radGradientDarkV20.png');
+  _background-image: none;
+  background-color: #89D5E1;
+  background-image: -webkit-linear-gradient(top, #89D5E1 0%, #89D5E1 100%);
+  background-image: -moz-linear-gradient(top, #89D5E1 0%, #89D5E1 100%);
+  background-image: -ms-linear-gradient(top, #89D5E1 0%, #89D5E1 100%);
+  background-image: -o-linear-gradient(top, #89D5E1 0%, #89D5E1 100%);
+  background-image: linear-gradient(top, #89D5E1 0%, #89D5E1 100%);
+  border: 1px solid #68b8c5; }
+
+#ImagePreviewToolBar.RadToolBar_Silk .rtbIconOnly .rtbText {
+  margin: 5px 0 0 3px; }
+
+#ImagePreviewToolBar.RadToolBar_Silk .rtbDisabled .rtbWrap, #ImagePreviewToolBar.RadToolBar_Silk .rtbDisabled .rtbWrap:hover {
+  background-color: transparent;
+  background-image: none;
+  filter: none;
+  border-color: transparent; }
+
+#ImagePreviewToolBar.RadToolBar_Silk .icnImageEditor {
+  width: auto;
+  padding: 0 2px; }
+
+#ImagePreviewToolBar.RadToolBar_Silk .icnImageEditor:hover, #ImagePreviewToolBar.RadToolBar_Silk .rtbDisabled .rtbWrap {
+  color: #767676; }
+
+#ImagePreviewToolBar.RadToolBar_Silk .icnImageEditor .rtbText {
+  margin-top: 7px; }
+
+.RadForm_Silk .imagePreview {
+  height: 300px; }
+
+.RadForm_Silk .imagePreviewer div#propertiesPage {
+  height: 358px !important; }
+

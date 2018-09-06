@@ -1,0 +1,57 @@
+Time:    2017/8/30 11:54:07
+Action:  数据异常
+Message: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebServiceForData.WebServiceForData.GetAllUsingInstruments() 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 928
+-----------------------------------------------------------
+
+Time:    2017/8/30 11:55:17
+Action:  数据异常
+Message: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebServiceForData.WebServiceForData.GetAllUsingInstruments() 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 928
+-----------------------------------------------------------
+
+Time:    2017/8/30 11:56:04
+Action:  数据异常
+Message: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebServiceForData.WebServiceForData.GetAllUsingInstruments() 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 928
+-----------------------------------------------------------
+
+Time:    2017/8/30 14:17:53
+Action:  数据异常
+Message: System.FormatException: 索引(从零开始)必须大于或等于零，且小于参数列表的大小。
+   在 System.Text.StringBuilder.AppendFormat(IFormatProvider provider, String format, Object[] args)
+   在 System.String.Format(IFormatProvider provider, String format, Object[] args)
+   在 System.String.Format(String format, Object arg0)
+   在 WebServiceForData.WebServiceForData.GetAllUsingInstruments() 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 926
+-----------------------------------------------------------
+
+Time:    2017/8/30 14:18:25
+Action:  数据异常
+Message: System.FormatException: 索引(从零开始)必须大于或等于零，且小于参数列表的大小。
+   在 System.Text.StringBuilder.AppendFormat(IFormatProvider provider, String format, Object[] args)
+   在 System.String.Format(IFormatProvider provider, String format, Object[] args)
+   在 System.String.Format(String format, Object arg0)
+   在 WebServiceForData.WebServiceForData.GetAllUsingInstruments() 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 926
+-----------------------------------------------------------
+
+Time:    2017/8/30 14:18:43
+Action:  数据异常
+Message: System.FormatException: 索引(从零开始)必须大于或等于零，且小于参数列表的大小。
+   在 System.Text.StringBuilder.AppendFormat(IFormatProvider provider, String format, Object[] args)
+   在 System.String.Format(IFormatProvider provider, String format, Object[] args)
+   在 System.String.Format(String format, Object arg0)
+   在 WebServiceForData.WebServiceForData.GetAllUsingInstruments() 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 926
+-----------------------------------------------------------
+
+Time:    2017/8/30 14:19:08
+Action:  数据异常
+Message: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebServiceForData.WebServiceForData.GetAllUsingInstruments() 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 929
+-----------------------------------------------------------
+
+Time:    2017/8/30 14:26:15
+Action:  数据异常
+Message: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebServiceForData.WebServiceForData.GetAllUsingInstruments() 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 929
+-----------------------------------------------------------
+

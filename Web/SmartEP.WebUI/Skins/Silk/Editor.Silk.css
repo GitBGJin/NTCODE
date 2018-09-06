@@ -1,0 +1,697 @@
+.Silk {
+  /* reWrapper */
+  /* common settings for .reModule, .reEditorModes and .reWrapper */
+  /* end of module */
+  /* Toolbar overrides */
+  /* reTool */
+  /* these settings will not be included in the common CSS file of RadEditor */
+  /* end of reTool_text */
+  /* add weight to the selector for IE6 so it is applied */
+  /* end of reSplitButton */
+  /* reDropdown */
+  /* Vertical mode */
+  /* end of reDropdown */
+  /* InsertTable itself is a kind of tool strip, so it must be styled as a toolstrip */
+  /* end of context menu and toolstrip */
+  /* spinbox */
+  /* end of spinbox */
+  /* DOM inspector */
+  /* end of DOM inspector */
+  /* end of expanded dropdowns */
+  /* color picker */
+  /* end of color picker */
+  /* ajax spellchecker */
+  /* ajax spellchecker */
+  /* custom links */
+  /* end of custom links */
+  /* insert table dropdown */
+  /* end of insert table dropdown */
+  /* Popup Comments */
+  /* Commnet popups */
+  /* Inline Editor */
+  /* Right to Left */ }
+  .Silk.RadEditor, .Silk.RadEditor .reModule, .Silk.RadEditor .reEditorModes, .Silk.RadEditor .reWrapper {
+    background-color: #e6e6e6;
+    font-size: 13px; }
+  .Silk .reEmptyMessage {
+    color: #b1b1b1; }
+  .Silk.RadEditor .reContentCell {
+    background-color: #ffffff; }
+  .Silk .reModule span {
+    display: inline-block;
+    zoom: 1;
+    *display: inline; }
+  .Silk.RadEditor .reEditorModes a {
+    font-size: 13px;
+    border: 1px solid transparent;
+    margin: 1px;
+    width: 90px;
+    height: 26px;
+    border-radius: 3px;
+    background-repeat: repeat-x; }
+  .Silk.RadEditor .reEditorModes a:hover {
+    background-image: url('../Common/Gradients/radGradientDarkV20.png');
+    background-color: #00a9c7;
+    background-image: -webkit-linear-gradient(top, #89d5e1 0%, #89d5e1 100%);
+    background-image: -moz-linear-gradient(top, #89d5e1 0%, #89d5e1 100%);
+    background-image: -ms-linear-gradient(top, #89d5e1 0%, #89d5e1 100%);
+    background-image: -o-linear-gradient(top, #89d5e1 0%, #89d5e1 100%);
+    background-image: linear-gradient(top, #89d5e1 0%, #89d5e1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#89d5e1', endColorstr='#89d5e1',GradientType=0 );
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    border-color: #00a9c7;
+    color: #ffffff; }
+  .Silk.RadEditor .reEditorModes a:focus, .Silk.RadEditor .reEditorModes a:active, .Silk.RadEditor a.reMode_selected, .Silk.RadEditor a.reMode_selected:hover, .Silk.reToolWrapper .reSplitButton.reTool:hover, .Silk.reToolbarWrapper .reTool.reSplitButton:hover,
+  .Silk .reToolWrapper .reTool.reSplitButton:hover,
+  .Silk .reToolbarWrapper .reTool.reSplitButton:hover,
+  .Silk .reModule .reSplitButton.reTool:hover, .Silk.reToolbarWrapper .reTool_selected, .Silk.reToolbarWrapper .reTool_selected:hover {
+    background-color: #2dabc1;
+    background-image: -webkit-linear-gradient(top, #89d5e1 0%, #89d5e1 100%);
+    background-image: -moz-linear-gradient(top, #89d5e1 0%, #89d5e1 100%);
+    background-image: -ms-linear-gradient(top, #89d5e1 0%, #89d5e1 100%);
+    background-image: -o-linear-gradient(top, #89d5e1 0%, #89d5e1 100%);
+    background-image: linear-gradient(top, #89d5e1 0%, #89d5e1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#89d5e1', endColorstr='#89d5e1',GradientType=0 );
+    background-position: 0 0 !important;
+    background-repeat: repeat-x;
+    border-color: #2292a8;
+    box-shadow: inset 0 0 4px #29a3b9;
+    color: #ffffff; }
+  .Silk a.reSpinBoxIncrease,
+  .Silk a.reSpinBoxDecrease {
+    background-image: url('Common/radActionsSprite.png'); }
+  .Silk a.reSpinBoxIncrease {
+    background-position: -20px -1022px; }
+  .Silk a.reSpinBoxDecrease {
+    background-position: -20px -1072px; }
+  .Silk.reToolWrapper .reSplitButton.reTool:hover .split_arrow,
+  .Silk .reModule .reSplitButton.reTool:hover .split_arrow {
+    background-position: -117px -63px; }
+  .Silk.RadEditor .reEditorModes a span {
+    line-height: 26px; }
+  .Silk a.reMode_design span,
+  .Silk a.reMode_selected.reMode_design span {
+    background-position: -7px -2px; }
+  .Silk a.reMode_html span,
+  .Silk a.reMode_selected.reMode_html span {
+    background-position: -7px -36px; }
+  .Silk a.reMode_preview span,
+  .Silk a.reMode_selected.reMode_preview span {
+    background-position: -7px -66px; }
+  .Silk .reResizeCell div {
+    width: 14px;
+    height: 14px;
+    background-image: url('Common/radActionsSprite.png');
+    background-position: -18px -2218px;
+    margin: 0 -1px -2px 0; }
+  .Silk .reToolbarWrapper .reToolbar li a.reSplitButton,
+  .Silk .reToolbar li a.reTool.reSplitButton {
+    width: 42px; }
+  .Silk.reToolbar li .reSplitButton .split_arrow {
+    width: 16px;
+    height: 26px;
+    background-image: url('Common/radActionsSprite.png');
+    background-position: -17px -62px;
+    margin: 10px 0 0 6px; }
+  .Silk.reToolbar li .reSplitButton:hover .split_arrow, .Silk.reToolbar li .reSplitButton:active .split_arrow, .Silk.reToolbar li .reSplitButton:focus .split_arrow {
+    background-position: -17px -62px; }
+  .Silk .reToolbarWrapper .reSplitButton.reTool:hover .split_arrow,
+  .Silk .reToolWrapper .reSplitButton.reTool:hover .split_arrow {
+    background-position: -117px -62px; }
+  .Silk .reToolbarWrapper .reSplitButton.reTool_disabled:hover .split_arrow,
+  .Silk .reToolWrapper .reSplitButton.reTool_disabled:hover .split_arrow {
+    background-position: -17px -62px; }
+  .Silk .reTool .ToggleFloatingToolbar {
+    width: 23px; }
+  .Silk .reSplitButton.reTool .split_arrow {
+    width: 16px;
+    height: 24px;
+    background-image: url('Common/radActionsSprite.png');
+    background-position: -17px -62px;
+    margin: 10px 0 0 4px; }
+  .Silk.reWrapper, .Silk.RadEditor .reContentCell, .Silk.reColorPicker, .Silk.reInsertTable, .Silk.reDropDownBody, .Silk.reCustomLinks a:hover {
+    border: 1px solid #d7d7d7; }
+  .Silk.reDropDownBody table {
+    background: transparent;
+    min-width: 100% !important; }
+  .Silk.reDropDownBody table td {
+    font-size: 13px;
+    height: 28px;
+    min-width: 28px !important;
+    color: #555555; }
+  .Silk.reCustomLinks a, .Silk.reCustomLinks a:link, .Silk.reCustomLinks a:visited {
+    border: 1px solid #fff;
+    /* should be the same as the background of the dropdown */
+    color: #767676 !important; }
+  .Silk.reCustomLinks a:hover {
+    background-color: #ffffff;
+    border: 1px solid #d7d7d7; }
+  .Silk .reTool,
+  .Silk .reToolbarWrapper .reToolbar li .reTool,
+  .Silk .reRibbonBarWrapper .reToolbar li .reTool, .Silk.RadEditor .reDialog .reTool, .Silk.RadEditor .reToolbar .reTool, .Silk.RadEditor .reModule .reTool,
+  .Silk .reToolbarWindow .reToolbar .reTool {
+    border-radius: 3px;
+    border: 1px solid transparent;
+    background-repeat: repeat-x; }
+  .Silk .reTool:hover,
+  .Silk .reToolbarWrapper .reToolbar li .reTool:hover,
+  .Silk .reRibbonBarWrapper .reToolbar li .reTool:hover, .Silk.RadEditor .reDialog .reTool:hover, .Silk.RadEditor .reToolbar .reTool:hover, .Silk.RadEditor .reModule .reTool:hover,
+  .Silk .reToolbarWindow .reToolbar .reTool:hover {
+    background-image: url('../Common/Gradients/radGradientDarkV20.png');
+    background-color: #89d5e1;
+    background-repeat: repeat-x;
+    background-image: -webkit-linear-gradient(top, #89d5e1 0%, #89d5e1 100%);
+    background-image: -moz-linear-gradient(top, #89d5e1 0%, #89d5e1 100%);
+    background-image: -ms-linear-gradient(top, #89d5e1 0%, #89d5e1 100%);
+    background-image: -o-linear-gradient(top, #89d5e1 0%, #89d5e1 100%);
+    background-image: linear-gradient(top, #89d5e1 0%, #89d5e1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#89d5e1', endColorstr='#89d5e1',GradientType=0 );
+    border: 1px solid #68b8c5;
+    background-position: 0 0 !important; }
+  .Silk .reToolbarWrapper .reToolbar li .reTool:active,
+  .Silk .reToolbarWrapper .reToolbar li .reTool:focus,
+  .Silk .reToolbarWrapper .reToolbar li .reTool_selected,
+  .Silk .reRibbonBarWrapper .reToolbar li .reTool:active,
+  .Silk .reRibbonBarWrapper .reToolbar li .reTool:focus,
+  .Silk .reRibbonBarWrapper .reToolbar li .reTool_selected, .Silk.RadEditor .reDialog .reTool:active, .Silk.RadEditor .reToolbar .reTool:active, .Silk.RadEditor .reModule .reTool:active,
+  .Silk .reToolbarWindow .reToolbar .reTool:active {
+    background-color: #c6f0f6;
+    background-repeat: repeat-x;
+    background-image: -webkit-linear-gradient(top, #c6f0f6 0%, #a7e3ed 100%);
+    background-image: -moz-linear-gradient(top, #c6f0f6 0%, #a7e3ed 100%);
+    background-image: -ms-linear-gradient(top, #c6f0f6 0%, #a7e3ed 100%);
+    background-image: -o-linear-gradient(top, #c6f0f6 0%, #a7e3ed 100%);
+    background-image: linear-gradient(top, #c6f0f6 0%, #a7e3ed 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c6f0f6', endColorstr='#a7e3ed',GradientType=0 );
+    border: 1px solid #2292a8;
+    background-position: 0 0;
+    box-shadow: inset 0 0 4px #88d6e3; }
+  .Silk .reToolbarWrapper .reToolbar li .reTool_disabled,
+  .Silk .reToolbarWrapper .reToolbar li .reTool_disabled:hover,
+  .Silk .reToolbarWrapper .reToolbar li .reTool_disabled:focus,
+  .Silk .reToolbarWrapper .reToolbar li .reTool_disabled:active, .Silk.RadEditor .reDialog .reTool_disabled:hover, .Silk.RadEditor .reToolbar .reTool_disabled:hover, .Silk.RadEditor .reModule .reTool_disabled:hover,
+  .Silk .reToolbarWindow .reToolbar .reTool_disabled:hover, .Silk.RadEditor .reDialog .reTool_disabled:active, .Silk.RadEditor .reToolbar .reTool_disabled:active, .Silk.RadEditor .reModule .reTool_disabled:active,
+  .Silk .reToolbarWindow .reToolbar .reTool_disabled:active {
+    background-image: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    box-shadow: none;
+    min-width: auto; }
+  .Silk.RadEditor.reWrapper .reSplitButton.reTool {
+    width: 42px; }
+  .Silk.RadEditor.reWrapper .reSplitButton.reTool span.split_arrow {
+    height: 26px; }
+  .Silk.reToolbar li .reTool_disabled:hover span.split_arrow, .Silk.reToolbar li .reTool_disabled:active span.split_arrow, .Silk.reToolbar li .reTool_disabled:focus span.split_arrow {
+    border: 0 none;
+    background-position: -17px -62px; }
+  .Silk.reToolbar li .reTool span {
+    margin: 5px 0 0 4px; }
+  .Silk.reToolbar {
+    background-image: url('../Common/Gradients/radGradientDarkV50.png');
+    background-color: #D6D5D4\9;
+    background-repeat: repeat-x;
+    background-image: linear-gradient(#ffffff, #d6d5d4);
+    height: 31px;
+    line-height: 31px;
+    border: 1px solid #d7d7d7;
+    border-radius: 3px; }
+  .Silk ul.reToolbar li {
+    color: #767676;
+    height: 31px; }
+  .Silk .reTool span,
+  .Silk .RadWindow_Silk .reTool span,
+  .Silk .RadForm_Silk .reTool span, .Silk.reInsertTable .reTlbVertical ul .reTool_text span,
+  .Silk .reToolbar .reTool_text span {
+    background-image: url('../Common/CommandSpritesMonoLight.png'); }
+  .Silk .reToolbar .reTool_text:hover,
+  .Silk .reToolbar .reTool_text.reTool_selected,
+  .Silk .reToolbar .reTool_text.reTool_selected:hover {
+    border-left: 1px solid #b9b9b9;
+    border-right: 1px solid #b9b9b9; }
+  .Silk .reToolbar .reTool_text.reTool_disabled,
+  .Silk .reToolbar .reTool_text.reTool_disabled:hover {
+    margin-left: 0;
+    margin-right: 0;
+    border: 0;
+    opacity: .6; }
+  .Silk .reToolbar .reTool.reSplitButton.reTool_disabled:hover {
+    background-color: none;
+    border-color: transparent;
+    box-shadow: none; }
+  .Silk .reDropdown,
+  .Silk .reTool_disabled.reDropdown:hover {
+    position: relative;
+    height: 24px;
+    min-width: 80px;
+    margin: 3px 2px 0 0;
+    padding: 0 15px 0 5px;
+    font-size: 13px;
+    border-radius: 3px;
+    border: 1px solid #d7d7d7;
+    background-color: #ffffff;
+    background-position: 0 0;
+    background-repeat: repeat-x; }
+  .Silk .reDropdown span {
+    line-height: 24px;
+    color: #767676;
+    min-width: 80px; }
+  .Silk .reDropdown:hover {
+    background-image: url('../Common/Gradients/radGradientDarkV20.png');
+    background-color: #00a9c7;
+    background-repeat: repeat-x;
+    background-image: -webkit-linear-gradient(top, #00a9c7 0%, #007d93 100%);
+    background-image: -moz-linear-gradient(top, #00a9c7 0%, #007d93 100%);
+    background-image: -ms-linear-gradient(top, #00a9c7 0%, #007d93 100%);
+    background-image: -o-linear-gradient(top, #00a9c7 0%, #007d93 100%);
+    background-image: linear-gradient(top, #00a9c7 0%, #007d93 100%);
+    border-color: #00a9c7;
+    color: #ffffff; }
+  .Silk .reDropdown:hover span {
+    color: #ffffff; }
+  .Silk .reDropdown:active,
+  .Silk .reDropdown:focus {
+    background-color: #2dabc1;
+    background-image: -webkit-linear-gradient(top, #2dabc1 0%, #2dabc1 100%);
+    background-image: -moz-linear-gradient(top, #2dabc1 0%, #2dabc1 100%);
+    background-image: -ms-linear-gradient(top, #2dabc1 0%, #2dabc1 100%);
+    background-image: -o-linear-gradient(top, #2dabc1 0%, #2dabc1 100%);
+    background-image: linear-gradient(top, #2dabc1 0%, #2dabc1 100%);
+    border-color: #2292a8;
+    background-repeat: repeat-x;
+    box-shadow: inset 0 0 4px #29a3b9;
+    color: #ffffff; }
+  .Silk .reDropdown:before {
+    background-image: url('Common/radActionsSprite.png');
+    background-position: -12px -64px;
+    content: "";
+    width: 26px;
+    height: 24px;
+    position: absolute;
+    top: 1px;
+    left: auto;
+    right: 0; }
+  .Silk .reDropdown:hover:before,
+  .Silk .reDropdown:active:before,
+  .Silk .reDropdown:focus:before {
+    background-image: url('Common/radActionsSprite.png');
+    background-position: -112px -64px; }
+  .Silk .reTool_disabled.reDropdown:hover:before {
+    background-image: url('Common/radActionsSprite.png');
+    background-position: -12px -64px; }
+  .Silk .reTool_disabled.reDropdown:hover span {
+    color: #767676; }
+  .Silk td.reTlbVertical .reTool {
+    margin-left: 8px;
+    border-radius: 3px;
+    background-repeat: repeat-x; }
+  .Silk td.reTlbVertical .reTool:hover {
+    background-image: url('../Common/Gradients/radGradientDarkV20.png');
+    background-color: #00a9c7;
+    background-repeat: repeat-x;
+    background-image: -webkit-linear-gradient(top, #00a9c7 0%, #007d93 100%);
+    background-image: -moz-linear-gradient(top, #00a9c7 0%, #007d93 100%);
+    background-image: -ms-linear-gradient(top, #00a9c7 0%, #007d93 100%);
+    background-image: -o-linear-gradient(top, #00a9c7 0%, #007d93 100%);
+    background-image: linear-gradient(top, #00a9c7 0%, #007d93 100%);
+    border-color: #00a9c7;
+    background-position: 0 0; }
+  .Silk td.reTlbVertical .reTool:active,
+  .Silk td.reTlbVertical .reTool:focus {
+    background-color: #2dabc1;
+    background-repeat: repeat-x;
+    background-image: -webkit-linear-gradient(top, #2dabc1 0%, #2dabc1 100%);
+    background-image: -moz-linear-gradient(top, #2dabc1 0%, #2dabc1 100%);
+    background-image: -ms-linear-gradient(top, #2dabc1 0%, #2dabc1 100%);
+    background-image: -o-linear-gradient(top, #2dabc1 0%, #2dabc1 100%);
+    background-image: linear-gradient(top, #2dabc1 0%, #2dabc1 100%);
+    border-color: #2292a8;
+    box-shadow: inset 0 0 4px #29a3b9;
+    background-position: 0 0; }
+  .Silk .reTlbVertical .reDropdown {
+    min-width: 36px;
+    height: 26px;
+    margin: 1px 0 0 4px;
+    padding: 0; }
+  .Silk .reTlbVertical .reDropdown:hover {
+    min-width: 36px;
+    height: 26px;
+    margin: 1px 0 0 4px; }
+  .Silk.reDropDownBody .reTlbVertical .reToolbar {
+    background-color: #ffffff;
+    background-image: none; }
+  .Silk table.reSpinBox {
+    border: 1px solid #d7d7d7;
+    background-color: #ffffff;
+    height: 26px; }
+  .Silk table.reSpinBox:hover, .Silk.RadEditor input:hover {
+    border: 1px solid #b9b9b9; }
+  .Silk .reModule .reModuleLabel {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #767676; }
+  .Silk .reModule_domlink {
+    color: #0394ae;
+    font-size: 13px; }
+  .Silk .reModule_domlink_selected {
+    color: #016476; }
+  .Silk.reDropDownBody .reItemOver {
+    background-color: #bbeaf3; }
+  .Silk.reColorPicker table div, .Silk.reColorPicker span {
+    border: 1px solid #d7d7d7; }
+  .Silk.reColorPicker table td.reItemOver div {
+    border-color: #767676; }
+  .Silk .reAjaxspell_wrapper {
+    font-size: 13px;
+    background-color: #ffffff !important; }
+  .Silk .reAjaxspell_button {
+    height: 34px;
+    font-size: 13px;
+    border: 1px solid #d7d7d7;
+    background-color: #e3e3e3;
+    color: #767676; }
+  .Silk .reAjaxspell_button:hover {
+    background-color: #ffffff; }
+  .Silk .reAjaxspell_button:active {
+    background-color: #ffffff;
+    color: #000000; }
+  .Silk .reAjaxSpellCheckSeparator {
+    background-color: #ffffff; }
+  .Silk.reCustomLinks, .Silk.reCustomLinks ul {
+    color: #767676; }
+  .Silk.reCustomLinks a {
+    background: none transparent;
+    color: #767676;
+    cursor: default !important; }
+  .Silk.reCustomLinks a:hover {
+    color: #ffffff; }
+  .Silk.reInsertTable table {
+    background-color: #ffffff; }
+  .Silk.reInsertTable table tr td {
+    border: 1px solid #d7d7d7;
+    background-color: #ffffff;
+    height: 20px;
+    min-width: 20px !important; }
+  .Silk.reInsertTable table tr td div {
+    height: 20px;
+    width: 20px; }
+  .Silk.reWrapper td.reTlbVertical ul.reToolbar {
+    width: 54px !important; }
+  .Silk .reTlbVertical .split_arrow,
+  .Silk .reTlbVertical .reTool_text.reSplitButton .split_arrow {
+    display: inline-block;
+    *zoom: 1;
+    *display: inline; }
+  .Silk.reInsertTable .reTlbVertical ul {
+    background-color: #ffffff; }
+  .Silk.reDropDownBody.reInsertTable {
+    width: 200px !important; }
+  .Silk.reDropDownBody.reInsertTable div.reTlbVertical a.reTool_text, .Silk.reDropDownBody.reInsertTable div.reTlbVertical a.reTool_text:link, .Silk.reDropDownBody.reInsertTable div.reTlbVertical a.reTool_text:visited {
+    color: #767676 !important;
+    background: transparent none; }
+  div.reInsertTable .Silk.reToolbar li, div.reInsertTable .Silk.reToolbar li .reTool {
+    width: 30px !important;
+    height: 30px; }
+  div.reInsertTable .Silk.reToolbar li .reTool span {
+    margin: 7px 0 0 6px; }
+  .Silk.reDropDownBody.reAlignmentSelector {
+    width: 87px !important;
+    height: 116px !important; }
+  .Silk.reColorPicker {
+    height: 330px !important; }
+  .Silk.reColorPicker table tr td {
+    min-width: 20px !important; }
+  .Silk.reColorPicker table td div {
+    width: 20px;
+    height: 20px; }
+  .Silk a.reCustomColor {
+    font-size: 13px; }
+  .Silk div.reColorPickerFooter {
+    height: 38px; }
+  .Silk div.reColorPickerFooter span {
+    height: 34px;
+    line-height: 34px;
+    font-size: 13px; }
+  .Silk.reDropDownBody .reTlbVertical ul li .reTool_text {
+    height: 28px;
+    line-height: 28px;
+    font-size: 13px; }
+  .Silk.reDropDownBody .reTlbVertical ul li .reTool_text .reButton_text {
+    color: #555555; }
+  .Silk.reDropDownBody .reTlbVertical ul li .reTool_text:hover {
+    background-color: #bbeaf3; }
+  .Silk.reDropDownBody .reTlbVertical ul li .reTool_text:hover .reButton_text {
+    color: #767676; }
+  .Silk div.reCommentEdit,
+  .Silk div.reCommentTextArea,
+  .Silk div.reCommentView,
+  .Silk div.reCommentButton,
+  .Silk div.rePopupButton,
+  .Silk div.rePopupMessage,
+  .Silk div.rePopupContainer .rePopupTitle,
+  .Silk div.reCommentTextAreaWatermark,
+  .Silk div.reCommentInfoPanel {
+    font: 13px Arial,Helvetica,sans-serif; }
+  .Silk .reCommentEdit,
+  .Silk .reCommentTextArea,
+  .Silk .reCommentView,
+  .Silk .reCommentInfoPanel {
+    border-color: #828282;
+    background-color: #e6e6e6; }
+  .Silk .reCommentTitle,
+  .Silk .reCommentInfoPanel {
+    color: #767676; }
+  .Silk .reCommentTextArea {
+    border-color: #d7d7d7;
+    background-color: #ffffff; }
+  .Silk.RadEditor .reCommentButton,
+  .Silk .rePopupButtonContainer .rePopupButton {
+    background-image: url('../Common/Gradients/radGradientDarkV20.png');
+    border-color: #c9c9c9;
+    color: #767676;
+    background-color: #e3e3e3;
+    background-image: linear-gradient(#fefefe, #e3e3e3);
+    height: 26px;
+    padding: 0 10px;
+    border-width: 1px;
+    border-style: solid;
+    background-position: 0 0;
+    background-repeat: repeat-x; }
+  .Silk.RadEditor .reCommentButton:hover,
+  .Silk .rePopupButtonContainer .rePopupButton:hover {
+    border-color: #939393;
+    color: #444444;
+    background-color: #939393;
+    background-image: linear-gradient(#d6d6d6, #939393); }
+  .Silk.RadEditor .reCommentButton:active, .Silk.RadEditor .rePopupButtonContainer .rePopupButton:active {
+    border-color: #a9a9a9;
+    color: #000000;
+    background-color: #cccccc;
+    background-image: linear-gradient(#cccccc, #cccccc);
+    box-shadow: inset 0 0 4px #c0c0c0; }
+  .Silk.rePopupContainer {
+    border-color: #d7d7d7;
+    background-color: #ffffff; }
+  .Silk.rePopupContainer .rePopupTitle {
+    color: #000000;
+    background-color: #ffffff;
+    border-color: #d7d7d7;
+    border-radius: 0; }
+  .Silk div.reCommentInfoPanel {
+    font: 16px Arial, Helvetica, sans-serif; }
+  .Silk .RadRibbonBar_Silk .reDropdown,
+  .Silk .RadRibbonBar_Silk .reTool_disabled.reDropdown:hover {
+    height: 20px;
+    margin: 0 2px 0 0; }
+  .Silk .RadRibbonBar_Silk .reDropdown span {
+    line-height: 20px; }
+  .Silk .reTool .ToggleEditMode {
+    background-image: url('../Common/CommonIconsLight.png');
+    background-position: -8px -40px; }
+  .Silk.RadWindow.RadEditor.reWrapper .rwWindowContent {
+    background-color: #e6e6e6; }
+  .Silk.reWrapper.reInlineEditor:hover {
+    border-color: #d7d7d7; }
+  .Silk.reWrapper.reInlineEditorSelected, .Silk.reWrapper.reInlineEditorSelected:hover {
+    border-color: #36b4cb; }
+  .Silk.RadEditor.reRtl .reTool .split_arrow:hover {
+    border-right-color: #939393; }
+  .Silk.RadEditor.reRtl .reDropdown:hover {
+    background-image: url('../Common/Gradients/radGradientDarkV20.png');
+    background-color: #00a9c7;
+    background-repeat: repeat-x;
+    background-image: -webkit-linear-gradient(top, #00a9c7 0%, #007d93 100%);
+    background-image: -moz-linear-gradient(top, #00a9c7 0%, #007d93 100%);
+    background-image: -ms-linear-gradient(top, #00a9c7 0%, #007d93 100%);
+    background-image: -o-linear-gradient(top, #00a9c7 0%, #007d93 100%);
+    background-image: linear-gradient(top, #00a9c7 0%, #007d93 100%);
+    border-color: #00a9c7;
+    color: #ffffff; }
+  .Silk.RadEditor.reRtl .reDropdown:before {
+    left: -4px;
+    right: auto; }
+  .Silk.RadEditor.reRtl .reEditorModes .reMode_design span {
+    background-position: 55px -3px; }
+  .Silk.RadEditor.reRtl .reEditorModes .reMode_html span {
+    background-position: 55px -33px; }
+  .Silk.RadEditor.reRtl .reEditorModes .reMode_preview span {
+    background-position: 55px -67px; }
+
+.reTool span,
+.Silk.reInsertTable .reTlbVertical ul .reTool_text span,
+.reToolbar .reTool_text span {
+  background-image: url('../Common/CommandSpritesMonoLight.png'); }
+
+/* the rule below styles RadWindow's content cell, which is used in the floating and show on focus toolbar modes */
+.RadWindow.RadWindow_Silk.reToolbarWindow td.rwWindowContent,
+.RadWindow.RadWindow_Silk.reToolbarWindow div.rwContent {
+  background-color: #ffffff; }
+
+.RadWindow_Silk .reInsertTableLightWrapper .lightTable {
+  border-color: #d7d7d7; }
+
+.reToolWrapper.Silk .reSplitButton.reTool {
+  width: 42px; }
+
+a.reTool .split_arrow {
+  width: 16px;
+  height: 26px;
+  background-image: url('Common/radActionsSprite.png');
+  background-position: -117px -62px;
+  top: -10px;
+  right: 0; }
+
+.RadForm_Silk .reStyleBuilderFonts a.reTool .split_arrow {
+  width: 12px !important;
+  height: 24px !important;
+  top: 0;
+  right: 5px;
+  background-position: -18px -63px !important;
+  margin: 0 !important; }
+
+.RadForm_Silk .reStyleBuilderFonts a.reTool:hover .split_arrow,
+.RadForm_Silk .reStyleBuilderFonts a.reTool .split_arrow:hover {
+  background-position: -118px -63px !important; }
+
+.reTool .split_arrow:hover {
+  border-left-color: #d7d7d7; }
+
+/* Dialogs overrides */
+.RadForm_Silk .reStyleBuilderBgImg li,
+.RadForm_Silk .reStyleBuilderTextAlignment li,
+.RadForm_Silk .reStyleBuilderTextSpacing li,
+.RadForm_Silk .reStyleBuilderTextFlow li,
+.RadForm_Silk .reStyleBuilderLayoutFlow li,
+.RadForm_Silk .reStyleBuilderLayoutContent li,
+.RadForm_Silk .reStyleBuilderBoxSize li,
+.RadForm_Silk .reStyleBuilderBoxPadding li,
+.RadForm_Silk .reStyleBuilderBoxMargin li,
+.RadForm_Silk .reStyleBuilderLists li,
+.RadForm_Silk #BoxWidthContainer {
+  margin-bottom: 3px; }
+
+.RadForm_Silk #sbMainPane,
+.RadForm_Silk #BorderContent {
+  width: 510px; }
+
+.RadForm_Silk #fontAttributes {
+  width: 396px; }
+
+.RadForm_Silk fieldset fieldset {
+  width: auto; }
+
+.RadForm_Silk #BorderContent .Labels {
+  width: 55px;
+  padding: 61px 2px 0 0; }
+
+.RadForm_Silk #BorderContent .Labels .columnLabel {
+  line-height: 26px; }
+
+.RadForm_Silk #borderStylePane,
+.RadForm_Silk #borderWidthPane,
+.RadForm_Silk #borderColorPane {
+  height: 190px; }
+
+.RadForm_Silk #borderColorPane ul {
+  padding: 10px 0 0; }
+
+.RadForm_Silk #borderColorPane li {
+  height: 26px; }
+
+.RadWindow_Silk .reTool span,
+.RadForm_Silk .reTool span {
+  background-image: url('../Common/CommandSpritesMonoLight.png'); }
+
+.RadForm_Silk .reMiddlecell.reTableWizardDialog {
+  height: 450px !important; }
+
+.RadForm_Silk .reStyleBuilderSize .reInlineBlock.reMetroTouchFix {
+  width: 150px; }
+
+.RadForm_Silk .reStyleBuilderSize .reInlineBlock.reMetroTouchFix .riLabel {
+  width: 69px !important;
+  color: #000; }
+
+.RadForm_Silk .reImageMapDefineArea .reDefineSize .rfdDecorated {
+  width: 32px !important; }
+
+.RadForm_Silk .reImageMapPreviewWrapper {
+  width: 360px; }
+
+.RadForm_Silk .reImageMapPreview {
+  width: 338px; }
+
+.RadForm_Silk .reCellPropertiesPreview {
+  width: 400px; }
+
+.RadForm_Silk .reTableWizardColumns .propertyLabel {
+  width: 100px !important; }
+
+.RadForm_Silk .reTableWizardRows .propertyLabel {
+  width: 80px !important; }
+
+.RadForm_Silk .reTableWizardAccessible .reLabelCell {
+  vertical-align: top; }
+
+.RadWindow_Silk .reTablePropertyControlCell .short {
+  width: 95px; }
+
+.RadWindow_Silk table.reControlsLayout .reTablePropertyControlCell input.rfdIgnore,
+.RadWindow_Silk table.reControlsLayout .reImgPropertyControlCell input.rfdIgnore,
+.RadWindow_Silk .reInsertLinkWrapper input {
+  height: 23px;
+  border: 1px solid #d7d7d7;
+  background-color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px; }
+
+.RadWindow_Silk .reControlsLayout .reConfirmCancelButtonsTblLight button {
+  border-color: #c9c9c9;
+  color: #767676;
+  background-color: #e3e3e3;
+  background-image: linear-gradient(#fefefe, #e3e3e3);
+  height: 26px;
+  padding: 0 10px;
+  *padding: 0;
+  border: 1px solid #c9c9c9 !important;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  border-radius: 4px; }
+
+.RadWindow_Silk .reControlsLayout .reConfirmCancelButtonsTblLight button:hover {
+  background-position: 0 0;
+  border-color: #939393;
+  color: #444444;
+  background-color: #939393;
+  background-image: linear-gradient(#d6d6d6, #939393);
+  border: 1px solid #939393 !important; }
+
+.RadWindow_Silk .reControlsLayout .reConfirmCancelButtonsTblLight button:active,
+.RadWindow_Silk .reControlsLayout .reConfirmCancelButtonsTblLight button:focus {
+  border-color: #a9a9a9;
+  color: #000000;
+  background-color: #cccccc;
+  background-image: linear-gradient(#cccccc, #cccccc);
+  background-position: 0 0;
+  box-shadow: inset 0 0 4px #c0c0c0;
+  border: 1px solid #a9a9a9 !important; }

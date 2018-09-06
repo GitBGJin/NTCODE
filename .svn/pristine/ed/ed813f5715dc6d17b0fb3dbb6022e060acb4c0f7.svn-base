@@ -1,0 +1,56 @@
+.RadDropDownList_Silk {
+  color: #767676;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5; }
+  .RadDropDownList_Silk .rddlInner {
+    border-color: #c9c9c9;
+    color: #767676;
+    background-color: #ebebeb;
+    background-image: url('Common/radPrimaryGradientButtonSprite.png');
+    background-image: linear-gradient(#fefefe 0%, #e3e3e3 100%); }
+  .RadDropDownList_Silk .rddlFakeInput {
+    height: 22px;
+    line-height: 22px; }
+  .RadDropDownList_Silk .rddlEmptyMessage,
+  .RadDropDownList_Silk .rddlDefaultMessage {
+    color: #b1b1b1; }
+  .RadDropDownList_Silk .rddlIcon {
+    width: 24px;
+    background-image: url('Common/radActionsSprite.png');
+    background-position: -13px -63px; }
+  .RadDropDownList_Silk .rddlHovered {
+    border-color: #007d93;
+    color: #ffffff;
+    background-color: #007d93;
+    background-image: linear-gradient(#00a9c7 0%, #007d93 100%); }
+    .RadDropDownList_Silk .rddlHovered .rddlIcon {
+      background-position: -113px -63px; }
+  .RadDropDownList_Silk .rddlFocused {
+    border-color: #2292a8;
+    color: #ffffff;
+    background-color: #2dabc1;
+    background-image: linear-gradient(#2dabc1 0%, #2dabc1 100%); }
+    .RadDropDownList_Silk .rddlFocused .rddlIcon {
+      background-position: -113px -63px; }
+
+.rddlPopup_Silk {
+  border-color: #d7d7d7;
+  color: #555555;
+  background-color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px; }
+  .rddlPopup_Silk .rddlHeader,
+  .rddlPopup_Silk .rddlFooter {
+    border-color: #828282;
+    color: #5f5f5f;
+    background-color: #eaeaea; }
+  .rddlPopup_Silk .rddlItemHovered {
+    color: #555555;
+    background-color: #bbeaf3; }
+  .rddlPopup_Silk .rddlItemSelected {
+    color: #000000;
+    background-color: #fff1cc; }
+  .rddlPopup_Silk .rddlItemLoading {
+    color: #555555;
+    background-color: #bbeaf3; }

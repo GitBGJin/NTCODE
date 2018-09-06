@@ -1,0 +1,9 @@
+.RadRating_Neptune a,
+.RadRating_Neptune a span {
+  background-image: url('Rating/Sprite.png');
+  _background-image: url('Rating/Sprite.gif'); }
+@media print {
+  .RadRating_Neptune a:before,
+  .RadRating_Neptune a span:before {
+    content: url('Rating/Sprite.png'); } }
+

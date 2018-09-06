@@ -1,0 +1,16 @@
+.RadSocialShare_Neptune {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  border: 1px solid #abc1de;
+  background-color: white; }
+  .RadSocialShare_Neptune .sshLinkItem .sshText {
+    color: black; }
+  .RadSocialShare_Neptune .sshLinkItem:hover .sshText {
+    color: black; }
+
+.RadComboBoxDropDown_Neptune .rcbItem .sshLinkItem .sshText {
+  color: black; }
+
+.RadComboBoxDropDown_Neptune .rcbHovered .sshLinkItem .sshText {
+  color: black; }
+

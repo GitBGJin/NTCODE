@@ -1,0 +1,14 @@
+D:\NTCODE\Web\NTAnalysisApplication\NTAnalysisApplication\bin\Debug\NTAnalysisApplication.exe.config
+D:\NTCODE\Web\NTAnalysisApplication\NTAnalysisApplication\bin\Debug\NTAnalysisApplication.exe
+D:\NTCODE\Web\NTAnalysisApplication\NTAnalysisApplication\bin\Debug\NTAnalysisApplication.pdb
+D:\NTCODE\Web\NTAnalysisApplication\NTAnalysisApplication\bin\Debug\log4net.dll
+D:\NTCODE\Web\NTAnalysisApplication\NTAnalysisApplication\bin\Debug\Model.dll
+D:\NTCODE\Web\NTAnalysisApplication\NTAnalysisApplication\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
+D:\NTCODE\Web\NTAnalysisApplication\NTAnalysisApplication\bin\Debug\Model.pdb
+D:\NTCODE\Web\NTAnalysisApplication\NTAnalysisApplication\bin\Debug\Telerik.OpenAccess.35.Extensions.xml
+D:\NTCODE\Web\NTAnalysisApplication\NTAnalysisApplication\obj\Debug\NTAnalysisApplication.csprojResolveAssemblyReference.cache
+D:\NTCODE\Web\NTAnalysisApplication\NTAnalysisApplication\obj\Debug\NTAnalysisApplication.Form1.resources
+D:\NTCODE\Web\NTAnalysisApplication\NTAnalysisApplication\obj\Debug\NTAnalysisApplication.Properties.Resources.resources
+D:\NTCODE\Web\NTAnalysisApplication\NTAnalysisApplication\obj\Debug\NTAnalysisApplication.csproj.GenerateResource.Cache
+D:\NTCODE\Web\NTAnalysisApplication\NTAnalysisApplication\obj\Debug\NTAnalysisApplication.exe
+D:\NTCODE\Web\NTAnalysisApplication\NTAnalysisApplication\obj\Debug\NTAnalysisApplication.pdb

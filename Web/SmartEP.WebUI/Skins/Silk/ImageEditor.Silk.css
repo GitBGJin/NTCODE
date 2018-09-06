@@ -1,0 +1,105 @@
+/*$main-sprite-url: skin-image-url("Common", "radActionsSprite.png");
+$gradient20: common-image-url( "Gradients", "radGradientDarkV20.png" );*/
+div.RadImageEditor_Silk {
+  background-color: #ffffff;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #d7d7d7;
+  /* Expand down button */ }
+  div.RadImageEditor_Silk .rieToolBar {
+    background-image: linear-gradient(#ffffff, #d6d5d4);
+    box-shadow: 0 1px 3px #d7d7d7;
+    height: 42px; }
+  div.RadImageEditor_Silk .RadToolBar_Silk a.rtbWrap {
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    border-width: 0;
+    background-image: none;
+    filter: none;
+    background-color: transparent;
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    border-radius: 3px;
+    border: 1px solid transparent; }
+  div.RadImageEditor_Silk .RadToolBar_Silk a.rtbWrap:hover {
+    /*background-image: url( $gradient20 );*/
+    _background-image: none;
+    background-color: #89D5E1;
+    background-image: -webkit-linear-gradient(top, #89D5E1 0%, #89D5E1 100%);
+    background-image: -moz-linear-gradient(top, #89D5E1 0%, #89D5E1 100%);
+    background-image: -ms-linear-gradient(top, #89D5E1 0%, #89D5E1 100%);
+    background-image: -o-linear-gradient(top, #89D5E1 0%, #89D5E1 100%);
+    background-image: linear-gradient(top, #89D5E1 0%, #89D5E1 100%);
+    border: 1px solid #68b8c5; }
+  div.RadImageEditor_Silk .RadToolBar_Silk .rtbDisabled .rtbWrap, div.RadImageEditor_Silk .RadToolBar_Silk .rtbDisabled .rtbWrap:hover {
+    background-color: transparent;
+    background-image: none;
+    filter: none;
+    border-color: transparent; }
+  div.RadImageEditor_Silk .RadToolBar_Silk .rtbIcon {
+    margin: 4px 0 0 1px; }
+  div.RadImageEditor_Silk .RadToolBar_Silk .rtbSplBtn .rtbExpandDown {
+    width: 40px; }
+  div.RadImageEditor_Silk .RadToolBar_Silk .rtbExpandDown span.rtbChoiceArrow {
+    border-left: 0 none;
+    background-position: -20px -60px; }
+  div.RadImageEditor_Silk, div.RadImageEditor_Silk.rieDialogs .riePrintContent {
+    border-color: #b9b9b9;
+    background-color: #ffffff; }
+  div.RadImageEditor_Silk .rieStatusBarInfo .rieLabel {
+    color: #767676; }
+  div.RadImageEditor_Silk .rieStatusBarInfo span {
+    color: #767676; }
+  div.RadImageEditor_Silk .rieContentArea {
+    border-color: #d7d7d7;
+    box-shadow: inset 4px 4px 3px #d7d7d7; }
+
+.RadToolBarDropDown_Silk.RadImageEditor .rtbWrap .rtbIcon {
+  top: 5px; }
+
+/* ImageEditor Dialogs using RadDock as Wrapper */
+.RadDock_Silk.rieDialogs .rbPrimaryIcon, .RadImageEditor_Silk .rieResizeHandle, .RadImageEditor_Silk .rieBackgroundImg .rtbIcon {
+  background-image: url('../Common/ImageEditor/rieToolsLight.png');
+  _background-image: url('../Common/ImageEditor/rieToolsLightIE6.png'); }
+
+.RadDock_Silk.rieDialogs .rieThumbsBottomRow td, .RadDock_Silk.rieDialogs .rieDialogsThumbsLeft {
+  border-color: #b9b9b9; }
+
+.RadDock_Silk.rieDialogs .rieThumbsLink {
+  border: 1px solid #828282; }
+
+.RadDock_Silk.rieDialogs .rieActiveThumbsLink, .RadDock_Silk.rieDialogs .rieThumbsLink:hover, .RadImageEditor_Silk .rieHighlightVertical, .RadImageEditor_Silk .rieHighlightHorizontal {
+  border-color: #b9b9b9;
+  background-color: #b4b4b4; }
+
+.RadDock_Silk.rieDialogs .riePrintContent img {
+  border-color: #d7d7d7; }
+
+.RadDock_Silk.rieDialogs .rdContent {
+  color: #767676; }
+
+.RadForm_Silk .rieResizeButtons {
+  width: 78px; }
+
+.rieResizeButtons .RadButton_Silk, .rieDialogsTable.rieZoomTable .RadButton_Silk, .rieDialogsTable.rieRotateTable .RadButton_Silk {
+  width: 10px !important; }
+
+.rieResizeButtons .RadButton_Silk .rbPrimaryIcon, .rieDialogsTable.rieZoomTable .RadButton_Silk .rbPrimaryIcon {
+  top: 6px !important;
+  left: 7px !important; }
+
+.rieDialogsTable.rieRotateTable .RadComboBox_Silk {
+  margin: 4px 0 0 -15px; }
+
+.RadDock_Silk.rieDialogs .rieResizeButtons {
+  height: 41px;
+  background: url('../Common/ImageEditor/rieResizeBgr.gif') -1px -110px no-repeat; }
+
+/* Vertical Toolbar */
+div.rieZoneLeft .RadToolBar_Silk img.rtbIcon, div.rieZoneRight .RadToolBar_Silk img.rtbIcon {
+  margin-left: 10px; }
+
+div.rieZoneLeft .RadToolBar_Silk .rtbSplBtn .rtbIcon, div.rieZoneRight .RadToolBar_Silk .rtbSplBtn .rtbIcon {
+  margin-left: auto; }
+

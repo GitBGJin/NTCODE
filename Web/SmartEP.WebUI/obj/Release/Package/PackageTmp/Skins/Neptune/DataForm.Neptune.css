@@ -1,0 +1,43 @@
+.RadDataForm_Neptune {
+  font: normal 12px / 1.33 "Segoe UI", Arial, Helvetica, sans-serif;
+  color: black;
+  overflow: hidden; }
+  .RadDataForm_Neptune .rdfLegend,
+  .RadDataForm_Neptune .rdfBorders {
+    border-color: #688caf; }
+  .RadDataForm_Neptune .rdfHr {
+    color: #abc1de; }
+  .RadDataForm_Neptune .rdfFieldHint {
+    color: gray; }
+  .RadDataForm_Neptune .rdfLegend {
+    font-size: 1.17em; }
+  .RadDataForm_Neptune .rdfFieldHint.rdfBlock {
+    padding: .42em 0 0 0; }
+  .RadDataForm_Neptune .rdfLabel.rdfBlock {
+    padding: 0 0 .17em 0; }
+  .RadDataForm_Neptune .rdfPager {
+    margin-top: 1.25em; }
+    .RadDataForm_Neptune .rdfPager .rdfFirst,
+    .RadDataForm_Neptune .rdfPager .rdfPrev,
+    .RadDataForm_Neptune .rdfPager .rdfNext,
+    .RadDataForm_Neptune .rdfPager .rdfLast {
+      width: 25px;
+      height: 25px;
+      background: transparent no-repeat url('DataForm/sprite.png');
+      border: none; }
+    .RadDataForm_Neptune .rdfPager .rdfFirst {
+      background-position: 0 0; }
+      .RadDataForm_Neptune .rdfPager .rdfFirst:hover {
+        background-position: 0 -50px; }
+    .RadDataForm_Neptune .rdfPager .rdfPrev {
+      background-position: 0 -100px; }
+      .RadDataForm_Neptune .rdfPager .rdfPrev:hover {
+        background-position: 0 -150px; }
+    .RadDataForm_Neptune .rdfPager .rdfNext {
+      background-position: 0 -200px; }
+      .RadDataForm_Neptune .rdfPager .rdfNext:hover {
+        background-position: 0 -250px; }
+    .RadDataForm_Neptune .rdfPager .rdfLast {
+      background-position: 0 -300px; }
+      .RadDataForm_Neptune .rdfPager .rdfLast:hover {
+        background-position: 0 -350px; }

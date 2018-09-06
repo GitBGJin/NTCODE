@@ -1,0 +1,434 @@
+.RadGrid_Neptune {
+  border: 1px solid #688caf;
+  background-color: #ffffff;
+  color: #333333;
+  font: normal 12px "Segoe UI", Arial, Helvetica, sans-serif;
+  line-height: 16px; }
+  .RadGrid_Neptune .rgMasterTable, .RadGrid_Neptune .rgDetailTable,
+  .RadGrid_Neptune .rgGroupPanel table,
+  .RadGrid_Neptune .rgCommandRow table,
+  .RadGrid_Neptune .rgEditForm table,
+  .RadGrid_Neptune .rgPager table {
+    font: normal 12px "Segoe UI", Arial, Helvetica, sans-serif;
+    line-height: 16px; }
+  .RadGrid_Neptune .rgInput {
+    background-color: #ffffff;
+    border: 1px solid #abc1de;
+    color: #333333; }
+
+.GridToolTip_Neptune {
+  font: normal 12px "Segoe UI", Arial, Helvetica, sans-serif;
+  line-height: 16px; }
+
+.RadGrid_Neptune .rgHeader:first-child,
+.RadGrid_Neptune th.rgResizeCol:first-child,
+.RadGrid_Neptune .rgFilterRow > td:first-child,
+.RadGrid_Neptune .rgRow > td:first-child,
+.RadGrid_Neptune .rgAltRow > td:first-child {
+  border-left-width: 0;
+  padding-left: 8px; }
+.RadGrid_Neptune .rgSave,
+.RadGrid_Neptune .rgAdd,
+.RadGrid_Neptune .rgRefresh,
+.RadGrid_Neptune .rgEdit,
+.RadGrid_Neptune .rgDel,
+.RadGrid_Neptune .rgFilter,
+.RadGrid_Neptune .rgPagePrev,
+.RadGrid_Neptune .rgPageNext,
+.RadGrid_Neptune .rgPageFirst,
+.RadGrid_Neptune .rgPageLast,
+.RadGrid_Neptune .rgExpand,
+.RadGrid_Neptune .rgCollapse,
+.RadGrid_Neptune .rgSortAsc,
+.RadGrid_Neptune .rgSortDesc,
+.RadGrid_Neptune .rgUpdate,
+.RadGrid_Neptune .rgCancel,
+.RadGrid_Neptune .rgUngroup,
+.RadGrid_Neptune .rgExpXLS,
+.RadGrid_Neptune .rgExpDOC,
+.RadGrid_Neptune .rgExpPDF,
+.RadGrid_Neptune .rgExpCSV {
+  background-image: url('Grid/sprite.gif'); }
+.RadGrid_Neptune .rgHeaderDiv {
+  background: #d6e5f3 0 -8050px repeat-x url('Grid/sprite.gif'); }
+
+.rgTwoLines .rgHeaderDiv {
+  background-position: 0 -7550px; }
+
+.rgHeaderWrapper .rgHeaderDiv {
+  border-color: #abc1de; }
+
+.RadGrid_Neptune .rgHeader,
+.RadGrid_Neptune th.rgResizeCol,
+.RadGrid_Neptune .rgHeaderWrapper {
+  border: solid #5d8cc9;
+  border-width: 0 0 1px 1px;
+  background: 0 -2300px repeat-x #c3d8f1 url('Grid/sprite.gif'); }
+.RadGrid_Neptune .rgMultiHeaderRow th.rgHeader, .RadGrid_Neptune .rgMultiHeaderRow th.rgResizeCol {
+  border: solid #5d8cc9;
+  border-width: 0 0 1px 1px; }
+.RadGrid_Neptune th.rgSorted {
+  border-bottom-color: #ff9b35;
+  background-color: #ffca5e;
+  background-position: 0 -2600px; }
+.RadGrid_Neptune .rgHeader {
+  color: #00156e; }
+  .RadGrid_Neptune .rgHeader a {
+    color: #00156e; }
+.RadGrid_Neptune th.rgSorted {
+  color: #000; }
+  .RadGrid_Neptune th.rgSorted a {
+    color: #000; }
+.RadGrid_Neptune .rgRow > td,
+.RadGrid_Neptune .rgAltRow > td,
+.RadGrid_Neptune .rgEditRow > td,
+.RadGrid_Neptune .rgFooter > td {
+  border-style: solid;
+  border-width: 0 0 1px 1px; }
+.RadGrid_Neptune .rgRow > td, .RadGrid_Neptune .rgAltRow > td {
+  border-color: #d0d7e5; }
+.RadGrid_Neptune .rgRow .rgSorted, .RadGrid_Neptune .rgAltRow .rgSorted {
+  background-color: #f2f2f2; }
+.RadGrid_Neptune .rgSelectedRow .rgSorted, .RadGrid_Neptune .rgActiveRow .rgSorted, .RadGrid_Neptune .rgHoveredRow .rgSorted, .RadGrid_Neptune .rgEditRow .rgSorted {
+  background-color: transparent; }
+.RadGrid_Neptune .rgRow a, .RadGrid_Neptune .rgAltRow a, .RadGrid_Neptune .rgEditRow a, .RadGrid_Neptune .rgFooter a, .RadGrid_Neptune .rgEditForm a {
+  color: #00156e; }
+.RadGrid_Neptune .rgMasterTable .rgSelectedCell, .RadGrid_Neptune .rgSelectedRow {
+  background: #ffcb60 0 -3900px repeat-x url('Grid/sprite.gif'); }
+
+* + html .RadGrid_Neptune .rgSelectedRow .rgSorted {
+  background-color: #ffcb60; }
+
+html .RadGrid_Neptune .rgSelectedRow .rgSorted {
+  background-color: #ffcb60; }
+
+.RadGrid_Neptune .rgMasterTable .rgActiveCell, .RadGrid_Neptune .rgActiveRow, .RadGrid_Neptune .rgHoveredRow {
+  background: #ecf4ff; }
+
+* + html .RadGrid_Neptune .rgActiveRow .rgSorted, * + html .RadGrid_Neptune .rgHoveredRow .rgSorted {
+  background-color: #ecf4ff; }
+* html .RadGrid_Neptune .rgActiveRow .rgSorted, * html .RadGrid_Neptune .rgHoveredRow .rgSorted {
+  background-color: #ecf4ff; }
+
+.RadGrid_Neptune .rgEditRow {
+  background: #ffe5ad; }
+
+* + html .RadGrid_Neptune .rgEditRow .rgSorted, * html .RadGrid_Neptune .rgEditRow .rgSorted {
+  background-color: #ffe5ad; }
+
+.RadGrid_Neptune .rgSelectedRow > td, .RadGrid_Neptune .rgActiveRow > td, .RadGrid_Neptune .rgHoveredRow > td, .RadGrid_Neptune .rgEditRow > td {
+  border-left-width: 0;
+  padding-left: 8px; }
+.RadGrid_Neptune .rgSelectedRow > td {
+  border-bottom-color: #ff9b35; }
+.RadGrid_Neptune .rgActiveRow > td, .RadGrid_Neptune .rgHoveredRow > td, .RadGrid_Neptune .rgEditRow > td {
+  border-bottom-color: #d0d7e5; }
+.RadGrid_Neptune .rgDrag {
+  background-image: url('Grid/rgDrag.gif'); }
+.RadGrid_Neptune .rgFooterDiv, .RadGrid_Neptune .rgFooter, .RadGrid_Neptune .rgFooterWrapper {
+  background: #9ab5db 0 -6500px repeat-x url('Grid/sprite.gif'); }
+.RadGrid_Neptune .rgFooter > td, .RadGrid_Neptune .rgFooterWrapper {
+  border-width: 1px 0;
+  border-color: #567db0 #fff #fff; }
+.RadGrid_Neptune .rgFooterWrapper .rgFooter > td {
+  border-bottom: 0; }
+.RadGrid_Neptune .rgFooterWrapper {
+  border-bottom: 1px solid #fff; }
+.RadGrid_Neptune .rgPager .rgStatus {
+  border: 1px solid;
+  border-width: 1px 1px 0 0;
+  border-color: #5d8cc9 #9cb9dc; }
+.RadGrid_Neptune .rgStatus div {
+  background-image: url('Common/loading_small.gif'); }
+.RadGrid_Neptune .rgPager {
+  background: #ecf3fc 0 -7000px repeat-x url('Grid/sprite.gif');
+  color: #00156e; }
+.RadGrid_Neptune td.rgPagerCell {
+  border-top: 1px solid #5d8cc9;
+  border-left: 1px solid #fff; }
+.RadGrid_Neptune .rgInfoPart {
+  color: #3e69a3; }
+.RadGrid_Neptune .rgPageFirst {
+  margin: 0 3px 0 0;
+  background-position: 0 -550px; }
+  .RadGrid_Neptune .rgPageFirst:hover {
+    background-position: 0 -600px; }
+.RadGrid_Neptune .rgPagePrev {
+  margin: 0 3px 0 0;
+  background-position: 0 -700px; }
+  .RadGrid_Neptune .rgPagePrev:hover {
+    background-position: 0 -750px; }
+.RadGrid_Neptune .rgPageNext {
+  margin: 0 0 0 3px;
+  background-position: 0 -850px; }
+  .RadGrid_Neptune .rgPageNext:hover {
+    background-position: 0 -900px; }
+.RadGrid_Neptune .rgPageLast {
+  margin: 0 0 0 3px;
+  background-position: 0 -1000px; }
+  .RadGrid_Neptune .rgPageLast:hover {
+    background-position: 0 -1050px; }
+.RadGrid_Neptune .rgPager .rgPagerButton {
+  border-color: #7793b9;
+  background: #e8f1fc repeat-x 0 -1550px url('Grid/sprite.gif');
+  color: #00156e;
+  font: 12px / 12px "segoe ui", arial, sans-serif; }
+.RadGrid_Neptune .rgNumPart a {
+  color: #00156e; }
+  .RadGrid_Neptune .rgNumPart a:hover, .RadGrid_Neptune .rgNumPart a.rgCurrentPage {
+    background: no-repeat url('Grid/sprite.gif'); }
+    .RadGrid_Neptune .rgNumPart a:hover span, .RadGrid_Neptune .rgNumPart a.rgCurrentPage span {
+      background: no-repeat url('Grid/sprite.gif'); }
+  .RadGrid_Neptune .rgNumPart a:hover {
+    background-position: 100% -1250px; }
+    .RadGrid_Neptune .rgNumPart a:hover span {
+      background-position: 0 -1150px; }
+  .RadGrid_Neptune .rgNumPart a.rgCurrentPage {
+    background-position: 100% -1450px; }
+    .RadGrid_Neptune .rgNumPart a.rgCurrentPage:hover {
+      background-position: 100% -1450px; }
+    .RadGrid_Neptune .rgNumPart a.rgCurrentPage span, .RadGrid_Neptune .rgNumPart a.rgCurrentPage:hover span {
+      background-position: 0 -1350px; }
+.RadGrid_Neptune .rgHeader .rgSortAsc {
+  background-position: 3px -147px;
+  height: 10px; }
+.RadGrid_Neptune .rgHeader .rgSortDesc {
+  background-position: 3px -96px;
+  height: 10px; }
+.RadGrid_Neptune .rgCommandRow .rgPrev,
+.RadGrid_Neptune .rgCommandRow .rgNext {
+  padding: 0 10px;
+  line-height: 20px;
+  border-radius: 3px;
+  border-color: #a7bedb;
+  color: #00156e;
+  background-color: #d2e1f4;
+  background-image: linear-gradient(#e8f1fc 0%, #e9f1fc 50%, #d2e1f4 50%, #e8f1fc 100%);
+  margin-right: 10px; }
+  .RadGrid_Neptune .rgCommandRow .rgPrev span,
+  .RadGrid_Neptune .rgCommandRow .rgNext span {
+    width: 10px;
+    height: 10px;
+    background-image: url('Common/radActionsSprite.png'); }
+  .RadGrid_Neptune .rgCommandRow .rgPrev:hover,
+  .RadGrid_Neptune .rgCommandRow .rgNext:hover {
+    border-color: #c6ba9d;
+    color: #000000;
+    background-color: #ffd563;
+    background-image: linear-gradient(#fffce8 0%, #ffedb3 50%, #ffd563 50%, #ffe18a 100%); }
+  .RadGrid_Neptune .rgCommandRow .rgPrev.rgDisabled:hover,
+  .RadGrid_Neptune .rgCommandRow .rgNext.rgDisabled:hover {
+    border-color: #a7bedb;
+    color: #00156e;
+    background-color: #d2e1f4;
+    background-image: linear-gradient(#e8f1fc 0%, #e9f1fc 50%, #d2e1f4 50%, #e8f1fc 100%); }
+.RadGrid_Neptune .rgPrev span {
+  margin-right: 10px;
+  background-position: -5px -45px; }
+.RadGrid_Neptune .rgNext span {
+  margin-left: 10px;
+  background-position: -5px -65px; }
+
+.GridReorderTop_Neptune {
+  height: 12px;
+  background: 0 0 no-repeat url('Grid/sprite.gif'); }
+
+.GridReorderBottom_Neptune {
+  height: 12px;
+  background: 0 0 no-repeat url('Grid/sprite.gif');
+  background-position: 0 -50px; }
+
+.RadGrid_Neptune .rgFilterRow {
+  background: #d6e5f3; }
+  .RadGrid_Neptune .rgFilterRow > td {
+    border: solid #9eb6ce;
+    border-width: 0 0 1px 1px; }
+.RadGrid_Neptune .rgFilter {
+  background-position: 0 -300px; }
+  .RadGrid_Neptune .rgFilter:hover {
+    background-position: 0 -350px; }
+.RadGrid_Neptune .rgFilterActive {
+  background-position: 0 -400px; }
+  .RadGrid_Neptune .rgFilterActive:hover {
+    background-position: 0 -400px; }
+.RadGrid_Neptune .rgFiltered {
+  background-position: 0 -325px; }
+  .RadGrid_Neptune .rgFiltered:hover {
+    background-position: 0 -375px; }
+  .RadGrid_Neptune .rgFiltered.rgFilterActive {
+    background-position: 0 -425px; }
+.RadGrid_Neptune .rgFilterBox {
+  border-color: #abc1de;
+  font: normal 12px "Segoe UI", Arial, Helvetica, sans-serif;
+  color: #000; }
+
+.RadMenu_Neptune .rgHCMClear, .RadMenu_Neptune .rgHCMFilter {
+  border-color: #a7bedb #7d98bd #a3bad8;
+  background: #e8f1fc center -23px repeat-x url('FormDecorator/ButtonSprites.gif');
+  color: #00156e;
+  font-family: "segoe ui",arial,sans-serif; }
+.RadMenu_Neptune .rgHCMClear:hover, .RadMenu_Neptune .rgHCMFilter:hover {
+  border-color: #d8ca95 #b9a073 #c6ba9d;
+  background-position: center -67px;
+  background-color: #ffe18a;
+  color: #000; }
+
+.RadMenu_Neptune_Context .rgFilterApply,
+.RadMenu_Neptune_Context .rgFilterCancel {
+  background-image: url('Common/radGradientButtonSprite.png');
+  _background-image: none;
+  border-color: #a7bedb;
+  color: #00156e;
+  background-color: #d2e1f4;
+  background-image: linear-gradient(#e8f1fc 0%, #e9f1fc 50%, #d2e1f4 50%, #e8f1fc 100%);
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #00156e;
+  border-color: #ccdbed #abc1de #abc1de #ccdbed; }
+
+div.RadMenu_Neptune_Context .rlbGroup {
+  border-color: #c5c5c5; }
+
+.GridContextMenu_Neptune .rmLeftImage {
+  background-image: url('../Common/Grid/contextMenu.gif'); }
+.GridContextMenu_Neptune .rgHCMSortAsc .rmLeftImage {
+  background-position: 0 0; }
+.GridContextMenu_Neptune .rgHCMSortDesc .rmLeftImage {
+  background-position: 0 -40px; }
+.GridContextMenu_Neptune .rgHCMUnsort .rmLeftImage {
+  background-position: 0 -80px; }
+.GridContextMenu_Neptune .rgHCMGroup .rmLeftImage {
+  background-position: 0 -120px; }
+.GridContextMenu_Neptune .rgHCMUngroup .rmLeftImage {
+  background-position: 0 -160px; }
+.GridContextMenu_Neptune .rgHCMCols .rmLeftImage {
+  background-position: 0 -200px; }
+.GridContextMenu_Neptune .rgHCMFilter .rmLeftImage {
+  background-position: 0 -240px; }
+.GridContextMenu_Neptune .rgHCMUnfilter .rmLeftImage {
+  background-position: 0 -280px; }
+
+.RadGrid_Neptune .rgGroupPanel {
+  border: 0;
+  border-bottom: 1px solid #688caf;
+  background: #ecf3fc; }
+  .RadGrid_Neptune .rgGroupPanel td {
+    border: 0;
+    padding: 3px 4px;
+    vertical-align: middle; }
+    .RadGrid_Neptune .rgGroupPanel td td {
+      padding: 0; }
+  .RadGrid_Neptune .rgGroupPanel .rgSortAsc {
+    background-position: 4px -144px; }
+  .RadGrid_Neptune .rgGroupPanel .rgSortDesc {
+    background-position: 4px -94px; }
+.RadGrid_Neptune .rgUngroup {
+  background-position: 0 -7500px; }
+.RadGrid_Neptune .rgGroupItem {
+  border: 1px solid #4b78ca;
+  background: #e6ebf5 0 -1900px repeat-x url('Grid/sprite.gif');
+  color: #00156e; }
+.RadGrid_Neptune .rgGroupHeader {
+  background: #d7e6f7;
+  font-size: 1.1em;
+  line-height: 21px;
+  color: #567db0; }
+  .RadGrid_Neptune .rgGroupHeader > td {
+    border-top: 1px solid #fcfcfd;
+    border-bottom: 1px solid #6f92b3;
+    padding-left: 8px; }
+.RadGrid_Neptune td.rgGroupCol, .RadGrid_Neptune td.rgExpandCol {
+  background: #d7e6f7 none;
+  border-color: #d7e6f7; }
+.RadGrid_Neptune .rgGroupHeader .rgExpand {
+  background-position: 5px -495px; }
+.RadGrid_Neptune .rgGroupHeader .rgCollapse {
+  background-position: 3px -93px; }
+.RadGrid_Neptune .rgEditForm {
+  border-bottom: 1px solid #d0d7e5; }
+.RadGrid_Neptune .rgUpdate {
+  background-position: 0 -1800px; }
+.RadGrid_Neptune .rgCancel {
+  background-position: 0 -1850px; }
+.RadGrid_Neptune .rgDetailTable {
+  border-color: #688caf; }
+.RadGrid_Neptune .rgExpand {
+  background-position: 5px -496px; }
+.RadGrid_Neptune .rgCollapse {
+  background-position: 3px -94px; }
+.RadGrid_Neptune .rgCommandRow {
+  background: #c4d9f1 0 -2099px repeat-x url('Grid/sprite.gif');
+  color: #333; }
+.RadGrid_Neptune .rgCommandCell {
+  border: 0;
+  padding: 0; }
+.RadGrid_Neptune thead .rgCommandCell {
+  border-bottom: 1px solid #688caf; }
+.RadGrid_Neptune .rgCommandTable {
+  border: 1px solid #9eb6ce; }
+  .RadGrid_Neptune .rgCommandTable td {
+    border: 0;
+    padding: 2px 7px; }
+.RadGrid_Neptune .rgCommandRow a {
+  color: #00156e;
+  text-decoration: none; }
+.RadGrid_Neptune .rgAdd {
+  margin-right: 3px;
+  background-position: 0 -1650px; }
+.RadGrid_Neptune .rgRefresh {
+  margin-right: 3px;
+  background-position: 0 -1600px; }
+.RadGrid_Neptune .rgEdit {
+  background-position: 0 -1700px; }
+.RadGrid_Neptune .rgDel {
+  background-position: 0 -1750px; }
+.RadGrid_Neptune .rgExpXLS, .RadGrid_Neptune .rgExpDOC, .RadGrid_Neptune .rgExpPDF, .RadGrid_Neptune .rgExpCSV {
+  background-image: url('../Common/Grid/export.gif'); }
+.RadGrid_Neptune .rgExpXLS {
+  background-position: 0 0; }
+.RadGrid_Neptune .rgExpDOC {
+  background-position: 0 -50px; }
+.RadGrid_Neptune .rgExpPDF {
+  background-position: 0 -100px; }
+.RadGrid_Neptune .rgExpCSV {
+  background-position: 0 -150px; }
+
+.rgCellSelectorArea_Neptune, .GridRowSelector_Neptune {
+  background: #00156e; }
+
+.GridItemDropIndicator_Neptune {
+  border-top: 1px dashed #00156e; }
+
+/*tooltip*/
+.GridToolTip_Neptune {
+  border: 1px solid #6187b8;
+  padding: 3px;
+  background: #d7e3f2;
+  color: #333; }
+
+/*rtl*/
+.RadGridRTL_Neptune .rgHeader:first-child, .RadGridRTL_Neptune th.rgResizeCol:first-child, .RadGridRTL_Neptune .rgFilterRow > td:first-child, .RadGridRTL_Neptune .rgRow > td:first-child, .RadGridRTL_Neptune .rgAltRow > td:first-child {
+  border-left-width: 1px;
+  padding-left: 7px; }
+.RadGridRTL_Neptune .rgPageFirst {
+  background-position: 0 -1000px; }
+  .RadGridRTL_Neptune .rgPageFirst:hover {
+    background-position: 0 -1050px; }
+.RadGridRTL_Neptune .rgPagePrev {
+  margin: 0 0 0 3px;
+  background-position: 0 -850px; }
+  .RadGridRTL_Neptune .rgPagePrev:hover {
+    background-position: 0 -900px; }
+.RadGridRTL_Neptune .rgPageNext {
+  margin: 0 3px 0 0;
+  background-position: 0 -700px; }
+  .RadGridRTL_Neptune .rgPageNext:hover {
+    background-position: 0 -750px; }
+.RadGridRTL_Neptune .rgPageLast {
+  background-position: 0 -550px; }
+  .RadGridRTL_Neptune .rgPageLast:hover {
+    background-position: 0 -600px; }
+.RadGridRTL_Neptune .rgGroupHeader .rgExpand {
+  background-position: -20pxpx -495px; }
+.RadGridRTL_Neptune .rgExpand {
+  background-position: -20px -496px; }

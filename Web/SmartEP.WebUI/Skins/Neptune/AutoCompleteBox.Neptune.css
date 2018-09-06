@@ -1,0 +1,64 @@
+.RadAutoCompleteBox_Neptune {
+  color: #000000;
+  font-size: 12px;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  line-height: 16px; }
+  .RadAutoCompleteBox_Neptune .racTokenList {
+    border-color: #abc1de;
+    color: #333333;
+    background-color: #ffffff; }
+  .RadAutoCompleteBox_Neptune .racDisabled {
+    border-color: #ccdbed;
+    color: #8d8d8d;
+    background-color: #ffffff; }
+  .RadAutoCompleteBox_Neptune .racToken {
+    border-radius: 3px;
+    background-image: url('Common/radGradientButtonSprite.png');
+    border-color: #a7bedb;
+    color: #00156e;
+    background-color: #e8f1fc;
+    background-image: linear-gradient(#e8f1fc 0%, #e9f1fc 50%, #d2e1f4 50%, #e8f1fc 100%); }
+  .RadAutoCompleteBox_Neptune .racTokenHovered {
+    border-color: #c6ba9d;
+    color: #000000;
+    background-color: #ffe18a;
+    background-image: linear-gradient(#fffce8 0%, #ffedb3 50%, #ffd563 50%, #ffe18a 100%); }
+  .RadAutoCompleteBox_Neptune .racTokenSelected {
+    border-color: #c3bdae;
+    color: #000000;
+    background-color: #fde292;
+    background-image: linear-gradient(#ebc59b 0%, #faad60 50%, #f99631 50%, #fde292 100%); }
+  .RadAutoCompleteBox_Neptune .racDisabled .racToken {
+    border-color: #9ebfdb;
+    color: #8d8d8d;
+    background-color: #e8f1fc;
+    background-image: linear-gradient(#e8f1fc 0%, #e9f1fc 50%, #d2e1f4 50%, #e8f1fc 100%); }
+  .RadAutoCompleteBox_Neptune .racRemoveTokenLink {
+    background-image: url('Common/radActionsSprite.png');
+    background-position: -2px -1342px; }
+  * + html .RadAutoCompleteBox_Neptune .racInput {
+    color: #333333;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif; }
+  .RadAutoCompleteBox_Neptune .racEmptyMessage {
+    color: #8d8d8d; }
+  .RadAutoCompleteBox_Neptune .racLoadingIcon {
+    background-image: url('Common/loading_small.gif'); }
+
+.RadAutoCompleteBoxPopup_Neptune {
+  border-color: #9eb6ce;
+  color: #00156e;
+  background-color: #ffffff;
+  font-size: 12px;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif; }
+  .RadAutoCompleteBoxPopup_Neptune .racHeader,
+  .RadAutoCompleteBoxPopup_Neptune .racFooter {
+    border-color: #688caf;
+    color: #00156e;
+    background-color: #c3d8f1; }
+  .RadAutoCompleteBoxPopup_Neptune .racShowAll {
+    border-color: #688caf;
+    color: #00156e;
+    background-color: #c3d8f1; }
+  .RadAutoCompleteBoxPopup_Neptune .racItemHovered {
+    color: #00156e;
+    background-color: #ffe27b; }

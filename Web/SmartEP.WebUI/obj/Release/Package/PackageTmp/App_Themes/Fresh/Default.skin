@@ -1,0 +1,39 @@
+﻿<%--
+默认的外观模板。以下外观仅作为示例提供。
+
+1. 命名的控件外观。SkinId 的定义应唯一，因为在同一主题中不允许一个控件类型有重复的 SkinId。
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. 默认外观。未定义 SkinId。在同一主题中每个控件类型只允许有一个默认的控件外观。
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+<telerik:RadToolBar Skin="Neptune" runat="server" SkinID="CRUD"  Width="100%"  EnableRoundedCorners="true" EnableShadows="true">
+<Items>
+    <telerik:RadToolBarButton Visible="false" Text="" Tooltip="打印" CommandName="Print" ImageUrl="images/ImageButton/add.png" checkimageurl="images/ImageButton/add.png" />
+    <telerik:RadToolBarButton IsSeparator="true" />
+    <telerik:RadToolBarButton Visible="true" Enabled="true" Text="" Tooltip="增加" Group="Update" CommandName="InitInsert" checkimageurl="images/ImageButton/add.png" ImageUrl="images/ImageButton/add.png"/>
+    <telerik:RadToolBarButton Visible="false" Enabled="true" Text="" Tooltip="编辑" Group="Update" CommandName="EditSelected"  checkimageurl="images/ImageButton/edit.png" ImageUrl="images/ImageButton/edit.png"/>
+    <telerik:RadToolBarButton Visible="true" Enabled="true" Text="" Tooltip="删除" Group="Update" CommandName="DeleteSelected"  checkimageurl="images/ImageButton/delete.png" ImageUrl="images/ImageButton/delete.png"/>
+    <telerik:RadToolBarButton Visible="false" Enabled="false" Text="" Tooltip="保存" Group="Update" CommandName="UpdateEdited"  checkimageurl="images/ImageButton/save.png" ImageUrl="images/ImageButton/save.png"/>
+    <telerik:RadToolBarButton Visible="false" Enabled="false" Text="" Tooltip="取消" Group="Update" CommandName="CancelAll"  checkimageurl="images/ImageButton/cancel.png" ImageUrl="images/ImageButton/cancel.png"/>
+    <telerik:RadToolBarButton IsSeparator="true" />
+    <telerik:RadToolBarButton Visible="true" Enabled="true" Text="" Tooltip="刷新" CommandName="RebindGrid" checkimageurl="images/ImageButton/refresh.png" ImageUrl="images/ImageButton/refresh.png"/>
+    <telerik:RadToolBarButton Visible="false" Enabled="true" Text="" Tooltip="查询" CommandName="Query" checkimageurl="images/ImageButton/search.png" ImageUrl="images/ImageButton/search.png"/>
+    <telerik:RadToolBarButton Visible="false" Enabled="true" Text="" Tooltip="关闭" CommandName="Close" checkimageurl="images/ImageButton/Menu_OperateExit.gif" ImageUrl="images/ImageButton/Menu_OperateExit.gif"/>
+    <telerik:RadToolBarButton IsSeparator="True" />
+    <telerik:RadToolBarButton Visible="true" Enabled="true" Text="" Tooltip="导出Excel" CommandName="ExportToExcel" CommandArgument="Export" ImageUrl="images/ImageButton/ExportToExcel.png"/>
+    <telerik:RadToolBarButton Visible="true" Enabled="true" Text="" Tooltip="导出Word" CommandName="ExportToWord" CommandArgument="Export" ImageUrl="images/ImageButton/ExportToWord.png"/>
+    <telerik:RadToolBarButton Visible="false" Enabled="true" Text="" Tooltip="导出CSV" CommandName="ExportToCsv" CommandArgument="Export" ImageUrl="images/ImageButton/ExportToCsv.gif" />
+</Items>
+</telerik:RadToolBar>
+
+<asp:ImageButton SkinID="ImgBtnSearch" runat="server" Width="61px" Height="24" ImageUrl="images/ImageButton/search.png" />
+<asp:ImageButton SkinID="ImgBtnAdd" runat="server" Width="61px" Height="24" ImageUrl="images/ImageButton/add.png" />
+<asp:ImageButton SkinID="ImgBtnSave" runat="server" Width="61px" Height="24" ImageUrl="images/ImageButton/save.png" />
+<asp:ImageButton SkinID="ImgBtnExcel" runat="server" Width="88px" Height="24" ImageUrl="images/ImageButton/ExportToExcel.png" />
+<asp:ImageButton SkinID="ImgBtnWord" runat="server" Width="88px" Height="24" ImageUrl="images/ImageButton/ExportToWord.png" />

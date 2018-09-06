@@ -1,0 +1,4 @@
+D:\NTCODE\Web\Services\SmartEP.Service.PublishingPlatform\bin\Release\SmartEP.Service.PublishingPlatform.dll
+D:\NTCODE\Web\Services\SmartEP.Service.PublishingPlatform\bin\Release\SmartEP.Service.PublishingPlatform.pdb
+D:\NTCODE\Web\Services\SmartEP.Service.PublishingPlatform\obj\x86\Release\SmartEP.Service.PublishingPlatform.dll
+D:\NTCODE\Web\Services\SmartEP.Service.PublishingPlatform\obj\x86\Release\SmartEP.Service.PublishingPlatform.pdb

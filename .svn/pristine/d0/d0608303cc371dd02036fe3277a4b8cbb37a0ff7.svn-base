@@ -1,0 +1,161 @@
+.RadTabStrip_Neptune {
+  color: black;
+  font: 12px "Segoe UI", Arial, Helvetica, sans-serif;
+  line-height: 26px; }
+  .RadTabStrip_Neptune .rtsGhostTab {
+    border-color: #a7bedb;
+    border-radius: 5px;
+    color: #00156e;
+    background-color: #ccdbee; }
+  .RadTabStrip_Neptune .rtsLevel {
+    background: #ccdbee; }
+    .RadTabStrip_Neptune .rtsLevel.rtsLevel2, .RadTabStrip_Neptune .rtsLevel.rtsLevel3 {
+      background-color: #ccdbee;
+      background-image: url('TabStrip/Level2Bg.png');
+      background-repeat: repeat-x; }
+  .RadTabStrip_Neptune .rtsLI,
+  .RadTabStrip_Neptune .rtsLink {
+    color: black;
+    font: 12px/26px "Segoe UI", Arial, Helvetica, sans-serif; }
+  .RadTabStrip_Neptune .rtsLink {
+    background-image: none; }
+    .RadTabStrip_Neptune .rtsLink:hover {
+      text-decoration: underline; }
+  .RadTabStrip_Neptune .rtsOut {
+    background-image: none; }
+  .RadTabStrip_Neptune .rtsSelected,
+  .RadTabStrip_Neptune .rtsSelected:hover {
+    text-decoration: underline; }
+  .RadTabStrip_Neptune .rtsDisabled {
+    color: #8d8d8d; }
+  .RadTabStrip_Neptune .rtsLevel1 {
+    background-color: #bfdbff;
+    background-image: url('TabStrip/TabStripStates.png');
+    background-position: 0 100%;
+    background-repeat: no-repeat; }
+    .RadTabStrip_Neptune .rtsLevel1 .rtsLink {
+      background-image: url('TabStrip/TabStripStates.png');
+      background-position: 0 0;
+      color: #00156e; }
+      .RadTabStrip_Neptune .rtsLevel1 .rtsLink:hover {
+        background-position: 0 -52px; }
+    .RadTabStrip_Neptune .rtsLevel1 .rtsSelected,
+    .RadTabStrip_Neptune .rtsLevel1 .rtsSelected:hover {
+      text-decoration: none;
+      background-position: 0 -26px; }
+    .RadTabStrip_Neptune .rtsLevel1 .rtsOut {
+      background-image: url('TabStrip/TabStripStates.png');
+      background-position: 100% 0; }
+    .RadTabStrip_Neptune .rtsLevel1 .rtsLink:hover .rtsOut {
+      background-position: 100% -52px; }
+    .RadTabStrip_Neptune .rtsLevel1 .rtsSelected .rtsOut,
+    .RadTabStrip_Neptune .rtsLevel1 .rtsSelected:hover .rtsOut {
+      background-position: 100% -26px; }
+    .RadTabStrip_Neptune .rtsLevel1 .rtsDisabled {
+      color: #8d8d8d; }
+    .RadTabStrip_Neptune .rtsLevel1 .rtsDisabled:hover {
+      background-position: 0 0;
+      text-decoration: none; }
+    .RadTabStrip_Neptune .rtsLevel1 .rtsDisabled:hover .rtsOut {
+      background-position: 100% 0; }
+  .RadTabStrip_Neptune .rtsLevel2 {
+    background-position: 0 0; }
+  .RadTabStrip_Neptune .rtsLevel3 {
+    background-position: 0 -26px; }
+  .RadTabStrip_Neptune .rtsNextArrow,
+  .RadTabStrip_Neptune .rtsPrevArrow,
+  .RadTabStrip_Neptune .rtsPrevArrowDisabled,
+  .RadTabStrip_Neptune .rtsNextArrowDisabled {
+    background-image: url('TabStrip/TabStripStates.png'); }
+
+.RadTabStrip_Neptune.RadTabStripVertical .rtsLevel1 {
+  background-image: none; }
+  .RadTabStrip_Neptune.RadTabStripVertical .rtsLevel1 .rtsLink {
+    background-image: url('TabStrip/TabStripVStates.png');
+    *zoom: 1; }
+  .RadTabStrip_Neptune.RadTabStripVertical .rtsLevel1 .rtsOut {
+    background-image: none; }
+.RadTabStrip_Neptune.RadTabStripVertical .rtsLevel2 {
+  background-image: none; }
+.RadTabStrip_Neptune.RadTabStripVertical .rtsLevel3 {
+  background-image: none; }
+
+.RadTabStripBottom_Neptune .rtsLevel.rtsLevel2, .RadTabStripBottom_Neptune .rtsLevel.rtsLevel3 {
+  background-image: none; }
+.RadTabStripBottom_Neptune .rtsLevel1 {
+  background-position: 0 -599px;
+  background-repeat: repeat-x; }
+  .RadTabStripBottom_Neptune .rtsLevel1 .rtsLink {
+    background-position: 0 -130px; }
+    .RadTabStripBottom_Neptune .rtsLevel1 .rtsLink:hover {
+      background-position: 0 -182px; }
+  .RadTabStripBottom_Neptune .rtsLevel1 .rtsOut {
+    background-position: 100% -130px; }
+  .RadTabStripBottom_Neptune .rtsLevel1 .rtsLink:hover .rtsOut {
+    background-position: 100% -182px; }
+  .RadTabStripBottom_Neptune .rtsLevel1 .rtsSelected,
+  .RadTabStripBottom_Neptune .rtsLevel1 .rtsSelected:hover {
+    background-position: 0 -156px; }
+  .RadTabStripBottom_Neptune .rtsLevel1 .rtsSelected .rtsOut,
+  .RadTabStripBottom_Neptune .rtsLevel1 .rtsSelected:hover .rtsOut {
+    background-position: 100% -156px; }
+  .RadTabStripBottom_Neptune .rtsLevel1 .rtsDisabled:hover {
+    background-position: 0 -599px; }
+    .RadTabStripBottom_Neptune .rtsLevel1 .rtsDisabled:hover .rtsOut {
+      background-position: 100% -599px; }
+.RadTabStripBottom_Neptune .rtsLevel2 {
+  background-image: none; }
+.RadTabStripBottom_Neptune .rtsLevel3 {
+  background-image: none; }
+
+.RadTabStripLeft_Neptune .rtsLevel1 .rtsLink {
+  background-position: 100% 0; }
+  .RadTabStripLeft_Neptune .rtsLevel1 .rtsLink:hover {
+    background-position: 0 -200px; }
+  .RadTabStripLeft_Neptune .rtsLevel1 .rtsLink.rtsSelected {
+    background-position: 0 -400px; }
+.RadTabStripLeft_Neptune .rtsLevel1 .rtsDisabled:hover {
+  background-position: 100% 0; }
+.RadTabStripLeft_Neptune .rtsSeparator {
+  background: #6f6f6f; }
+
+.RadTabStripRight_Neptune .rtsLevel1 .rtsLink {
+  background-position: 100% 0; }
+  .RadTabStripRight_Neptune .rtsLevel1 .rtsLink:hover {
+    background-position: 100% -200px; }
+  .RadTabStripRight_Neptune .rtsLevel1 .rtsLink.rtsSelected {
+    background-position: 100% -400px; }
+.RadTabStripRight_Neptune .rtsLevel1 .rtsDisabled:hover {
+  background-position: 100% 0; }
+.RadTabStripRight_Neptune .rtsSeparator {
+  background: #6f6f6f; }
+
+html .RadTabStrip_Neptune_disabled .rtsLevel1 .rtsLink {
+  color: #8d8d8d;
+  cursor: default; }
+  html .RadTabStrip_Neptune_disabled .rtsLevel1 .rtsLink:hover {
+    text-decoration: none; }
+
+/* <focus cue> */
+div.RadTabStrip_Office2010Blue a.rtsLink:focus {
+  outline-color: #6f6f6f; }
+
+div.RadTabStrip_Office2010Blue a.rtsLink:focus:after {
+  border-color: #6f6f6f \9; }
+
+/* </focus cue> */
+/** DropClues */
+.rtsDropClue_Neptune {
+  background-image: url('../Common/TabStrip/rtsDropClueSprite.png'); }
+
+.rtsDropClueTop_Neptune {
+  background-position: 0 -20px; }
+
+.rtsDropClueRight_Neptune {
+  background-position: 0 -30px; }
+
+.rtsDropClueBottom_Neptune {
+  background-position: 0 0; }
+
+.rtsDropClueLeft_Neptune {
+  background-position: 0 -10px; }

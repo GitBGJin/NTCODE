@@ -1,0 +1,70 @@
+/*global*/
+.RadInput_Neptune,
+.RadInputMgr_Neptune {
+  font: normal 12px "Segoe UI", Arial, Helvetica, sans-serif; }
+
+/*textbox states*/
+html body .RadInput_Neptune .riTextBox, html body .RadInputMgr_Neptune {
+  border-color: #abc1de;
+  background: #fff;
+  color: #333333;
+  font: normal 12px "Segoe UI", Arial, Helvetica, sans-serif; }
+html body .RadInput_Neptune .riEmpty,
+html body .RadInput_Empty_Neptune {
+  color: #8d8d8d; }
+html body .RadInput_Neptune .riHover, html body .RadInput_Hover_Neptune, html body .RadInput_Neptune .riFocused, html body .RadInput_Focused_Neptune {
+  color: #333333;
+  border-color: #305090; }
+html body .RadInput_Neptune .riRead, html body .RadInput_Read_Neptune {
+  border-color: #ccdbed; }
+html body .RadInput_Neptune .riDisabled, html body .RadInput_Disabled_Neptune {
+  border-color: #ccdbed;
+  color: #8d8d8d;
+  cursor: default; }
+html body .RadInput_Neptune .riError, html body .RadInput_Error_Neptune {
+  border-color: #b32d34 #dc643f #ea8541;
+  background: white 100% -298px no-repeat url('Input/sprite.gif');
+  color: #b32d34; }
+
+.RadForm.rfdTextbox .RadInput_Neptune .riError[type="text"], .RadForm.rfdTextbox .RadInput_Error_Neptune[type="text"] {
+  border-color: #b32d34 #dc643f #ea8541;
+  background: white 100% -298px no-repeat url('Input/sprite.gif');
+  color: #b32d34; }
+
+html body .RadInput_Neptune .riNegative, html body .RadInput_Negative_Neptune {
+  color: #565656; }
+
+/*buttons*/
+.RadInput_Neptune a {
+  background: transparent no-repeat url('Input/sprite.gif'); }
+.RadInput_Neptune .riBtn a {
+  width: 20px;
+  height: 18px;
+  line-height: 18px;
+  background-position: 3px 5px; }
+  .RadInput_Neptune .riBtn a:hover {
+    background-position: 3px -45px; }
+.RadInput_Neptune .riSpin a {
+  width: 15px;
+  height: 7px;
+  line-height: 7px; }
+.RadInput_Neptune a.riUp {
+  background-position: 4px -98px; }
+  .RadInput_Neptune a.riUp:hover {
+    background-position: 4px -148px; }
+.RadInput_Neptune a.riDown {
+  background-position: 4px -199px; }
+  .RadInput_Neptune a.riDown:hover {
+    background-position: 4px -249px; }
+.RadInput_Neptune .riLabel {
+  color: #000; }
+.RadInput_Neptune .riResizeIcon {
+  background: transparent 0 0 no-repeat url('Input/ResizeEdge.gif'); }
+
+html body .RadInputRTL_Neptune .riError, html body .RadInputRTL_Error_Neptune {
+  background-position: 3px -298px; }
+html body .RadInputRTL_Neptune .riResizeIcon {
+  background-position: 0 -19px; }
+
+.RadForm.rfdTextbox .RadInputRTL_Neptune .riError[type="text"], .RadForm.rfdTextbox .RadInputRTL_Error_Neptune[type="text"] {
+  background-position: 3px -298px; }

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DomainModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="2.0.0.0" name="MonitorBusinessModel" namespace="Model" showPropertiesCompartment="true" xmlns="http://www.telerik.com/ORM">
+  <orm:orm name="MonitorBusinessModel" backend="mssql" default-schema="dbo" xmlns:orm="http://tempuri.org/ORM">
+    <orm:namespace name="Model" default="true">
+      <orm:class name="InstrumentDataOnline" uniqueId="487b7643-ba24-4a81-b9b4-d843655b25bd">
+        <orm:table name="InstrumentDataOnline" />
+        <orm:identity>
+          <orm:key-generator name="autoinc">
+            <orm:key-generator-member property-name="Id" />
+          </orm:key-generator>
+          <orm:single-field field-name="_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_id" property="Id" behavior="readwrite" uniqueId="9e75aa40-fc55-47fe-8471-9a10bbacd4d0" type="System.Int32">
+          <orm:column name="Id" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_instrumentUid" property="InstrumentUid" behavior="readwrite" uniqueId="430cd2a0-a332-4531-b017-86c280dc2f91" type="System.String">
+          <orm:column name="InstrumentUid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_instrumentName" property="InstrumentName" behavior="readwrite" uniqueId="83f7e8b4-80bd-4f08-af8e-933da5f564c4" type="System.String">
+          <orm:column name="InstrumentName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_dataTypeUid" property="DataTypeUid" behavior="readwrite" uniqueId="d39ecd05-c2c4-4caf-8fdf-db268d469dea" type="System.String">
+          <orm:column name="DataTypeUid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_isOnline" property="IsOnline" behavior="readwrite" uniqueId="e266616a-02fa-4753-a836-a980bdf0f1d9" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="IsOnline" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_newDataTime" property="NewDataTime" behavior="readwrite" uniqueId="6063514e-746b-41b2-a664-5b1f1ba56310" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="NewDataTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="_offLineTime" property="OffLineTime" behavior="readwrite" uniqueId="27fc1f64-46a2-46b7-9d42-85651c2f3aec" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="OffLineTime" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+      </orm:class>
+    </orm:namespace>
+    <orm:schema schema="">
+      <orm:table name="InstrumentDataOnline">
+        <orm:column name="Id" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="InstrumentUid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="InstrumentName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="DataTypeUid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="IsOnline" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="NewDataTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="OffLineTime" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+      </orm:table>
+    </orm:schema>
+    <orm:relational-naming-settings>
+      <orm:source-strategy>Property</orm:source-strategy>
+      <orm:remove-camel-case>False</orm:remove-camel-case>
+    </orm:relational-naming-settings>
+  </orm:orm>
+  <ModelSettings xmlns="">
+    <AppConfigConnectionPropertyName>AMS_MonitorBusinessConnection</AppConfigConnectionPropertyName>
+    <AppConfigConnectionString>Data Source=192.168.90.199;Initial Catalog=AMS_MonitorBusiness;Persist Security Info=True;User ID=sa;Password=sinoyd123!@#</AppConfigConnectionString>
+    <InitialCatalog>AMS_MonitorBusiness</InitialCatalog>
+    <NamingSettings>
+      <ClassRules>
+        <CaseMode>PascalCase</CaseMode>
+        <PluralizationMode>Singularize</PluralizationMode>
+      </ClassRules>
+      <FieldRules>
+        <AddPrefix>_</AddPrefix>
+        <CaseMode>CamelCase</CaseMode>
+      </FieldRules>
+      <PropertyRules>
+        <CaseMode>PascalCase</CaseMode>
+      </PropertyRules>
+      <NavigationPropertyRules />
+    </NamingSettings>
+    <CodeGenerationSettings>
+      <MappingDefinitionType>Xml</MappingDefinitionType>
+    </CodeGenerationSettings>
+    <SchemaUpdateSettings />
+    <BackendConfigurationSettings>
+      <BackendConfiguration>
+        <Backend>MsSql</Backend>
+        <ProviderName>System.Data.SqlClient</ProviderName>
+      </BackendConfiguration>
+    </BackendConfigurationSettings>
+  </ModelSettings>
+  <Types>
+    <DomainClass Id="487b7643-ba24-4a81-b9b4-d843655b25bd" name="InstrumentDataOnline" namespace="Model" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="Id">
+      <Property Id="9e75aa40-fc55-47fe-8471-9a10bbacd4d0" name="Id" type="Int32" label="Id : Int32" kind="Persistent" identity="true" fieldName="_id" />
+      <Property Id="d39ecd05-c2c4-4caf-8fdf-db268d469dea" name="DataTypeUid" label="DataTypeUid : String" kind="Persistent" fieldName="_dataTypeUid" />
+      <Property Id="83f7e8b4-80bd-4f08-af8e-933da5f564c4" name="InstrumentName" label="InstrumentName : String" kind="Persistent" fieldName="_instrumentName" />
+      <Property Id="430cd2a0-a332-4531-b017-86c280dc2f91" name="InstrumentUid" label="InstrumentUid : String" kind="Persistent" fieldName="_instrumentUid" />
+      <Property Id="e266616a-02fa-4753-a836-a980bdf0f1d9" name="IsOnline" type="Int32" label="IsOnline : Int32" nullable="true" kind="Persistent" fieldName="_isOnline" />
+      <Property Id="6063514e-746b-41b2-a664-5b1f1ba56310" name="NewDataTime" type="DateTime" label="NewDataTime : DateTime" nullable="true" kind="Persistent" fieldName="_newDataTime" />
+      <Property Id="27fc1f64-46a2-46b7-9d42-85651c2f3aec" name="OffLineTime" type="Int32" label="OffLineTime : Int32" nullable="true" kind="Persistent" fieldName="_offLineTime" />
+    </DomainClass>
+  </Types>
+  <domainContext>
+    <domainModelHasDomainContext Id="3339fdeb-6137-43cd-9977-8e651c1f0395">
+      <domainContainer name="MonitorBusinessModel" namespace="Model" showPropertiesCompartment="true">
+        <entitySetProperty name="InstrumentDataOnlines" namespace="Model" type="InstrumentDataOnline" label="InstrumentDataOnlines : IQueryable&lt;Model.InstrumentDataOnline&gt;" />
+      </domainContainer>
+    </domainModelHasDomainContext>
+  </domainContext>
+</DomainModel>

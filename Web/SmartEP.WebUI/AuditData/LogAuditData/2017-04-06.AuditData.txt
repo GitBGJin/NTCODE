@@ -1,0 +1,35 @@
+Time:    2017/4/6 14:46:47
+Action:  指定的转换无效。
+Message: System.Data.DataView GetDataPager(System.String[], System.String[], System.DateTime, System.DateTime, Int32, Int32, Int32 ByRef, System.String)
+Function: SmartEP.Data
+-----------------------------------------------------------
+
+
+Time:    2017/4/6 14:50:29
+Action:  指定的转换无效。
+Message: System.Data.DataView GetDataPager(System.String[], System.String[], System.DateTime, System.DateTime, Int32, Int32, Int32 ByRef, System.String)
+Function: SmartEP.Data
+-----------------------------------------------------------
+
+
+Time:    2017/4/6 14:50:34
+Action:  指定的转换无效。
+Message: System.Data.DataView GetDataPager(System.String[], System.String[], System.DateTime, System.DateTime, Int32, Int32, Int32 ByRef, System.String)
+Function: SmartEP.Data
+-----------------------------------------------------------
+
+
+Time:    2017/4/6 14:52:00
+Action:  指定的转换无效。
+Message: System.Data.DataView GetDataPager(System.String[], System.String[], System.DateTime, System.DateTime, Int32, Int32, Int32 ByRef, System.String)
+Function: SmartEP.Data
+-----------------------------------------------------------
+
+
+Time:    2017/4/6 14:52:01
+Action:  指定的转换无效。
+Message: System.Data.DataView GetDataPager(System.String[], System.String[], System.DateTime, System.DateTime, Int32, Int32, Int32 ByRef, System.String)
+Function: SmartEP.Data
+-----------------------------------------------------------
+
+

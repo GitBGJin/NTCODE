@@ -1,0 +1,1646 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DomainModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="2.0.0.0" name="WaterAutoMonitoringModel" namespace="SmartEP.DomainModel.WaterAutoMonitoring" showPropertiesCompartment="true" xmlns="http://www.telerik.com/ORM">
+  <orm:orm name="WaterAutoMonitoringModel" backend="mssql" default-schema="dbo" xmlns:orm="http://tempuri.org/ORM">
+    <orm:namespace name="SmartEP.DomainModel.WaterAutoMonitoring" default="true">
+      <orm:class name="OriginalPacketRequestEntity" uniqueId="aeb4bf8e-8aa4-45d9-9013-0d2c91336b51">
+        <orm:table name="TB_OriginalPacketRequest" />
+        <orm:identity>
+          <orm:key-generator name="autoinc">
+            <orm:key-generator-member property-name="Id" />
+          </orm:key-generator>
+          <orm:single-field field-name="m_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="m_id" property="Id" behavior="readwrite" uniqueId="93492de8-fb30-4948-9e8c-ce9e7d0bc473" type="System.Int32">
+          <orm:column name="id" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_qn" property="Qn" behavior="readwrite" uniqueId="c3200332-606e-4891-af01-1ad7573da2f8" type="System.String">
+          <orm:column name="qn" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_sT" property="ST" behavior="readwrite" uniqueId="9f3f40de-f2f0-49c3-b118-b2a3a586ef68" type="System.String">
+          <orm:column name="ST" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_cn" property="Cn" behavior="readwrite" uniqueId="80530a7e-8dc1-4dee-966b-7867aafaabfc" type="System.String">
+          <orm:column name="cn" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_mn" property="Mn" behavior="readwrite" uniqueId="e020c8bb-8891-4f8f-ad99-6aac75ba4160" type="System.String">
+          <orm:column name="mn" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_cmdDesc" property="CmdDesc" behavior="readwrite" uniqueId="e7c53b2d-0af9-4e36-b9d6-45a7eda15f38" type="System.String">
+          <orm:column name="cmdDesc" sql-type="nvarchar" nullable="true" length="4000" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_cmdContent" property="CmdContent" behavior="readwrite" uniqueId="fab55e41-2992-437d-afa8-c24995d78c14" type="System.String">
+          <orm:column name="cmdContent" sql-type="nvarchar" nullable="true" length="4000" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_operater" property="Operater" behavior="readwrite" uniqueId="5fc6d33e-73d0-422f-9689-25fa82a8a66c" type="System.String">
+          <orm:column name="operater" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_operaterTime" property="OperaterTime" behavior="readwrite" uniqueId="d6386956-9613-46c2-bc2b-835259282aa9" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="operaterTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_execState" property="ExecState" behavior="readwrite" uniqueId="4b15dfb0-6f79-4a8c-81bf-7491c753ecd0" type="System.String">
+          <orm:column name="execState" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_isFinished" property="IsFinished" behavior="readwrite" uniqueId="8f18294c-ec9f-46e9-9594-361f0d0a6ca3" type="System.Nullable`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="isFinished" sql-type="bit" nullable="true" length="0" scale="0" has-default-value="true" ado-type="Bit" />
+        </orm:field>
+        <orm:field name="m_flag" property="Flag" behavior="readwrite" uniqueId="d6a9b5e7-2b0e-4235-abf1-6c87e970f812" type="System.String">
+          <orm:column name="flag" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_updateUser" property="UpdateUser" behavior="readwrite" uniqueId="2e3225ae-b498-48cb-9381-51c9b3b1d6dc" type="System.String">
+          <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_updateDateTime" property="UpdateDateTime" behavior="readwrite" uniqueId="8183fb93-e005-4566-a4f7-3f973cc671be" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_orderByNum" property="OrderByNum" behavior="readwrite" uniqueId="ded08616-47e6-4e1c-ae1f-0c84ba5b6372" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_description" property="Description" behavior="readwrite" uniqueId="7c38cd38-b565-4dc3-a083-f3be4ab3da69" type="System.String">
+          <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatUser" property="CreatUser" behavior="readwrite" uniqueId="532e05a2-5a11-431c-b437-a3dc662f4e78" type="System.String">
+          <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatDateTime" property="CreatDateTime" behavior="readwrite" uniqueId="c70fc2e9-d601-4648-9f8d-5a6c43346723" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_reqState" property="ReqState" behavior="readwrite" uniqueId="ef9fd600-978f-43db-9cad-f7183c1a4cee" type="System.String">
+          <orm:column name="reqState" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:implements name="SmartEP.DomainModel.WaterAutoMonitoring.IWaterAutoMonitoringEntityProperty" />
+      </orm:class>
+      <orm:class name="OriginalPacketReceiveEntity" uniqueId="cf38936b-b43c-432e-b49c-1ca9394f982c">
+        <orm:table name="TB_OriginalPacketReceive" />
+        <orm:identity>
+          <orm:key-generator name="autoinc">
+            <orm:key-generator-member property-name="Id" />
+          </orm:key-generator>
+          <orm:single-field field-name="m_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="m_id" property="Id" behavior="readwrite" uniqueId="1acbff2b-37f5-4c2b-b491-0a479551c51e" type="System.Int32">
+          <orm:column name="id" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_qN" property="QN" behavior="readwrite" uniqueId="f890d576-5042-49dd-ab6d-3ec640058cc6" type="System.String">
+          <orm:column name="QN" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_sT" property="ST" behavior="readwrite" uniqueId="95d0793e-6df8-4d30-9e61-8f968023ec5a" type="System.String">
+          <orm:column name="ST" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_cN" property="CN" behavior="readwrite" uniqueId="22f6819f-ee98-4913-bad7-1f9750f44f46" type="System.String">
+          <orm:column name="CN" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_mN" property="MN" behavior="readwrite" uniqueId="f2babf12-70d3-4c15-bf53-d04368c17f6d" type="System.String">
+          <orm:column name="MN" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_receiveTime" property="ReceiveTime" behavior="readwrite" uniqueId="d66bcf3a-455a-441c-83e9-ca333a5269b9" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="receiveTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_cmdContent" property="CmdContent" behavior="readwrite" uniqueId="3cb354f4-caa6-407e-ba34-1d22bc805859" type="System.String">
+          <orm:column name="cmdContent" sql-type="nvarchar" nullable="true" length="3000" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_cmdDesc" property="CmdDesc" behavior="readwrite" uniqueId="c671e04f-f709-403d-a7a8-e1ce676e8b77" type="System.String">
+          <orm:column name="cmdDesc" sql-type="nvarchar" nullable="true" length="2000" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_isHandle" property="IsHandle" behavior="readwrite" uniqueId="564df8b7-01fb-415f-baab-8cd61abe5481" type="System.String">
+          <orm:column name="isHandle" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_handleTime" property="HandleTime" behavior="readwrite" uniqueId="bad5f23d-9391-4c94-89b1-2c0c6b77e296" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="handleTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_orderByNum" property="OrderByNum" behavior="readwrite" uniqueId="4ef4224e-8b5c-44f0-ae63-27e7e0eaf677" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_description" property="Description" behavior="readwrite" uniqueId="f73078ff-fcc6-48c3-b88d-43d223dfdf0b" type="System.String">
+          <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatUser" property="CreatUser" behavior="readwrite" uniqueId="24b2123e-d170-45cd-98c9-017b0425903f" type="System.String">
+          <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatDateTime" property="CreatDateTime" behavior="readwrite" uniqueId="7c872d28-d5f6-4102-9897-a0b238d82dd5" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_updateUser" property="UpdateUser" behavior="readwrite" uniqueId="e2246d82-d6f8-44ac-b432-9ca220a52186" type="System.String">
+          <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_updateDateTime" property="UpdateDateTime" behavior="readwrite" uniqueId="252ae23c-2b5d-4d40-938f-4c91eefdd586" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:implements name="SmartEP.DomainModel.WaterAutoMonitoring.IWaterAutoMonitoringEntityProperty" />
+        <orm:index name="ClusteredIndex_MN_receiveTime" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="MN" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="receiveTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:class>
+      <orm:class name="OriginalPacketBackupEntity" uniqueId="64fe0c8a-cc37-4173-a643-1716435d6f31">
+        <orm:table name="TB_OriginalPacketBackup" />
+        <orm:identity>
+          <orm:key-generator name="autoinc">
+            <orm:key-generator-member property-name="Id" />
+          </orm:key-generator>
+          <orm:single-field field-name="m_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="m_id" property="Id" behavior="readwrite" uniqueId="5ffebab2-3d45-4350-b151-d123980336d6" type="System.Int32">
+          <orm:column name="id" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_qN" property="QN" behavior="readwrite" uniqueId="ad8b90fb-2cd7-43e4-b5d4-d7cbf915f786" type="System.String">
+          <orm:column name="QN" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_sT" property="ST" behavior="readwrite" uniqueId="4fdf3a6d-76c4-4b28-bf4f-300064a43c38" type="System.String">
+          <orm:column name="ST" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_cN" property="CN" behavior="readwrite" uniqueId="d9608988-972c-4ef7-96e8-dafd605db565" type="System.String">
+          <orm:column name="CN" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_mN" property="MN" behavior="readwrite" uniqueId="3cf7f4cc-5f03-4279-9d54-e6dabcff800a" type="System.String">
+          <orm:column name="MN" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_receiveTime" property="ReceiveTime" behavior="readwrite" uniqueId="4239099d-bf63-4be6-b33d-84771828d975" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="receiveTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_cmdContent" property="CmdContent" behavior="readwrite" uniqueId="757936fc-9549-4900-acdf-94029b65f40b" type="System.String">
+          <orm:column name="cmdContent" sql-type="nvarchar" nullable="true" length="3000" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_cmdDesc" property="CmdDesc" behavior="readwrite" uniqueId="9fe8bf0b-5f59-4b98-87b9-bc3e732bd342" type="System.String">
+          <orm:column name="cmdDesc" sql-type="nvarchar" nullable="true" length="2000" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_isHandle" property="IsHandle" behavior="readwrite" uniqueId="e457885c-0917-4d04-a96b-cf9f7beb5dbe" type="System.String">
+          <orm:column name="isHandle" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_handleTime" property="HandleTime" behavior="readwrite" uniqueId="085d934a-6be5-45d7-ab2b-85e0e10d7438" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="handleTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_orderByNum" property="OrderByNum" behavior="readwrite" uniqueId="eb000b1b-03da-466e-a89e-192a026b9fae" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_description" property="Description" behavior="readwrite" uniqueId="01dafcaa-578d-440b-aefe-1ba67ff58a34" type="System.String">
+          <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatUser" property="CreatUser" behavior="readwrite" uniqueId="39139117-8087-4ccb-ae5a-73e556758e02" type="System.String">
+          <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatDateTime" property="CreatDateTime" behavior="readwrite" uniqueId="86798457-7088-402c-9cd3-eb3b3b9ee53f" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_updateUser" property="UpdateUser" behavior="readwrite" uniqueId="235bca89-7838-4811-b029-aef49cf11234" type="System.String">
+          <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_updateDateTime" property="UpdateDateTime" behavior="readwrite" uniqueId="8708d33d-685b-4db9-94b9-b3e45252a0ed" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:implements name="SmartEP.DomainModel.WaterAutoMonitoring.IWaterAutoMonitoringEntityProperty" />
+        <orm:index name="ClusteredIndex_MN_receiveTime" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="MN" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="receiveTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:class>
+      <orm:class name="InstrumentDataBy60BufferEntity" uniqueId="3eaef3ba-e44d-48f0-a1bf-928d62181ce3">
+        <orm:table name="TB_InstrumentDataBy60Buffer" schema="Water" />
+        <orm:identity>
+          <orm:key-generator name="autoinc">
+            <orm:key-generator-member property-name="Id" />
+          </orm:key-generator>
+          <orm:single-field field-name="m_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="m_id" property="Id" behavior="readwrite" uniqueId="e6b4dea0-d659-4ab8-9ddc-68ba4bc3d626" type="System.Int32">
+          <orm:column name="id" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_pointId" property="PointId" behavior="readwrite" uniqueId="89d64c68-a9e6-4b4a-80f5-5ce02e14a90c" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="PointId" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_tstamp" property="Tstamp" behavior="readwrite" uniqueId="3e550813-af33-47fb-8aa3-3586d75bdc88" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="tstamp" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_receiveTime" property="ReceiveTime" behavior="readwrite" uniqueId="9251feb6-4d67-46df-b274-0247126243ec" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="ReceiveTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_status" property="Status" behavior="readwrite" uniqueId="2efe23d6-753c-41af-bcd8-d4fe6354bd1c" type="System.String">
+          <orm:column name="Status" sql-type="nvarchar" nullable="true" length="5" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_instrumentCode" property="InstrumentCode" behavior="readwrite" uniqueId="45fdca62-d01d-4bd1-b2f2-2c77a397048f" type="System.String">
+          <orm:column name="instrumentCode" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_pollutantCode" property="PollutantCode" behavior="readwrite" uniqueId="c64d4438-1604-4b61-b78b-a87c95ed741c" type="System.String">
+          <orm:column name="PollutantCode" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_pollutantValue" property="PollutantValue" behavior="readwrite" uniqueId="8b6afa72-f957-42e1-879d-b682525aa9a8" type="System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="PollutantValue" sql-type="decimal" nullable="true" length="18" scale="4" ado-type="Decimal" />
+        </orm:field>
+        <orm:field name="m_monitoringDataTypeCode" property="MonitoringDataTypeCode" behavior="readwrite" uniqueId="dbe234da-a7aa-4398-938a-099c3991e94e" type="System.String">
+          <orm:column name="MonitoringDataTypeCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_orderByNum" property="OrderByNum" behavior="readwrite" uniqueId="45982beb-cc7c-40da-a031-97e6aa19f921" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_description" property="Description" behavior="readwrite" uniqueId="94e21114-6781-4186-9f5a-d03bc9e5aa8c" type="System.String">
+          <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatUser" property="CreatUser" behavior="readwrite" uniqueId="cd3393e0-dbe1-4093-9303-25229fc08f32" type="System.String">
+          <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatDateTime" property="CreatDateTime" behavior="readwrite" uniqueId="f53d2bec-9cc4-4a60-8dd4-2a5eb6013117" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_updateUser" property="UpdateUser" behavior="readwrite" uniqueId="823b21c0-7ca1-416a-9bd2-70a47613b8ff" type="System.String">
+          <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_updateDateTime" property="UpdateDateTime" behavior="readwrite" uniqueId="5b18ef07-c7d1-4057-8290-e50c70d1e2be" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:implements name="SmartEP.DomainModel.WaterAutoMonitoring.IWaterAutoMonitoringEntityProperty" />
+        <orm:index name="ClusteredIndex_PointId_Tstamp" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="PointId" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="tstamp" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:class>
+      <orm:class name="InstrumentDataBy60Entity" uniqueId="6acbc904-26db-4834-89d6-7bc6358691c4">
+        <orm:table name="TB_InstrumentDataBy60" schema="Water" />
+        <orm:identity>
+          <orm:key-generator name="autoinc">
+            <orm:key-generator-member property-name="Id" />
+          </orm:key-generator>
+          <orm:single-field field-name="m_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="m_id" property="Id" behavior="readwrite" uniqueId="e8d128db-82d8-4d69-aa6b-78ec6c3fdaad" type="System.Int32">
+          <orm:column name="id" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_pointId" property="PointId" behavior="readwrite" uniqueId="6609e441-320f-4b6b-b738-55cdaf50790a" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="PointId" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_tstamp" property="Tstamp" behavior="readwrite" uniqueId="07b2e881-65d1-4733-bb9c-f4844dc0467a" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="tstamp" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_receiveTime" property="ReceiveTime" behavior="readwrite" uniqueId="ef51d989-7361-4e7f-9adf-2966c581389a" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="ReceiveTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_status" property="Status" behavior="readwrite" uniqueId="1f72bc3f-79d8-4f34-aedb-d5a208917226" type="System.String">
+          <orm:column name="Status" sql-type="nvarchar" nullable="true" length="5" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_instrumentCode" property="InstrumentCode" behavior="readwrite" uniqueId="edbd5998-28b8-497b-9d3a-4155f36af8cb" type="System.String">
+          <orm:column name="instrumentCode" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_pollutantCode" property="PollutantCode" behavior="readwrite" uniqueId="b3cab342-46a9-4b50-813b-4ad3f92d5eb8" type="System.String">
+          <orm:column name="PollutantCode" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_pollutantValue" property="PollutantValue" behavior="readwrite" uniqueId="1759f13e-082a-46ec-b9dc-3c85f1536f96" type="System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="PollutantValue" sql-type="decimal" nullable="true" length="18" scale="4" ado-type="Decimal" />
+        </orm:field>
+        <orm:field name="m_monitoringDataTypeCode" property="MonitoringDataTypeCode" behavior="readwrite" uniqueId="8f92d84b-3d8e-423e-9b22-a914797ccc84" type="System.String">
+          <orm:column name="MonitoringDataTypeCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_orderByNum" property="OrderByNum" behavior="readwrite" uniqueId="6ca8b338-4d82-45a4-b63b-2e695b781f2d" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_description" property="Description" behavior="readwrite" uniqueId="60afaa92-a64c-403c-84ea-b8cffc8f9bcf" type="System.String">
+          <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatUser" property="CreatUser" behavior="readwrite" uniqueId="299dcf7c-cf0d-43b4-817b-37683db879d4" type="System.String">
+          <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatDateTime" property="CreatDateTime" behavior="readwrite" uniqueId="58bf1d8c-201d-4bc2-a732-ff2e49b75c9f" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_updateUser" property="UpdateUser" behavior="readwrite" uniqueId="4e5d7c93-85f2-4f64-a330-098aae9cb6c0" type="System.String">
+          <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_updateDateTime" property="UpdateDateTime" behavior="readwrite" uniqueId="6e918efa-61c8-4da7-b48b-fa325afad61e" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:implements name="SmartEP.DomainModel.WaterAutoMonitoring.IWaterAutoMonitoringEntityProperty" />
+        <orm:index name="ClusteredIndex_PointId_Tstamp" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="PointId" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="tstamp" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:class>
+      <orm:class name="InfectantByRTEntity" uniqueId="2f70160c-3126-4dc4-b11c-d6daf6da6b2a">
+        <orm:table name="TB_InfectantByRT" schema="Water" />
+        <orm:identity>
+          <orm:key-generator name="autoinc">
+            <orm:key-generator-member property-name="Id" />
+          </orm:key-generator>
+          <orm:single-field field-name="m_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="m_id" property="Id" behavior="readwrite" uniqueId="8cf43c67-5f67-47e9-be14-e06a136bcb4e" type="System.Int64">
+          <orm:column name="id" sql-type="bigint" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int64" />
+        </orm:field>
+        <orm:field name="m_pointId" property="PointId" behavior="readwrite" uniqueId="e30c9cdb-484e-415b-b9b1-a5d046242f47" type="System.Int32">
+          <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_tstamp" property="Tstamp" behavior="readwrite" uniqueId="659b717c-b85e-4d1c-b00a-c63ff0429ee9" type="System.DateTime">
+          <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_receiveTime" property="ReceiveTime" behavior="readwrite" uniqueId="62b515cc-8be3-4a5a-b371-f110a90bbbf6" type="System.DateTime">
+          <orm:column name="ReceiveTime" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_status" property="Status" behavior="readwrite" uniqueId="40fb377e-aed4-433a-8891-5da72f1c65c4" type="System.String">
+          <orm:column name="Status" sql-type="nvarchar" nullable="true" length="5" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_pollutantCode" property="PollutantCode" behavior="readwrite" uniqueId="c5d8474b-084e-4afd-903b-ff6eef7bd7ad" type="System.String">
+          <orm:column name="PollutantCode" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_pollutantValue" property="PollutantValue" behavior="readwrite" uniqueId="ec465adc-8d2c-4e8c-95f8-2ba0745d402e" type="System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="PollutantValue" sql-type="decimal" nullable="true" length="18" scale="4" ado-type="Decimal" />
+        </orm:field>
+        <orm:field name="m_monitoringDataTypeCode" property="MonitoringDataTypeCode" behavior="readwrite" uniqueId="4b54cff0-ce8e-483e-ac34-938f7625978f" type="System.String">
+          <orm:column name="MonitoringDataTypeCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_orderByNum" property="OrderByNum" behavior="readwrite" uniqueId="c1f40f43-24d4-40c5-bcce-25b85fa8faf1" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_description" property="Description" behavior="readwrite" uniqueId="160d9339-3105-4e26-b1c2-44fbb4bb00da" type="System.String">
+          <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatUser" property="CreatUser" behavior="readwrite" uniqueId="d64d50d0-9d7b-414c-867d-4656606dae61" type="System.String">
+          <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatDateTime" property="CreatDateTime" behavior="readwrite" uniqueId="9fbf483b-18e5-436b-b0ea-7810787ef68c" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_updateUser" property="UpdateUser" behavior="readwrite" uniqueId="6224ad85-a0aa-4b72-8a43-5ba9dc43fde5" type="System.String">
+          <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_updateDateTime" property="UpdateDateTime" behavior="readwrite" uniqueId="1caa7da5-77b6-4d94-b19c-78708dc07363" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:implements name="SmartEP.DomainModel.WaterAutoMonitoring.IWaterAutoMonitoringEntityProperty" />
+        <orm:index name="ClusteredIndex_PointId_Tstamp" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:class>
+      <orm:class name="InfectantBy60BufferEntity" uniqueId="cd4e74a2-e9cf-491e-9c94-e7a20e8fd294">
+        <orm:table name="TB_InfectantBy60Buffer" schema="Water" />
+        <orm:identity>
+          <orm:key-generator name="autoinc">
+            <orm:key-generator-member property-name="Id" />
+          </orm:key-generator>
+          <orm:single-field field-name="m_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="m_id" property="Id" behavior="readwrite" uniqueId="e8434f70-b2f1-4662-bf80-55370736d092" type="System.Int64">
+          <orm:column name="id" sql-type="bigint" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int64" />
+        </orm:field>
+        <orm:field name="m_pointId" property="PointId" behavior="readwrite" uniqueId="e05a17c8-e95e-40dd-94c2-ad83a12cdbab" type="System.Int32">
+          <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_tstamp" property="Tstamp" behavior="readwrite" uniqueId="053a4cb8-bbb9-48a3-a9dc-f3b86c87d3a4" type="System.DateTime">
+          <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_receiveTime" property="ReceiveTime" behavior="readwrite" uniqueId="da95a33d-2c7e-4614-a9dd-7fb8fb34b08b" type="System.DateTime">
+          <orm:column name="ReceiveTime" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_status" property="Status" behavior="readwrite" uniqueId="fbfe7a27-44fc-4f02-9659-10e5eb6623a9" type="System.String">
+          <orm:column name="Status" sql-type="nvarchar" nullable="true" length="5" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_pollutantCode" property="PollutantCode" behavior="readwrite" uniqueId="ed02b22c-4387-4ffb-ba6f-dd125cd6bc5b" type="System.String">
+          <orm:column name="PollutantCode" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_pollutantValue" property="PollutantValue" behavior="readwrite" uniqueId="3d077e05-feb8-4b53-a572-8edc59cddcd7" type="System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="PollutantValue" sql-type="decimal" nullable="true" length="18" scale="4" ado-type="Decimal" />
+        </orm:field>
+        <orm:field name="m_monitoringDataTypeCode" property="MonitoringDataTypeCode" behavior="readwrite" uniqueId="1f65c9e1-e0b5-45ed-a783-d0d1c2ef5c98" type="System.String">
+          <orm:column name="MonitoringDataTypeCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_orderByNum" property="OrderByNum" behavior="readwrite" uniqueId="527500e3-9894-47e9-a759-7149950da76e" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_description" property="Description" behavior="readwrite" uniqueId="71f516fb-e7ad-46c5-b300-fd413cdbb490" type="System.String">
+          <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatUser" property="CreatUser" behavior="readwrite" uniqueId="dc59d244-09f4-4d52-a41c-335d3c17abd8" type="System.String">
+          <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatDateTime" property="CreatDateTime" behavior="readwrite" uniqueId="79e346cc-55c6-44dd-8aa8-f3d0517801bb" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_updateUser" property="UpdateUser" behavior="readwrite" uniqueId="a86a5ac4-89ea-4f3e-bc06-b27e64bc5a64" type="System.String">
+          <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_updateDateTime" property="UpdateDateTime" behavior="readwrite" uniqueId="7d64f6d3-3d1f-4733-8c3d-b8a62a327e28" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:implements name="SmartEP.DomainModel.WaterAutoMonitoring.IWaterAutoMonitoringEntityProperty" />
+        <orm:index name="ClusteredIndex_PointId_Tstamp" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:class>
+      <orm:class name="InfectantBy60Entity" uniqueId="8640c84a-d40e-445f-a499-68abd974a06f">
+        <orm:table name="TB_InfectantBy60" schema="Water" />
+        <orm:identity>
+          <orm:key-generator name="autoinc">
+            <orm:key-generator-member property-name="Id" />
+          </orm:key-generator>
+          <orm:single-field field-name="m_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="m_id" property="Id" behavior="readwrite" uniqueId="7b2707b4-d7e7-4f4a-997b-8b7e3c784628" type="System.Int64">
+          <orm:column name="id" sql-type="bigint" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int64" />
+        </orm:field>
+        <orm:field name="m_pointId" property="PointId" behavior="readwrite" uniqueId="657dec9a-5c6b-4bfc-8b62-3c2e19ad8ac2" type="System.Int32">
+          <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_tstamp" property="Tstamp" behavior="readwrite" uniqueId="3d292c71-e63f-4a93-a195-01abd4fba7fb" type="System.DateTime">
+          <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_receiveTime" property="ReceiveTime" behavior="readwrite" uniqueId="47bb1182-8a38-44d6-981c-95a48eccc5e8" type="System.DateTime">
+          <orm:column name="ReceiveTime" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_status" property="Status" behavior="readwrite" uniqueId="da986442-f0c5-4e20-919f-5b47f72e0b43" type="System.String">
+          <orm:column name="Status" sql-type="nvarchar" nullable="true" length="5" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_pollutantCode" property="PollutantCode" behavior="readwrite" uniqueId="4da58fa8-8001-445c-8a91-e8ec04855c5d" type="System.String">
+          <orm:column name="PollutantCode" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_pollutantValue" property="PollutantValue" behavior="readwrite" uniqueId="de00b911-1d20-4c55-8af6-7c573b79bafd" type="System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="PollutantValue" sql-type="decimal" nullable="true" length="18" scale="4" ado-type="Decimal" />
+        </orm:field>
+        <orm:field name="m_monitoringDataTypeCode" property="MonitoringDataTypeCode" behavior="readwrite" uniqueId="17ca734f-8018-4be5-ab76-e0d79b9468fa" type="System.String">
+          <orm:column name="MonitoringDataTypeCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_orderByNum" property="OrderByNum" behavior="readwrite" uniqueId="e901ac80-aaa1-42bc-90fe-7b1dc8f884d3" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_description" property="Description" behavior="readwrite" uniqueId="034e51ec-1031-4d24-9280-9497bb0a24d4" type="System.String">
+          <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatUser" property="CreatUser" behavior="readwrite" uniqueId="a7ee9c4a-c204-4ab0-ad5e-3e1b4a1dfa14" type="System.String">
+          <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatDateTime" property="CreatDateTime" behavior="readwrite" uniqueId="4eba2150-ab36-4a2e-be86-d8bb116ed6df" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_updateUser" property="UpdateUser" behavior="readwrite" uniqueId="44c07762-8ef3-4c41-be49-1b10d398360a" type="System.String">
+          <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_updateDateTime" property="UpdateDateTime" behavior="readwrite" uniqueId="fb1ba804-7381-4c70-90cd-39a55c5f65f0" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:implements name="SmartEP.DomainModel.WaterAutoMonitoring.IWaterAutoMonitoringEntityProperty" />
+        <orm:index name="ClusteredIndex_PointId_Tstamp" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:class>
+      <orm:class name="InfectantBy5BufferEntity" uniqueId="e00c61ac-486f-4354-b6d0-59b3cde0a0f3">
+        <orm:table name="TB_InfectantBy5Buffer" schema="Water" />
+        <orm:identity>
+          <orm:key-generator name="autoinc">
+            <orm:key-generator-member property-name="Id" />
+          </orm:key-generator>
+          <orm:single-field field-name="m_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="m_id" property="Id" behavior="readwrite" uniqueId="751d1562-3a22-4e44-a3f3-7884b771fe08" type="System.Int64">
+          <orm:column name="id" sql-type="bigint" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int64" />
+        </orm:field>
+        <orm:field name="m_pointId" property="PointId" behavior="readwrite" uniqueId="33b6aa48-4a29-41b4-ad37-6c4d81c292f0" type="System.Int32">
+          <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_tstamp" property="Tstamp" behavior="readwrite" uniqueId="ed66b96d-45dc-4add-9d4c-45f1454f68e1" type="System.DateTime">
+          <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_receiveTime" property="ReceiveTime" behavior="readwrite" uniqueId="45aebdbb-1ba3-4d4a-b47c-8a344feeeb99" type="System.DateTime">
+          <orm:column name="ReceiveTime" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_status" property="Status" behavior="readwrite" uniqueId="9f72e1b6-e964-433e-accf-24e1d8af2f01" type="System.String">
+          <orm:column name="Status" sql-type="nvarchar" nullable="true" length="5" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_pollutantCode" property="PollutantCode" behavior="readwrite" uniqueId="335d1360-4844-459e-8abd-528f03c53d64" type="System.String">
+          <orm:column name="PollutantCode" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_pollutantValue" property="PollutantValue" behavior="readwrite" uniqueId="74df5943-56a5-4884-ba87-4d211fda98fe" type="System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="PollutantValue" sql-type="decimal" nullable="true" length="18" scale="4" ado-type="Decimal" />
+        </orm:field>
+        <orm:field name="m_monitoringDataTypeCode" property="MonitoringDataTypeCode" behavior="readwrite" uniqueId="29a8e169-200b-46d1-970d-7db283d7535e" type="System.String">
+          <orm:column name="MonitoringDataTypeCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_orderByNum" property="OrderByNum" behavior="readwrite" uniqueId="61613460-d143-4d53-899e-07d81e05d8d6" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_description" property="Description" behavior="readwrite" uniqueId="da8ed574-2c7c-4f28-8504-88170dd46d2c" type="System.String">
+          <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatUser" property="CreatUser" behavior="readwrite" uniqueId="de868a69-6fbf-40ac-830f-54a86ae54176" type="System.String">
+          <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatDateTime" property="CreatDateTime" behavior="readwrite" uniqueId="9411d4d5-3165-437a-bc8b-459f184025db" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_updateUser" property="UpdateUser" behavior="readwrite" uniqueId="8c018846-07ab-4a63-9939-a55e4b807c10" type="System.String">
+          <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_updateDateTime" property="UpdateDateTime" behavior="readwrite" uniqueId="ce304461-6016-4358-ac34-a320938a2e3d" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:implements name="SmartEP.DomainModel.WaterAutoMonitoring.IWaterAutoMonitoringEntityProperty" />
+        <orm:index name="ClusteredIndex_PointId_Tstamp" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:class>
+      <orm:class name="InfectantBy5Entity" uniqueId="d2a8175e-6c73-4761-b97b-3fb31510680c">
+        <orm:table name="TB_InfectantBy5" schema="Water" />
+        <orm:identity>
+          <orm:key-generator name="autoinc">
+            <orm:key-generator-member property-name="Id" />
+          </orm:key-generator>
+          <orm:single-field field-name="m_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="m_id" property="Id" behavior="readwrite" uniqueId="4c6b0599-9a3c-4757-a838-33107369bb2a" type="System.Int64">
+          <orm:column name="id" sql-type="bigint" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int64" />
+        </orm:field>
+        <orm:field name="m_pointId" property="PointId" behavior="readwrite" uniqueId="944891c3-5690-4db9-96eb-652653de34c3" type="System.Int32">
+          <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_tstamp" property="Tstamp" behavior="readwrite" uniqueId="42c6acea-031c-458d-87f0-67dc9d3256f1" type="System.DateTime">
+          <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_receiveTime" property="ReceiveTime" behavior="readwrite" uniqueId="c5880a29-5041-4f98-8779-d9c03a3e2063" type="System.DateTime">
+          <orm:column name="ReceiveTime" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_status" property="Status" behavior="readwrite" uniqueId="9154bef0-7a9e-4635-8f2f-5e9cf80654e0" type="System.String">
+          <orm:column name="Status" sql-type="nvarchar" nullable="true" length="5" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_pollutantCode" property="PollutantCode" behavior="readwrite" uniqueId="ad39527f-c3a1-4ce8-a9be-2e23c67463ee" type="System.String">
+          <orm:column name="PollutantCode" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_pollutantValue" property="PollutantValue" behavior="readwrite" uniqueId="529f7899-879b-4d5f-b2cc-2e8147d2f024" type="System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="PollutantValue" sql-type="decimal" nullable="true" length="18" scale="4" ado-type="Decimal" />
+        </orm:field>
+        <orm:field name="m_monitoringDataTypeCode" property="MonitoringDataTypeCode" behavior="readwrite" uniqueId="c758a8e5-8234-4544-b074-a558f568c8ca" type="System.String">
+          <orm:column name="MonitoringDataTypeCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_orderByNum" property="OrderByNum" behavior="readwrite" uniqueId="5b41ee7c-0319-4cee-8878-2800338e2583" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_description" property="Description" behavior="readwrite" uniqueId="e55f1fe9-327f-477b-813e-3f5a0d8e37ae" type="System.String">
+          <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatUser" property="CreatUser" behavior="readwrite" uniqueId="e1cb175a-023e-4089-820a-00649c860871" type="System.String">
+          <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatDateTime" property="CreatDateTime" behavior="readwrite" uniqueId="701811f1-8c6c-486c-b6c6-195529bde4dd" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_updateUser" property="UpdateUser" behavior="readwrite" uniqueId="b291e871-458c-4f5b-bfbd-6a34f5d93787" type="System.String">
+          <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_updateDateTime" property="UpdateDateTime" behavior="readwrite" uniqueId="1d345bc5-d528-45fd-a3db-c661c7219d6b" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:implements name="SmartEP.DomainModel.WaterAutoMonitoring.IWaterAutoMonitoringEntityProperty" />
+        <orm:index name="ClusteredIndex_PointId_Tstamp" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:class>
+      <orm:class name="InfectantBy30BufferEntity" uniqueId="922f01c0-0577-4b33-bc37-b15e3177413a">
+        <orm:table name="TB_InfectantBy30Buffer" schema="Water" />
+        <orm:identity>
+          <orm:key-generator name="autoinc">
+            <orm:key-generator-member property-name="Id" />
+          </orm:key-generator>
+          <orm:single-field field-name="m_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="m_id" property="Id" behavior="readwrite" uniqueId="fb362ac1-82e3-420c-9a7e-4f07eb5b4fe1" type="System.Int64">
+          <orm:column name="id" sql-type="bigint" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int64" />
+        </orm:field>
+        <orm:field name="m_pointId" property="PointId" behavior="readwrite" uniqueId="00af9531-b3cc-4e4c-94c2-f166548424e4" type="System.Int32">
+          <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_tstamp" property="Tstamp" behavior="readwrite" uniqueId="daf591b1-8ad8-4c8e-9878-a0ebe67802ea" type="System.DateTime">
+          <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_receiveTime" property="ReceiveTime" behavior="readwrite" uniqueId="bed3f463-598f-489e-921d-14170f623acc" type="System.DateTime">
+          <orm:column name="ReceiveTime" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_status" property="Status" behavior="readwrite" uniqueId="5f5ae176-4cdd-408d-b07b-922be36a0877" type="System.String">
+          <orm:column name="Status" sql-type="nvarchar" nullable="true" length="5" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_pollutantCode" property="PollutantCode" behavior="readwrite" uniqueId="5ae0f9f0-4d68-44ad-b55f-b16b0aa95860" type="System.String">
+          <orm:column name="PollutantCode" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_pollutantValue" property="PollutantValue" behavior="readwrite" uniqueId="593e2db1-3a43-4dbc-a614-377a057dd187" type="System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="PollutantValue" sql-type="decimal" nullable="true" length="18" scale="4" ado-type="Decimal" />
+        </orm:field>
+        <orm:field name="m_monitoringDataTypeCode" property="MonitoringDataTypeCode" behavior="readwrite" uniqueId="d37aae66-90ef-4374-8897-a38c8c756bc6" type="System.String">
+          <orm:column name="MonitoringDataTypeCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_orderByNum" property="OrderByNum" behavior="readwrite" uniqueId="4560c87c-e113-4f34-ba28-7aae44afef68" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_description" property="Description" behavior="readwrite" uniqueId="f0d6307e-dace-4f96-bedc-1f53cda85f6b" type="System.String">
+          <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatUser" property="CreatUser" behavior="readwrite" uniqueId="871bc8ec-98bb-4591-82a4-02b3bf29c873" type="System.String">
+          <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatDateTime" property="CreatDateTime" behavior="readwrite" uniqueId="cb0af18c-ed1e-4537-bdcc-5000880f6288" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_updateUser" property="UpdateUser" behavior="readwrite" uniqueId="d4af8dcf-90fa-4988-bf1f-825a1a83b6c0" type="System.String">
+          <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_updateDateTime" property="UpdateDateTime" behavior="readwrite" uniqueId="0a5c1cf8-acb9-4580-9df5-fcd32c67e52d" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:implements name="SmartEP.DomainModel.WaterAutoMonitoring.IWaterAutoMonitoringEntityProperty" />
+        <orm:index name="ClusteredIndex_PointId_Tstamp" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:class>
+      <orm:class name="InfectantBy30Entity" uniqueId="5011a81e-edf3-4da8-9a1e-a50bfc9895e8">
+        <orm:table name="TB_InfectantBy30" schema="Water" />
+        <orm:identity>
+          <orm:key-generator name="autoinc">
+            <orm:key-generator-member property-name="Id" />
+          </orm:key-generator>
+          <orm:single-field field-name="m_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="m_id" property="Id" behavior="readwrite" uniqueId="25ee2e9a-6188-4ca9-9f70-6f9c56546c3c" type="System.Int64">
+          <orm:column name="id" sql-type="bigint" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int64" />
+        </orm:field>
+        <orm:field name="m_pointId" property="PointId" behavior="readwrite" uniqueId="bef856d5-3545-425a-9326-f531a27f4fd3" type="System.Int32">
+          <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_tstamp" property="Tstamp" behavior="readwrite" uniqueId="5fa83346-3e58-46aa-9e37-a0fc8b35c7ee" type="System.DateTime">
+          <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_receiveTime" property="ReceiveTime" behavior="readwrite" uniqueId="0d1e6594-785e-416f-b87d-8945f1d274af" type="System.DateTime">
+          <orm:column name="ReceiveTime" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_status" property="Status" behavior="readwrite" uniqueId="b6fd341a-ef30-4f3d-8ec9-ddb7cce481e4" type="System.String">
+          <orm:column name="Status" sql-type="nvarchar" nullable="true" length="5" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_pollutantCode" property="PollutantCode" behavior="readwrite" uniqueId="4a39fc80-dc27-438d-9f65-aa3935583439" type="System.String">
+          <orm:column name="PollutantCode" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_pollutantValue" property="PollutantValue" behavior="readwrite" uniqueId="5189804f-b71a-42c8-ac4f-4ceec070214b" type="System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="PollutantValue" sql-type="decimal" nullable="true" length="18" scale="4" ado-type="Decimal" />
+        </orm:field>
+        <orm:field name="m_monitoringDataTypeCode" property="MonitoringDataTypeCode" behavior="readwrite" uniqueId="27d884bc-df76-4128-bdf2-efe0c15d8299" type="System.String">
+          <orm:column name="MonitoringDataTypeCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_orderByNum" property="OrderByNum" behavior="readwrite" uniqueId="1c356ccb-bf62-4f86-9baf-6512a72b900e" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_description" property="Description" behavior="readwrite" uniqueId="92d29f09-dd28-4c8f-8321-ea78dc5879f0" type="System.String">
+          <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatUser" property="CreatUser" behavior="readwrite" uniqueId="53d24f9b-5496-45a4-be84-2952755ef6b7" type="System.String">
+          <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatDateTime" property="CreatDateTime" behavior="readwrite" uniqueId="c7695d0d-8eb6-4ab1-93cb-e4843a37d946" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_updateUser" property="UpdateUser" behavior="readwrite" uniqueId="c202ea85-0520-4473-9af1-49e1b7b07ac2" type="System.String">
+          <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_updateDateTime" property="UpdateDateTime" behavior="readwrite" uniqueId="bab13822-ad74-45ea-b21f-218f2e5fa40b" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:implements name="SmartEP.DomainModel.WaterAutoMonitoring.IWaterAutoMonitoringEntityProperty" />
+        <orm:index name="ClusteredIndex_PointId_Tstamp" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:class>
+      <orm:class name="InfectantBy10BufferEntity" uniqueId="206054f9-0931-4abb-85c8-80760db77124">
+        <orm:table name="TB_InfectantBy10Buffer" schema="Water" />
+        <orm:identity>
+          <orm:key-generator name="autoinc">
+            <orm:key-generator-member property-name="Id" />
+          </orm:key-generator>
+          <orm:single-field field-name="m_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="m_id" property="Id" behavior="readwrite" uniqueId="105e14cc-99d9-40a0-ac67-e7f6de8be9e1" type="System.Int64">
+          <orm:column name="id" sql-type="bigint" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int64" />
+        </orm:field>
+        <orm:field name="m_pointId" property="PointId" behavior="readwrite" uniqueId="675ff96c-ec97-4dea-ba51-8912d99ebd02" type="System.Int32">
+          <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_tstamp" property="Tstamp" behavior="readwrite" uniqueId="80711bf7-a58b-4779-917d-115ded9e4522" type="System.DateTime">
+          <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_receiveTime" property="ReceiveTime" behavior="readwrite" uniqueId="febbe469-f904-4fe7-aa36-4490adbcb03d" type="System.DateTime">
+          <orm:column name="ReceiveTime" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_status" property="Status" behavior="readwrite" uniqueId="6ee948e9-bfa4-4282-bcf0-9a5b6bc74266" type="System.String">
+          <orm:column name="Status" sql-type="nvarchar" nullable="true" length="5" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_pollutantCode" property="PollutantCode" behavior="readwrite" uniqueId="ac83ec19-5309-4e11-b1e6-0767c46699f7" type="System.String">
+          <orm:column name="PollutantCode" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_pollutantValue" property="PollutantValue" behavior="readwrite" uniqueId="2e0a6f24-eb1d-461f-bd7d-a488c269a982" type="System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="PollutantValue" sql-type="decimal" nullable="true" length="18" scale="4" ado-type="Decimal" />
+        </orm:field>
+        <orm:field name="m_monitoringDataTypeCode" property="MonitoringDataTypeCode" behavior="readwrite" uniqueId="ae41d66f-7d0d-4627-b7d2-266e929b4bfd" type="System.String">
+          <orm:column name="MonitoringDataTypeCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_orderByNum" property="OrderByNum" behavior="readwrite" uniqueId="7357edd9-0664-4398-8917-6f623bef7faa" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_description" property="Description" behavior="readwrite" uniqueId="d0afd915-10bc-4241-af9d-b4c8d3792093" type="System.String">
+          <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatUser" property="CreatUser" behavior="readwrite" uniqueId="f2478f58-b03e-46ca-b63f-eccad61f47f1" type="System.String">
+          <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatDateTime" property="CreatDateTime" behavior="readwrite" uniqueId="6e8670dd-9d5d-440c-aa48-4785dfa2cd4e" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_updateUser" property="UpdateUser" behavior="readwrite" uniqueId="9c93c798-5bfc-443e-8213-ecb3d3cfdafd" type="System.String">
+          <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_updateDateTime" property="UpdateDateTime" behavior="readwrite" uniqueId="393691ed-cfd7-4d40-8008-c7cd238bb9a2" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:implements name="SmartEP.DomainModel.WaterAutoMonitoring.IWaterAutoMonitoringEntityProperty" />
+        <orm:index name="ClusteredIndex_PointId_Tstamp" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:class>
+      <orm:class name="InfectantBy10Entity" uniqueId="c7cf36e0-2d78-49af-8681-fbfb2418def3">
+        <orm:table name="TB_InfectantBy10" schema="Water" />
+        <orm:identity>
+          <orm:key-generator name="autoinc">
+            <orm:key-generator-member property-name="Id" />
+          </orm:key-generator>
+          <orm:single-field field-name="m_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="m_id" property="Id" behavior="readwrite" uniqueId="427d2da6-dfe3-4200-abb3-39eff65f54f5" type="System.Int64">
+          <orm:column name="id" sql-type="bigint" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int64" />
+        </orm:field>
+        <orm:field name="m_pointId" property="PointId" behavior="readwrite" uniqueId="94d87793-42aa-4f43-8e83-1bf82e03c456" type="System.Int32">
+          <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_tstamp" property="Tstamp" behavior="readwrite" uniqueId="6cfc027d-b2bc-4ecd-96b9-2f8947500750" type="System.DateTime">
+          <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_receiveTime" property="ReceiveTime" behavior="readwrite" uniqueId="1673ddb0-28e4-4a90-88e1-2fe9b5efa61a" type="System.DateTime">
+          <orm:column name="ReceiveTime" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_status" property="Status" behavior="readwrite" uniqueId="d7560b95-bfef-445a-b002-7359de412559" type="System.String">
+          <orm:column name="Status" sql-type="nvarchar" nullable="true" length="5" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_pollutantCode" property="PollutantCode" behavior="readwrite" uniqueId="d5e342fd-d246-4d7b-8868-745424fc1f01" type="System.String">
+          <orm:column name="PollutantCode" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_pollutantValue" property="PollutantValue" behavior="readwrite" uniqueId="a450ce7e-011c-49de-8335-ebe761c5e9db" type="System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="PollutantValue" sql-type="decimal" nullable="true" length="18" scale="4" ado-type="Decimal" />
+        </orm:field>
+        <orm:field name="m_monitoringDataTypeCode" property="MonitoringDataTypeCode" behavior="readwrite" uniqueId="74717d02-5624-49be-9db9-47e6973bea50" type="System.String">
+          <orm:column name="MonitoringDataTypeCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_orderByNum" property="OrderByNum" behavior="readwrite" uniqueId="7f781482-005c-4e52-ac94-bb41329e8448" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_description" property="Description" behavior="readwrite" uniqueId="849f91a6-1b41-4712-b7e7-735ccc7f4ca8" type="System.String">
+          <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatUser" property="CreatUser" behavior="readwrite" uniqueId="6796646c-3496-4f12-81a4-3a3b3441905a" type="System.String">
+          <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatDateTime" property="CreatDateTime" behavior="readwrite" uniqueId="54037845-be80-47e1-8791-898f8defdebd" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_updateUser" property="UpdateUser" behavior="readwrite" uniqueId="c3900374-1e4d-48d6-9ea4-5b08c31140b1" type="System.String">
+          <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_updateDateTime" property="UpdateDateTime" behavior="readwrite" uniqueId="3d2ce9aa-2163-4793-950c-232a811a667e" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:implements name="SmartEP.DomainModel.WaterAutoMonitoring.IWaterAutoMonitoringEntityProperty" />
+        <orm:index name="ClusteredIndex_PointId_Tstamp" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:class>
+      <orm:class name="InfectantBy1Entity" uniqueId="e02ae780-a184-4b1d-b90e-65f3a378526a">
+        <orm:table name="TB_InfectantBy1" schema="Water" />
+        <orm:identity>
+          <orm:key-generator name="autoinc">
+            <orm:key-generator-member property-name="Id" />
+          </orm:key-generator>
+          <orm:single-field field-name="m_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="m_id" property="Id" behavior="readwrite" uniqueId="b30dae4f-9699-4060-a63c-a58a3b9320aa" type="System.Int64">
+          <orm:column name="id" sql-type="bigint" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int64" />
+        </orm:field>
+        <orm:field name="m_pointId" property="PointId" behavior="readwrite" uniqueId="a10ebac7-92f9-40f8-acad-dd2f2501d70a" type="System.Int32">
+          <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_tstamp" property="Tstamp" behavior="readwrite" uniqueId="2dfb6601-ae0e-4711-a02d-bf4dcf481b1f" type="System.DateTime">
+          <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_receiveTime" property="ReceiveTime" behavior="readwrite" uniqueId="2f8b3d41-03c6-4f5a-86e2-e9c6863caef4" type="System.DateTime">
+          <orm:column name="ReceiveTime" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_status" property="Status" behavior="readwrite" uniqueId="43164b13-527c-4d3f-8411-3a90d2fc4cc3" type="System.String">
+          <orm:column name="Status" sql-type="nvarchar" nullable="true" length="5" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_pollutantCode" property="PollutantCode" behavior="readwrite" uniqueId="6c180fc3-fb2a-4f9d-80fd-95f6ad13b7cc" type="System.String">
+          <orm:column name="PollutantCode" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_pollutantValue" property="PollutantValue" behavior="readwrite" uniqueId="169f2659-ce3f-42c5-8f83-00b523084131" type="System.Nullable`1[[System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="PollutantValue" sql-type="decimal" nullable="true" length="18" scale="4" ado-type="Decimal" />
+        </orm:field>
+        <orm:field name="m_monitoringDataTypeCode" property="MonitoringDataTypeCode" behavior="readwrite" uniqueId="5c21cc3d-381a-47b3-a8f8-a57a1bb274a7" type="System.String">
+          <orm:column name="MonitoringDataTypeCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_orderByNum" property="OrderByNum" behavior="readwrite" uniqueId="146011d3-39c9-444f-bff1-fc105d361d00" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_description" property="Description" behavior="readwrite" uniqueId="9b9f9e57-7d84-4a5b-9cbf-ac83977858cd" type="System.String">
+          <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatUser" property="CreatUser" behavior="readwrite" uniqueId="6c0a8773-8576-44d9-b661-88abffd36886" type="System.String">
+          <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_creatDateTime" property="CreatDateTime" behavior="readwrite" uniqueId="c32eb173-3efe-48c7-a598-a47690e02d1c" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:field name="m_updateUser" property="UpdateUser" behavior="readwrite" uniqueId="787d0742-c649-4150-b367-e26e877e1e22" type="System.String">
+          <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_updateDateTime" property="UpdateDateTime" behavior="readwrite" uniqueId="edaea65c-88ff-491f-a321-938aef34cc49" type="System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        </orm:field>
+        <orm:implements name="SmartEP.DomainModel.WaterAutoMonitoring.IWaterAutoMonitoringEntityProperty" />
+        <orm:index name="ClusteredIndex_PointId_Tstamp" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:class>
+      <orm:interface name="IWaterAutoMonitoringEntityProperty" uniqueId="e818f7ee-2a02-435c-8fa0-37118e1f3b56" />
+    </orm:namespace>
+    <orm:schema schema="">
+      <orm:table name="TB_OriginalPacketRequest">
+        <orm:column name="id" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="qn" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ST" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="cn" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="mn" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="cmdDesc" sql-type="nvarchar" nullable="true" length="4000" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="cmdContent" sql-type="nvarchar" nullable="true" length="4000" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="operater" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="operaterTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="execState" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="isFinished" sql-type="bit" nullable="true" length="0" scale="0" has-default-value="true" ado-type="Bit" />
+        <orm:column name="flag" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="reqState" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+      </orm:table>
+      <orm:table name="TB_OriginalPacketReceive">
+        <orm:column name="id" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="QN" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ST" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CN" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="MN" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="receiveTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="cmdContent" sql-type="nvarchar" nullable="true" length="3000" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="cmdDesc" sql-type="nvarchar" nullable="true" length="2000" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="isHandle" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="handleTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:index name="ClusteredIndex_MN_receiveTime" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="MN" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="receiveTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:table>
+      <orm:table name="TB_OriginalPacketBackup">
+        <orm:column name="id" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="QN" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ST" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CN" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="MN" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="receiveTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="cmdContent" sql-type="nvarchar" nullable="true" length="3000" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="cmdDesc" sql-type="nvarchar" nullable="true" length="2000" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="isHandle" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="handleTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:index name="ClusteredIndex_MN_receiveTime" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="MN" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="receiveTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:table>
+    </orm:schema>
+    <orm:schema schema="Water">
+      <orm:table name="TB_InstrumentDataBy60Buffer" schema="Water">
+        <orm:column name="id" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="PointId" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="tstamp" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="ReceiveTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="Status" sql-type="nvarchar" nullable="true" length="5" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="instrumentCode" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PollutantCode" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PollutantValue" sql-type="decimal" nullable="true" length="18" scale="4" ado-type="Decimal" />
+        <orm:column name="MonitoringDataTypeCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:index name="ClusteredIndex_PointId_Tstamp" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="PointId" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="tstamp" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:table>
+      <orm:table name="TB_InstrumentDataBy60" schema="Water">
+        <orm:column name="id" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="PointId" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="tstamp" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="ReceiveTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="Status" sql-type="nvarchar" nullable="true" length="5" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="instrumentCode" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PollutantCode" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PollutantValue" sql-type="decimal" nullable="true" length="18" scale="4" ado-type="Decimal" />
+        <orm:column name="MonitoringDataTypeCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:index name="ClusteredIndex_PointId_Tstamp" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="PointId" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="tstamp" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:table>
+      <orm:table name="TB_InfectantByRT" schema="Water">
+        <orm:column name="id" sql-type="bigint" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int64" />
+        <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="ReceiveTime" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="Status" sql-type="nvarchar" nullable="true" length="5" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PollutantCode" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PollutantValue" sql-type="decimal" nullable="true" length="18" scale="4" ado-type="Decimal" />
+        <orm:column name="MonitoringDataTypeCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:index name="ClusteredIndex_PointId_Tstamp" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:table>
+      <orm:table name="TB_InfectantBy60Buffer" schema="Water">
+        <orm:column name="id" sql-type="bigint" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int64" />
+        <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="ReceiveTime" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="Status" sql-type="nvarchar" nullable="true" length="5" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PollutantCode" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PollutantValue" sql-type="decimal" nullable="true" length="18" scale="4" ado-type="Decimal" />
+        <orm:column name="MonitoringDataTypeCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:index name="ClusteredIndex_PointId_Tstamp" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:table>
+      <orm:table name="TB_InfectantBy60" schema="Water">
+        <orm:column name="id" sql-type="bigint" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int64" />
+        <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="ReceiveTime" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="Status" sql-type="nvarchar" nullable="true" length="5" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PollutantCode" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PollutantValue" sql-type="decimal" nullable="true" length="18" scale="4" ado-type="Decimal" />
+        <orm:column name="MonitoringDataTypeCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:index name="ClusteredIndex_PointId_Tstamp" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:table>
+      <orm:table name="TB_InfectantBy5Buffer" schema="Water">
+        <orm:column name="id" sql-type="bigint" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int64" />
+        <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="ReceiveTime" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="Status" sql-type="nvarchar" nullable="true" length="5" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PollutantCode" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PollutantValue" sql-type="decimal" nullable="true" length="18" scale="4" ado-type="Decimal" />
+        <orm:column name="MonitoringDataTypeCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:index name="ClusteredIndex_PointId_Tstamp" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:table>
+      <orm:table name="TB_InfectantBy5" schema="Water">
+        <orm:column name="id" sql-type="bigint" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int64" />
+        <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="ReceiveTime" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="Status" sql-type="nvarchar" nullable="true" length="5" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PollutantCode" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PollutantValue" sql-type="decimal" nullable="true" length="18" scale="4" ado-type="Decimal" />
+        <orm:column name="MonitoringDataTypeCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:index name="ClusteredIndex_PointId_Tstamp" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:table>
+      <orm:table name="TB_InfectantBy30Buffer" schema="Water">
+        <orm:column name="id" sql-type="bigint" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int64" />
+        <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="ReceiveTime" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="Status" sql-type="nvarchar" nullable="true" length="5" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PollutantCode" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PollutantValue" sql-type="decimal" nullable="true" length="18" scale="4" ado-type="Decimal" />
+        <orm:column name="MonitoringDataTypeCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:index name="ClusteredIndex_PointId_Tstamp" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:table>
+      <orm:table name="TB_InfectantBy30" schema="Water">
+        <orm:column name="id" sql-type="bigint" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int64" />
+        <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="ReceiveTime" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="Status" sql-type="nvarchar" nullable="true" length="5" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PollutantCode" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PollutantValue" sql-type="decimal" nullable="true" length="18" scale="4" ado-type="Decimal" />
+        <orm:column name="MonitoringDataTypeCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:index name="ClusteredIndex_PointId_Tstamp" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:table>
+      <orm:table name="TB_InfectantBy10Buffer" schema="Water">
+        <orm:column name="id" sql-type="bigint" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int64" />
+        <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="ReceiveTime" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="Status" sql-type="nvarchar" nullable="true" length="5" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PollutantCode" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PollutantValue" sql-type="decimal" nullable="true" length="18" scale="4" ado-type="Decimal" />
+        <orm:column name="MonitoringDataTypeCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:index name="ClusteredIndex_PointId_Tstamp" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:table>
+      <orm:table name="TB_InfectantBy10" schema="Water">
+        <orm:column name="id" sql-type="bigint" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int64" />
+        <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="ReceiveTime" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="Status" sql-type="nvarchar" nullable="true" length="5" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PollutantCode" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PollutantValue" sql-type="decimal" nullable="true" length="18" scale="4" ado-type="Decimal" />
+        <orm:column name="MonitoringDataTypeCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:index name="ClusteredIndex_PointId_Tstamp" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:table>
+      <orm:table name="TB_InfectantBy1" schema="Water">
+        <orm:column name="id" sql-type="bigint" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int64" />
+        <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="ReceiveTime" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="Status" sql-type="nvarchar" nullable="true" length="5" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PollutantCode" sql-type="nvarchar" nullable="false" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="PollutantValue" sql-type="decimal" nullable="true" length="18" scale="4" ado-type="Decimal" />
+        <orm:column name="MonitoringDataTypeCode" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="OrderByNum" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Description" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CreatDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:column name="UpdateUser" sql-type="nvarchar" nullable="true" length="10" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="UpdateDateTime" sql-type="datetime" nullable="true" length="0" scale="0" ado-type="DateTime" />
+        <orm:index name="ClusteredIndex_PointId_Tstamp" clustered="true">
+          <orm:columnMapping>
+            <orm:column name="PointId" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+          </orm:columnMapping>
+          <orm:columnMapping sort-order="descending">
+            <orm:column name="Tstamp" sql-type="datetime" nullable="false" length="0" scale="0" ado-type="DateTime" />
+          </orm:columnMapping>
+        </orm:index>
+      </orm:table>
+    </orm:schema>
+    <orm:relational-naming-settings>
+      <orm:source-strategy>Property</orm:source-strategy>
+      <orm:remove-camel-case>False</orm:remove-camel-case>
+    </orm:relational-naming-settings>
+  </orm:orm>
+  <ModelSettings xmlns="">
+    <AppConfigConnectionPropertyName>AMS_WaterAutoMonitorConnection</AppConfigConnectionPropertyName>
+    <AppConfigConnectionString>data source=192.168.0.22;initial catalog=AMS_WaterAutoMonitorSZ;user id=sa;password=szemc123!@#</AppConfigConnectionString>
+    <InitialCatalog>AMS_WaterAutoMonitoringSZ</InitialCatalog>
+    <NamingSettings>
+      <ClassRules>
+        <AddSuffix>Entity</AddSuffix>
+        <RemovePrefix>TB_</RemovePrefix>
+        <CaseMode>PascalCase</CaseMode>
+        <PluralizationMode>Singularize</PluralizationMode>
+      </ClassRules>
+      <FieldRules>
+        <AddPrefix>m_</AddPrefix>
+        <CaseMode>CamelCase</CaseMode>
+      </FieldRules>
+      <PropertyRules>
+        <CaseMode>PascalCase</CaseMode>
+      </PropertyRules>
+      <NavigationPropertyRules />
+    </NamingSettings>
+    <CodeGenerationSettings>
+      <OutputProjectName>SmartEP.DomainModel</OutputProjectName>
+      <OutputProjectFolder>WaterAutoMonitoring\</OutputProjectFolder>
+      <OutputPath>WaterAutoMonitoring\</OutputPath>
+      <MappingDefinitionType>Xml</MappingDefinitionType>
+    </CodeGenerationSettings>
+    <SchemaUpdateSettings />
+    <BackendConfigurationSettings>
+      <BackendConfiguration>
+        <Backend>MsSql</Backend>
+        <ProviderName>System.Data.SqlClient</ProviderName>
+      </BackendConfiguration>
+    </BackendConfigurationSettings>
+  </ModelSettings>
+  <Types>
+    <DomainClass Id="aeb4bf8e-8aa4-45d9-9013-0d2c91336b51" name="OriginalPacketRequestEntity" namespace="SmartEP.DomainModel.WaterAutoMonitoring" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="Id">
+      <Property Id="93492de8-fb30-4948-9e8c-ce9e7d0bc473" name="Id" type="Int32" label="Id : Int32" kind="Persistent" identity="true" fieldName="m_id" />
+      <Property Id="fab55e41-2992-437d-afa8-c24995d78c14" name="CmdContent" label="CmdContent : String" kind="Persistent" fieldName="m_cmdContent" />
+      <Property Id="e7c53b2d-0af9-4e36-b9d6-45a7eda15f38" name="CmdDesc" label="CmdDesc : String" kind="Persistent" fieldName="m_cmdDesc" />
+      <Property Id="80530a7e-8dc1-4dee-966b-7867aafaabfc" name="Cn" label="Cn : String" kind="Persistent" fieldName="m_cn" />
+      <Property Id="4b15dfb0-6f79-4a8c-81bf-7491c753ecd0" name="ExecState" label="ExecState : String" kind="Persistent" fieldName="m_execState" />
+      <Property Id="d6a9b5e7-2b0e-4235-abf1-6c87e970f812" name="Flag" label="Flag : String" kind="Persistent" fieldName="m_flag" />
+      <Property Id="8f18294c-ec9f-46e9-9594-361f0d0a6ca3" name="IsFinished" type="Boolean" label="IsFinished : Boolean" nullable="true" kind="Persistent" fieldName="m_isFinished" />
+      <Property Id="e020c8bb-8891-4f8f-ad99-6aac75ba4160" name="Mn" label="Mn : String" kind="Persistent" fieldName="m_mn" />
+      <Property Id="5fc6d33e-73d0-422f-9689-25fa82a8a66c" name="Operater" label="Operater : String" kind="Persistent" fieldName="m_operater" />
+      <Property Id="d6386956-9613-46c2-bc2b-835259282aa9" name="OperaterTime" type="DateTime" label="OperaterTime : DateTime" nullable="true" kind="Persistent" fieldName="m_operaterTime" />
+      <Property Id="c3200332-606e-4891-af01-1ad7573da2f8" name="Qn" label="Qn : String" kind="Persistent" fieldName="m_qn" />
+      <Property Id="9f3f40de-f2f0-49c3-b118-b2a3a586ef68" name="ST" label="ST : String" kind="Persistent" fieldName="m_sT" />
+      <Property Id="2e3225ae-b498-48cb-9381-51c9b3b1d6dc" name="UpdateUser" label="UpdateUser : String" kind="Persistent" fieldName="m_updateUser" />
+      <Property Id="8183fb93-e005-4566-a4f7-3f973cc671be" name="UpdateDateTime" type="DateTime" label="UpdateDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_updateDateTime" />
+      <Property Id="ded08616-47e6-4e1c-ae1f-0c84ba5b6372" name="OrderByNum" type="Int32" label="OrderByNum : Int32" nullable="true" kind="Persistent" fieldName="m_orderByNum" />
+      <Property Id="7c38cd38-b565-4dc3-a083-f3be4ab3da69" name="Description" label="Description : String" kind="Persistent" fieldName="m_description" />
+      <Property Id="532e05a2-5a11-431c-b437-a3dc662f4e78" name="CreatUser" label="CreatUser : String" kind="Persistent" fieldName="m_creatUser" />
+      <Property Id="c70fc2e9-d601-4648-9f8d-5a6c43346723" name="CreatDateTime" type="DateTime" label="CreatDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_creatDateTime" />
+      <Property Id="ef9fd600-978f-43db-9cad-f7183c1a4cee" name="ReqState" label="ReqState : String" kind="Persistent" fieldName="m_reqState" />
+    </DomainClass>
+    <DomainClass Id="cf38936b-b43c-432e-b49c-1ca9394f982c" name="OriginalPacketReceiveEntity" namespace="SmartEP.DomainModel.WaterAutoMonitoring" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="Id">
+      <Property Id="1acbff2b-37f5-4c2b-b491-0a479551c51e" name="Id" type="Int32" label="Id : Int32" kind="Persistent" identity="true" fieldName="m_id" />
+      <Property Id="3cb354f4-caa6-407e-ba34-1d22bc805859" name="CmdContent" label="CmdContent : String" kind="Persistent" fieldName="m_cmdContent" />
+      <Property Id="c671e04f-f709-403d-a7a8-e1ce676e8b77" name="CmdDesc" label="CmdDesc : String" kind="Persistent" fieldName="m_cmdDesc" />
+      <Property Id="22f6819f-ee98-4913-bad7-1f9750f44f46" name="CN" label="CN : String" kind="Persistent" fieldName="m_cN" />
+      <Property Id="7c872d28-d5f6-4102-9897-a0b238d82dd5" name="CreatDateTime" type="DateTime" label="CreatDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_creatDateTime" />
+      <Property Id="24b2123e-d170-45cd-98c9-017b0425903f" name="CreatUser" label="CreatUser : String" kind="Persistent" fieldName="m_creatUser" />
+      <Property Id="f73078ff-fcc6-48c3-b88d-43d223dfdf0b" name="Description" label="Description : String" kind="Persistent" fieldName="m_description" />
+      <Property Id="bad5f23d-9391-4c94-89b1-2c0c6b77e296" name="HandleTime" type="DateTime" label="HandleTime : DateTime" nullable="true" kind="Persistent" fieldName="m_handleTime" />
+      <Property Id="564df8b7-01fb-415f-baab-8cd61abe5481" name="IsHandle" label="IsHandle : String" kind="Persistent" fieldName="m_isHandle" />
+      <Property Id="f2babf12-70d3-4c15-bf53-d04368c17f6d" name="MN" label="MN : String" kind="Persistent" fieldName="m_mN" />
+      <Property Id="4ef4224e-8b5c-44f0-ae63-27e7e0eaf677" name="OrderByNum" type="Int32" label="OrderByNum : Int32" nullable="true" kind="Persistent" fieldName="m_orderByNum" />
+      <Property Id="f890d576-5042-49dd-ab6d-3ec640058cc6" name="QN" label="QN : String" kind="Persistent" fieldName="m_qN" />
+      <Property Id="d66bcf3a-455a-441c-83e9-ca333a5269b9" name="ReceiveTime" type="DateTime" label="ReceiveTime : DateTime" nullable="true" kind="Persistent" fieldName="m_receiveTime" />
+      <Property Id="95d0793e-6df8-4d30-9e61-8f968023ec5a" name="ST" label="ST : String" kind="Persistent" fieldName="m_sT" />
+      <Property Id="252ae23c-2b5d-4d40-938f-4c91eefdd586" name="UpdateDateTime" type="DateTime" label="UpdateDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_updateDateTime" />
+      <Property Id="e2246d82-d6f8-44ac-b432-9ca220a52186" name="UpdateUser" label="UpdateUser : String" kind="Persistent" fieldName="m_updateUser" />
+    </DomainClass>
+    <DomainClass Id="64fe0c8a-cc37-4173-a643-1716435d6f31" name="OriginalPacketBackupEntity" namespace="SmartEP.DomainModel.WaterAutoMonitoring" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="Id">
+      <Property Id="5ffebab2-3d45-4350-b151-d123980336d6" name="Id" type="Int32" label="Id : Int32" kind="Persistent" identity="true" fieldName="m_id" />
+      <Property Id="757936fc-9549-4900-acdf-94029b65f40b" name="CmdContent" label="CmdContent : String" kind="Persistent" fieldName="m_cmdContent" />
+      <Property Id="9fe8bf0b-5f59-4b98-87b9-bc3e732bd342" name="CmdDesc" label="CmdDesc : String" kind="Persistent" fieldName="m_cmdDesc" />
+      <Property Id="d9608988-972c-4ef7-96e8-dafd605db565" name="CN" label="CN : String" kind="Persistent" fieldName="m_cN" />
+      <Property Id="86798457-7088-402c-9cd3-eb3b3b9ee53f" name="CreatDateTime" type="DateTime" label="CreatDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_creatDateTime" />
+      <Property Id="39139117-8087-4ccb-ae5a-73e556758e02" name="CreatUser" label="CreatUser : String" kind="Persistent" fieldName="m_creatUser" />
+      <Property Id="01dafcaa-578d-440b-aefe-1ba67ff58a34" name="Description" label="Description : String" kind="Persistent" fieldName="m_description" />
+      <Property Id="085d934a-6be5-45d7-ab2b-85e0e10d7438" name="HandleTime" type="DateTime" label="HandleTime : DateTime" nullable="true" kind="Persistent" fieldName="m_handleTime" />
+      <Property Id="e457885c-0917-4d04-a96b-cf9f7beb5dbe" name="IsHandle" label="IsHandle : String" kind="Persistent" fieldName="m_isHandle" />
+      <Property Id="3cf7f4cc-5f03-4279-9d54-e6dabcff800a" name="MN" label="MN : String" kind="Persistent" fieldName="m_mN" />
+      <Property Id="eb000b1b-03da-466e-a89e-192a026b9fae" name="OrderByNum" type="Int32" label="OrderByNum : Int32" nullable="true" kind="Persistent" fieldName="m_orderByNum" />
+      <Property Id="ad8b90fb-2cd7-43e4-b5d4-d7cbf915f786" name="QN" label="QN : String" kind="Persistent" fieldName="m_qN" />
+      <Property Id="4239099d-bf63-4be6-b33d-84771828d975" name="ReceiveTime" type="DateTime" label="ReceiveTime : DateTime" nullable="true" kind="Persistent" fieldName="m_receiveTime" />
+      <Property Id="4fdf3a6d-76c4-4b28-bf4f-300064a43c38" name="ST" label="ST : String" kind="Persistent" fieldName="m_sT" />
+      <Property Id="8708d33d-685b-4db9-94b9-b3e45252a0ed" name="UpdateDateTime" type="DateTime" label="UpdateDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_updateDateTime" />
+      <Property Id="235bca89-7838-4811-b029-aef49cf11234" name="UpdateUser" label="UpdateUser : String" kind="Persistent" fieldName="m_updateUser" />
+    </DomainClass>
+    <DomainClass Id="3eaef3ba-e44d-48f0-a1bf-928d62181ce3" name="InstrumentDataBy60BufferEntity" namespace="SmartEP.DomainModel.WaterAutoMonitoring" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="Id">
+      <Property Id="e6b4dea0-d659-4ab8-9ddc-68ba4bc3d626" name="Id" type="Int32" label="Id : Int32" kind="Persistent" identity="true" fieldName="m_id" />
+      <Property Id="f53d2bec-9cc4-4a60-8dd4-2a5eb6013117" name="CreatDateTime" type="DateTime" label="CreatDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_creatDateTime" />
+      <Property Id="cd3393e0-dbe1-4093-9303-25229fc08f32" name="CreatUser" label="CreatUser : String" kind="Persistent" fieldName="m_creatUser" />
+      <Property Id="94e21114-6781-4186-9f5a-d03bc9e5aa8c" name="Description" label="Description : String" kind="Persistent" fieldName="m_description" />
+      <Property Id="45fdca62-d01d-4bd1-b2f2-2c77a397048f" name="InstrumentCode" label="InstrumentCode : String" kind="Persistent" fieldName="m_instrumentCode" />
+      <Property Id="dbe234da-a7aa-4398-938a-099c3991e94e" name="MonitoringDataTypeCode" label="MonitoringDataTypeCode : String" kind="Persistent" fieldName="m_monitoringDataTypeCode" />
+      <Property Id="45982beb-cc7c-40da-a031-97e6aa19f921" name="OrderByNum" type="Int32" label="OrderByNum : Int32" nullable="true" kind="Persistent" fieldName="m_orderByNum" />
+      <Property Id="89d64c68-a9e6-4b4a-80f5-5ce02e14a90c" name="PointId" type="Int32" label="PointId : Int32" nullable="true" kind="Persistent" fieldName="m_pointId" />
+      <Property Id="c64d4438-1604-4b61-b78b-a87c95ed741c" name="PollutantCode" label="PollutantCode : String" kind="Persistent" fieldName="m_pollutantCode" />
+      <Property Id="8b6afa72-f957-42e1-879d-b682525aa9a8" name="PollutantValue" type="Decimal" label="PollutantValue : Decimal" nullable="true" kind="Persistent" fieldName="m_pollutantValue" />
+      <Property Id="9251feb6-4d67-46df-b274-0247126243ec" name="ReceiveTime" type="DateTime" label="ReceiveTime : DateTime" nullable="true" kind="Persistent" fieldName="m_receiveTime" />
+      <Property Id="2efe23d6-753c-41af-bcd8-d4fe6354bd1c" name="Status" label="Status : String" kind="Persistent" fieldName="m_status" />
+      <Property Id="3e550813-af33-47fb-8aa3-3586d75bdc88" name="Tstamp" type="DateTime" label="Tstamp : DateTime" nullable="true" kind="Persistent" fieldName="m_tstamp" />
+      <Property Id="5b18ef07-c7d1-4057-8290-e50c70d1e2be" name="UpdateDateTime" type="DateTime" label="UpdateDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_updateDateTime" />
+      <Property Id="823b21c0-7ca1-416a-9bd2-70a47613b8ff" name="UpdateUser" label="UpdateUser : String" kind="Persistent" fieldName="m_updateUser" />
+    </DomainClass>
+    <DomainClass Id="6acbc904-26db-4834-89d6-7bc6358691c4" name="InstrumentDataBy60Entity" namespace="SmartEP.DomainModel.WaterAutoMonitoring" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="Id">
+      <Property Id="e8d128db-82d8-4d69-aa6b-78ec6c3fdaad" name="Id" type="Int32" label="Id : Int32" kind="Persistent" identity="true" fieldName="m_id" />
+      <Property Id="58bf1d8c-201d-4bc2-a732-ff2e49b75c9f" name="CreatDateTime" type="DateTime" label="CreatDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_creatDateTime" />
+      <Property Id="299dcf7c-cf0d-43b4-817b-37683db879d4" name="CreatUser" label="CreatUser : String" kind="Persistent" fieldName="m_creatUser" />
+      <Property Id="60afaa92-a64c-403c-84ea-b8cffc8f9bcf" name="Description" label="Description : String" kind="Persistent" fieldName="m_description" />
+      <Property Id="edbd5998-28b8-497b-9d3a-4155f36af8cb" name="InstrumentCode" label="InstrumentCode : String" kind="Persistent" fieldName="m_instrumentCode" />
+      <Property Id="8f92d84b-3d8e-423e-9b22-a914797ccc84" name="MonitoringDataTypeCode" label="MonitoringDataTypeCode : String" kind="Persistent" fieldName="m_monitoringDataTypeCode" />
+      <Property Id="6ca8b338-4d82-45a4-b63b-2e695b781f2d" name="OrderByNum" type="Int32" label="OrderByNum : Int32" nullable="true" kind="Persistent" fieldName="m_orderByNum" />
+      <Property Id="6609e441-320f-4b6b-b738-55cdaf50790a" name="PointId" type="Int32" label="PointId : Int32" nullable="true" kind="Persistent" fieldName="m_pointId" />
+      <Property Id="b3cab342-46a9-4b50-813b-4ad3f92d5eb8" name="PollutantCode" label="PollutantCode : String" kind="Persistent" fieldName="m_pollutantCode" />
+      <Property Id="1759f13e-082a-46ec-b9dc-3c85f1536f96" name="PollutantValue" type="Decimal" label="PollutantValue : Decimal" nullable="true" kind="Persistent" fieldName="m_pollutantValue" />
+      <Property Id="ef51d989-7361-4e7f-9adf-2966c581389a" name="ReceiveTime" type="DateTime" label="ReceiveTime : DateTime" nullable="true" kind="Persistent" fieldName="m_receiveTime" />
+      <Property Id="1f72bc3f-79d8-4f34-aedb-d5a208917226" name="Status" label="Status : String" kind="Persistent" fieldName="m_status" />
+      <Property Id="07b2e881-65d1-4733-bb9c-f4844dc0467a" name="Tstamp" type="DateTime" label="Tstamp : DateTime" nullable="true" kind="Persistent" fieldName="m_tstamp" />
+      <Property Id="6e918efa-61c8-4da7-b48b-fa325afad61e" name="UpdateDateTime" type="DateTime" label="UpdateDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_updateDateTime" />
+      <Property Id="4e5d7c93-85f2-4f64-a330-098aae9cb6c0" name="UpdateUser" label="UpdateUser : String" kind="Persistent" fieldName="m_updateUser" />
+    </DomainClass>
+    <DomainClass Id="2f70160c-3126-4dc4-b11c-d6daf6da6b2a" name="InfectantByRTEntity" namespace="SmartEP.DomainModel.WaterAutoMonitoring" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="Id">
+      <Property Id="8cf43c67-5f67-47e9-be14-e06a136bcb4e" name="Id" type="Int64" label="Id : Int64" kind="Persistent" identity="true" fieldName="m_id" />
+      <Property Id="9fbf483b-18e5-436b-b0ea-7810787ef68c" name="CreatDateTime" type="DateTime" label="CreatDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_creatDateTime" />
+      <Property Id="d64d50d0-9d7b-414c-867d-4656606dae61" name="CreatUser" label="CreatUser : String" kind="Persistent" fieldName="m_creatUser" />
+      <Property Id="160d9339-3105-4e26-b1c2-44fbb4bb00da" name="Description" label="Description : String" kind="Persistent" fieldName="m_description" />
+      <Property Id="4b54cff0-ce8e-483e-ac34-938f7625978f" name="MonitoringDataTypeCode" label="MonitoringDataTypeCode : String" kind="Persistent" fieldName="m_monitoringDataTypeCode" />
+      <Property Id="c1f40f43-24d4-40c5-bcce-25b85fa8faf1" name="OrderByNum" type="Int32" label="OrderByNum : Int32" nullable="true" kind="Persistent" fieldName="m_orderByNum" />
+      <Property Id="e30c9cdb-484e-415b-b9b1-a5d046242f47" name="PointId" type="Int32" label="PointId : Int32" kind="Persistent" fieldName="m_pointId" />
+      <Property Id="c5d8474b-084e-4afd-903b-ff6eef7bd7ad" name="PollutantCode" label="PollutantCode : String" kind="Persistent" fieldName="m_pollutantCode" />
+      <Property Id="ec465adc-8d2c-4e8c-95f8-2ba0745d402e" name="PollutantValue" type="Decimal" label="PollutantValue : Decimal" nullable="true" kind="Persistent" fieldName="m_pollutantValue" />
+      <Property Id="62b515cc-8be3-4a5a-b371-f110a90bbbf6" name="ReceiveTime" type="DateTime" label="ReceiveTime : DateTime" kind="Persistent" fieldName="m_receiveTime" />
+      <Property Id="40fb377e-aed4-433a-8891-5da72f1c65c4" name="Status" label="Status : String" kind="Persistent" fieldName="m_status" />
+      <Property Id="659b717c-b85e-4d1c-b00a-c63ff0429ee9" name="Tstamp" type="DateTime" label="Tstamp : DateTime" kind="Persistent" fieldName="m_tstamp" />
+      <Property Id="1caa7da5-77b6-4d94-b19c-78708dc07363" name="UpdateDateTime" type="DateTime" label="UpdateDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_updateDateTime" />
+      <Property Id="6224ad85-a0aa-4b72-8a43-5ba9dc43fde5" name="UpdateUser" label="UpdateUser : String" kind="Persistent" fieldName="m_updateUser" />
+    </DomainClass>
+    <DomainClass Id="cd4e74a2-e9cf-491e-9c94-e7a20e8fd294" name="InfectantBy60BufferEntity" namespace="SmartEP.DomainModel.WaterAutoMonitoring" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="Id">
+      <Property Id="e8434f70-b2f1-4662-bf80-55370736d092" name="Id" type="Int64" label="Id : Int64" kind="Persistent" identity="true" fieldName="m_id" />
+      <Property Id="79e346cc-55c6-44dd-8aa8-f3d0517801bb" name="CreatDateTime" type="DateTime" label="CreatDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_creatDateTime" />
+      <Property Id="dc59d244-09f4-4d52-a41c-335d3c17abd8" name="CreatUser" label="CreatUser : String" kind="Persistent" fieldName="m_creatUser" />
+      <Property Id="71f516fb-e7ad-46c5-b300-fd413cdbb490" name="Description" label="Description : String" kind="Persistent" fieldName="m_description" />
+      <Property Id="1f65c9e1-e0b5-45ed-a783-d0d1c2ef5c98" name="MonitoringDataTypeCode" label="MonitoringDataTypeCode : String" kind="Persistent" fieldName="m_monitoringDataTypeCode" />
+      <Property Id="527500e3-9894-47e9-a759-7149950da76e" name="OrderByNum" type="Int32" label="OrderByNum : Int32" nullable="true" kind="Persistent" fieldName="m_orderByNum" />
+      <Property Id="e05a17c8-e95e-40dd-94c2-ad83a12cdbab" name="PointId" type="Int32" label="PointId : Int32" kind="Persistent" fieldName="m_pointId" />
+      <Property Id="ed02b22c-4387-4ffb-ba6f-dd125cd6bc5b" name="PollutantCode" label="PollutantCode : String" kind="Persistent" fieldName="m_pollutantCode" />
+      <Property Id="3d077e05-feb8-4b53-a572-8edc59cddcd7" name="PollutantValue" type="Decimal" label="PollutantValue : Decimal" nullable="true" kind="Persistent" fieldName="m_pollutantValue" />
+      <Property Id="da95a33d-2c7e-4614-a9dd-7fb8fb34b08b" name="ReceiveTime" type="DateTime" label="ReceiveTime : DateTime" kind="Persistent" fieldName="m_receiveTime" />
+      <Property Id="fbfe7a27-44fc-4f02-9659-10e5eb6623a9" name="Status" label="Status : String" kind="Persistent" fieldName="m_status" />
+      <Property Id="053a4cb8-bbb9-48a3-a9dc-f3b86c87d3a4" name="Tstamp" type="DateTime" label="Tstamp : DateTime" kind="Persistent" fieldName="m_tstamp" />
+      <Property Id="7d64f6d3-3d1f-4733-8c3d-b8a62a327e28" name="UpdateDateTime" type="DateTime" label="UpdateDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_updateDateTime" />
+      <Property Id="a86a5ac4-89ea-4f3e-bc06-b27e64bc5a64" name="UpdateUser" label="UpdateUser : String" kind="Persistent" fieldName="m_updateUser" />
+    </DomainClass>
+    <DomainClass Id="8640c84a-d40e-445f-a499-68abd974a06f" name="InfectantBy60Entity" namespace="SmartEP.DomainModel.WaterAutoMonitoring" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="Id">
+      <Property Id="7b2707b4-d7e7-4f4a-997b-8b7e3c784628" name="Id" type="Int64" label="Id : Int64" kind="Persistent" identity="true" fieldName="m_id" />
+      <Property Id="4eba2150-ab36-4a2e-be86-d8bb116ed6df" name="CreatDateTime" type="DateTime" label="CreatDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_creatDateTime" />
+      <Property Id="a7ee9c4a-c204-4ab0-ad5e-3e1b4a1dfa14" name="CreatUser" label="CreatUser : String" kind="Persistent" fieldName="m_creatUser" />
+      <Property Id="034e51ec-1031-4d24-9280-9497bb0a24d4" name="Description" label="Description : String" kind="Persistent" fieldName="m_description" />
+      <Property Id="17ca734f-8018-4be5-ab76-e0d79b9468fa" name="MonitoringDataTypeCode" label="MonitoringDataTypeCode : String" kind="Persistent" fieldName="m_monitoringDataTypeCode" />
+      <Property Id="e901ac80-aaa1-42bc-90fe-7b1dc8f884d3" name="OrderByNum" type="Int32" label="OrderByNum : Int32" nullable="true" kind="Persistent" fieldName="m_orderByNum" />
+      <Property Id="657dec9a-5c6b-4bfc-8b62-3c2e19ad8ac2" name="PointId" type="Int32" label="PointId : Int32" kind="Persistent" fieldName="m_pointId" />
+      <Property Id="4da58fa8-8001-445c-8a91-e8ec04855c5d" name="PollutantCode" label="PollutantCode : String" kind="Persistent" fieldName="m_pollutantCode" />
+      <Property Id="de00b911-1d20-4c55-8af6-7c573b79bafd" name="PollutantValue" type="Decimal" label="PollutantValue : Decimal" nullable="true" kind="Persistent" fieldName="m_pollutantValue" />
+      <Property Id="47bb1182-8a38-44d6-981c-95a48eccc5e8" name="ReceiveTime" type="DateTime" label="ReceiveTime : DateTime" kind="Persistent" fieldName="m_receiveTime" />
+      <Property Id="da986442-f0c5-4e20-919f-5b47f72e0b43" name="Status" label="Status : String" kind="Persistent" fieldName="m_status" />
+      <Property Id="3d292c71-e63f-4a93-a195-01abd4fba7fb" name="Tstamp" type="DateTime" label="Tstamp : DateTime" kind="Persistent" fieldName="m_tstamp" />
+      <Property Id="fb1ba804-7381-4c70-90cd-39a55c5f65f0" name="UpdateDateTime" type="DateTime" label="UpdateDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_updateDateTime" />
+      <Property Id="44c07762-8ef3-4c41-be49-1b10d398360a" name="UpdateUser" label="UpdateUser : String" kind="Persistent" fieldName="m_updateUser" />
+    </DomainClass>
+    <DomainClass Id="e00c61ac-486f-4354-b6d0-59b3cde0a0f3" name="InfectantBy5BufferEntity" namespace="SmartEP.DomainModel.WaterAutoMonitoring" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="Id">
+      <Property Id="751d1562-3a22-4e44-a3f3-7884b771fe08" name="Id" type="Int64" label="Id : Int64" kind="Persistent" identity="true" fieldName="m_id" />
+      <Property Id="9411d4d5-3165-437a-bc8b-459f184025db" name="CreatDateTime" type="DateTime" label="CreatDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_creatDateTime" />
+      <Property Id="de868a69-6fbf-40ac-830f-54a86ae54176" name="CreatUser" label="CreatUser : String" kind="Persistent" fieldName="m_creatUser" />
+      <Property Id="da8ed574-2c7c-4f28-8504-88170dd46d2c" name="Description" label="Description : String" kind="Persistent" fieldName="m_description" />
+      <Property Id="29a8e169-200b-46d1-970d-7db283d7535e" name="MonitoringDataTypeCode" label="MonitoringDataTypeCode : String" kind="Persistent" fieldName="m_monitoringDataTypeCode" />
+      <Property Id="61613460-d143-4d53-899e-07d81e05d8d6" name="OrderByNum" type="Int32" label="OrderByNum : Int32" nullable="true" kind="Persistent" fieldName="m_orderByNum" />
+      <Property Id="33b6aa48-4a29-41b4-ad37-6c4d81c292f0" name="PointId" type="Int32" label="PointId : Int32" kind="Persistent" fieldName="m_pointId" />
+      <Property Id="335d1360-4844-459e-8abd-528f03c53d64" name="PollutantCode" label="PollutantCode : String" kind="Persistent" fieldName="m_pollutantCode" />
+      <Property Id="74df5943-56a5-4884-ba87-4d211fda98fe" name="PollutantValue" type="Decimal" label="PollutantValue : Decimal" nullable="true" kind="Persistent" fieldName="m_pollutantValue" />
+      <Property Id="45aebdbb-1ba3-4d4a-b47c-8a344feeeb99" name="ReceiveTime" type="DateTime" label="ReceiveTime : DateTime" kind="Persistent" fieldName="m_receiveTime" />
+      <Property Id="9f72e1b6-e964-433e-accf-24e1d8af2f01" name="Status" label="Status : String" kind="Persistent" fieldName="m_status" />
+      <Property Id="ed66b96d-45dc-4add-9d4c-45f1454f68e1" name="Tstamp" type="DateTime" label="Tstamp : DateTime" kind="Persistent" fieldName="m_tstamp" />
+      <Property Id="ce304461-6016-4358-ac34-a320938a2e3d" name="UpdateDateTime" type="DateTime" label="UpdateDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_updateDateTime" />
+      <Property Id="8c018846-07ab-4a63-9939-a55e4b807c10" name="UpdateUser" label="UpdateUser : String" kind="Persistent" fieldName="m_updateUser" />
+    </DomainClass>
+    <DomainClass Id="d2a8175e-6c73-4761-b97b-3fb31510680c" name="InfectantBy5Entity" namespace="SmartEP.DomainModel.WaterAutoMonitoring" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="Id">
+      <Property Id="4c6b0599-9a3c-4757-a838-33107369bb2a" name="Id" type="Int64" label="Id : Int64" kind="Persistent" identity="true" fieldName="m_id" />
+      <Property Id="701811f1-8c6c-486c-b6c6-195529bde4dd" name="CreatDateTime" type="DateTime" label="CreatDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_creatDateTime" />
+      <Property Id="e1cb175a-023e-4089-820a-00649c860871" name="CreatUser" label="CreatUser : String" kind="Persistent" fieldName="m_creatUser" />
+      <Property Id="e55f1fe9-327f-477b-813e-3f5a0d8e37ae" name="Description" label="Description : String" kind="Persistent" fieldName="m_description" />
+      <Property Id="c758a8e5-8234-4544-b074-a558f568c8ca" name="MonitoringDataTypeCode" label="MonitoringDataTypeCode : String" kind="Persistent" fieldName="m_monitoringDataTypeCode" />
+      <Property Id="5b41ee7c-0319-4cee-8878-2800338e2583" name="OrderByNum" type="Int32" label="OrderByNum : Int32" nullable="true" kind="Persistent" fieldName="m_orderByNum" />
+      <Property Id="944891c3-5690-4db9-96eb-652653de34c3" name="PointId" type="Int32" label="PointId : Int32" kind="Persistent" fieldName="m_pointId" />
+      <Property Id="ad39527f-c3a1-4ce8-a9be-2e23c67463ee" name="PollutantCode" label="PollutantCode : String" kind="Persistent" fieldName="m_pollutantCode" />
+      <Property Id="529f7899-879b-4d5f-b2cc-2e8147d2f024" name="PollutantValue" type="Decimal" label="PollutantValue : Decimal" nullable="true" kind="Persistent" fieldName="m_pollutantValue" />
+      <Property Id="c5880a29-5041-4f98-8779-d9c03a3e2063" name="ReceiveTime" type="DateTime" label="ReceiveTime : DateTime" kind="Persistent" fieldName="m_receiveTime" />
+      <Property Id="9154bef0-7a9e-4635-8f2f-5e9cf80654e0" name="Status" label="Status : String" kind="Persistent" fieldName="m_status" />
+      <Property Id="42c6acea-031c-458d-87f0-67dc9d3256f1" name="Tstamp" type="DateTime" label="Tstamp : DateTime" kind="Persistent" fieldName="m_tstamp" />
+      <Property Id="1d345bc5-d528-45fd-a3db-c661c7219d6b" name="UpdateDateTime" type="DateTime" label="UpdateDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_updateDateTime" />
+      <Property Id="b291e871-458c-4f5b-bfbd-6a34f5d93787" name="UpdateUser" label="UpdateUser : String" kind="Persistent" fieldName="m_updateUser" />
+    </DomainClass>
+    <DomainClass Id="922f01c0-0577-4b33-bc37-b15e3177413a" name="InfectantBy30BufferEntity" namespace="SmartEP.DomainModel.WaterAutoMonitoring" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="Id">
+      <Property Id="fb362ac1-82e3-420c-9a7e-4f07eb5b4fe1" name="Id" type="Int64" label="Id : Int64" kind="Persistent" identity="true" fieldName="m_id" />
+      <Property Id="cb0af18c-ed1e-4537-bdcc-5000880f6288" name="CreatDateTime" type="DateTime" label="CreatDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_creatDateTime" />
+      <Property Id="871bc8ec-98bb-4591-82a4-02b3bf29c873" name="CreatUser" label="CreatUser : String" kind="Persistent" fieldName="m_creatUser" />
+      <Property Id="f0d6307e-dace-4f96-bedc-1f53cda85f6b" name="Description" label="Description : String" kind="Persistent" fieldName="m_description" />
+      <Property Id="d37aae66-90ef-4374-8897-a38c8c756bc6" name="MonitoringDataTypeCode" label="MonitoringDataTypeCode : String" kind="Persistent" fieldName="m_monitoringDataTypeCode" />
+      <Property Id="4560c87c-e113-4f34-ba28-7aae44afef68" name="OrderByNum" type="Int32" label="OrderByNum : Int32" nullable="true" kind="Persistent" fieldName="m_orderByNum" />
+      <Property Id="00af9531-b3cc-4e4c-94c2-f166548424e4" name="PointId" type="Int32" label="PointId : Int32" kind="Persistent" fieldName="m_pointId" />
+      <Property Id="5ae0f9f0-4d68-44ad-b55f-b16b0aa95860" name="PollutantCode" label="PollutantCode : String" kind="Persistent" fieldName="m_pollutantCode" />
+      <Property Id="593e2db1-3a43-4dbc-a614-377a057dd187" name="PollutantValue" type="Decimal" label="PollutantValue : Decimal" nullable="true" kind="Persistent" fieldName="m_pollutantValue" />
+      <Property Id="bed3f463-598f-489e-921d-14170f623acc" name="ReceiveTime" type="DateTime" label="ReceiveTime : DateTime" kind="Persistent" fieldName="m_receiveTime" />
+      <Property Id="5f5ae176-4cdd-408d-b07b-922be36a0877" name="Status" label="Status : String" kind="Persistent" fieldName="m_status" />
+      <Property Id="daf591b1-8ad8-4c8e-9878-a0ebe67802ea" name="Tstamp" type="DateTime" label="Tstamp : DateTime" kind="Persistent" fieldName="m_tstamp" />
+      <Property Id="0a5c1cf8-acb9-4580-9df5-fcd32c67e52d" name="UpdateDateTime" type="DateTime" label="UpdateDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_updateDateTime" />
+      <Property Id="d4af8dcf-90fa-4988-bf1f-825a1a83b6c0" name="UpdateUser" label="UpdateUser : String" kind="Persistent" fieldName="m_updateUser" />
+    </DomainClass>
+    <DomainClass Id="5011a81e-edf3-4da8-9a1e-a50bfc9895e8" name="InfectantBy30Entity" namespace="SmartEP.DomainModel.WaterAutoMonitoring" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="Id">
+      <Property Id="25ee2e9a-6188-4ca9-9f70-6f9c56546c3c" name="Id" type="Int64" label="Id : Int64" kind="Persistent" identity="true" fieldName="m_id" />
+      <Property Id="c7695d0d-8eb6-4ab1-93cb-e4843a37d946" name="CreatDateTime" type="DateTime" label="CreatDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_creatDateTime" />
+      <Property Id="53d24f9b-5496-45a4-be84-2952755ef6b7" name="CreatUser" label="CreatUser : String" kind="Persistent" fieldName="m_creatUser" />
+      <Property Id="92d29f09-dd28-4c8f-8321-ea78dc5879f0" name="Description" label="Description : String" kind="Persistent" fieldName="m_description" />
+      <Property Id="27d884bc-df76-4128-bdf2-efe0c15d8299" name="MonitoringDataTypeCode" label="MonitoringDataTypeCode : String" kind="Persistent" fieldName="m_monitoringDataTypeCode" />
+      <Property Id="1c356ccb-bf62-4f86-9baf-6512a72b900e" name="OrderByNum" type="Int32" label="OrderByNum : Int32" nullable="true" kind="Persistent" fieldName="m_orderByNum" />
+      <Property Id="bef856d5-3545-425a-9326-f531a27f4fd3" name="PointId" type="Int32" label="PointId : Int32" kind="Persistent" fieldName="m_pointId" />
+      <Property Id="4a39fc80-dc27-438d-9f65-aa3935583439" name="PollutantCode" label="PollutantCode : String" kind="Persistent" fieldName="m_pollutantCode" />
+      <Property Id="5189804f-b71a-42c8-ac4f-4ceec070214b" name="PollutantValue" type="Decimal" label="PollutantValue : Decimal" nullable="true" kind="Persistent" fieldName="m_pollutantValue" />
+      <Property Id="0d1e6594-785e-416f-b87d-8945f1d274af" name="ReceiveTime" type="DateTime" label="ReceiveTime : DateTime" kind="Persistent" fieldName="m_receiveTime" />
+      <Property Id="b6fd341a-ef30-4f3d-8ec9-ddb7cce481e4" name="Status" label="Status : String" kind="Persistent" fieldName="m_status" />
+      <Property Id="5fa83346-3e58-46aa-9e37-a0fc8b35c7ee" name="Tstamp" type="DateTime" label="Tstamp : DateTime" kind="Persistent" fieldName="m_tstamp" />
+      <Property Id="bab13822-ad74-45ea-b21f-218f2e5fa40b" name="UpdateDateTime" type="DateTime" label="UpdateDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_updateDateTime" />
+      <Property Id="c202ea85-0520-4473-9af1-49e1b7b07ac2" name="UpdateUser" label="UpdateUser : String" kind="Persistent" fieldName="m_updateUser" />
+    </DomainClass>
+    <DomainClass Id="206054f9-0931-4abb-85c8-80760db77124" name="InfectantBy10BufferEntity" namespace="SmartEP.DomainModel.WaterAutoMonitoring" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="Id">
+      <Property Id="105e14cc-99d9-40a0-ac67-e7f6de8be9e1" name="Id" type="Int64" label="Id : Int64" kind="Persistent" identity="true" fieldName="m_id" />
+      <Property Id="6e8670dd-9d5d-440c-aa48-4785dfa2cd4e" name="CreatDateTime" type="DateTime" label="CreatDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_creatDateTime" />
+      <Property Id="f2478f58-b03e-46ca-b63f-eccad61f47f1" name="CreatUser" label="CreatUser : String" kind="Persistent" fieldName="m_creatUser" />
+      <Property Id="d0afd915-10bc-4241-af9d-b4c8d3792093" name="Description" label="Description : String" kind="Persistent" fieldName="m_description" />
+      <Property Id="ae41d66f-7d0d-4627-b7d2-266e929b4bfd" name="MonitoringDataTypeCode" label="MonitoringDataTypeCode : String" kind="Persistent" fieldName="m_monitoringDataTypeCode" />
+      <Property Id="7357edd9-0664-4398-8917-6f623bef7faa" name="OrderByNum" type="Int32" label="OrderByNum : Int32" nullable="true" kind="Persistent" fieldName="m_orderByNum" />
+      <Property Id="675ff96c-ec97-4dea-ba51-8912d99ebd02" name="PointId" type="Int32" label="PointId : Int32" kind="Persistent" fieldName="m_pointId" />
+      <Property Id="ac83ec19-5309-4e11-b1e6-0767c46699f7" name="PollutantCode" label="PollutantCode : String" kind="Persistent" fieldName="m_pollutantCode" />
+      <Property Id="2e0a6f24-eb1d-461f-bd7d-a488c269a982" name="PollutantValue" type="Decimal" label="PollutantValue : Decimal" nullable="true" kind="Persistent" fieldName="m_pollutantValue" />
+      <Property Id="febbe469-f904-4fe7-aa36-4490adbcb03d" name="ReceiveTime" type="DateTime" label="ReceiveTime : DateTime" kind="Persistent" fieldName="m_receiveTime" />
+      <Property Id="6ee948e9-bfa4-4282-bcf0-9a5b6bc74266" name="Status" label="Status : String" kind="Persistent" fieldName="m_status" />
+      <Property Id="80711bf7-a58b-4779-917d-115ded9e4522" name="Tstamp" type="DateTime" label="Tstamp : DateTime" kind="Persistent" fieldName="m_tstamp" />
+      <Property Id="393691ed-cfd7-4d40-8008-c7cd238bb9a2" name="UpdateDateTime" type="DateTime" label="UpdateDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_updateDateTime" />
+      <Property Id="9c93c798-5bfc-443e-8213-ecb3d3cfdafd" name="UpdateUser" label="UpdateUser : String" kind="Persistent" fieldName="m_updateUser" />
+    </DomainClass>
+    <DomainClass Id="c7cf36e0-2d78-49af-8681-fbfb2418def3" name="InfectantBy10Entity" namespace="SmartEP.DomainModel.WaterAutoMonitoring" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="Id">
+      <Property Id="427d2da6-dfe3-4200-abb3-39eff65f54f5" name="Id" type="Int64" label="Id : Int64" kind="Persistent" identity="true" fieldName="m_id" />
+      <Property Id="54037845-be80-47e1-8791-898f8defdebd" name="CreatDateTime" type="DateTime" label="CreatDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_creatDateTime" />
+      <Property Id="6796646c-3496-4f12-81a4-3a3b3441905a" name="CreatUser" label="CreatUser : String" kind="Persistent" fieldName="m_creatUser" />
+      <Property Id="849f91a6-1b41-4712-b7e7-735ccc7f4ca8" name="Description" label="Description : String" kind="Persistent" fieldName="m_description" />
+      <Property Id="74717d02-5624-49be-9db9-47e6973bea50" name="MonitoringDataTypeCode" label="MonitoringDataTypeCode : String" kind="Persistent" fieldName="m_monitoringDataTypeCode" />
+      <Property Id="7f781482-005c-4e52-ac94-bb41329e8448" name="OrderByNum" type="Int32" label="OrderByNum : Int32" nullable="true" kind="Persistent" fieldName="m_orderByNum" />
+      <Property Id="94d87793-42aa-4f43-8e83-1bf82e03c456" name="PointId" type="Int32" label="PointId : Int32" kind="Persistent" fieldName="m_pointId" />
+      <Property Id="d5e342fd-d246-4d7b-8868-745424fc1f01" name="PollutantCode" label="PollutantCode : String" kind="Persistent" fieldName="m_pollutantCode" />
+      <Property Id="a450ce7e-011c-49de-8335-ebe761c5e9db" name="PollutantValue" type="Decimal" label="PollutantValue : Decimal" nullable="true" kind="Persistent" fieldName="m_pollutantValue" />
+      <Property Id="1673ddb0-28e4-4a90-88e1-2fe9b5efa61a" name="ReceiveTime" type="DateTime" label="ReceiveTime : DateTime" kind="Persistent" fieldName="m_receiveTime" />
+      <Property Id="d7560b95-bfef-445a-b002-7359de412559" name="Status" label="Status : String" kind="Persistent" fieldName="m_status" />
+      <Property Id="6cfc027d-b2bc-4ecd-96b9-2f8947500750" name="Tstamp" type="DateTime" label="Tstamp : DateTime" kind="Persistent" fieldName="m_tstamp" />
+      <Property Id="3d2ce9aa-2163-4793-950c-232a811a667e" name="UpdateDateTime" type="DateTime" label="UpdateDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_updateDateTime" />
+      <Property Id="c3900374-1e4d-48d6-9ea4-5b08c31140b1" name="UpdateUser" label="UpdateUser : String" kind="Persistent" fieldName="m_updateUser" />
+    </DomainClass>
+    <DomainClass Id="e02ae780-a184-4b1d-b90e-65f3a378526a" name="InfectantBy1Entity" namespace="SmartEP.DomainModel.WaterAutoMonitoring" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="Id">
+      <Property Id="b30dae4f-9699-4060-a63c-a58a3b9320aa" name="Id" type="Int64" label="Id : Int64" kind="Persistent" identity="true" fieldName="m_id" />
+      <Property Id="c32eb173-3efe-48c7-a598-a47690e02d1c" name="CreatDateTime" type="DateTime" label="CreatDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_creatDateTime" />
+      <Property Id="6c0a8773-8576-44d9-b661-88abffd36886" name="CreatUser" label="CreatUser : String" kind="Persistent" fieldName="m_creatUser" />
+      <Property Id="9b9f9e57-7d84-4a5b-9cbf-ac83977858cd" name="Description" label="Description : String" kind="Persistent" fieldName="m_description" />
+      <Property Id="5c21cc3d-381a-47b3-a8f8-a57a1bb274a7" name="MonitoringDataTypeCode" label="MonitoringDataTypeCode : String" kind="Persistent" fieldName="m_monitoringDataTypeCode" />
+      <Property Id="146011d3-39c9-444f-bff1-fc105d361d00" name="OrderByNum" type="Int32" label="OrderByNum : Int32" nullable="true" kind="Persistent" fieldName="m_orderByNum" />
+      <Property Id="a10ebac7-92f9-40f8-acad-dd2f2501d70a" name="PointId" type="Int32" label="PointId : Int32" kind="Persistent" fieldName="m_pointId" />
+      <Property Id="6c180fc3-fb2a-4f9d-80fd-95f6ad13b7cc" name="PollutantCode" label="PollutantCode : String" kind="Persistent" fieldName="m_pollutantCode" />
+      <Property Id="169f2659-ce3f-42c5-8f83-00b523084131" name="PollutantValue" type="Decimal" label="PollutantValue : Decimal" nullable="true" kind="Persistent" fieldName="m_pollutantValue" />
+      <Property Id="2f8b3d41-03c6-4f5a-86e2-e9c6863caef4" name="ReceiveTime" type="DateTime" label="ReceiveTime : DateTime" kind="Persistent" fieldName="m_receiveTime" />
+      <Property Id="43164b13-527c-4d3f-8411-3a90d2fc4cc3" name="Status" label="Status : String" kind="Persistent" fieldName="m_status" />
+      <Property Id="2dfb6601-ae0e-4711-a02d-bf4dcf481b1f" name="Tstamp" type="DateTime" label="Tstamp : DateTime" kind="Persistent" fieldName="m_tstamp" />
+      <Property Id="edaea65c-88ff-491f-a321-938aef34cc49" name="UpdateDateTime" type="DateTime" label="UpdateDateTime : DateTime" nullable="true" kind="Persistent" fieldName="m_updateDateTime" />
+      <Property Id="787d0742-c649-4150-b367-e26e877e1e22" name="UpdateUser" label="UpdateUser : String" kind="Persistent" fieldName="m_updateUser" />
+    </DomainClass>
+    <Interface Id="e818f7ee-2a02-435c-8fa0-37118e1f3b56" name="IWaterAutoMonitoringEntityProperty" showPropertiesCompartment="true">
+      <implementors>
+        <DomainClassMoniker name="/WaterAutoMonitoringModel/OriginalPacketReceiveEntity" />
+        <DomainClassMoniker name="/WaterAutoMonitoringModel/OriginalPacketBackupEntity" />
+        <DomainClassMoniker name="/WaterAutoMonitoringModel/InstrumentDataBy60BufferEntity" />
+        <DomainClassMoniker name="/WaterAutoMonitoringModel/InfectantBy5BufferEntity" />
+        <DomainClassMoniker name="/WaterAutoMonitoringModel/InfectantBy30BufferEntity" />
+        <DomainClassMoniker name="/WaterAutoMonitoringModel/InfectantBy10Entity" />
+        <DomainClassMoniker name="/WaterAutoMonitoringModel/InfectantBy1Entity" />
+        <DomainClassMoniker name="/WaterAutoMonitoringModel/InstrumentDataBy60Entity" />
+        <DomainClassMoniker name="/WaterAutoMonitoringModel/InfectantByRTEntity" />
+        <DomainClassMoniker name="/WaterAutoMonitoringModel/InfectantBy60BufferEntity" />
+        <DomainClassMoniker name="/WaterAutoMonitoringModel/InfectantBy60Entity" />
+        <DomainClassMoniker name="/WaterAutoMonitoringModel/InfectantBy5Entity" />
+        <DomainClassMoniker name="/WaterAutoMonitoringModel/InfectantBy30Entity" />
+        <DomainClassMoniker name="/WaterAutoMonitoringModel/InfectantBy10BufferEntity" />
+        <DomainClassMoniker name="/WaterAutoMonitoringModel/OriginalPacketRequestEntity" />
+      </implementors>
+    </Interface>
+  </Types>
+  <domainContext>
+    <domainModelHasDomainContext Id="d3bc7d1a-3a6a-47c5-9f78-2590c0500644">
+      <domainContainer name="WaterAutoMonitoringModel" namespace="SmartEP.DomainModel.WaterAutoMonitoring" showPropertiesCompartment="true">
+        <entitySetProperty name="OriginalPacketRequestEntities" namespace="SmartEP.DomainModel.WaterAutoMonitoring" type="OriginalPacketRequestEntity" label="OriginalPacketRequestEntities : IQueryable&lt;SmartEP.DomainModel.WaterAutoMonitoring.OriginalPacketRequestEntity&gt;" />
+        <entitySetProperty name="OriginalPacketReceiveEntities" namespace="SmartEP.DomainModel.WaterAutoMonitoring" type="OriginalPacketReceiveEntity" label="OriginalPacketReceiveEntities : IQueryable&lt;SmartEP.DomainModel.WaterAutoMonitoring.OriginalPacketReceiveEntity&gt;" />
+        <entitySetProperty name="OriginalPacketBackupEntities" namespace="SmartEP.DomainModel.WaterAutoMonitoring" type="OriginalPacketBackupEntity" label="OriginalPacketBackupEntities : IQueryable&lt;SmartEP.DomainModel.WaterAutoMonitoring.OriginalPacketBackupEntity&gt;" />
+        <entitySetProperty name="InstrumentDataBy60BufferEntities" namespace="SmartEP.DomainModel.WaterAutoMonitoring" type="InstrumentDataBy60BufferEntity" label="InstrumentDataBy60BufferEntities : IQueryable&lt;SmartEP.DomainModel.WaterAutoMonitoring.InstrumentDataBy60BufferEntity&gt;" />
+        <entitySetProperty name="InstrumentDataBy60Entities" namespace="SmartEP.DomainModel.WaterAutoMonitoring" type="InstrumentDataBy60Entity" label="InstrumentDataBy60Entities : IQueryable&lt;SmartEP.DomainModel.WaterAutoMonitoring.InstrumentDataBy60Entity&gt;" />
+        <entitySetProperty name="InfectantByRTEntities" namespace="SmartEP.DomainModel.WaterAutoMonitoring" type="InfectantByRTEntity" label="InfectantByRTEntities : IQueryable&lt;SmartEP.DomainModel.WaterAutoMonitoring.InfectantByRTEntity&gt;" />
+        <entitySetProperty name="InfectantBy60BufferEntities" namespace="SmartEP.DomainModel.WaterAutoMonitoring" type="InfectantBy60BufferEntity" label="InfectantBy60BufferEntities : IQueryable&lt;SmartEP.DomainModel.WaterAutoMonitoring.InfectantBy60BufferEntity&gt;" />
+        <entitySetProperty name="InfectantBy60Entities" namespace="SmartEP.DomainModel.WaterAutoMonitoring" type="InfectantBy60Entity" label="InfectantBy60Entities : IQueryable&lt;SmartEP.DomainModel.WaterAutoMonitoring.InfectantBy60Entity&gt;" />
+        <entitySetProperty name="InfectantBy5BufferEntities" namespace="SmartEP.DomainModel.WaterAutoMonitoring" type="InfectantBy5BufferEntity" label="InfectantBy5BufferEntities : IQueryable&lt;SmartEP.DomainModel.WaterAutoMonitoring.InfectantBy5BufferEntity&gt;" />
+        <entitySetProperty name="InfectantBy5Entities" namespace="SmartEP.DomainModel.WaterAutoMonitoring" type="InfectantBy5Entity" label="InfectantBy5Entities : IQueryable&lt;SmartEP.DomainModel.WaterAutoMonitoring.InfectantBy5Entity&gt;" />
+        <entitySetProperty name="InfectantBy30BufferEntities" namespace="SmartEP.DomainModel.WaterAutoMonitoring" type="InfectantBy30BufferEntity" label="InfectantBy30BufferEntities : IQueryable&lt;SmartEP.DomainModel.WaterAutoMonitoring.InfectantBy30BufferEntity&gt;" />
+        <entitySetProperty name="InfectantBy30Entities" namespace="SmartEP.DomainModel.WaterAutoMonitoring" type="InfectantBy30Entity" label="InfectantBy30Entities : IQueryable&lt;SmartEP.DomainModel.WaterAutoMonitoring.InfectantBy30Entity&gt;" />
+        <entitySetProperty name="InfectantBy10BufferEntities" namespace="SmartEP.DomainModel.WaterAutoMonitoring" type="InfectantBy10BufferEntity" label="InfectantBy10BufferEntities : IQueryable&lt;SmartEP.DomainModel.WaterAutoMonitoring.InfectantBy10BufferEntity&gt;" />
+        <entitySetProperty name="InfectantBy10Entities" namespace="SmartEP.DomainModel.WaterAutoMonitoring" type="InfectantBy10Entity" label="InfectantBy10Entities : IQueryable&lt;SmartEP.DomainModel.WaterAutoMonitoring.InfectantBy10Entity&gt;" />
+        <entitySetProperty name="InfectantBy1Entities" namespace="SmartEP.DomainModel.WaterAutoMonitoring" type="InfectantBy1Entity" label="InfectantBy1Entities : IQueryable&lt;SmartEP.DomainModel.WaterAutoMonitoring.InfectantBy1Entity&gt;" />
+      </domainContainer>
+    </domainModelHasDomainContext>
+  </domainContext>
+</DomainModel>

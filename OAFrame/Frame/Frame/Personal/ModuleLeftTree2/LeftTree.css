@@ -1,0 +1,109 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+a {
+    border: 0px currentColor;
+}
+
+    a:focus {
+        outline: none;
+    }
+
+img {
+    border: 0px;
+}
+
+body {
+    font: 12px/180% Arial, Helvetica, sans-serif, "ÐÂËÎÌå";
+    font-size-adjust: none;
+    font-stretch: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: none;
+    }
+
+.v {
+    background: url("vicon.png") no-repeat;
+    width: 14px;
+    height: 14px;
+    overflow: hidden;
+    margin-top: -5px;
+    margin-bottom: -5px;
+    float: right;
+    display: inline-block;    
+}
+
+.v01 {
+    
+}
+
+.v02 {
+    background-position: 0px -16px;
+}
+
+.vtitle {
+    background-color: #AED3F0;
+    text-align: left;
+    padding-left:10px;
+    border: 1px solid #C4C6C0;
+    height: 35px;
+    color: #414855;
+    line-height: 35px;
+    font-family: "Î¢ÈíÑÅºÚ";
+    font-size: 15px;
+    margin-top: -1px;
+    cursor: pointer;
+}
+
+.vtitle1 {
+    background-color: #f00;
+    text-align: left;
+    padding-left:10px;
+    border: 1px solid #C4C6C0;
+    height: 35px;
+    color: #414855;
+    line-height: 35px;
+    font-family: "Î¢ÈíÑÅºÚ";
+    font-size: 15px;
+    margin-top: -1px;
+    cursor: pointer;
+}
+
+.vtitle em {
+    margin: 10px 10px 0px 0px;
+}
+
+.vconlist {
+    background: #FFF;
+     /*height:500px;*/
+}
+
+    .vconlist li a {
+        height: 35px;
+        color: rgb(134, 111, 103);
+        line-height: 35px;
+        padding-left: 50px;
+        font-family: "Î¢ÈíÑÅºÚ";
+        font-size: 14px;
+        display: block;
+    }
+
+    .vconlist li.select a {
+        color: #FFF;
+        text-decoration: none;
+        background-color:#FDAA32;
+        /*background-image: url("images/1.png");*/
+    }
+
+    .vconlist li a:hover {
+        color:#fa7c0f;
+        text-decoration: none;
+    }

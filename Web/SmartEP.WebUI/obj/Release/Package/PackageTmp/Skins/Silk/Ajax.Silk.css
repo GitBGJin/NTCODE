@@ -1,0 +1,9 @@
+.RadAjax_Silk .raDiv {
+  background-image: url('Common/loading.gif'); }
+.RadAjax_Silk .raColor {
+  background-color: #e6e6e6;
+  color: #3b3b3b; }
+.RadAjax_Silk .raTransp {
+  opacity: 0.6;
+  -moz-opacity: 0.6;
+  filter: alpha(opacity=60); }

@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B34AFA9C-4CC2-44FC-94D6-6D47F46B384F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartEP.Service.DataAnalyze</RootNamespace>
+    <AssemblyName>SmartEP.Service.DataAnalyze</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\..\南通\Vendor\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartEP.AMSRepository">
+      <HintPath>..\..\..\..\南通\Src\SmartEP.WebUI\bin\SmartEP.AMSRepository.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartEP.BaseInfoRepository">
+      <HintPath>..\..\..\..\南通\Src\SmartEP.WebUI\bin\SmartEP.BaseInfoRepository.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartEP.DomainModel">
+      <HintPath>..\..\..\..\南通\Src\SmartEP.WebUI\bin\SmartEP.DomainModel.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartEP.Service.BaseData">
+      <HintPath>..\..\..\..\南通\Src\SmartEP.WebUI\bin\SmartEP.Service.BaseData.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartEP.Service.Core">
+      <HintPath>..\..\..\..\南通\Src\SmartEP.WebUI\bin\SmartEP.Service.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartEP.Service.DataAuditing">
+      <HintPath>..\..\..\..\南通\Src\SmartEP.WebUI\bin\SmartEP.Service.DataAuditing.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartEP.Service.Frame">
+      <HintPath>..\..\..\..\南通\Src\SmartEP.WebUI\bin\SmartEP.Service.Frame.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartEP.WebControl">
+      <HintPath>..\..\..\..\南通\Src\SmartEP.WebUI\bin\SmartEP.WebControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Web.Design, Version=2015.1.401.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Vendor\Telerik Control\Telerik Ajax 2015Q1\Telerik.Web.Design.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.Web.Device.Detection">
+      <HintPath>..\..\..\..\南通\Src\Services\SmartEP.Service.DataAnalyze\bin\Debug\Telerik.Web.Device.Detection.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\..\..\..\南通\Vendor\SmartEP\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins">
+      <HintPath>..\..\..\..\南通\Vendor\Telerik Control\Telerik Ajax 2015Q1\Telerik.Web.UI.Skins.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess, Version=2015.1.225.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342">
+      <HintPath>C:\Program Files (x86)\Telerik\OpenAccess ORM\bin\Telerik.OpenAccess.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.35.Extensions, Version=2015.1.225.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342">
+      <HintPath>C:\Program Files (x86)\Telerik\OpenAccess ORM\bin\Telerik.OpenAccess.35.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.40.Extensions, Version=2015.1.225.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342">
+      <HintPath>C:\Program Files (x86)\Telerik\OpenAccess ORM\bin\Telerik.OpenAccess.40.Extensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Air\AirAuditStateRemindService.cs" />
+    <Compile Include="Air\AirCalibrationService.cs" />
+    <Compile Include="Air\AirFrequencyService.cs" />
+    <Compile Include="Air\AirRealTimeOnlineStateNewService.cs" />
+    <Compile Include="Air\AirRealTimeOnlineStateService.cs" />
+    <Compile Include="Air\AQIReport\AQIDataType.cs" />
+    <Compile Include="Air\AQIReport\AQIFactorData.cs" />
+    <Compile Include="Air\AQIReport\AQIFactorMapping.cs" />
+    <Compile Include="Air\AQIReport\AQIReport.cs" />
+    <Compile Include="Air\AQIReport\AQIReportManager.cs" />
+    <Compile Include="Air\AQIReport\ConcentrationAQIService.cs" />
+    <Compile Include="Air\AQIReport\DayAQIService.cs" />
+    <Compile Include="Air\AQIReport\FactorAQI.cs" />
+    <Compile Include="Air\AQIReport\HourAQIService.cs" />
+    <Compile Include="Air\AQIReport\MonthAQIService.cs" />
+    <Compile Include="Air\AQIReport\YearAQIService.cs" />
+    <Compile Include="Air\AQICalculateService.cs" />
+    <Compile Include="Air\DataQuery\DataCompare.cs" />
+    <Compile Include="Air\DataQuery\DataQueryByDayService.cs" />
+    <Compile Include="Air\DataQuery\DataQueryByHourForUpLoadService.cs" />
+    <Compile Include="Air\DataQuery\DataQueryByHourForUpLoadSZService.cs" />
+    <Compile Include="Air\DataQuery\DataQueryByHourService.cs" />
+    <Compile Include="Air\DataQuery\DataQueryByMonthService.cs" />
+    <Compile Include="Air\DataQuery\DataQueryBySeasonService.cs" />
+    <Compile Include="Air\DataQuery\DataQueryByWeekService.cs" />
+    <Compile Include="Air\DataQuery\DataQueryByYearService.cs" />
+    <Compile Include="Air\DataQuery\DustHazeDayService.cs" />
+    <Compile Include="Air\DataQuery\GranuleSpecialService.cs" />
+    <Compile Include="Air\FrequencyService.cs" />
+    <Compile Include="Air\MessageTextService.cs" />
+    <Compile Include="Air\MonthReport\MonthReportService.cs" />
+    <Compile Include="Air\PolaryWind\PolaryWindService.cs" />
+    <Compile Include="Air\RPT_AQIForecastService.cs" />
+    <Compile Include="Air\SuperStationInterfaceService.cs" />
+    <Compile Include="Common\DataOnlineService.cs" />
+    <Compile Include="Common\DataSamplingConditionService.cs" />
+    <Compile Include="Common\ELMAHService.cs" />
+    <Compile Include="Enums\AnalyzeEnum.cs" />
+    <Compile Include="Enums\CaculatorType.cs" />
+    <Compile Include="Enums\DataExportType.cs" />
+    <Compile Include="Enums\PollutantDataType.cs" />
+    <Compile Include="Enums\PollutionIndexDataType.cs" />
+    <Compile Include="Enums\PollutionIndexType.cs" />
+    <Compile Include="Enums\ReportType.cs" />
+    <Compile Include="Enums\WaterPollutionFactor.cs" />
+    <Compile Include="Enums\WaterPollutionLevelType.cs" />
+    <Compile Include="HomePageElements\AlarmRemindService.cs" />
+    <Compile Include="HomePageElements\QualityRunningService.cs" />
+    <Compile Include="HomePageElements\TaskManagementService.cs" />
+    <Compile Include="HomePageElements\WaterQualityService.cs" />
+    <Compile Include="Interfaces\IAuditStateRemind.cs" />
+    <Compile Include="Interfaces\IDayAQI.cs" />
+    <Compile Include="Interfaces\IHourAQI.cs" />
+    <Compile Include="Interfaces\IRealTimeOnline.cs" />
+    <Compile Include="PollutionIndex\FactorInfo.cs" />
+    <Compile Include="PollutionIndex\IPollutionIndexCaculator.cs" />
+    <Compile Include="PollutionIndex\PollutionIndexCaculator.cs" />
+    <Compile Include="PollutionIndex\PollutionIndexCaculatorContext.cs" />
+    <Compile Include="PollutionIndex\PollutionIndexLibrary.cs" />
+    <Compile Include="PollutionIndex\PollutionIndexStandard.cs" />
+    <Compile Include="PollutionIndex\PollutionLevelInfo.cs" />
+    <Compile Include="PollutionIndex\PollutionStandard.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Public\PublicReportService.cs" />
+    <Compile Include="Report\CalibrationReportService.cs" />
+    <Compile Include="Report\CustomDataService.cs" />
+    <Compile Include="Report\jzSendMessageManage.cs" />
+    <Compile Include="Report\jzSendMessageService.cs" />
+    <Compile Include="Report\ReportLogService.cs" />
+    <Compile Include="Report\WaterMonthRunReportSettingService.cs" />
+    <Compile Include="WaterLZ\DayReportBlueAlgaeService.cs" />
+    <Compile Include="WaterLZ\LZService.cs" />
+    <Compile Include="WaterPollutionIndex\WaterPollutionIndexLibrary.cs" />
+    <Compile Include="WaterPollutionIndex\WaterPollutionInfo.cs" />
+    <Compile Include="WaterPollutionIndex\WaterPollutionLevel.cs" />
+    <Compile Include="WaterPollutionIndex\WQIFactorMapping.cs" />
+    <Compile Include="WaterPollutionIndex\WQIReport.cs" />
+    <Compile Include="Water\BlueAlgaeEarlyWarningMonitoringService.cs" />
+    <Compile Include="Water\DataQuery\DataCompare.cs" />
+    <Compile Include="Water\DataQuery\DataExportService.cs" />
+    <Compile Include="Water\DataQuery\DataQueryByDayService.cs" />
+    <Compile Include="Water\DataQuery\DataQueryByHourService.cs" />
+    <Compile Include="Water\DataQuery\DataQueryByMonthService.cs" />
+    <Compile Include="Water\DataQuery\DataQueryBySeasonService.cs" />
+    <Compile Include="Water\DataQuery\DataQueryByWeekService.cs" />
+    <Compile Include="Water\DataQuery\DataQueryByYearService.cs" />
+    <Compile Include="Water\DataQuery\DayReportBlueAlgaeService.cs" />
+    <Compile Include="Water\DataQuery\DayReportManualService.cs" />
+    <Compile Include="Water\DataQuery\RealTimeWaterQualityStatus.cs" />
+    <Compile Include="Water\DataQuery\WaterQualityAnalysis.cs" />
+    <Compile Include="Water\InstrumentParameterAnalyzeService.cs" />
+    <Compile Include="Water\OM_ReagentInBillItemSevice.cs" />
+    <Compile Include="Water\ReportContentService.cs" />
+    <Compile Include="Water\ReportSummaryService.cs" />
+    <Compile Include="Water\RiverSectionService.cs" />
+    <Compile Include="Water\WaterAuditStateRemindService.cs" />
+    <Compile Include="Water\WaterCustomDataAnalysisService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Water\WaterFrequencyService.cs" />
+    <Compile Include="Water\WaterGrossStatisticsService.cs" />
+    <Compile Include="Water\WaterInfectantBy60Service.cs" />
+    <Compile Include="Water\WaterRealTimeOnlineStateNewService.cs" />
+    <Compile Include="Water\WaterRealTimeOnlineStateService.cs" />
+    <Compile Include="Water\WaterRemoteControlService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Air\AQIReport\AQI报表类使用说明.txt" />
+    <Content Include="PollutionIndex\污染物指数的说明.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DAL\SmartEP.Data\SmartEP.Data.csproj">
+      <Project>{89b8d570-dcfe-4265-b804-537324de6745}</Project>
+      <Name>SmartEP.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Repositories\SmartEP.MonitorBusinessRepository\SmartEP.MonitoringBusinessRepository.csproj">
+      <Project>{a6823fb0-0511-48c1-92af-a94437484d43}</Project>
+      <Name>SmartEP.MonitoringBusinessRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SmartEP.Core\SmartEP.Core.csproj">
+      <Project>{a16a68c3-0579-4927-91b3-d21c3631380b}</Project>
+      <Name>SmartEP.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SmartEP.Utilities\SmartEP.Utilities.csproj">
+      <Project>{fa8bdea2-3a34-4817-9db9-8bbc1a307dbc}</Project>
+      <Name>SmartEP.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartEP.Service.AutoMonitoring\SmartEP.Service.AutoMonitoring.csproj">
+      <Project>{8c480e7e-f681-4f44-883b-4da02f7bf38b}</Project>
+      <Name>SmartEP.Service.AutoMonitoring</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AQIReport\" />
+    <Folder Include="Audit\Air\" />
+    <Folder Include="Audit\Water\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,263 @@
+﻿body {
+}
+.iconText {
+    background: url(../../App_Themes/Feminine/imgs/icon_All.png) no-repeat  -143px -57px !important;
+    width: 29px;
+    height: 29px;
+    border: none !important;
+}
+
+    .iconText:hover {
+        background: url(../../App_Themes/Feminine/imgs/icon_All.png) no-repeat -34px -92px !important;
+    }
+
+.iconHelp {
+    background: url(../../App_Themes/Feminine/imgs/icon_All.png) no-repeat -194px -57px !important;
+    width: 29px;
+    height: 29px;
+    border: none !important;
+}
+
+    .iconHelp:hover {
+        background: url(../../App_Themes/Feminine/imgs/icon_All.png) no-repeat -102px -92px !important;
+    }
+
+.iconSetting {
+    background: url(../../App_Themes/Feminine/imgs/icon_All.png) no-repeat -222px -57px !important;
+    width: 29px;
+    height: 29px;
+    border: none !important;
+}
+    .iconSetting:hover {
+        background: url(../../App_Themes/Feminine/imgs/icon_All.png) no-repeat 0px -92px !important;
+    }
+
+.iconBack {
+    background: url(../../App_Themes/Feminine/imgs/icon_All.png) no-repeat -246px -57px !important;
+    width: 28px;
+    height: 29px;
+    border: none !important;
+}
+
+    .iconBack:hover {
+        background: url(../../App_Themes/Feminine/imgs/icon_All.png) no-repeat -137px -92px !important;
+    }
+
+.iconCloth {
+    background: url(../../App_Themes/Feminine/imgs/icon_All.png) no-repeat -167px -57px !important;
+    width: 29px;
+    height: 29px;
+    border: none !important;
+}
+
+    .iconCloth:hover{
+        background: url(../../App_Themes/Feminine/imgs/icon_All.png) no-repeat -69px -92px !important;
+    }
+
+#leftMenu ul {
+    list-style: none;
+    margin-top: 0px;
+}
+
+    #leftMenu ul li {
+        float: left;
+        margin: 0px 0px 12px -23px;
+    }
+
+        #leftMenu ul li a {
+            color: #333;
+            font-size: 12px;
+            text-decoration: none;
+        }
+
+            #leftMenu ul li a span {
+                margin: 0 0 0 3px;
+            }
+
+
+/*头部css*/
+#Container_table {
+    background-color: #eaf4f8;
+}
+
+/*left_css*/
+#Td_left {
+}
+    #Td_left table {
+    background-color: none; height: 65px; margin-top: -4px;
+    }
+        #Td_left table td {
+        width:460px;
+        }
+            #Td_left table td div {
+            width:460px;height:65px;background:url(../../App_Themes/Feminine/imgs/icon_All.png) no-repeat 0 2px;text-indent:-9999px;overflow:hidden; display:block;
+            }
+
+/*center_css*/
+#Td_center {
+}
+    #Td_center table {
+    margin-top: -66px;
+    }
+    #Td_center .iconClock {
+    width:30px; height:30px; margin-top:13px; background:url(../../App_Themes/Feminine/imgs/icon_All.png) no-repeat 0 -169px;text-indent:-9999px;overflow:hidden; display:block;
+    }
+    #Td_center .Time {
+    font-size: 60px; color: #a4d8e9; font-weight: bolder;
+    }
+    #Td_center .Moth {
+    font-size: 16px; color: #a4d8e9; font-weight: bolder;
+    }
+        #Td_center .Moth p:first-child {
+        margin-bottom: -10px;
+        }
+
+/*right_css*/
+#Td_right {
+}
+#Td_right_user {
+    color: #FFF; font-size: 10pt; width: 184px;
+}
+    #Td_right_user div {
+    float: left; width: 44px; height: 44px; background: url(../../App_Themes/Feminine/imgs/icon_All.png) no-repeat 0 -233px; text-align: center; padding-top: 5px; margin-top: -11px;
+    }
+    #Td_right_user span {
+        float: right; margin-top: 2px;color:#58585a;
+    }
+#Td_right .weather p{
+    font-size: 13px; color: #333333; margin-bottom: -5px; *margin-bottom: 0px; margin-left: 36px;
+}
+    #Td_right .weather p span {
+    color:#b01645;
+    }
+
+#lineButton {
+}
+    #lineButton .lineButton_left {
+    width:11px; height:26px;background:url(../../App_Themes/Feminine/imgs/bg_iconLeft.png) no-repeat;margin: -6px -3px 0px 0px;text-indent:-9999px;overflow:hidden; display:block;
+    }
+    #lineButton .lineButton_right {
+    width:11px; height:26px;background:url(../../App_Themes/Feminine/imgs/bg_iconRight.png) no-repeat;margin: -6px 0px 0px -3px;text-indent:-9999px;overflow:hidden; display:block;
+    }
+    #lineButton .lineButton_center {
+    background: url(../../App_Themes/Feminine/imgs/bg_icon.png) repeat-x; height: 26px; width: 100%;
+    }
+        #lineButton .lineButton_center div {
+        margin: -5px 0px 0px 5px;
+        }
+
+
+#Td_right_menu {
+}
+    #Td_right_menu div {
+        background: url(../../App_Themes/Feminine/imgs/bg_Dropdown.png) no-repeat; width: 75px; height: 26px; margin: 6px -10px 0px 0px;
+    }
+    #Td_right_menu #iconImg {
+    float: left; margin: 1px 10px 0 14px;
+    width:28px;height:26px; 
+    background-image:url(../../App_Themes/Feminine/imgs/icon_All.png);
+    background-repeat:no-repeat;
+    background-position:-273px -60px;
+    text-indent:-9999px;overflow:hidden; display:block;
+    }
+    #Td_right_menu #dropDown {
+    width:12px;height:7px; background:url(../../App_Themes/Feminine/imgs/icon_All.png) no-repeat -34px -204px;
+    float: right; margin: 10px 11px 0px 0px; cursor: pointer;text-indent:-9999px;overflow:hidden; display:block;
+    }
+
+
+/*Frame===============================================================*/
+.x-panel-default-outer-border-trbl {
+    border:none !important;
+}
+.x-tab-bar-default {
+    background-color: #ec3e7d !important;
+}
+.x-tab-default-active {
+    background-color: #ca1566 !important;
+}
+.x-tab-default-active .x-tab-inner {
+    color: #fff !important;
+}
+.x-tab-bar-strip-default {
+    background-color: #ca1566 !important;
+    border-color: #ca1566 !important;
+    border-style: solid;
+}
+#RegionPanel1_Region2-splitter {
+background-color:#ec3e7d !important;
+border:none !important;
+}
+.x-panel-default-outer-border-trl {
+    border-left-color: #ec3e7d !important;
+    border-left-width: 1px !important;
+    border-right-color: #ec3e7d !important;
+    border-right-width: 1px !important;
+    border-top-color: #ec3e7d !important;
+    border-top-width: 1px !important;
+}
+.x-panel-header-default {
+    background-color: #ec3e7d !important;
+    background-image: none;
+}
+.x-panel-header-default {
+    border: 1px solid #ec3e7d !important;
+    font-size: 13px;
+}
+.x-panel-header-default .x-tool-img {
+    background-color: #ec3e7d !important;
+}
+.x-panel-default-outer-border-rbl {
+    border-bottom-color: #ec3e7d !important;
+    border-bottom-width: 1px !important;
+    border-left-color: #ec3e7d !important;
+    border-left-width: 1px !important;
+    border-right-color: #ec3e7d !important;
+    border-right-width: 1px !important;
+}
+.x-panel-body-default {
+    background: #fff none repeat scroll 0 0;
+    border-color: #ec3e7d !important;
+    border-style: solid;
+    border-width: 1px;
+    color: #000;
+    font-size: 13px;
+}
+
+.x-panel-default {
+    border-color: #EAF4F8 !important;
+    padding: 0;
+}
+
+.DivLogoMgr
+{
+	background: url(../../App_Themes/Feminine/imgs/MgrTopLogo.png) no-repeat;
+	width: 680px;
+    height: 50px;
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    z-index: 10000;
+}
+
+.DivLogoAir
+{
+	background: url(../../App_Themes/Feminine/imgs/AirTopLogo.png) no-repeat;
+	width: 680px;
+    height: 50px;
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    z-index: 10000;
+}
+
+.DivLogoWater
+{
+    background: url(../../App_Themes/Feminine/imgs/WaterTopLogo.png) no-repeat;
+	width: 680px;
+    height: 50px;
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    z-index: 10000;
+}

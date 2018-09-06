@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{891378EA-1395-47F0-8B3B-14F35C6126A5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartEP.DomainModel</RootNamespace>
+    <AssemblyName>SmartEP.DomainModel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.OpenAccess, Version=2015.1.225.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Vendor\Telerik Control\Telerik ORM\Telerik.OpenAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.35.Extensions, Version=2015.1.225.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Vendor\Telerik Control\Telerik ORM\Telerik.OpenAccess.35.Extensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AirAutoMonitoringModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AirAutoMonitoringModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="AirAutoMonitoring\AirCalibrationDetailEntity.generated.cs" />
+    <Compile Include="AirAutoMonitoring\AirCalibrationEntity.generated.cs" />
+    <Compile Include="AirAutoMonitoring\AirInstrumentStateEntity.generated.cs" />
+    <Compile Include="AirAutoMonitoring\IAirAutoMonitoringEntityProperty.generated.cs" />
+    <Compile Include="AirAutoMonitoring\InfectantBy10BufferEntity.generated.cs" />
+    <Compile Include="AirAutoMonitoring\InfectantBy10Entity.generated.cs" />
+    <Compile Include="AirAutoMonitoring\InfectantBy1BufferEntity.generated.cs" />
+    <Compile Include="AirAutoMonitoring\InfectantBy1Entity.generated.cs" />
+    <Compile Include="AirAutoMonitoring\InfectantBy30BufferEntity.generated.cs" />
+    <Compile Include="AirAutoMonitoring\InfectantBy30Entity.generated.cs" />
+    <Compile Include="AirAutoMonitoring\InfectantBy5BufferEntity.generated.cs" />
+    <Compile Include="AirAutoMonitoring\InfectantBy5Entity.generated.cs" />
+    <Compile Include="AirAutoMonitoring\InfectantBy60BufferEntity.generated.cs" />
+    <Compile Include="AirAutoMonitoring\InfectantBy60Entity.generated.cs" />
+    <Compile Include="AirAutoMonitoring\InfectantByRTEntity.generated.cs" />
+    <Compile Include="AirAutoMonitoring\InstrumentDataBy60BufferEntity.generated.cs" />
+    <Compile Include="AirAutoMonitoring\InstrumentDataBy60Entity.generated.cs" />
+    <Compile Include="AirAutoMonitoring\OriDayAQIEntity.generated.cs" />
+    <Compile Include="AirAutoMonitoring\OriginalPacketBackupEntity.generated.cs" />
+    <Compile Include="AirAutoMonitoring\OriginalPacketReceiveEntity.generated.cs" />
+    <Compile Include="AirAutoMonitoring\OriginalPacketRequestEntity.generated.cs" />
+    <Compile Include="AirAutoMonitoring\OriHourAQIEntity.generated.cs" />
+    <Compile Include="AirAutoMonitoring\OriRegionDayAQIReportEntity.generated.cs" />
+    <Compile Include="AirAutoMonitoring\OriRegionHourAQIEntity.generated.cs" />
+    <Compile Include="BaseDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDataModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDataModel\AcquisitionInstrumentEntity.generated.cs" />
+    <Compile Include="BaseDataModel\AlarmInfoEntity.generated.cs" />
+    <Compile Include="BaseDataModel\APIConcentrationLimitEntity.generated.cs" />
+    <Compile Include="BaseDataModel\BreakSettingEntity.generated.cs" />
+    <Compile Include="BaseDataModel\CommunicationInfoEntity.generated.cs" />
+    <Compile Include="BaseDataModel\CreatAlarmEntity.generated.cs" />
+    <Compile Include="BaseDataModel\CustomPollutantCategoryEntity.generated.cs" />
+    <Compile Include="BaseDataModel\CustomPollutantGroupEntity.generated.cs" />
+    <Compile Include="BaseDataModel\DT_ApproveMappingEntity.generated.cs" />
+    <Compile Include="BaseDataModel\DT_ConfigIDInfoEntity.generated.cs" />
+    <Compile Include="BaseDataModel\DT_DataTypeConfigEntity.generated.cs" />
+    <Compile Include="BaseDataModel\EQIConcentrationLimitEntity.generated.cs" />
+    <Compile Include="BaseDataModel\EQIEntity.generated.cs" />
+    <Compile Include="BaseDataModel\ExcessiveSettingEntity.generated.cs" />
+    <Compile Include="BaseDataModel\ExcessiveSolutionDetailEntity.generated.cs" />
+    <Compile Include="BaseDataModel\GradeEntity.generated.cs" />
+    <Compile Include="BaseDataModel\IAlarmNotifyEntityProperty.generated.cs" />
+    <Compile Include="BaseDataModel\IBasicInfoEntityProperty.generated.cs" />
+    <Compile Include="BaseDataModel\IBusinessRuleEntityProperty.generated.cs" />
+    <Compile Include="BaseDataModel\IMPInfoEntityProperty.generated.cs" />
+    <Compile Include="BaseDataModel\InstrumentChannelEntity.generated.cs" />
+    <Compile Include="BaseDataModel\InstrumentEntity.generated.cs" />
+    <Compile Include="BaseDataModel\IStandardEntityProperty.generated.cs" />
+    <Compile Include="BaseDataModel\MonitoringInstrumentEntity.generated.cs" />
+    <Compile Include="BaseDataModel\MonitoringPointEntity.generated.cs" />
+    <Compile Include="BaseDataModel\MonitoringPointExtensionForEQMSAirEntity.generated.cs" />
+    <Compile Include="BaseDataModel\MonitoringPointExtensionForEQMSWaterEntity.generated.cs" />
+    <Compile Include="BaseDataModel\MonitoringStationEntity.generated.cs" />
+    <Compile Include="BaseDataModel\NegativeLimitSettingEntity.generated.cs" />
+    <Compile Include="BaseDataModel\NegativeLimitSolutionDetailEntity.generated.cs" />
+    <Compile Include="BaseDataModel\NotifyAddressEntity.generated.cs" />
+    <Compile Include="BaseDataModel\NotifyGradeEntity.generated.cs" />
+    <Compile Include="BaseDataModel\NotifyNumberEntity.generated.cs" />
+    <Compile Include="BaseDataModel\NotifySendEntity.generated.cs" />
+    <Compile Include="BaseDataModel\NotifyStrategyEntity.generated.cs" />
+    <Compile Include="BaseDataModel\NotifyTypeEntity.generated.cs" />
+    <Compile Include="BaseDataModel\OfflineSettingEntity.generated.cs" />
+    <Compile Include="BaseDataModel\OfflineSolutionDetailEntity.generated.cs" />
+    <Compile Include="BaseDataModel\OutlierSettingEntity.generated.cs" />
+    <Compile Include="BaseDataModel\OutlierSolutionDetailEntity.generated.cs" />
+    <Compile Include="BaseDataModel\PersonalizedSettingEntity.generated.cs" />
+    <Compile Include="BaseDataModel\PollutantCodeEntity.generated.cs" />
+    <Compile Include="BaseDataModel\ProtocolColumnEntity.generated.cs" />
+    <Compile Include="BaseDataModel\ProtocolCommandEntity.generated.cs" />
+    <Compile Include="BaseDataModel\RepeatLimitSettingEntity.generated.cs" />
+    <Compile Include="BaseDataModel\RepeatLimitSolutionDetailEntity.generated.cs" />
+    <Compile Include="BaseDataModel\RuleSolutionEntity.generated.cs" />
+    <Compile Include="BaseDataModel\SubjectionRelationEntity.generated.cs" />
+    <Compile Include="BaseDataModel\SYS_Factors_MappingEntity.generated.cs" />
+    <Compile Include="BaseDataModel\SYS_PointsFactors_MappingEntity.generated.cs" />
+    <Compile Include="BaseDataModel\SYS_Point_MappingEntity.generated.cs" />
+    <Compile Include="BaseDataModel\UsedPollutantEntity.generated.cs" />
+    <Compile Include="BaseDataModel\ValidDataSettingEntity.generated.cs" />
+    <Compile Include="BaseDataModel\ValidDataSolutionDetailEntity.generated.cs" />
+    <Compile Include="BaseDataModel\V_FactorEntity.generated.cs" />
+    <Compile Include="BaseDataModel\V_Factor_SiteMap_UserConfigEntity.generated.cs" />
+    <Compile Include="BaseDataModel\V_Factor_UserConfigEntity.generated.cs" />
+    <Compile Include="BaseDataModel\V_InstrumentChannelEntity.generated.cs" />
+    <Compile Include="BaseDataModel\V_InstrumentEntity.generated.cs" />
+    <Compile Include="BaseDataModel\V_NotifyMaliEntity.generated.cs" />
+    <Compile Include="BaseDataModel\V_NotifyNumberEntity.generated.cs" />
+    <Compile Include="BaseDataModel\V_OfflineSettingEntity.generated.cs" />
+    <Compile Include="BaseDataModel\V_Point_AirEntity.generated.cs" />
+    <Compile Include="BaseDataModel\V_Point_Air_UserConfigEntity.generated.cs" />
+    <Compile Include="BaseDataModel\V_Point_InstrumentChannelEntity.generated.cs" />
+    <Compile Include="BaseDataModel\V_Point_InstrumentEntity.generated.cs" />
+    <Compile Include="BaseDataModel\V_Point_SiteMap_UserConfig_PropertyEntity.generated.cs" />
+    <Compile Include="BaseDataModel\V_Point_SiteMap_UserConfig_RegionEntity.generated.cs" />
+    <Compile Include="BaseDataModel\V_Point_SiteMap_UserConfig_TypeEntity.generated.cs" />
+    <Compile Include="BaseDataModel\V_Point_UserConfigEntity.generated.cs" />
+    <Compile Include="BaseDataModel\V_Point_Water_UserConfigEntity.generated.cs" />
+    <Compile Include="FrameworkModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrameworkModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\Frame_CodeDictionaryDetailEntity.generated.cs" />
+    <Compile Include="Framework\Frame_CodeDictionaryEntity.generated.cs" />
+    <Compile Include="Framework\Frame_CodeItemEntity.generated.cs" />
+    <Compile Include="Framework\Frame_CodeMainEntity.generated.cs" />
+    <Compile Include="Framework\Frame_CodeTypeEntity.generated.cs" />
+    <Compile Include="Framework\Frame_UserEntity.generated.cs" />
+    <Compile Include="Framework\IFrameInfoEntity.generated.cs" />
+    <Compile Include="Framework\InstrumentInstanceRecord2Entity.generated.cs" />
+    <Compile Include="Framework\InstrumentInstanceRecord3Entity.generated.cs" />
+    <Compile Include="Framework\InstrumentInstanceTimeRecordEntity.generted.cs" />
+    <Compile Include="Framework\OMMP_InstrumentFittingInstanceEntity.generated.cs" />
+    <Compile Include="Framework\OMMP_InstrumentInstanceEntity.generated.cs" />
+    <Compile Include="Framework\OM_ReagentEntiy.generated.cs" />
+    <Compile Include="Framework\OM_ReagentInBillEntiy.generated.cs" />
+    <Compile Include="Framework\OM_ReagentInBillItemEntiy.generated.cs" />
+    <Compile Include="Framework\OM_ReagentInItemDetailEntiy.generated.cs" />
+    <Compile Include="Framework\OM_ReagentTypeEntiy.generated.cs" />
+    <Compile Include="Framework\VI_UserInfoAll.cs" />
+    <Compile Include="Framework\VI_UserInfoAllEntity.generated.cs" />
+    <Compile Include="Framework\VI_UserInfoRoleAllEntity.generated.cs" />
+    <Compile Include="Framework\V_CodeDictionaryEntity.generated.cs" />
+    <Compile Include="Framework\V_CodeMainItemEntity.generated.cs" />
+    <Compile Include="Framework\V_ReagentConfigRecordEntity.generated.cs" />
+    <Compile Include="MonitoringBusinessModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MonitoringBusinessModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="MonitoringBusiness\AirCalibrationReportEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AirDayReportEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AirHourReportEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AirHourReportForUpLoadEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AirHourReportForUpLoadSZEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AirMonthReportEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AirSeasonReportEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AirWeekReportEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AirYearReportEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AQIForcastConsultationSheetEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AQIForcastDescEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AQIForcastEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AQIForcastWarningReportEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AuditAirInfectantByHourEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AuditAirInfectantByMinuteEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AuditAirLogEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AuditAirStatusForHourEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AuditMonitoringPointEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AuditMonitoringPointPollutantEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AuditOperatorSettingEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AuditReasonEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AuditStatusForDayEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AuditStatusMappingEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AuditWaterInfectantByHourEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AuditWaterInfectantByMinuteEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AuditWaterLogEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AuditWaterStatusForHourEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\AutoMonitoringMonthSummaryEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\BlueAlgaeEarlyWarningMonitoringEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\CustomDatumEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\DataOnlineEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\DataSamplingConditionEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\DayAPIEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\DayAQIEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\DayReportBlueAlgaeEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\DayReportManualEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\DrySeasonReportEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\DustHazeDayEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\DutyEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\ELMAHEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\HourAPIEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\HourAQIEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\IMonitoringBusinessEntityProperty.generated.cs" />
+    <Compile Include="MonitoringBusiness\InstrumentDataOnlineEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\InstrumentOPDatumEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\MaintainInstrumentEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\OM_DeviceRepairDetailEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\OM_DeviceRepairEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\OM_TaskItemConfigEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\OM_TaskItemDatumEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\OperationLogEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\QC_Report_PMSharp5030FlowCheckCaliEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\QC_Report_PMTEOMRPFlowCheckCaliEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\RealSampleEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\RealTimeHourEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\RegionDayAPIReportEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\RegionDayAQIReportEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\RegionHourAQIEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\ReportLogEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\ReportQualifiedRateByDayEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\ReportQualifiedRateByHourEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\ReportSamplingRateByDayEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\ReportSamplingRateByHourEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\RPT_AQIForecastEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\ScrappedEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\StandardSolutionCheckEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\TaskConfigEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\V_AuditOperatorSettingEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\V_DataSamplingConditionEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\WaterCalibrationReportEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\WaterDayReportEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\WaterHourReportEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\WaterMonthReportEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\WaterMonthRunReportSettingEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\WaterSeasonReportEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\WaterWeekReportEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\WaterYearReportEntity.generated.cs" />
+    <Compile Include="MonitoringBusiness\WeatherForcastEntity.generated.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WaterAutoMonitoring\InfectantBy10BufferEntity.generated.cs" />
+    <Compile Include="WaterAutoMonitoring\InfectantBy10Entity.generated.cs" />
+    <Compile Include="WaterAutoMonitoring\InfectantBy1Entity.generated.cs" />
+    <Compile Include="WaterAutoMonitoring\InfectantBy30BufferEntity.generated.cs" />
+    <Compile Include="WaterAutoMonitoring\InfectantBy30Entity.generated.cs" />
+    <Compile Include="WaterAutoMonitoring\InfectantBy5BufferEntity.generated.cs" />
+    <Compile Include="WaterAutoMonitoring\InfectantBy5Entity.generated.cs" />
+    <Compile Include="WaterAutoMonitoring\InfectantBy60BufferEntity.generated.cs" />
+    <Compile Include="WaterAutoMonitoring\InfectantBy60Entity.generated.cs" />
+    <Compile Include="WaterAutoMonitoring\InfectantByRTEntity.generated.cs" />
+    <Compile Include="WaterAutoMonitoring\InstrumentDataBy60BufferEntity.generated.cs" />
+    <Compile Include="WaterAutoMonitoring\InstrumentDataBy60Entity.generated.cs" />
+    <Compile Include="WaterAutoMonitoring\IWaterAutoMonitoringEntityProperty.generated.cs" />
+    <Compile Include="WaterAutoMonitoring\OriginalPacketBackupEntity.generated.cs" />
+    <Compile Include="WaterAutoMonitoring\OriginalPacketReceiveEntity.generated.cs" />
+    <Compile Include="WaterAutoMonitoring\OriginalPacketRequestEntity.generated.cs" />
+    <Compile Include="WaterAutoMonitoringModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WaterAutoMonitoringModel.rlinq</DependentUpon>
+    </Compile>
+    <Compile Include="WaterQualityControlOperation\AbnormalConfigEntity.cs" />
+    <Compile Include="WaterQualityControlOperation\AbnormalEntity.cs" />
+    <Compile Include="WaterQualityControlOperation\ActionConfigEntity.cs" />
+    <Compile Include="WaterQualityControlOperation\ElectrodeCalibrationEntity.cs" />
+    <Compile Include="WaterQualityControlOperation\InstrumentUsedRecordEntity.cs" />
+    <Compile Include="WaterQualityControlOperation\PartChangeEntity.cs" />
+    <Compile Include="WaterQualityControlOperation\SamplingRecordDetailEntity.cs" />
+    <Compile Include="WaterQualityControlOperation\SamplingRecordEntity.cs" />
+    <Compile Include="WaterQualityControlOperation\StandardizationEntity.cs" />
+    <Compile Include="WaterQualityControlOperation\StandardSolutionChangeEntity.cs" />
+    <Compile Include="WaterQualityControlOperation\StatusEntity.cs" />
+    <Compile Include="WaterQualityControlOperation\TaskActionConfigEntity.cs" />
+    <Compile Include="WaterQualityControlOperation\TaskFileInfoEntity.cs" />
+    <Compile Include="WaterQualityControlOperation\UrbanRiverCourseInspectEntity.cs" />
+    <Compile Include="WaterQualityControlOperation\WaterInspectionBase2Entity.cs" />
+    <Compile Include="WaterQualityControlOperation\WaterInspectionBaseEntity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <OpenAccessDeploy Include="MonitoringBusinessModel.rlinq">
+      <Generator>MetaModelCodeGenerator</Generator>
+      <LastGenOutput>MonitoringBusinessModel.cs</LastGenOutput>
+    </OpenAccessDeploy>
+    <OpenAccessDeploy Include="BaseDataModel.rlinq">
+      <Generator>MetaModelCodeGenerator</Generator>
+      <LastGenOutput>BaseDataModel.cs</LastGenOutput>
+    </OpenAccessDeploy>
+    <None Include="BaseDataModel.rlinq.diagram">
+      <DependentUpon>BaseDataModel.rlinq</DependentUpon>
+    </None>
+    <None Include="MonitoringBusinessModel.rlinq.diagram">
+      <DependentUpon>MonitoringBusinessModel.rlinq</DependentUpon>
+    </None>
+    <None Include="WaterAutoMonitoringModel.rlinq.diagram">
+      <DependentUpon>WaterAutoMonitoringModel.rlinq</DependentUpon>
+    </None>
+    <OpenAccessDeploy Include="WaterAutoMonitoringModel.rlinq">
+      <Generator>MetaModelCodeGenerator</Generator>
+      <LastGenOutput>WaterAutoMonitoringModel.cs</LastGenOutput>
+    </OpenAccessDeploy>
+    <OpenAccessDeploy Include="AirAutoMonitoringModel.rlinq">
+      <Generator>MetaModelCodeGenerator</Generator>
+      <LastGenOutput>AirAutoMonitoringModel.cs</LastGenOutput>
+    </OpenAccessDeploy>
+    <None Include="AirAutoMonitoringModel.rlinq.diagram">
+      <DependentUpon>AirAutoMonitoringModel.rlinq</DependentUpon>
+    </None>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FrameworkModel.rlinq.diagram">
+      <DependentUpon>FrameworkModel.rlinq</DependentUpon>
+    </None>
+    <OpenAccessDeploy Include="FrameworkModel.rlinq">
+      <Generator>MetaModelCodeGenerator</Generator>
+      <LastGenOutput>FrameworkModel.cs</LastGenOutput>
+    </OpenAccessDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SmartEP.Core\SmartEP.Core.csproj">
+      <Project>{a16a68c3-0579-4927-91b3-d21c3631380b}</Project>
+      <Name>SmartEP.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AirQualityControlOperation\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Condition="Exists('$(MSBuildExtensionsPath)\OpenAccess.targets')" Project="$(MSBuildExtensionsPath)\OpenAccess.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

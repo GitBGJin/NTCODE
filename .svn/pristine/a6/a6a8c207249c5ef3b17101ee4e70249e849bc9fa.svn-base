@@ -1,0 +1,9 @@
+﻿污染物指数的使用说明：
+1、定义上下文
+	PollutionIndexCaculatorContext context=new PollutionIndexCaculatorContext();
+2、添加因子
+	context.AddFactor(factorName, caculatorType, factorValue);
+3、获得相关污染信息
+	 List<PollutionLevelInfo> allPLF=context.GetALLFactorPollutionLevelInfos();//获得所有因子污染情况集合
+	 List<PollutionLevelInfo> primaryPLF = context.GetPrimaryPollutions();//获得首要污染物的因子情况集合
+

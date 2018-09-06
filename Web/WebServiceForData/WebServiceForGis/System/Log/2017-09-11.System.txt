@@ -1,0 +1,42 @@
+Time:    2017/9/11 12:05:51
+Action:  数据异常
+Message: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebServiceForData.WebServiceForData.GetHourData(List`1 listFactor, String startTime, DataTable dtFactor, String instrumentUid) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 968
+   在 WebServiceForData.WebServiceForData.GetInstrumentsFactorsData(String instrumentUid, String startTime) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 682
+-----------------------------------------------------------
+
+Time:    2017/9/11 12:07:07
+Action:  数据异常
+Message: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebServiceForData.WebServiceForData.GetHourData(List`1 listFactor, String startTime, DataTable dtFactor, String instrumentUid) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 968
+   在 WebServiceForData.WebServiceForData.GetInstrumentsFactorsData(String instrumentUid, String startTime) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 682
+-----------------------------------------------------------
+
+Time:    2017/9/11 12:38:15
+Action:  数据异常
+Message: System.ArgumentException: 列“measureUnit”不属于表 。
+   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.get_Item(String columnName)
+   在 WebServiceForData.WebServiceForData.GetParticlesizeOfSpectrometerData(String startTime, String kind) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 190
+-----------------------------------------------------------
+
+Time:    2017/9/11 12:38:54
+Action:  数据异常
+Message: System.ArgumentException: 列“measureUnit”不属于表 。
+   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.get_Item(String columnName)
+   在 WebServiceForData.WebServiceForData.GetParticlesizeOfSpectrometerData(String startTime, String kind) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 190
+-----------------------------------------------------------
+
+Time:    2017/9/11 18:42:40
+Action:  数据异常
+Message: System.IndexOutOfRangeException: 索引超出了数组界限。
+   在 WebServiceForData.WebServiceForData.GetInstrumentsFactorsData(String instrumentUid, String startTime) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 855
+-----------------------------------------------------------
+
+Time:    2017/9/11 18:44:56
+Action:  数据异常
+Message: System.IndexOutOfRangeException: 索引超出了数组界限。
+   在 WebServiceForData.WebServiceForData.GetInstrumentsFactorsData(String instrumentUid, String startTime) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 855
+-----------------------------------------------------------
+

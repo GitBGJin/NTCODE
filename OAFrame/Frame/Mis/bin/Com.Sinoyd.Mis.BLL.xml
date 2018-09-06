@@ -1,0 +1,474 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Com.Sinoyd.Mis.BLL</name>
+    </assembly>
+    <members>
+        <member name="M:Com.Sinoyd.Mis.BLL.B_AutoEntity.InitData(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="className"></param>
+            <param name="mmkj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.B_AutoPage.GetTD_Search(Com.Sinoyd.Mis.Core.Domain.TB_MisField)">
+            <summary>
+            返回搜索类型
+            </summary>
+            <param name="TB_MisField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.B_AutoPage.GetTD_SearchAdv(Com.Sinoyd.Mis.Core.Domain.TB_MisField)">
+            <summary>
+            返回搜索类型
+            </summary>
+            <param name="TB_MisField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.B_AutoPage.GetDesignerField(Com.Sinoyd.Mis.Core.Domain.TB_MisField)">
+            <summary>
+            返回搜索类型
+            </summary>
+            <param name="TB_MisField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.B_AutoPage.GetDesignerFieldAdv(Com.Sinoyd.Mis.Core.Domain.TB_MisField)">
+            <summary>
+            返回搜索类型
+            </summary>
+            <param name="TB_MisField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.B_AutoPage.GetDesignerField_Detail(Com.Sinoyd.Mis.Core.Domain.TB_MisField)">
+            <summary>
+            返回搜索类型
+            </summary>
+            <param name="TB_MisField"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.B_CodeItem.#ctor">
+            <summary>
+            类的初始化
+            </summary>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.B_CodeItem.#ctor(System.String)">
+            <summary>
+            类的初始化
+            </summary>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.B_Method.Invoke(System.String,System.Data.DataView)">
+            <summary>
+            调用外部方法
+            </summary>
+            <param name="methodGuid">方法标识</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.B_Method.GetDV(System.String)">
+            <summary>
+            获取方法
+            </summary>
+            <param name="misTableGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.B_MisFieldReportX.SelectByMisTableGuid(System.String)">
+            <summary>
+            查询出所有X字段
+            </summary>
+            <param name="misTableGuid">主表信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Add.PageAdd_NoPlatform(System.String,System.String,FineUI.Form)">
+            <summary>
+            添加操作
+            编写人：沙斌
+            编写日期：2011-3-8
+            </summary>
+            <param name="RowGuid">唯一字段</param>
+            <param name="sqlTableName">数据库表名</param>
+            <param name="Form">extForm</param>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Add.PageAddInit(System.String,FineUI.Form)">
+            <summary>
+            添加操作
+            编写人：沙斌
+            编写日期：2011-3-8
+            </summary>
+            <param name="Form">extForm</param>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Add.PageAddCheck(System.String,FineUI.Form)">
+            <summary>
+            添加操作
+            编写人：沙斌
+            编写日期：2011-3-8
+            </summary>
+            <param name="Form">extForm</param>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Add.getColValue(FineUI.Form,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="sqlTableName"></param>
+            <param name="form"></param>
+            <param name="colID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Add.RowUniqueAdd(FineUI.Form,System.String,System.String,System.String@)">
+            <summary>
+            记录唯一性检查的通用判断（添加记录）
+            </summary>
+            <param name="form">页面上的Form</param>
+            <param name="tableRowGuid">Mis表标识</param>
+            <param name="strWhere">示例：and OrgGuid='*****',如无特殊要求则可以传空或者and 1=1</param>
+            <param name="errorMessage">输出错误信息，没有错误则为空</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Add.RowUniqueEdit(System.String,FineUI.Form,System.String,System.String,System.String@)">
+            <summary>
+            记录唯一性检查的通用判断（编辑记录）
+            </summary>
+            <param name="rowGuid">记录的唯一标识</param>
+            <param name="form">页面上的Form</param>
+            <param name="tableRowGuid">Mis表标识</param>
+            <param name="strWhere">示例：and OrgGuid='*****',如无特殊要求则可以传空或者and 1=1</param>
+            <param name="errorMessage">输出错误信息，没有错误则为空</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Common.RecordDelete(System.String,System.String)">
+            <summary>
+            删除数据
+            </summary>
+            <param name="SqlTableName">sql表名</param>
+            <param name="RowGuid">标识</param>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Common.RecordSelect(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            记录查询
+            </summary>
+            <param name="sqlTableName">sql表名</param>
+            <param name="selectFields">选择的字段</param>
+            <param name="fieldName">字段名称</param>
+            <param name="fieldValue">字段值</param>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Common.RecordStartUp(System.String,System.String)">
+            <summary>
+            启用
+            </summary>
+            <param name="SqlTableName">sql表名</param>
+            <param name="RowGuid">标识</param>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Common.RecordStartDown(System.String,System.String)">
+            <summary>
+            停用
+            </summary>
+            <param name="SqlTableName">sql表名</param>
+            <param name="RowGuid">标识</param>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Common.RecordShareUp(System.String,System.String)">
+            <summary>
+            共享
+            </summary>
+            <param name="SqlTableName">sql表名</param>
+            <param name="RowGuid">标识</param>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Common.RecordShareDown(System.String,System.String)">
+            <summary>
+            取消共享
+            </summary>
+            <param name="SqlTableName">sql表名</param>
+            <param name="RowGuid">标识</param>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Common.RecordSubmit(System.String,System.String)">
+            <summary>
+            提交数据
+             </summary>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Common.RecordDelete_LogicEX(System.String,System.String)">
+            <summary>
+            删除数据
+            </summary>
+            <param name="SqlTableName">sql表名</param>
+            <param name="RowGuid">标识</param>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Common.RecordDelete_Logic(System.String,System.String)">
+            <summary>
+            删除数据
+            </summary>
+            <param name="SqlTableName">sql表名</param>
+            <param name="RowGuid">标识</param>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Common.getArryControl(System.String)">
+            <summary>
+            返回控件的类型、名称数组（通过控件ID）
+            编写人：沙斌
+            编写日期：2011-3-8
+            </summary>
+            <param name="strControlID">控件ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Common.IsExist_Row(System.Data.DataView,System.String,System.String)">
+            <summary>
+            判断dv中是否存在特定名称的列名
+            </summary>
+            <param name="dv">数据源</param>
+            <param name="strColumnName">列名</param>
+            <param name="strFieldName">字段名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Common.IsExist_Column(System.Data.DataView,System.String)">
+            <summary>
+            判断dv中是否存在特定名称的列名
+            </summary>
+            <param name="dv">数据源</param>
+            <param name="strColumnName">列名</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Common.getChklstValue(System.Web.UI.WebControls.CheckBoxList)">
+            <summary>
+            获取复选框的值
+            编写人：沙斌
+            编写日期：2011-3-8
+            </summary>
+            <param name="chk"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Common.getChklstValue_ext(FineUI.CheckBoxList)">
+            <summary>
+            获取复选框的值
+            编写人：沙斌
+            编写日期：2011-3-8
+            </summary>
+            <param name="chk"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Common.getShortControl(System.String)">
+            <summary>
+            获取控件的简写
+            </summary>
+            <param name="ControlName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Pages.DataToExcel.CreateExcel">
+            <summary>
+            创建一个Excel示例
+            </summary>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Pages.DataToExcel.OutputExcel(System.Data.DataTable,System.String,System.String)">
+            <summary>
+            将DataTable的数据导出显示为报表
+            </summary>
+            <param name="dt">要导出的数据</param>
+            <param name="strTitle">导出报表的标题</param>
+            <param name="FilePath">保存文件的路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Pages.DataToExcel.KillExcelProcess">
+            <summary>
+            结束Excel进程
+            </summary>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Pages.DataToExcel.DataExcel(System.Data.DataTable,System.String,System.String,System.Collections.Hashtable)">
+            <summary>
+            将DataTable的数据导出显示为报表(不使用Excel对象)
+            </summary>
+            <param name="dt">数据DataTable</param>
+            <param name="strTitle">标题</param>
+            <param name="FilePath">生成文件的路径</param>
+            <param name="nameList"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Com.Sinoyd.Mis.BLL.Pages.DataToExcel.TitleColorIndex">
+            <summary>
+            标题背景色
+            </summary>
+        </member>
+        <member name="T:Com.Sinoyd.Mis.BLL.Detail">
+            <summary>
+            明细页面：遍历页面上所有元素，置为只读
+            </summary>
+        </member>
+        <!-- 对于成员“M:Com.Sinoyd.Mis.BLL.Detail.EnablePageControlFalse(FineUI.Form)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:Com.Sinoyd.Mis.BLL.Detail.EnablePageControlReadonly(FineUI.Form)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Com.Sinoyd.Mis.BLL.Detail.PageDetail_Init_NoPlatform(System.String,System.String,System.String,FineUI.Form)">
+            <summary>
+            编辑页面初始化
+            编写人：沙斌
+            编写日期：2011-3-8
+            </summary>
+            <param name="sqlTableName">数据库表名</param>
+            <param name="sqlTableName">数据库表名</param>
+            <param name="tdContainer">HtmlTableCell类型的容器</param>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Edit.PageEdit_Mis_NoPlatform(System.String,System.String,FineUI.Form)">
+            <summary>
+            保存操作
+            编写人：沙斌
+            编写日期：2011-3-8
+            </summary>
+            <param name="RowGuid">唯一字段</param>
+            <param name="sqlTableName">数据库表名</param>
+            <param name="tdContainer">HtmlTableCell类型的容器</param>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Edit.PageEdit_Init_NoPlatform(System.String,System.String,FineUI.Form)">
+            <summary>
+            编辑页面初始化
+            编写人：沙斌
+            编写日期：2011-3-8
+            </summary>
+            <param name="sqlTableName">数据库表名</param>
+            <param name="sqlTableName">数据库表名</param>
+            <param name="tdContainer">HtmlTableCell类型的容器</param>
+        </member>
+        <!-- 对于成员“M:Com.Sinoyd.Mis.BLL.ListPage.ClearAdvancedArea_ContentPanel(FineUI.ContentPanel)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:Com.Sinoyd.Mis.BLL.ListPage.ClearAdvancedArea_SimpleForm(FineUI.SimpleForm)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:Com.Sinoyd.Mis.BLL.ListPage.ClearAdvancedArea_Form(FineUI.Form)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Com.Sinoyd.Mis.BLL.MisObjectRow.#ctor(System.String,System.String)">
+            <summary>
+            MisObjectRow构造函数（未初始化数据）
+            </summary> 
+            <param name="sqlTableName">表名</param>
+            <param name="RowGuid">唯一字段值</param>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.MisObjectRow.#ctor(System.String,System.String,System.String)">
+            <summary>
+            MisObjectRow构造函数（初始化数据）
+            </summary>
+            <param name="sqlTableName">表名</param>
+            <param name="RowGuid">唯一字段值</param>
+            <param name="Type">任意值</param>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Paging.GetGridView(System.String,System.String,System.String,System.Int32,System.Int32,System.String,System.String,System.Int32@)">
+            <summary>
+            通用分页方法
+            编写人：沙斌
+            编写日期：2011-11-04
+            </summary>
+            <param name="gridViewName">表或者试图名称：示例T_FrameUser</param>
+            <param name="fieldName">选择的字段，示例1：*，示例2：LoginID,DisplayName</param>
+            <param name="gridKeyName">主键，必须为唯一字段，一般情况用ID，示例1：ID，示例2：RowGuid。如果大数据量，请把本字段设为聚集索引，提升查询速度</param>
+            <param name="pageNo">当前页码，示例：1</param>
+            <param name="pageSize">每页显示条数，示例：30</param>
+            <param name="orderStr">排序内容，示例：order by id asc</param>
+            <param name="whereStr">where条件，示例：DisplayName like '%张'</param>
+            <param name="recordTotal">返回的数据总数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.Paging.GetPagingString(System.String,System.String,System.String,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            通用返回分页数据的方法
+            编写人：沙斌
+            编写日期：2011-11-04
+            </summary>
+            <param name="gridViewName">表或者试图名称：示例T_FrameUser</param>
+            <param name="fieldName">选择的字段，示例1：*，示例2：LoginID,DisplayName</param>
+            <param name="gridKeyName">主键，必须为唯一字段，一般情况用ID，示例1：ID，示例2：RowGuid。如果大数据量，请把本字段设为聚集索引，提升查询速度</param>
+            <param name="pageNo">当前页码，示例：1</param>
+            <param name="pageSize">每页显示条数，示例：30</param>
+            <param name="orderStr">排序内容，示例：order by id asc</param>
+            <param name="whereStr">where条件，示例：DisplayName like '%张'</param>
+            <param name="recordTotal">返回的数据总数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.B_StringOpe.SubstringCount(System.String,System.String)">
+            <summary>
+            计算字符串中子串出现的次数
+            </summary>
+            <param name="str">字符串</param>
+            <param name="substring">子串</param>
+            <returns>出现的次数</returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.TableInfoEasy.Add.SaveAdd(System.String,FineUI.Form,System.String)">
+            <summary>
+            添加操作
+            </summary>
+            <param name="form">form的ID</param>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.TableInfoEasy.Add.SaveEdit(System.String,FineUI.Form)">
+            <summary>
+            保存编辑
+            </summary>
+            <param name="tableName"></param>
+            <param name="form"></param>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.TableInfoEasy.Add.PageMisInit(System.String,FineUI.Form)">
+            <summary>
+            页面信息初始化（Mis平台方法）
+            </summary>
+            <param name="form">form的ID</param>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.TableInfoEasy.List.GetDV_MisTableAllField(System.String)">
+            <summary>
+            从sql系统表中获取Mis表的所有字段（排除掉id、rowguid等）
+            </summary>
+            <param name="sqlTableName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.TableInfoEasy.List.GetDV_MisAllField(System.String)">
+            <summary>
+            从Mis定义表中获取Mis表的所有字段
+            </summary>
+            <param name="misTableGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.TableInfoEasy.List.GetDV_MisAllFieldShow(System.String)">
+            <summary>
+            从Mis定义表中获取Mis表的所有显示字段
+            </summary>
+            <param name="misTableGuid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.TableInfoEasy.List.GetDV_MisField(System.String,System.String)">
+            <summary>
+            获取单个Mis字段
+            </summary>
+            <param name="misTableGuid"></param>
+            <param name="sqlFieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.TableInfoEasy.List.MisField_Add(System.String,System.String)">
+            <summary>
+            Mis字段添加
+            </summary>
+            <param name="fieldName"></param>
+            <param name="sqlFieldName"></param>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.TableInfoEasy.List.MisField_Delete(System.String,System.String)">
+            <summary>
+            Mis字段删除
+            </summary>
+            <param name="fieldName"></param>
+            <param name="sqlFieldName"></param>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.TableInfoEasy.List.GetSourceDV(System.String)">
+            <summary>
+            获取数据源
+            </summary>
+            <param name="sourceName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.TableInfo.Add.BindParentGuid(FineUI.DropDownList)">
+            <summary>
+            绑定“主表标识”
+            </summary>
+            <param name="ddl_ParentGuid">下拉框“主表标识”的ID</param>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.TableInfo.Add.SaveAdd(FineUI.Form)">
+            <summary>
+            添加操作
+            </summary>
+            <param name="form">form的ID</param>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.TableInfo.Add.SaveEdit(FineUI.Form)">
+            <summary>
+            编辑操作
+            </summary>
+            <param name="form">form的ID</param>
+        </member>
+        <member name="M:Com.Sinoyd.Mis.BLL.TableInfo.Add.PageMisInit(FineUI.Form)">
+            <summary>
+            页面信息初始化（Mis平台方法）
+            </summary>
+            <param name="form">form的ID</param>
+        </member>
+    </members>
+</doc>

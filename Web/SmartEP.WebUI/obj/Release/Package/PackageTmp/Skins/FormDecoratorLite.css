@@ -1,0 +1,305 @@
+@font-face {
+  font-family: 'TelerikWebUI';
+  src: url('Common/TelerikWebUI.eot');
+  src: url('Common/TelerikWebUI.eot') format('embedded-opentype'), url('Common/TelerikWebUI.woff') format('woff'), url('Common/TelerikWebUI.ttf') format('truetype'); }
+
+.RadForm {
+  /* Headings */
+  /*Buttons*/
+  /*Text inputs and Textarea*/
+  /* Checkbox and RadioButton */
+  /* Webkit provides full support for checkbox and radiobutton */
+  /* Checkboxes and Radios with font */
+  /* DropDown Styles */
+  /* Right to Left mode */
+  /* Chekboxes and RadioButtons Right to Left Mode */
+  /* DropDown Right to Left Mode */
+  /* ScrollBar CSS Settings for WebKit */
+  /* Since v.6 chrome uses standard Windows scrollbars for the iframe only */
+  /* We ca not manipulate them and will style only body, div and form scrolls */
+  /* arrow button settings */
+  /* Validation Summary Control and Login Control  */ }
+  .RadForm .rfdRealInput {
+    left: -99999px;
+    position: fixed;
+    top: 0; }
+  .RadForm {
+    box-sizing: content-box;
+    -moz-box-sizing: content-box; }
+  .RadForm.rfdHeading h4, .RadForm.rfdHeading h5, .RadForm.rfdHeading h6 {
+    font-weight: normal;
+    margin: 0;
+    margin: 0.83333em 0em;
+    padding: 0.16667em 0em;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    line-height: normal; }
+  .RadForm.rfdHeading h4 {
+    font-size: 14px; }
+  .RadForm.rfdHeading h5 {
+    font-size: 13px; }
+  .RadForm.rfdHeading h6 {
+    font-size: 12px; }
+  .RadForm .rfdInputDisabled, .RadForm .rfdInputDisabled:hover, .RadForm .rfdInputDisabled:active, .RadForm .rfdInputDisabled:focus, .RadForm .rfdSelectDisabled, .RadForm .rfdSelectDisabled:active, .RadForm .rfdSelectDisabled:focus {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    /* For IE8 and earlier */
+    cursor: default;
+    box-shadow: none !important; }
+  .RadForm.rfdLabel label {
+    vertical-align: middle;
+    margin-bottom: auto; }
+  .RadForm.rfdRoundedCorners.rfdTextbox .rfdTextInput, .RadForm.rfdRoundedCorners.rfdTextarea textarea, .RadForm.rfdRoundedCorners.rfdFieldset fieldset, .RadForm.rfdRoundedCorners .rfdSkinnedButton, .RadForm.rfdRoundedCorners .rfdSelectBox, .RadForm.rfdRoundedCorners .rfdSelectBox ul, .RadForm.rfdRoundedCorners .rfdSelect {
+    border-radius: 0.33333em; }
+  .RadForm.rfdRoundedCorners .rfdSelectBox li:first-child, .RadForm.rfdRoundedCorners .rfdDropDownExpanded {
+    border-radius: 0.33333em 0.33333em 0em 0em; }
+  .RadForm.rfdRoundedCorners .rfdSelectBoxDropDown {
+    border-radius: 0em 0em 0.33333em 0.33333em; }
+  .RadForm.rfdRoundedCorners .rfdSelectBoxDropDown li:first-child {
+    border-radius: 0; }
+  .RadForm.rfdFieldset fieldset {
+    padding: 0.83333em 1.25em;
+    border-width: 1px;
+    border-style: solid; }
+  .RadForm.rfdFieldset legend {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    border: 0 none; }
+  .RadForm .rfdSkinnedButton {
+    border-width: 1px;
+    border-style: solid;
+    padding: 0 10px 1px;
+    vertical-align: top;
+    margin: 0;
+    *padding: 0 14px 1px 10px;
+    *max-width: auto;
+    *overflow: visible;
+    cursor: pointer;
+    min-height: 1.83333em; }
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    .RadForm .rfdSkinnedButton {
+      vertical-align: super; } }
+  .RadForm .rfdTextInput, .RadForm.rfdTextarea textarea {
+    border-width: 1px;
+    border-style: solid;
+    padding: 0.08333em 0.41667em 0.16667em 0.41667em;
+    vertical-align: top;
+    margin: 0; }
+  .RadForm .rfdTextInput {
+    width: 12.33333em;
+    min-height: 1.41667em;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box; }
+  .RadForm .rfdCheckboxChecked, .RadForm .rfdCheckboxUnchecked, .RadForm .rfdRadioChecked, .RadForm .rfdRadioUnchecked {
+    position: relative;
+    padding: 0em 1.5em;
+    font-weight: normal; }
+  .RadForm .rfdCheckboxChecked .rfdToggleImage, .RadForm .rfdCheckboxUnchecked .rfdToggleImage, .RadForm .rfdRadioChecked .rfdToggleImage, .RadForm .rfdRadioUnchecked .rfdToggleImage {
+    position: absolute;
+    top: 2px;
+    top: 4px\9;
+    left: 0;
+    width: 16px;
+    height: 16px; }
+  .RadForm .rfdCheckboxUnchecked .rfdToggleImage {
+    background-position: 0 0; }
+  .RadForm .rfdCheckboxUnchecked:hover .rfdToggleImage {
+    background-position: -40px 0; }
+  .RadForm .rfdCheckboxChecked .rfdToggleImage {
+    background-position: 0 -40px; }
+  .RadForm .rfdCheckboxChecked:hover .rfdToggleImage {
+    background-position: -40px -40px; }
+  .RadForm .rfdCheckboxUnchecked.rfdInputDisabled .rfdToggleImage, .RadForm .rfdCheckboxUnchecked.rfdInputDisabled:hover .rfdToggleImage {
+    background-position: 0 -120px; }
+  .RadForm .rfdCheckboxChecked.rfdInputDisabled .rfdToggleImage, .RadForm .rfdCheckboxChecked.rfdInputDisabled:hover .rfdToggleImage {
+    background-position: 0 -160px; }
+  .RadForm .rfdRadioUnchecked .rfdToggleImage {
+    background-position: -80px 0; }
+  .RadForm .rfdRadioUnchecked:hover .rfdToggleImage {
+    background-position: -120px 0; }
+  .RadForm .rfdRadioChecked .rfdToggleImage {
+    background-position: -80px -40px; }
+  .RadForm .rfdRadioChecked:hover .rfdToggleImage {
+    background-position: -120px -40px; }
+  .RadForm .rfdRadioUnchecked.rfdInputDisabled .rfdToggleImage, .RadForm .rfdRadioUnchecked.rfdInputDisabled:hover .rfdToggleImage {
+    background-position: -80px -120px; }
+  .RadForm .rfdRadioChecked.rfdInputDisabled .rfdToggleImage, .RadForm .rfdRadioChecked.rfdInputDisabled:hover .rfdToggleImage {
+    background-position: -80px -160px; }
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    .RadForm.rfdRadio.rfdLabel label, .RadForm.rfdCheckbox.rfdLabel label {
+      padding-left: 0 !important;
+      background-image: none !important;
+      vertical-align: top; }
+    .RadForm.rfdRadio input[type="radio"], .RadForm.rfdCheckbox input[type="checkbox"] {
+      -khtml-appearance: none;
+      /* remove the graphic appearance of the original control */
+      position: static;
+      /* set back it's static position on the page */
+      width: 1.5em;
+      /* set default width of the control */
+      height: 1.5em;
+      /* set default height of the control */
+      vertical-align: top;
+      /* align the control properly */
+      margin: 0.11em 0 0;
+      -webkit-appearance: none;
+      outline: none; }
+    .RadForm.rfdRadio input[type="radio"] + label, .RadForm.rfdCheckbox input[type="checkbox"] + label {
+      padding-right: 1.5em; }
+    .RadForm.rfdCheckbox input[type="checkbox"] {
+      background-repeat: no-repeat;
+      background-position: 0 1px; }
+    .RadForm.rfdCheckbox input[type="checkbox"]:hover {
+      background-position: -40px 1px; }
+    .RadForm.rfdCheckbox input[type="checkbox"]:checked {
+      background-position: 0 -39px; }
+    .RadForm.rfdCheckbox input[type="checkbox"]:hover:checked {
+      background-position: -40px -39px; }
+    .RadForm.rfdCheckbox input[type="checkbox"][disabled], .RadForm.rfdCheckbox input[type="checkbox"][disabled]:hover {
+      background-position: 0 -119px;
+      opacity: 0.8; }
+    .RadForm.rfdCheckbox input[type="checkbox"][disabled]:checked, .RadForm.rfdCheckbox input[type="checkbox"][disabled]:checked:hover {
+      background-position: 0 -159px; }
+    .RadForm.rfdCheckbox input[type="checkbox"][disabled] + label {
+      opacity: 0.8; }
+    .RadForm.rfdRadio input[type="radio"] {
+      background-repeat: no-repeat;
+      background-position: -80px 2px; }
+    .RadForm.rfdRadio input[type="radio"]:hover {
+      background-position: -120px 2px; }
+    .RadForm.rfdRadio input[type="radio"]:checked {
+      background-position: -80px -38px; }
+    .RadForm.rfdRadio input[type="radio"]:hover:checked {
+      background-position: -120px -38px; }
+    .RadForm.rfdCheckbox input[type="radio"][disabled], .RadForm.rfdCheckbox input[type="radio"][disabled]:hover {
+      background-position: -80px -118px;
+      opacity: 0.8; }
+    .RadForm.rfdCheckbox input[type="radio"][disabled] + label {
+      opacity: 0.8; }
+    .RadForm.rfdCheckbox input[type="radio"][disabled]:checked, .RadForm.rfdCheckbox input[type="radio"][disabled]:checked:hover {
+      background-position: -80px -158px; }
+    .RadForm input[type="checkbox"], .RadForm input[type="radio"], .RadForm input[type="checkbox"][checked], .RadForm input[type="radio"][checked] {
+      border: 0;
+      background-color: transparent; } }
+  .RadForm .rfdToggleImage:before {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    content: "";
+    font-family: "TelerikWebUI";
+    font-size: 1.33333em; }
+  .RadForm .rfdSelect {
+    box-sizing: border-box;
+    position: relative;
+    padding: 0.08333em 1.66667em 0.16667em 0.41667em;
+    border-width: 1px;
+    min-height: 1.41667em;
+    border-style: solid;
+    display: inline-block;
+    text-decoration: none;
+    vertical-align: top;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; }
+  .RadForm .rfdDropDownArrow {
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 20px;
+    top: 0;
+    right: 0;
+    background-position: -2px -20px; }
+  .RadForm .rfdDropDownArrow:before {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    content: "";
+    font-family: "TelerikWebUI";
+    font-size: 1.33333em; }
+  .RadForm .rfdRtl .rfdCheckboxChecked, .RadForm .rfdRtl .rfdCheckboxUnchecked, .RadForm .rfdRtl .rfdRadioChecked, .RadForm .rfdRtl .rfdRadioUnchecked, .RadForm.rfdRtl .rfdCheckboxChecked, .RadForm.rfdRtl .rfdCheckboxUnchecked, .RadForm.rfdRtl .rfdRadioChecked, .RadForm.rfdRtl .rfdRadioUnchecked {
+    padding: 0 18px 0 0; }
+  .RadForm .rfdRtl .rfdCheckboxChecked .rfdToggleImage, .RadForm .rfdRtl .rfdCheckboxUnchecked .rfdToggleImage, .RadForm .rfdRtl .rfdRadioChecked .rfdToggleImage, .RadForm .rfdRtl .rfdRadioUnchecked .rfdToggleImage, .RadForm.rfdRtl .rfdCheckboxChecked .rfdToggleImage, .RadForm.rfdRtl .rfdCheckboxUnchecked .rfdToggleImage, .RadForm.rfdRtl .rfdRadioChecked .rfdToggleImage, .RadForm.rfdRtl .rfdRadioUnchecked .rfdToggleImage {
+    right: 0;
+    left: auto; }
+  .RadForm .rfdRtl .rfdSelect, .RadForm.rfdRtl .rfdSelect {
+    padding: 0 5px 0 20px; }
+  .RadForm .rfdRtl .rfdSelect .rfdDropDownArrow, .RadForm.rfdRtl .rfdSelect .rfdDropDownArrow {
+    right: auto;
+    left: 0; }
+  .RadForm.rfdScrollBars {
+    /* horizontal scroll left button */
+    /* horizontal scroll right button */
+    /* vertical scroll up button */
+    /* vertical scroll down button */
+    /* increment / decrement button settings */ }
+    .RadForm.rfdScrollBars body::-webkit-scrollbar, .RadForm.rfdScrollBars textarea::-webkit-scrollbar, .RadForm.rfdScrollBars div::-webkit-scrollbar {
+      width: 16px;
+      height: 16px; }
+    .RadForm.rfdScrollBars ::-webkit-scrollbar-button:horizontal:decrement {
+      background-position: -2.5px -43px; }
+    .RadForm.rfdScrollBars ::-webkit-scrollbar-button:horizontal:increment {
+      background-position: -2.5px -63px; }
+    .RadForm.rfdScrollBars ::-webkit-scrollbar-button:vertical:decrement {
+      background-position: -2.5px -3px; }
+    .RadForm.rfdScrollBars ::-webkit-scrollbar-button:vertical:increment {
+      background-position: -2.5px -23px; }
+    .RadForm.rfdScrollBars ::-webkit-scrollbar-button:vertical:decrement, .RadForm.rfdScrollBars ::-webkit-scrollbar-button:vertical:increment, .RadForm.rfdScrollBars ::-webkit-scrollbar-button:horizontal:decrement, .RadForm.rfdScrollBars ::-webkit-scrollbar-button:horizontal:increment {
+      background-repeat: no-repeat;
+      height: auto;
+      width: auto; }
+    .RadForm.rfdScrollBars ::-webkit-scrollbar-button:vertical:decrement, .RadForm.rfdScrollBars ::-webkit-scrollbar-button:vertical:increment, .RadForm.rfdScrollBars ::-webkit-scrollbar-button:horizontal:decrement, .RadForm.rfdScrollBars ::-webkit-scrollbar-button:horizontal:increment, .RadForm.rfdScrollBars ::-webkit-scrollbar-thumb:vertical, .RadForm.rfdScrollBars ::-webkit-scrollbar-thumb:horizontal {
+      border-width: 1px;
+      border-style: solid; }
+  .RadForm .rfdValidationSummaryControl, .RadForm .rfdLoginControl {
+    padding: 0.33333em;
+    border-radius: 0.33333em;
+    border-collapse: separate !important;
+    /* need to be with important as by default the table is rendered with collpase inline style */ }
+  .RadForm .rfdValidationSummaryControl ul {
+    padding-left: 5.41667em;
+    margin-left: 0;
+    min-height: 32px;
+    color: #f00;
+    background: url('Common/ModalDialogAlert.gif') no-repeat 8px -3px; }
+  .RadForm .rfdValidationSummaryControl ul {
+    _height: 32px; }
+
+/* ListBox Styles */
+/* Must be out of the SASS Box */
+.rfdSelectBox {
+  border-width: 1px;
+  border-style: solid;
+  min-height: 1.66667em;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  vertical-align: top;
+  z-index: 4007; }
+
+.rfdSelectBox ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none outside; }
+
+.rfdSelectBox li {
+  overflow: hidden;
+  padding: 0 5px;
+  text-overflow: ellipsis;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none; }
+
+.rfdSelectBox .rfdSelect_hovered {
+  outline: 1px dotted; }
+
+.rfdSelectBoxDropDown {
+  margin-top: -1px; }
+
+/* SASS Outer Right to Left mode */

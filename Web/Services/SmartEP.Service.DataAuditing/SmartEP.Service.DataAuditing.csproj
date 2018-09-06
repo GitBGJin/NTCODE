@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D61C0320-995C-4518-A9DB-68423D11B913}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartEP.Service.DataAuditing</RootNamespace>
+    <AssemblyName>SmartEP.Service.DataAuditing</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells">
+      <HintPath>..\..\..\..\南通\Vendor\ASPOSE\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Words">
+      <HintPath>..\..\..\..\南通\Vendor\ASPOSE\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SmartEP.WebUI\bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartEP.Data">
+      <HintPath>..\..\..\..\南通\Src\SmartEP.WebUI\bin\SmartEP.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartEP.DomainModel">
+      <HintPath>..\..\..\..\南通\Src\SmartEP.WebUI\bin\SmartEP.DomainModel.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartEP.Service.AutoMonitoring">
+      <HintPath>..\..\..\..\南通\Src\SmartEP.WebUI\bin\SmartEP.Service.AutoMonitoring.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartEP.Service.BaseData">
+      <HintPath>..\..\..\..\南通\Src\SmartEP.WebUI\bin\SmartEP.Service.BaseData.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartEP.Service.Frame">
+      <HintPath>..\..\..\..\南通\Src\SmartEP.WebUI\bin\SmartEP.Service.Frame.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.OpenAccess, Version=2015.1.225.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Vendor\Telerik Control\Telerik ORM\Telerik.OpenAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.35.Extensions, Version=2015.1.225.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Vendor\Telerik Control\Telerik ORM\Telerik.OpenAccess.35.Extensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuditBaseInfo\AbstractAuditMonitoringPoint.cs" />
+    <Compile Include="AuditBaseInfo\AirAuditMonitoringPointService.cs" />
+    <Compile Include="AuditBaseInfo\AuditMonitoringPointPollutantService.cs" />
+    <Compile Include="AuditBaseInfo\AuditMonitoringPointService.cs" />
+    <Compile Include="AuditBaseInfo\PointPollutantInfo.cs" />
+    <Compile Include="AuditBaseInfo\WaterAuditMonitoringPointService.cs" />
+    <Compile Include="AuditInterfaces\AuditDataService.cs" />
+    <Compile Include="AuditInterfaces\AuditLogInfo.cs" />
+    <Compile Include="AuditInterfaces\AuditLogService.cs" />
+    <Compile Include="AuditInterfaces\AuditOperatorService.cs" />
+    <Compile Include="AuditInterfaces\AuditOperatorSettingService.cs" />
+    <Compile Include="AuditInterfaces\AuditPreDataService.cs" />
+    <Compile Include="AuditInterfaces\AuditReasonService.cs" />
+    <Compile Include="AuditInterfaces\AuditStatusMappingService.cs" />
+    <Compile Include="AuditInterfaces\DataDealService.cs" />
+    <Compile Include="AuditInterfaces\GeneratorAuditReportService.cs" />
+    <Compile Include="AuditInterfaces\SyncGuoJiaDataService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Repositories\SmartEP.AMSRepository\SmartEP.AMSRepository.csproj">
+      <Project>{0122fc5b-a008-4294-abea-7fd7edf6eb4e}</Project>
+      <Name>SmartEP.AMSRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Repositories\SmartEP.BaseInfoRepository\SmartEP.BaseInfoRepository.csproj">
+      <Project>{ae87814a-691a-4172-af21-0f0586b0a560}</Project>
+      <Name>SmartEP.BaseInfoRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Repositories\SmartEP.MonitorBusinessRepository\SmartEP.MonitoringBusinessRepository.csproj">
+      <Project>{a6823fb0-0511-48c1-92af-a94437484d43}</Project>
+      <Name>SmartEP.MonitoringBusinessRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SmartEP.Core\SmartEP.Core.csproj">
+      <Project>{a16a68c3-0579-4927-91b3-d21c3631380b}</Project>
+      <Name>SmartEP.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SmartEP.Utilities\SmartEP.Utilities.csproj">
+      <Project>{fa8bdea2-3a34-4817-9db9-8bbc1a307dbc}</Project>
+      <Name>SmartEP.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

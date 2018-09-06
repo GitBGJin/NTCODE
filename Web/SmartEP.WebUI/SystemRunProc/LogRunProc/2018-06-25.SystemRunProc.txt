@@ -1,0 +1,30 @@
+Time:    2018/6/25 星期一 下午 3:38:55
+Action:  执行存储过程：UP_AirReport_HourAQI_Port_Mul，出现错误：为过程或函数 UP_AirReport_HourAQI_Port_Mul 指定了过多的参数。
+Message: AMS_MonitoringBusinessConnection
+-----------------------------------------------------------
+
+
+Time:    2018/6/25 星期一 下午 4:29:58
+Action:  执行存储过程：UP_AirReport_HourAQI_Port_Mul，出现错误：为过程或函数 UP_AirReport_HourAQI_Port_Mul 指定了过多的参数。
+Message: AMS_MonitoringBusinessConnection
+-----------------------------------------------------------
+
+
+Time:    2018/6/25 星期一 下午 5:31:11
+Action:  执行存储过程：UP_AirReport_HourAQI_Port_Mul，出现错误：为过程或函数 UP_AirReport_HourAQI_Port_Mul 指定了过多的参数。
+Message: AMS_MonitoringBusinessConnection
+-----------------------------------------------------------
+
+
+Time:    2018/6/25 星期一 下午 5:31:20
+Action:  执行存储过程：UP_AirReport_HourAQI_Port_Mul，出现错误：为过程或函数 UP_AirReport_HourAQI_Port_Mul 指定了过多的参数。
+Message: AMS_MonitoringBusinessConnection
+-----------------------------------------------------------
+
+
+Time:    2018/6/25 星期一 下午 5:31:31
+Action:  执行存储过程：UP_AirReport_HourAQI_Port_Mul，出现错误：为过程或函数 UP_AirReport_HourAQI_Port_Mul 指定了过多的参数。
+Message: AMS_MonitoringBusinessConnection
+-----------------------------------------------------------
+
+

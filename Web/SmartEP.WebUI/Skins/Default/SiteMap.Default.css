@@ -1,0 +1,24 @@
+.RadSiteMap_Default {
+  color: #333333;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif; }
+  .RadSiteMap_Default .rsmManyLevels .rsmLink {
+    border-bottom: 2px solid #cccccc; }
+  .RadSiteMap_Default .rsmTwoLevels .rsmLink, .RadSiteMap_Default .rsmThreeLevels .rsmLink, .RadSiteMap_Default .rsmManyLevels .rsmLevel1 .rsmLink {
+    border-bottom: 1px solid #cccccc; }
+  .RadSiteMap_Default .rsmOneLevel .rsmLink, .RadSiteMap_Default .rsmTwoLevels .rsmLevel1 .rsmLink, .RadSiteMap_Default .rsmThreeLevels .rsmLevel1 .rsmLink, .RadSiteMap_Default .rsmManyLevels .rsmLevel2 .rsmLink {
+    border: 0;
+    color: #333333; }
+    .RadSiteMap_Default .rsmOneLevel .rsmLink:hover, .RadSiteMap_Default .rsmTwoLevels .rsmLevel1 .rsmLink:hover, .RadSiteMap_Default .rsmThreeLevels .rsmLevel1 .rsmLink:hover, .RadSiteMap_Default .rsmManyLevels .rsmLevel2 .rsmLink:hover {
+      border-color: #515151;
+      color: black;
+      background-color: #c3c3c3;
+      background-image: -webkit-linear-gradient(top, #e2e2e2 0%, #c3c3c3 100%);
+      background-image: -moz-linear-gradient(top, #e2e2e2 0%, #c3c3c3 100%);
+      background-image: -ms-linear-gradient(top, #e2e2e2 0%, #c3c3c3 100%);
+      background-image: -o-linear-gradient(top, #e2e2e2 0%, #c3c3c3 100%);
+      background-image: linear-gradient(top, #e2e2e2 0%, #c3c3c3 100%); }
+  .RadSiteMap_Default .rsmLink,
+  .RadSiteMap_Default .rsmTemplate {
+    color: #333333; }
+  .RadSiteMap_Default .rsmLink:hover {
+    color: #888888; }

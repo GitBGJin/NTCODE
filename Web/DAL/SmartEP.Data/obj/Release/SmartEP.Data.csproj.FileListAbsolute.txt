@@ -1,0 +1,17 @@
+D:\NTCODE\Web\DAL\SmartEP.Data\bin\Release\SmartEP.Data.dll
+D:\NTCODE\Web\DAL\SmartEP.Data\bin\Release\SmartEP.Data.pdb
+D:\NTCODE\Web\DAL\SmartEP.Data\bin\Release\log4net.dll
+D:\NTCODE\Web\DAL\SmartEP.Data\bin\Release\SmartEP.Core.dll
+D:\NTCODE\Web\DAL\SmartEP.Data\bin\Release\SmartEP.DomainModel.dll
+D:\NTCODE\Web\DAL\SmartEP.Data\bin\Release\SmartEP.Utilities.dll
+D:\NTCODE\Web\DAL\SmartEP.Data\bin\Release\Telerik.OpenAccess.35.Extensions.dll
+D:\NTCODE\Web\DAL\SmartEP.Data\bin\Release\ICSharpCode.SharpZipLib.dll
+D:\NTCODE\Web\DAL\SmartEP.Data\bin\Release\Aspose.Cells.dll
+D:\NTCODE\Web\DAL\SmartEP.Data\bin\Release\Aspose.Words.dll
+D:\NTCODE\Web\DAL\SmartEP.Data\bin\Release\SmartEP.DomainModel.pdb
+D:\NTCODE\Web\DAL\SmartEP.Data\bin\Release\SmartEP.Core.pdb
+D:\NTCODE\Web\DAL\SmartEP.Data\bin\Release\SmartEP.Utilities.pdb
+D:\NTCODE\Web\DAL\SmartEP.Data\bin\Release\Telerik.OpenAccess.35.Extensions.xml
+D:\NTCODE\Web\DAL\SmartEP.Data\obj\Release\SmartEP.Data.csprojResolveAssemblyReference.cache
+D:\NTCODE\Web\DAL\SmartEP.Data\obj\Release\SmartEP.Data.dll
+D:\NTCODE\Web\DAL\SmartEP.Data\obj\Release\SmartEP.Data.pdb

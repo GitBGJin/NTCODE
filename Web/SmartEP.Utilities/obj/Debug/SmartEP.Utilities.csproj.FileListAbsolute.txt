@@ -1,0 +1,8 @@
+D:\NTCODE\Web\SmartEP.Utilities\bin\Debug\SmartEP.Utilities.dll
+D:\NTCODE\Web\SmartEP.Utilities\bin\Debug\SmartEP.Utilities.pdb
+D:\NTCODE\Web\SmartEP.Utilities\bin\Debug\Aspose.Cells.dll
+D:\NTCODE\Web\SmartEP.Utilities\bin\Debug\Aspose.Words.dll
+D:\NTCODE\Web\SmartEP.Utilities\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\NTCODE\Web\SmartEP.Utilities\bin\Debug\log4net.dll
+D:\NTCODE\Web\SmartEP.Utilities\obj\Debug\SmartEP.Utilities.dll
+D:\NTCODE\Web\SmartEP.Utilities\obj\Debug\SmartEP.Utilities.pdb

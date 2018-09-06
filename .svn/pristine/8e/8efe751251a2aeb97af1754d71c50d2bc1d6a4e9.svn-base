@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{591835AE-28B3-4888-AC7C-E551294B6BFF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartEP.Service.OperatingMaintenance</RootNamespace>
+    <AssemblyName>SmartEP.Service.OperatingMaintenance</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SmartEP.Core">
+      <HintPath>..\..\..\..\Vendor\SmartEP\SmartEP.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartEP.Service.BaseData">
+      <HintPath>..\..\..\..\Vendor\SmartEP\SmartEP.Service.BaseData.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.OpenAccess, Version=2015.1.225.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Vendor\Telerik Control\Telerik ORM\Telerik.OpenAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.35.Extensions, Version=2015.1.225.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Vendor\Telerik Control\Telerik ORM\Telerik.OpenAccess.35.Extensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Air\InstrumentFaultService.cs" />
+    <Compile Include="Air\MaintenanceService.cs" />
+    <Compile Include="Air\OM_TaskItemConfigService.cs" />
+    <Compile Include="Air\OM_TaskItemDataService.cs" />
+    <Compile Include="Air\QualityControlDataSearchService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="WaterInspectionBaseService.cs" />
+    <Compile Include="Water\AbnormalService.cs" />
+    <Compile Include="Water\DutyService.cs" />
+    <Compile Include="Water\InstrumentFittingInstanceService.cs" />
+    <Compile Include="Water\InstrumentUsedRecordService.cs" />
+    <Compile Include="Water\MaintainInstrumentService.cs" />
+    <Compile Include="Water\MaterialRigisterService.cs" />
+    <Compile Include="Water\PartChangeService.cs" />
+    <Compile Include="Water\QC_QueryService.cs" />
+    <Compile Include="Water\ReagentConfigRecordService.cs" />
+    <Compile Include="Water\ReagentFormulaService.cs" />
+    <Compile Include="Water\RealSamplesCheckService.cs" />
+    <Compile Include="Water\RealSamplesService.cs" />
+    <Compile Include="Water\SampleCompareService.cs" />
+    <Compile Include="Water\SamplingRecordDetailService.cs" />
+    <Compile Include="Water\SamplingRecordService.cs" />
+    <Compile Include="Water\ScrappedInstrumentService.cs" />
+    <Compile Include="Water\StandardizationService.cs" />
+    <Compile Include="Water\StandardSolutionChangeService.cs" />
+    <Compile Include="Water\StandardSolutionCheckService.cs" />
+    <Compile Include="Water\StandardSolutionConfigService.cs" />
+    <Compile Include="Water\StandardSolutionService.cs" />
+    <Compile Include="Water\StatusService.cs" />
+    <Compile Include="Water\TaskConfigService.cs" />
+    <Compile Include="Water\UrbanRiverCourseInspectService.cs" />
+    <Compile Include="Water\WaterInspectionBase2Service.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Service References\ServiceReference\OMMPGetDataWebService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference\OMMPGetDataWebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DomainModel\SmartEP.DomainModel\SmartEP.DomainModel.csproj">
+      <Project>{891378ea-1395-47f0-8b3b-14f35c6126a5}</Project>
+      <Name>SmartEP.DomainModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Repositories\SmartEP.AMSRepository\SmartEP.AMSRepository.csproj">
+      <Project>{0122fc5b-a008-4294-abea-7fd7edf6eb4e}</Project>
+      <Name>SmartEP.AMSRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Repositories\SmartEP.BaseInfoRepository\SmartEP.BaseInfoRepository.csproj">
+      <Project>{ae87814a-691a-4172-af21-0f0586b0a560}</Project>
+      <Name>SmartEP.BaseInfoRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Repositories\SmartEP.MonitorBusinessRepository\SmartEP.MonitoringBusinessRepository.csproj">
+      <Project>{a6823fb0-0511-48c1-92af-a94437484d43}</Project>
+      <Name>SmartEP.MonitoringBusinessRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SmartEP.Utilities\SmartEP.Utilities.csproj">
+      <Project>{fa8bdea2-3a34-4817-9db9-8bbc1a307dbc}</Project>
+      <Name>SmartEP.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

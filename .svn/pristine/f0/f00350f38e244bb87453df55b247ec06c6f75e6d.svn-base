@@ -1,0 +1,36 @@
+.RecurrenceEditor_Silk {
+  color: #3b3b3b;
+  font: normal 13px/22px Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif; }
+  .RecurrenceEditor_Silk .rsAdvOptionsPanel {
+    *zoom: 1; }
+    .RecurrenceEditor_Silk .rsAdvOptionsPanel:after {
+      content: "";
+      height: 0;
+      clear: both;
+      display: block; }
+  .RecurrenceEditor_Silk .rsAdvRecurrencePatterns .rsAdvDaily li,
+  .RecurrenceEditor_Silk .rsAdvRecurrencePatterns .rsAdvMonthly li,
+  .RecurrenceEditor_Silk .rsAdvRecurrencePatterns .rsAdvYearly li {
+    height: auto; }
+  .RecurrenceEditor_Silk .rsAdvRecurrenceFreq {
+    height: auto; }
+  .RecurrenceEditor_Silk .rsAdvPatternPanel {
+    height: auto; }
+    .RecurrenceEditor_Silk .rsAdvPatternPanel ul {
+      *zoom: 1; }
+      .RecurrenceEditor_Silk .rsAdvPatternPanel ul:after {
+        content: "";
+        height: 0;
+        clear: both;
+        display: block; }
+  .RecurrenceEditor_Silk .rsAdvRecurrenceRangePanel li {
+    height: auto; }
+  .RecurrenceEditor_Silk .rsAdvRecurrenceRangePanel,
+  .RecurrenceEditor_Silk .rsAdvRecurrencePatterns {
+    border-color: #e2e2e2; }
+    .RecurrenceEditor_Silk .rsAdvRecurrenceRangePanel .RadInput,
+    .RecurrenceEditor_Silk .rsAdvRecurrenceRangePanel .RadComboBox,
+    .RecurrenceEditor_Silk .rsAdvRecurrencePatterns .RadInput,
+    .RecurrenceEditor_Silk .rsAdvRecurrencePatterns .RadComboBox {
+      vertical-align: middle; }

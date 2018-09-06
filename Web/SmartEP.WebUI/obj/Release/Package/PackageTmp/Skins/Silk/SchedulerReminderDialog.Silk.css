@@ -1,0 +1,77 @@
+html .ReminderDialog_Silk {
+  color: #3b3b3b;
+  font: normal 13px/22px Arial, Helvetica, sans-serif;
+  height: auto !important;
+  padding: 0;
+  border: 1px solid #d7d7d7;
+  color: #555555;
+  background-color: white;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif; }
+  .RadScheduler html .ReminderDialog_Silk {
+    padding: 0; }
+  html .ReminderDialog_Silk .rsRemActions a.rsRemDismissAllBtn,
+  html .ReminderDialog_Silk .rsRemActions a.rsRemDismissBtn,
+  html .ReminderDialog_Silk .rsRemActions a.rsRemOpenItemBtn, html .ReminderDialog_Silk .rsRemSnoozePanel a.rsRemSnoozeBtn {
+    background-image: url('Common/radGradientButtonSprite.png');
+    background-repeat: repeat-x;
+    border-color: #c9c9c9;
+    color: #3b3b3b;
+    background-color: #e3e3e3;
+    background-image: -webkit-linear-gradient(top, #fefefe 0%, #e3e3e3 100%);
+    background-image: -moz-linear-gradient(top, #fefefe 0%, #e3e3e3 100%);
+    background-image: -ms-linear-gradient(top, #fefefe 0%, #e3e3e3 100%);
+    background-image: -o-linear-gradient(top, #fefefe 0%, #e3e3e3 100%);
+    background-image: linear-gradient(top, #fefefe 0%, #e3e3e3 100%);
+    padding: 2px;
+    height: 22px;
+    border: 1px solid #c9c9c9;
+    border-radius: 3px;
+    background-position: 0 0; }
+    html .ReminderDialog_Silk .rsRemActions a.rsRemDismissAllBtn:hover,
+    html .ReminderDialog_Silk .rsRemActions a.rsRemDismissBtn:hover,
+    html .ReminderDialog_Silk .rsRemActions a.rsRemOpenItemBtn:hover, html .ReminderDialog_Silk .rsRemSnoozePanel a.rsRemSnoozeBtn:hover {
+      border-color: #939393;
+      color: #444444;
+      background-color: #939393;
+      background-image: -webkit-linear-gradient(top, #d6d6d6 0%, #939393 100%);
+      background-image: -moz-linear-gradient(top, #d6d6d6 0%, #939393 100%);
+      background-image: -ms-linear-gradient(top, #d6d6d6 0%, #939393 100%);
+      background-image: -o-linear-gradient(top, #d6d6d6 0%, #939393 100%);
+      background-image: linear-gradient(top, #d6d6d6 0%, #939393 100%);
+      background-position: 0 0;
+      background-position: 0 -1000px\9; }
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        html .ReminderDialog_Silk .rsRemActions a.rsRemDismissAllBtn:hover,
+        html .ReminderDialog_Silk .rsRemActions a.rsRemDismissBtn:hover,
+        html .ReminderDialog_Silk .rsRemActions a.rsRemOpenItemBtn:hover, html .ReminderDialog_Silk .rsRemSnoozePanel a.rsRemSnoozeBtn:hover {
+          background-position: 0 0; } }
+  html .ReminderDialog_Silk .rsRemTitleBar {
+    background-image: -webkit-linear-gradient(top, white 0%, #d6d5d4 100%);
+    background-image: -moz-linear-gradient(top, white 0%, #d6d5d4 100%);
+    background-image: -ms-linear-gradient(top, white 0%, #d6d5d4 100%);
+    background-image: -o-linear-gradient(top, white 0%, #d6d5d4 100%);
+    background-image: linear-gradient(top, white 0%, #d6d5d4 100%);
+    margin: 0;
+    padding: 5px 0 5px 15px;
+    border: 1px solid #e8e8e8;
+    color: #5f5f5f;
+    background-color: #eaeaea;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.7);
+    background-position: 0 0; }
+    html .ReminderDialog_Silk .rsRemTitleBar .rsRemTitleBarIcon {
+      display: block;
+      background-image: url('Scheduler/rsSprites.png'); }
+    html .ReminderDialog_Silk .rsRemTitleBar .rsRemTitleBarText {
+      padding: 0;
+      height: 28px;
+      font-size: 16px;
+      line-height: 28px; }
+    html .ReminderDialog_Silk .rsRemTitleBar .rsRemTitleBarCloseBtn {
+      width: 20px;
+      height: 20px;
+      background-image: url('Common/radActionsSprite.png');
+      background-position: -15px -1915px; }
+  html .ReminderDialog_Silk .rsRemTitleBarIcon {
+    margin-top: 6px; }
+  html .ReminderDialog_Silk .rsRemContentPanel .rsRemTitleIcon {
+    background-image: url('Scheduler/rsSprites.png'); }

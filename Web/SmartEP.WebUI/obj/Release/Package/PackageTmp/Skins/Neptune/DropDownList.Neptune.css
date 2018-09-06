@@ -1,0 +1,52 @@
+.RadDropDownList_Neptune {
+  color: #000000;
+  font-size: 12px;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif; }
+  .RadDropDownList_Neptune .rddlInner {
+    border-radius: 3px;
+    border-color: #a7bedb;
+    color: #00156e;
+    background-color: #d2e1f4;
+    background-image: url('Common/radGradientButtonSprite.png');
+    background-image: linear-gradient(#e8f1fc 0%, #e9f1fc 50%, #d2e1f4 50%, #e8f1fc 100%); }
+  .RadDropDownList_Neptune .rddlEmptyMessage,
+  .RadDropDownList_Neptune .rddlDefaultMessage {
+    color: #8d8d8d; }
+  .RadDropDownList_Neptune .rddlIcon {
+    background-image: url('Common/radActionsSprite.png');
+    background-position: -2px -20px; }
+  .RadDropDownList_Neptune .rddlHovered {
+    border-color: #c6ba9d;
+    color: #000000;
+    background-color: #ffd563;
+    background-image: linear-gradient(#fffce8 0%, #ffedb3 50%, #ffd563 50%, #ffe18a 100%); }
+    .RadDropDownList_Neptune .rddlHovered .rddlIcon {
+      background-position: -22px -20px; }
+  .RadDropDownList_Neptune .rddlFocused {
+    border-color: #c3bdae;
+    color: #000000;
+    background-color: #f99631;
+    background-image: linear-gradient(#ebc59b 0%, #faad60 50%, #f99631 50%, #fde292 100%); }
+    .RadDropDownList_Neptune .rddlFocused .rddlIcon {
+      background-position: -22px -20px; }
+
+.rddlPopup_Neptune {
+  border-color: #9eb6ce;
+  color: #00156e;
+  background-color: #ffffff;
+  font-size: 12px;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif; }
+  .rddlPopup_Neptune .rddlHeader,
+  .rddlPopup_Neptune .rddlFooter {
+    border-color: #688caf;
+    color: #00156e;
+    background-color: #c3d8f1; }
+  .rddlPopup_Neptune .rddlItemHovered {
+    color: #00156e;
+    background-color: #ffe27b; }
+  .rddlPopup_Neptune .rddlItemSelected {
+    color: #000000;
+    background-color: #fcc365; }
+  .rddlPopup_Neptune .rddlItemLoading {
+    color: #00156e;
+    background-color: #ffe27b; }

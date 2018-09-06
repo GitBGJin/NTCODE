@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3F49AFCF-CD84-4D83-8AD2-0916A8C002A5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartEP.Service.BaseData</RootNamespace>
+    <AssemblyName>SmartEP.Service.BaseData</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\..\Vendor\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartEP.Core">
+      <HintPath>..\..\..\..\Vendor\SmartEP\SmartEP.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartEP.Utilities">
+      <HintPath>..\..\..\..\Vendor\SmartEP\SmartEP.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.OpenAccess, Version=2013.2.611.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\2010年项目\苏州\苏州环境质量监测平台\系统集成\trunck\Vendor\Telerik Control\Telerik ORM\Telerik.OpenAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.35.Extensions, Version=2013.2.611.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\2010年项目\苏州\苏州环境质量监测平台\系统集成\trunck\Vendor\Telerik Control\Telerik ORM\Telerik.OpenAccess.35.Extensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessInfo\AccessInfoService.cs" />
+    <Compile Include="Alarm\AlarmManagerService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Alarm\BreakAlarmService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Alarm\CreateAlarmService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Alarm\ExcessiveAlarmService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Alarm\NotifyNumbersService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Alarm\NotifySendService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Alarm\NotifyStrategyService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Alarm\OfflineAlarmService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Alarm\OutlierAlarmService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Alarm\RepeatAlarmService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Alarm\NotifyMailsService.cs" />
+    <Compile Include="BusinessRule\BreakSettingSerivce.cs" />
+    <Compile Include="BusinessRule\ExcessiveSettingInfo.cs" />
+    <Compile Include="BusinessRule\ExcessiveSettingService.cs" />
+    <Compile Include="BusinessRule\NegativeLimitSetting.cs" />
+    <Compile Include="BusinessRule\NegativeLimitSettingService.cs" />
+    <Compile Include="BusinessRule\OfflineSettingService.cs" />
+    <Compile Include="BusinessRule\OutlierSettingService.cs" />
+    <Compile Include="BusinessRule\PersonalizedSetService.cs" />
+    <Compile Include="BusinessRule\RepeatLimitSettingService.cs" />
+    <Compile Include="Channel\AirInstrumentStateService.cs" />
+    <Compile Include="Channel\AirPollutantService.cs" />
+    <Compile Include="Channel\IChannel.cs" />
+    <Compile Include="Channel\IInstrumentState.cs" />
+    <Compile Include="Channel\InstrumentStateService.cs" />
+    <Compile Include="Channel\IPollutant.cs" />
+    <Compile Include="Channel\WaterPollutantService.cs" />
+    <Compile Include="Exchange\ApproveMappingService.cs" />
+    <Compile Include="MPInfo\AbstractMonitoringPoint.cs" />
+    <Compile Include="MPInfo\AcquisitionInstrumentService.cs" />
+    <Compile Include="MPInfo\InstrumentChannelService.cs" />
+    <Compile Include="MPInfo\InstrumentService.cs" />
+    <Compile Include="MPInfo\MonitoringInstrumentService.cs" />
+    <Compile Include="MPInfo\MonitoringPointAirService.cs" />
+    <Compile Include="MPInfo\MonitoringPointService.cs" />
+    <Compile Include="MPInfo\MonitoringPointWaterService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Standard\AQIService.cs" />
+    <Compile Include="Standard\EQIConcentrationService.cs" />
+    <Compile Include="Standard\EQIService.cs" />
+    <Compile Include="Standard\FactorsConfigService.cs" />
+    <Compile Include="Standard\IEQI.cs" />
+    <Compile Include="Standard\PollutantService.cs" />
+    <Compile Include="Standard\WaterQualityService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DAL\SmartEP.Data\SmartEP.Data.csproj">
+      <Project>{89b8d570-dcfe-4265-b804-537324de6745}</Project>
+      <Name>SmartEP.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DomainModel\SmartEP.DomainModel\SmartEP.DomainModel.csproj">
+      <Project>{891378ea-1395-47f0-8b3b-14f35c6126a5}</Project>
+      <Name>SmartEP.DomainModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Repositories\SmartEP.AMSRepository\SmartEP.AMSRepository.csproj">
+      <Project>{0122fc5b-a008-4294-abea-7fd7edf6eb4e}</Project>
+      <Name>SmartEP.AMSRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Repositories\SmartEP.BaseInfoRepository\SmartEP.BaseInfoRepository.csproj">
+      <Project>{ae87814a-691a-4172-af21-0f0586b0a560}</Project>
+      <Name>SmartEP.BaseInfoRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SmartEP.WebControl\SmartEP.WebControl.csproj">
+      <Project>{d1372933-7075-42b7-8b31-ce1311800299}</Project>
+      <Name>SmartEP.WebControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartEP.Service.Core\SmartEP.Service.Core.csproj">
+      <Project>{fd64a4be-1f1a-4398-b37f-2276f6714869}</Project>
+      <Name>SmartEP.Service.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartEP.Service.Frame\SmartEP.Service.Frame.csproj">
+      <Project>{d3b242d8-3784-4170-92c4-cd0db2ca748f}</Project>
+      <Name>SmartEP.Service.Frame</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

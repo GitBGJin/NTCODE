@@ -1,0 +1,4 @@
+D:\NTCODE\Web\Services\SmartEP.Service.ExchangePlatForm\bin\Debug\SmartEP.Service.ExchangePlatForm.dll
+D:\NTCODE\Web\Services\SmartEP.Service.ExchangePlatForm\bin\Debug\SmartEP.Service.ExchangePlatForm.pdb
+D:\NTCODE\Web\Services\SmartEP.Service.ExchangePlatForm\obj\x86\Debug\SmartEP.Service.ExchangePlatForm.dll
+D:\NTCODE\Web\Services\SmartEP.Service.ExchangePlatForm\obj\x86\Debug\SmartEP.Service.ExchangePlatForm.pdb

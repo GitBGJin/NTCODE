@@ -1,0 +1,5 @@
+2017-09-18 15:04:17|ERROR|When GetPortInfoBySysType SysType=[air] Error: 索引 0 不是为负数，就是大于行数。
+2017-09-18 15:04:17|INFO|Return GetPortInfoBySysType SysType=[air] Result=[]
+2017-09-18 15:04:27|ERROR|When GetPortInfoBySysType SysType=[air] Error: 索引 0 不是为负数，就是大于行数。
+2017-09-18 15:04:27|INFO|Return GetPortInfoBySysType SysType=[air] Result=[]
+2017-09-18 17:34:28|INFO|EndTime=[2017-9-19 0:00]

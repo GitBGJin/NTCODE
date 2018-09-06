@@ -1,0 +1,40 @@
+.ReminderDialog_Neptune,
+.ReminderDialog_Neptune a {
+  color: #333;
+  font: normal 12px/14px "Segoe UI", Arial, sans-serif; }
+
+.ReminderDialog_Neptune .rsRemContentPanel {
+  border-color: #688caf; }
+
+/* <advanced edit title> */
+.ReminderDialog_Neptune .rsModalBgTopLeft,
+.ReminderDialog_Neptune .rsModalBgTopRight,
+.ReminderDialog_Neptune .rsModalBgBottomLeft,
+.ReminderDialog_Neptune .rsModalBgBottomRight {
+  background-image: url('Scheduler/rsModalBg.png'); }
+
+* html .ReminderDialog_Neptune .rsModalBgTopLeft,
+* html .ReminderDialog_Neptune .rsModalBgTopRight,
+* html .ReminderDialog_Neptune .rsModalBgBottomLeft,
+* html .ReminderDialog_Neptune .rsModalBgBottomRight {
+  background-image: url('Scheduler/rsModalBgIE6.png'); }
+
+.ReminderDialog_Neptune a.rsRemTitleBarCloseBtn {
+  height: 19px;
+  margin-top: -25px;
+  width: 30px; }
+
+.ReminderDialog_Neptune a.rsRemTitleBarCloseBtn:hover {
+  background-position: -78px -526px; }
+
+.ReminderDialog_Neptune .rsRemTitleIcon,
+.ReminderDialog_Neptune .rsRemTitleBarIcon,
+.ReminderDialog_Neptune a.rsRemTitleBarCloseBtn,
+.ReminderDialog_Neptune .rsRemActions a.rsRemDismissAllBtn,
+.ReminderDialog_Neptune .rsRemActions a.rsRemOpenItemBtn,
+.ReminderDialog_Neptune .rsRemActions a.rsRemDismissBtn,
+.ReminderDialog_Neptune .rsRemSnoozePanel a.rsRemSnoozeBtn {
+  color: #333;
+  background-image: url('Scheduler/rsSprites.png'); }
+
+/* </advanced edit title> */

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <connectionStrings>
+   <add name="AMS_AirAutoMonitorConnection" connectionString="data source=192.168.90.188;initial catalog=AMS_AirAutoMonitor;user id=sa;password=sinoyd123!@#" providerName="System.Data.SqlClient" />
+    <add name="AMS_WaterAutoMonitorConnection" connectionString="data source=192.168.90.188;initial catalog=AMS_WaterAutoMonitorSZ;user id=sa;password=sinoyd123!@#" providerName="System.Data.SqlClient" />
+    <add name="AMS_MonitoringBusinessConnection" connectionString="data source=192.168.90.188;initial catalog=AMS_MonitorBusiness;persist security info=True;user id=sa;password=sinoyd123!@#" providerName="System.Data.SqlClient" />
+    <add name="AMS_BaseDataConnection" connectionString="data source=192.168.90.188;initial catalog=AMS_BaseData;user id=sa;password=sinoyd123!@#" providerName="System.Data.SqlClient" />
+    <add name="Frame_Connection" connectionString="data source=192.168.90.188;initial catalog=EQMS_Framework;user id=sa;password=sinoyd123!@#" providerName="System.Data.SqlClient" />
+
+     <!--<add name="AMS_AirAutoMonitorConnection" connectionString="data source=.;initial catalog=AMS_AirAutoMonitor;user id=sa;password=11111" providerName="System.Data.SqlClient" />
+    <add name="AMS_WaterAutoMonitorConnection" connectionString="data source=.;initial catalog=AMS_WaterAutoMonitor;user id=sa;password=11111" providerName="System.Data.SqlClient" />
+    <add name="AMS_MonitoringBusinessConnection" connectionString="data source=.;initial catalog=AMS_MonitorBusiness;persist security info=True;user id=sa;password=11111" providerName="System.Data.SqlClient" />
+    <add name="AMS_BaseDataConnection" connectionString="data source=.;initial catalog=AMS_BaseData;user id=sa;password=11111" providerName="System.Data.SqlClient" />
+    <add name="Frame_Connection" connectionString="data source=.;initial catalog=EQMS_Framework;user id=sa;password=11111" providerName="System.Data.SqlClient" />-->
+    
+  </connectionStrings>
+</configuration>

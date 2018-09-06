@@ -1,0 +1,2 @@
+2017-07-05 12:57:32|ERROR|Execute (SELECT TelNumber,EnableOrNot FROM [AMS_BaseDataSZ].[dbo].[TB_MessageTel] where PageType='AirMessage') Error: 已成功与服务器建立连接，但是在登录前的握手期间发生错误。 (provider: SSL Provider, error: 0 - 等待的操作过时。)
+2017-07-05 12:58:09|ERROR|Execute (SELECT TelNumber,EnableOrNot FROM [AMS_BaseDataSZ].[dbo].[TB_MessageTel] where PageType='AirMessage') Error: 已成功与服务器建立连接，但是在登录前的握手期间发生错误。 (provider: SSL Provider, error: 0 - 等待的操作过时。)

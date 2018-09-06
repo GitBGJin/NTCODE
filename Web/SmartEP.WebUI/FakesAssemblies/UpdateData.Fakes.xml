@@ -1,0 +1,1505 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UpdateData.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:NTDataProcessApplication.Fakes.ShimAQICalculateDAL">
+            <summary>NTDataProcessApplication.AQICalculateDAL 的填充码类型</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.#ctor(NTDataProcessApplication.AQICalculateDAL)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.Constructor">
+            <summary>设置 AQICalculateDAL.AQICalculateDAL() 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.GetDayRegionValueByTimeStringArrayStringDateTimeDateTime">
+            <summary>设置 AQICalculateDAL.GetDayRegionValueByTime(String[] PointIds, String PollutantCode, DateTime StartTime, DateTime EndTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.GetDayRegionValueStringArrayStringDateTime">
+            <summary>设置 AQICalculateDAL.GetDayRegionValue(String[] PointIds, String PollutantCode, DateTime Tstamp) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.GetFactorLimitAndIAQIStringString">
+            <summary>设置 AQICalculateDAL.GetFactorLimitAndIAQI(String PollutantCode, String TimeTypeUid) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.GetFlagStringArray">
+            <summary>设置 AQICalculateDAL.GetFlag(String[] Flag) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.GetHourRegionValueByTimeStringArrayStringDateTimeDateTime">
+            <summary>设置 AQICalculateDAL.GetHourRegionValueByTime(String[] PointIds, String PollutantCode, DateTime StartTime, DateTime EndTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.GetHourRegionValueStringArrayStringDateTime">
+            <summary>设置 AQICalculateDAL.GetHourRegionValue(String[] PointIds, String PollutantCode, DateTime Tstamp) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.GetO3_8NTRegionValueStringArrayDateTime">
+            <summary>设置 AQICalculateDAL.GetO3_8NTRegionValue(String[] PointIds, DateTime Tstamp) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.GetO3_8RegionValueByTimeStringArrayDateTimeDateTime">
+            <summary>设置 AQICalculateDAL.GetO3_8RegionValueByTime(String[] PointIds, DateTime StartTime, DateTime EndTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.GetO3_8RegionValueStringArrayDateTime">
+            <summary>设置 AQICalculateDAL.GetO3_8RegionValue(String[] PointIds, DateTime Tstamp) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.GetPollutantUnitString">
+            <summary>设置 AQICalculateDAL.GetPollutantUnit(String PollutantCode) 的 填充码</summary>
+        </member>
+        <member name="T:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.AllInstances.GetDayRegionValueByTimeStringArrayStringDateTimeDateTime">
+            <summary>设置 AQICalculateDAL.GetDayRegionValueByTime(String[] PointIds, String PollutantCode, DateTime StartTime, DateTime EndTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.AllInstances.GetDayRegionValueStringArrayStringDateTime">
+            <summary>设置 AQICalculateDAL.GetDayRegionValue(String[] PointIds, String PollutantCode, DateTime Tstamp) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.AllInstances.GetFactorLimitAndIAQIStringString">
+            <summary>设置 AQICalculateDAL.GetFactorLimitAndIAQI(String PollutantCode, String TimeTypeUid) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.AllInstances.GetFlagStringArray">
+            <summary>设置 AQICalculateDAL.GetFlag(String[] Flag) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.AllInstances.GetHourRegionValueByTimeStringArrayStringDateTimeDateTime">
+            <summary>设置 AQICalculateDAL.GetHourRegionValueByTime(String[] PointIds, String PollutantCode, DateTime StartTime, DateTime EndTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.AllInstances.GetHourRegionValueStringArrayStringDateTime">
+            <summary>设置 AQICalculateDAL.GetHourRegionValue(String[] PointIds, String PollutantCode, DateTime Tstamp) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.AllInstances.GetO3_8NTRegionValueStringArrayDateTime">
+            <summary>设置 AQICalculateDAL.GetO3_8NTRegionValue(String[] PointIds, DateTime Tstamp) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.AllInstances.GetO3_8RegionValueByTimeStringArrayDateTimeDateTime">
+            <summary>设置 AQICalculateDAL.GetO3_8RegionValueByTime(String[] PointIds, DateTime StartTime, DateTime EndTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.AllInstances.GetO3_8RegionValueStringArrayDateTime">
+            <summary>设置 AQICalculateDAL.GetO3_8RegionValue(String[] PointIds, DateTime Tstamp) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateDAL.AllInstances.GetPollutantUnitString">
+            <summary>设置 AQICalculateDAL.GetPollutantUnit(String PollutantCode) 的 填充码</summary>
+        </member>
+        <member name="T:NTDataProcessApplication.Fakes.ShimAQICalculateService">
+            <summary>NTDataProcessApplication.AQICalculateService 的填充码类型</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.ShimAQICalculateService.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.ShimAQICalculateService.#ctor(NTDataProcessApplication.AQICalculateService)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.ShimAQICalculateService.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.ShimAQICalculateService.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService.Constructor">
+            <summary>设置 AQICalculateService.AQICalculateService() 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService.GetAQI_GradeInt32String">
+            <summary>设置 AQICalculateService.GetAQI_Grade(Int32 AQI_MaxValue, String ReturnType) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService.GetAQI_Max_CNVNullableOfInt32NullableOfInt32NullableOfInt32NullableOfInt32NullableOfInt32NullableOfInt32String">
+            <summary>设置 AQICalculateService.GetAQI_Max_CNV(Nullable`1&lt;Int32&gt; AQI_SO2, Nullable`1&lt;Int32&gt; AQI_NO2, Nullable`1&lt;Int32&gt; AQI_PM10, Nullable`1&lt;Int32&gt; AQI_CO, Nullable`1&lt;Int32&gt; AQI_O3, Nullable`1&lt;Int32&gt; AQI_PM25, String ReturnType) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService.GetIAQIStringNullableOfDecimalInt32">
+            <summary>设置 AQICalculateService.GetIAQI(String PollutantCode, Nullable`1&lt;Decimal&gt; PollutantValue, Int32 TimeType) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService.GetPollutantUnitString">
+            <summary>设置 AQICalculateService.GetPollutantUnit(String PollutantCode) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService.GetRegionValueByTimeStringArrayStringDateTimeDateTimeInt32String">
+            <summary>设置 AQICalculateService.GetRegionValueByTime(String[] PointIds, String PollutantCode, DateTime StartTime, DateTime EndTime, Int32 TimeType, String Type) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService.GetRegionValueStringArrayStringDateTimeInt32String">
+            <summary>设置 AQICalculateService.GetRegionValue(String[] PointIds, String PollutantCode, DateTime Tstamp, Int32 TimeType, String Type) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService.ValidValueByFlagDecimalStringString">
+            <summary>设置 AQICalculateService.ValidValueByFlag(Decimal Param, String Flag, String sparator) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService._GetRegionValueByTimeb__10DataRow">
+            <summary>设置 AQICalculateService.&lt;GetRegionValueByTime&gt;b__10(DataRow d) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService._GetRegionValueByTimeb__11DataRow">
+            <summary>设置 AQICalculateService.&lt;GetRegionValueByTime&gt;b__11(DataRow d) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService._GetRegionValueByTimeb__12DataRow">
+            <summary>设置 AQICalculateService.&lt;GetRegionValueByTime&gt;b__12(DataRow d) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService._GetRegionValueByTimeb__13DataRow">
+            <summary>设置 AQICalculateService.&lt;GetRegionValueByTime&gt;b__13(DataRow d) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService._GetRegionValueb__0DataRow">
+            <summary>设置 AQICalculateService.&lt;GetRegionValue&gt;b__0(DataRow d) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService._GetRegionValueb__1DataRow">
+            <summary>设置 AQICalculateService.&lt;GetRegionValue&gt;b__1(DataRow d) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService._GetRegionValueb__2DataRow">
+            <summary>设置 AQICalculateService.&lt;GetRegionValue&gt;b__2(DataRow d) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService._GetRegionValueb__3DataRow">
+            <summary>设置 AQICalculateService.&lt;GetRegionValue&gt;b__3(DataRow d) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService._GetRegionValueb__4DataRow">
+            <summary>设置 AQICalculateService.&lt;GetRegionValue&gt;b__4(DataRow d) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService._GetRegionValueb__5DataRow">
+            <summary>设置 AQICalculateService.&lt;GetRegionValue&gt;b__5(DataRow d) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService._GetRegionValueb__6DataRow">
+            <summary>设置 AQICalculateService.&lt;GetRegionValue&gt;b__6(DataRow d) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService._GetRegionValueb__7DataRow">
+            <summary>设置 AQICalculateService.&lt;GetRegionValue&gt;b__7(DataRow d) 的 填充码</summary>
+        </member>
+        <member name="T:NTDataProcessApplication.Fakes.ShimAQICalculateService.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService.AllInstances.GetAQI_GradeInt32String">
+            <summary>设置 AQICalculateService.GetAQI_Grade(Int32 AQI_MaxValue, String ReturnType) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService.AllInstances.GetAQI_Max_CNVNullableOfInt32NullableOfInt32NullableOfInt32NullableOfInt32NullableOfInt32NullableOfInt32String">
+            <summary>设置 AQICalculateService.GetAQI_Max_CNV(Nullable`1&lt;Int32&gt; AQI_SO2, Nullable`1&lt;Int32&gt; AQI_NO2, Nullable`1&lt;Int32&gt; AQI_PM10, Nullable`1&lt;Int32&gt; AQI_CO, Nullable`1&lt;Int32&gt; AQI_O3, Nullable`1&lt;Int32&gt; AQI_PM25, String ReturnType) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService.AllInstances.GetIAQIStringNullableOfDecimalInt32">
+            <summary>设置 AQICalculateService.GetIAQI(String PollutantCode, Nullable`1&lt;Decimal&gt; PollutantValue, Int32 TimeType) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService.AllInstances.GetPollutantUnitString">
+            <summary>设置 AQICalculateService.GetPollutantUnit(String PollutantCode) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService.AllInstances.GetRegionValueByTimeStringArrayStringDateTimeDateTimeInt32String">
+            <summary>设置 AQICalculateService.GetRegionValueByTime(String[] PointIds, String PollutantCode, DateTime StartTime, DateTime EndTime, Int32 TimeType, String Type) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService.AllInstances.GetRegionValueStringArrayStringDateTimeInt32String">
+            <summary>设置 AQICalculateService.GetRegionValue(String[] PointIds, String PollutantCode, DateTime Tstamp, Int32 TimeType, String Type) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimAQICalculateService.AllInstances.ValidValueByFlagDecimalStringString">
+            <summary>设置 AQICalculateService.ValidValueByFlag(Decimal Param, String Flag, String sparator) 的 填充码</summary>
+        </member>
+        <member name="T:NTDataProcessApplication.Fakes.ShimDAL">
+            <summary>NTDataProcessApplication.DAL 的填充码类型</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.ShimDAL.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.ShimDAL.#ctor(NTDataProcessApplication.DAL)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.ShimDAL.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.ShimDAL.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AddAirReport_Day_MulDateTimeDateTimeInt32String">
+            <summary>设置 DAL.AddAirReport_Day_Mul(DateTime sTime, DateTime eTime, Int32 PointId, String TableName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AddAirReport_Hour_MulInt64Int64Int32ArrayString">
+            <summary>设置 DAL.AddAirReport_Hour_Mul(Int64 IDLog, Int64 IDLogFlag, Int32[] PointIds, String TableName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AddAirReport_Month_MulDateTimeDateTimeInt32String">
+            <summary>设置 DAL.AddAirReport_Month_Mul(DateTime sTime, DateTime eTime, Int32 PointId, String TableName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AddAirReport_Season_MulDateTimeDateTimeInt32">
+            <summary>设置 DAL.AddAirReport_Season_Mul(DateTime sTime, DateTime eTime, Int32 PointId) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AddAirReport_Week_MulDateTimeDateTimeInt32">
+            <summary>设置 DAL.AddAirReport_Week_Mul(DateTime sTime, DateTime eTime, Int32 PointId) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AddAirReport_Year_MulDateTimeDateTimeInt32">
+            <summary>设置 DAL.AddAirReport_Year_Mul(DateTime sTime, DateTime eTime, Int32 PointId) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AddCommonAirReport_Hour_MulInt64Int64Int32ArrayString">
+            <summary>设置 DAL.AddCommonAirReport_Hour_Mul(Int64 IDLog, Int64 IDLogFlag, Int32[] PointIds, String TableName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AddOriginalDataStringStringInt64Int64Int32Array">
+            <summary>设置 DAL.AddOriginalData(String BufferTable, String OriginalTable, Int64 IDLog, Int64 IDLogFlag, Int32[] PointIds) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AddOriginalDayDataDateTimeDateTimeInt32">
+            <summary>设置 DAL.AddOriginalDayData(DateTime sTime, DateTime eTime, Int32 PointId) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AddOriginalMonthDataDateTimeDateTimeInt32">
+            <summary>设置 DAL.AddOriginalMonthData(DateTime sTime, DateTime eTime, Int32 PointId) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.Constructor">
+            <summary>设置 DAL.DAL() 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.CreateAlarmLowerStringStringStringStringStringStringDecimalStringStringStringStringDateTimeDateTimeString">
+            <summary>设置 DAL.CreateAlarmLower(String ApplicationUid, String PUid, String AlarmTypeUid_Lsp, String NotifyGradeUid, String DataTypeUid, String PName, Decimal ExcessiveLow, String FactorName, String FactorCode, String PId, String SYBufferTableName, DateTime DateStart, DateTime DateEnd, String Flag) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.CreateAlarmUpperStringStringStringStringStringStringDecimalStringStringStringStringDateTimeDateTimeString">
+            <summary>设置 DAL.CreateAlarmUpper(String ApplicationUid, String PUid, String AlarmTypeUid_Hsp, String NotifyGradeUid, String DataTypeUid, String PName, Decimal ExcessiveUpper, String FactorName, String FactorCode, String PId, String SYBufferTableName, DateTime DateStart, DateTime DateEnd, String Flag) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.DeleteAuditDataByTimeDateTimeDateTimeStringString">
+            <summary>设置 DAL.DeleteAuditDataByTime(DateTime sTime, DateTime eTime, String pid, String fac) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.DeleteOriDataByTimeDateTimeDateTimeStringString">
+            <summary>设置 DAL.DeleteOriDataByTime(DateTime sTime, DateTime eTime, String pid, String fac) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.DeleteRepeatDataInt64String">
+            <summary>设置 DAL.DeleteRepeatData(Int64 id, String BufferTableName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.FlagLowerStringInt64StringStringStringStringStringStringDateTime">
+            <summary>设置 DAL.FlagLower(String DataTypeUid, Int64 id, String Flag, String FlagType, String UseForUid, String SYBufferTableName, String ApplicationUid, String UpdateUser, DateTime UpdateDateTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.FlagUpperStringInt64StringStringStringStringStringStringDateTime">
+            <summary>设置 DAL.FlagUpper(String DataTypeUid, Int64 id, String Flag, String FlagType, String UseForUid, String TableName, String ApplicationUid, String UpdateUser, DateTime UpdateDateTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.GetExcessiveConfigStringStringString">
+            <summary>设置 DAL.GetExcessiveConfig(String DataTypeUid, String UseForUid, String ApplicationUid) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.GetInstrumentSetString">
+            <summary>设置 DAL.GetInstrumentSet(String DataTypeUid) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.GetIpAddress">
+            <summary>设置 DAL.GetIpAddress() 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.GetLatestDataInt32String">
+            <summary>设置 DAL.GetLatestData(Int32 PointId, String TableName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.GetLatestDataInt64String">
+            <summary>设置 DAL.GetLatestData(Int64 id, String BufferTableName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.GetLatestDataInt64StringInt32">
+            <summary>设置 DAL.GetLatestData(Int64 id, String BufferTableName, Int32 PointId) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.GetLatestDataInt64StringInt32String">
+            <summary>设置 DAL.GetLatestData(Int64 id, String BufferTableName, Int32 PointId, String PollutantCode) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.GetLatestOnlineInt32">
+            <summary>设置 DAL.GetLatestOnline(Int32 PointId) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.GetLostConfigStringString">
+            <summary>设置 DAL.GetLostConfig(String ApplicationUid, String DataTypeUid) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.GetLowerDataStringInt64StringStringStringStringString">
+            <summary>设置 DAL.GetLowerData(String DataTypeUid, Int64 id, String Flag, String FlagType, String UseForUid, String SYBufferTableName, String ApplicationUid) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.GetNewDataInstrumentStringString">
+            <summary>设置 DAL.GetNewDataInstrument(String BufferTableName, String InstrumentUid) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.GetOfflineConfigStringString">
+            <summary>设置 DAL.GetOfflineConfig(String ApplicationUid, String DataTypeUid) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.GetPivotAudDayDataInt32DateTimeDateTime">
+            <summary>设置 DAL.GetPivotAudDayData(Int32 PointId, DateTime sTime, DateTime eTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.GetPivotAudHourDataInt32DateTimeDateTime">
+            <summary>设置 DAL.GetPivotAudHourData(Int32 PointId, DateTime sTime, DateTime eTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.GetPivotAudRegionDayDataStringDateTimeDateTime">
+            <summary>设置 DAL.GetPivotAudRegionDayData(String RegionUid, DateTime sTime, DateTime eTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.GetPivotAudRegionHourDataStringDateTimeDateTime">
+            <summary>设置 DAL.GetPivotAudRegionHourData(String RegionUid, DateTime sTime, DateTime eTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.GetPivotOriDayDataInt32DateTimeDateTime">
+            <summary>设置 DAL.GetPivotOriDayData(Int32 PointId, DateTime sTime, DateTime eTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.GetPivotOriHourDataInt32DateTimeDateTime">
+            <summary>设置 DAL.GetPivotOriHourData(Int32 PointId, DateTime sTime, DateTime eTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.GetPivotOriRegionDayDataStringDateTimeDateTime">
+            <summary>设置 DAL.GetPivotOriRegionDayData(String RegionUid, DateTime sTime, DateTime eTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.GetPivotOriRegionHourDataStringDateTimeDateTime">
+            <summary>设置 DAL.GetPivotOriRegionHourData(String RegionUid, DateTime sTime, DateTime eTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.GetRecentHourRecordsInt32DateTimeDateTimeString">
+            <summary>设置 DAL.GetRecentHourRecords(Int32 PointId, DateTime sTime, DateTime eTime, String SYTableName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.GetRepeatLimitConfigStringStringString">
+            <summary>设置 DAL.GetRepeatLimitConfig(String UseForUid, String DataTypeUid, String ApplicationUid) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.GetRepeatLimitDataInt64StringStringString">
+            <summary>设置 DAL.GetRepeatLimitData(Int64 id, String BufferTableName, String PointId, String PollutantCode) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.GetUpperDataStringInt64StringStringStringStringString">
+            <summary>设置 DAL.GetUpperData(String DataTypeUid, Int64 id, String Flag, String FlagType, String UseForUid, String SYBufferTableName, String ApplicationUid) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.Load_AuditPreData_NotAuditInt32ArrayStringInt64">
+            <summary>设置 DAL.Load_AuditPreData_NotAudit(Int32[] PointIds, String ApplicationUid, Int64 IDLog) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.Load_AuditPreData_NotAuditInt32ArrayStringInt64Int64">
+            <summary>设置 DAL.Load_AuditPreData_NotAudit(Int32[] PointIds, String ApplicationUid, Int64 IDLog, Int64 IDLogFlag) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.LogLowerStringInt64StringStringStringStringString">
+            <summary>设置 DAL.LogLower(String DataTypeUid, Int64 id, String Flag, String UseForUid, String SYBufferTableName, String ip, String ApplicationUid) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.LogRepeatLimitStringStringDateTimeDateTimeStringStringString">
+            <summary>设置 DAL.LogRepeatLimit(String PointId, String PollutantCode, DateTime DateStart, DateTime DateEnd, String BufferTableName, String FlagType, String ip) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.LogUpperStringInt64StringStringStringStringString">
+            <summary>设置 DAL.LogUpper(String DataTypeUid, Int64 id, String Flag, String UseForUid, String SYBufferTableName, String ip, String ApplicationUid) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.RepeatLimitFlagStringStringDateTimeDateTimeStringStringStringDateTime">
+            <summary>设置 DAL.RepeatLimitFlag(String PointId, String PollutantCode, DateTime DateStart, DateTime DateEnd, String BufferTableName, String FlagType, String UpdateUser, DateTime UpdateDateTime) 的 填充码</summary>
+        </member>
+        <member name="T:NTDataProcessApplication.Fakes.ShimDAL.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.AddAirReport_Day_MulDateTimeDateTimeInt32String">
+            <summary>设置 DAL.AddAirReport_Day_Mul(DateTime sTime, DateTime eTime, Int32 PointId, String TableName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.AddAirReport_Hour_MulInt64Int64Int32ArrayString">
+            <summary>设置 DAL.AddAirReport_Hour_Mul(Int64 IDLog, Int64 IDLogFlag, Int32[] PointIds, String TableName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.AddAirReport_Month_MulDateTimeDateTimeInt32String">
+            <summary>设置 DAL.AddAirReport_Month_Mul(DateTime sTime, DateTime eTime, Int32 PointId, String TableName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.AddAirReport_Season_MulDateTimeDateTimeInt32">
+            <summary>设置 DAL.AddAirReport_Season_Mul(DateTime sTime, DateTime eTime, Int32 PointId) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.AddAirReport_Week_MulDateTimeDateTimeInt32">
+            <summary>设置 DAL.AddAirReport_Week_Mul(DateTime sTime, DateTime eTime, Int32 PointId) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.AddAirReport_Year_MulDateTimeDateTimeInt32">
+            <summary>设置 DAL.AddAirReport_Year_Mul(DateTime sTime, DateTime eTime, Int32 PointId) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.AddCommonAirReport_Hour_MulInt64Int64Int32ArrayString">
+            <summary>设置 DAL.AddCommonAirReport_Hour_Mul(Int64 IDLog, Int64 IDLogFlag, Int32[] PointIds, String TableName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.AddOriginalDataStringStringInt64Int64Int32Array">
+            <summary>设置 DAL.AddOriginalData(String BufferTable, String OriginalTable, Int64 IDLog, Int64 IDLogFlag, Int32[] PointIds) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.AddOriginalDayDataDateTimeDateTimeInt32">
+            <summary>设置 DAL.AddOriginalDayData(DateTime sTime, DateTime eTime, Int32 PointId) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.AddOriginalMonthDataDateTimeDateTimeInt32">
+            <summary>设置 DAL.AddOriginalMonthData(DateTime sTime, DateTime eTime, Int32 PointId) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.CreateAlarmLowerStringStringStringStringStringStringDecimalStringStringStringStringDateTimeDateTimeString">
+            <summary>设置 DAL.CreateAlarmLower(String ApplicationUid, String PUid, String AlarmTypeUid_Lsp, String NotifyGradeUid, String DataTypeUid, String PName, Decimal ExcessiveLow, String FactorName, String FactorCode, String PId, String SYBufferTableName, DateTime DateStart, DateTime DateEnd, String Flag) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.CreateAlarmUpperStringStringStringStringStringStringDecimalStringStringStringStringDateTimeDateTimeString">
+            <summary>设置 DAL.CreateAlarmUpper(String ApplicationUid, String PUid, String AlarmTypeUid_Hsp, String NotifyGradeUid, String DataTypeUid, String PName, Decimal ExcessiveUpper, String FactorName, String FactorCode, String PId, String SYBufferTableName, DateTime DateStart, DateTime DateEnd, String Flag) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.DeleteAuditDataByTimeDateTimeDateTimeStringString">
+            <summary>设置 DAL.DeleteAuditDataByTime(DateTime sTime, DateTime eTime, String pid, String fac) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.DeleteOriDataByTimeDateTimeDateTimeStringString">
+            <summary>设置 DAL.DeleteOriDataByTime(DateTime sTime, DateTime eTime, String pid, String fac) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.DeleteRepeatDataInt64String">
+            <summary>设置 DAL.DeleteRepeatData(Int64 id, String BufferTableName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.FlagLowerStringInt64StringStringStringStringStringStringDateTime">
+            <summary>设置 DAL.FlagLower(String DataTypeUid, Int64 id, String Flag, String FlagType, String UseForUid, String SYBufferTableName, String ApplicationUid, String UpdateUser, DateTime UpdateDateTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.FlagUpperStringInt64StringStringStringStringStringStringDateTime">
+            <summary>设置 DAL.FlagUpper(String DataTypeUid, Int64 id, String Flag, String FlagType, String UseForUid, String TableName, String ApplicationUid, String UpdateUser, DateTime UpdateDateTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.GetExcessiveConfigStringStringString">
+            <summary>设置 DAL.GetExcessiveConfig(String DataTypeUid, String UseForUid, String ApplicationUid) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.GetInstrumentSetString">
+            <summary>设置 DAL.GetInstrumentSet(String DataTypeUid) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.GetIpAddress">
+            <summary>设置 DAL.GetIpAddress() 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.GetLatestDataInt32String">
+            <summary>设置 DAL.GetLatestData(Int32 PointId, String TableName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.GetLatestDataInt64String">
+            <summary>设置 DAL.GetLatestData(Int64 id, String BufferTableName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.GetLatestDataInt64StringInt32">
+            <summary>设置 DAL.GetLatestData(Int64 id, String BufferTableName, Int32 PointId) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.GetLatestDataInt64StringInt32String">
+            <summary>设置 DAL.GetLatestData(Int64 id, String BufferTableName, Int32 PointId, String PollutantCode) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.GetLatestOnlineInt32">
+            <summary>设置 DAL.GetLatestOnline(Int32 PointId) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.GetLostConfigStringString">
+            <summary>设置 DAL.GetLostConfig(String ApplicationUid, String DataTypeUid) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.GetLowerDataStringInt64StringStringStringStringString">
+            <summary>设置 DAL.GetLowerData(String DataTypeUid, Int64 id, String Flag, String FlagType, String UseForUid, String SYBufferTableName, String ApplicationUid) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.GetNewDataInstrumentStringString">
+            <summary>设置 DAL.GetNewDataInstrument(String BufferTableName, String InstrumentUid) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.GetOfflineConfigStringString">
+            <summary>设置 DAL.GetOfflineConfig(String ApplicationUid, String DataTypeUid) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.GetPivotAudDayDataInt32DateTimeDateTime">
+            <summary>设置 DAL.GetPivotAudDayData(Int32 PointId, DateTime sTime, DateTime eTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.GetPivotAudHourDataInt32DateTimeDateTime">
+            <summary>设置 DAL.GetPivotAudHourData(Int32 PointId, DateTime sTime, DateTime eTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.GetPivotAudRegionDayDataStringDateTimeDateTime">
+            <summary>设置 DAL.GetPivotAudRegionDayData(String RegionUid, DateTime sTime, DateTime eTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.GetPivotAudRegionHourDataStringDateTimeDateTime">
+            <summary>设置 DAL.GetPivotAudRegionHourData(String RegionUid, DateTime sTime, DateTime eTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.GetPivotOriDayDataInt32DateTimeDateTime">
+            <summary>设置 DAL.GetPivotOriDayData(Int32 PointId, DateTime sTime, DateTime eTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.GetPivotOriHourDataInt32DateTimeDateTime">
+            <summary>设置 DAL.GetPivotOriHourData(Int32 PointId, DateTime sTime, DateTime eTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.GetPivotOriRegionDayDataStringDateTimeDateTime">
+            <summary>设置 DAL.GetPivotOriRegionDayData(String RegionUid, DateTime sTime, DateTime eTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.GetPivotOriRegionHourDataStringDateTimeDateTime">
+            <summary>设置 DAL.GetPivotOriRegionHourData(String RegionUid, DateTime sTime, DateTime eTime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.GetRecentHourRecordsInt32DateTimeDateTimeString">
+            <summary>设置 DAL.GetRecentHourRecords(Int32 PointId, DateTime sTime, DateTime eTime, String SYTableName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.GetRepeatLimitConfigStringStringString">
+            <summary>设置 DAL.GetRepeatLimitConfig(String UseForUid, String DataTypeUid, String ApplicationUid) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.GetRepeatLimitDataInt64StringStringString">
+            <summary>设置 DAL.GetRepeatLimitData(Int64 id, String BufferTableName, String PointId, String PollutantCode) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.GetUpperDataStringInt64StringStringStringStringString">
+            <summary>设置 DAL.GetUpperData(String DataTypeUid, Int64 id, String Flag, String FlagType, String UseForUid, String SYBufferTableName, String ApplicationUid) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.Load_AuditPreData_NotAuditInt32ArrayStringInt64">
+            <summary>设置 DAL.Load_AuditPreData_NotAudit(Int32[] PointIds, String ApplicationUid, Int64 IDLog) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.Load_AuditPreData_NotAuditInt32ArrayStringInt64Int64">
+            <summary>设置 DAL.Load_AuditPreData_NotAudit(Int32[] PointIds, String ApplicationUid, Int64 IDLog, Int64 IDLogFlag) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.LogLowerStringInt64StringStringStringStringString">
+            <summary>设置 DAL.LogLower(String DataTypeUid, Int64 id, String Flag, String UseForUid, String SYBufferTableName, String ip, String ApplicationUid) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.LogRepeatLimitStringStringDateTimeDateTimeStringStringString">
+            <summary>设置 DAL.LogRepeatLimit(String PointId, String PollutantCode, DateTime DateStart, DateTime DateEnd, String BufferTableName, String FlagType, String ip) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.LogUpperStringInt64StringStringStringStringString">
+            <summary>设置 DAL.LogUpper(String DataTypeUid, Int64 id, String Flag, String UseForUid, String SYBufferTableName, String ip, String ApplicationUid) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDAL.AllInstances.RepeatLimitFlagStringStringDateTimeDateTimeStringStringStringDateTime">
+            <summary>设置 DAL.RepeatLimitFlag(String PointId, String PollutantCode, DateTime DateStart, DateTime DateEnd, String BufferTableName, String FlagType, String UpdateUser, DateTime UpdateDateTime) 的 填充码</summary>
+        </member>
+        <member name="T:NTDataProcessApplication.Fakes.ShimDatabaseHelper">
+            <summary>NTDataProcessApplication.DatabaseHelper 的填充码类型</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.ShimDatabaseHelper.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.ShimDatabaseHelper.#ctor(NTDataProcessApplication.DatabaseHelper)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.ShimDatabaseHelper.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.ShimDatabaseHelper.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.Constructor">
+            <summary>设置 DatabaseHelper.DatabaseHelper() 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.ExecuteDataTableStringStringArrayList">
+            <summary>设置 DatabaseHelper.ExecuteDataTable(String strSql, String strConName, ArrayList TableParameters) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.ExecuteDataViewStringStringArrayList">
+            <summary>设置 DatabaseHelper.ExecuteDataView(String strSql, String strConName, ArrayList TableParameters) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.ExecuteInsertStringStringArrayList">
+            <summary>设置 DatabaseHelper.ExecuteInsert(String strSql, String strConName, ArrayList TableParameters) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.ExecuteModelObjectStringStringArrayList">
+            <summary>设置 DatabaseHelper.ExecuteModel(Object model, String strSql, String strConName, ArrayList TableParameters) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.ExecuteNonQueryStringStringArrayList">
+            <summary>设置 DatabaseHelper.ExecuteNonQuery(String strSql, String strConName, ArrayList TableParameters) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.ExecuteScalarStringStringArrayList">
+            <summary>设置 DatabaseHelper.ExecuteScalar(String strSql, String strConName, ArrayList TableParameters) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.ExecuteWithTransactionStringString">
+            <summary>设置 DatabaseHelper.ExecuteWithTransaction(String strSql, String strConName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.GetSqlConnectionString">
+            <summary>设置 DatabaseHelper.GetSqlConnection(String appSettingsName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.MakeInParamStringSqlDbTypeInt32Object">
+            <summary>设置 DatabaseHelper.MakeInParam(String ParamName, SqlDbType DbType, Int32 Size, Object Value) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.MakeOutParamStringSqlDbTypeInt32">
+            <summary>设置 DatabaseHelper.MakeOutParam(String ParamName, SqlDbType DbType, Int32 Size) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.MakeParamStringSqlDbTypeInt32ParameterDirectionObject">
+            <summary>设置 DatabaseHelper.MakeParam(String ParamName, SqlDbType DbType, Int32 Size, ParameterDirection Direction, Object Value) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.PopulateParamsSqlCommandArrayList">
+            <summary>设置 DatabaseHelper.PopulateParams(SqlCommand myCommand, ArrayList TableParameters) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.PopulateProcParamsSqlCommandSqlParameterArray">
+            <summary>设置 DatabaseHelper.PopulateProcParams(SqlCommand myCommand, SqlParameter[] prams) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.PopulateProcParamsSqlDataAdapterSqlParameterArray">
+            <summary>设置 DatabaseHelper.PopulateProcParams(SqlDataAdapter myCommand, SqlParameter[] prams) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.ReaderToObjectIDataReaderObject">
+            <summary>设置 DatabaseHelper.ReaderToObject(IDataReader reader, Object targetObj) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.RunProcDataReaderStringString">
+            <summary>设置 DatabaseHelper.RunProcDataReader(String procName, String strConName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.RunProcDataReaderStringStringSqlParameterArray">
+            <summary>设置 DatabaseHelper.RunProcDataReader(String procName, String strConName, SqlParameter[] prams) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.RunProcDataViewStringString">
+            <summary>设置 DatabaseHelper.RunProcDataView(String procName, String strConName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.RunProcDataViewStringStringSqlParameterArray">
+            <summary>设置 DatabaseHelper.RunProcDataView(String procName, String strConName, SqlParameter[] prams) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.RunProcStringString">
+            <summary>设置 DatabaseHelper.RunProc(String procName, String strConName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.RunProcStringStringSqlParameterArray">
+            <summary>设置 DatabaseHelper.RunProc(String procName, String strConName, SqlParameter[] prams) 的 填充码</summary>
+        </member>
+        <member name="T:NTDataProcessApplication.Fakes.ShimDatabaseHelper.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.AllInstances.ExecuteDataTableStringStringArrayList">
+            <summary>设置 DatabaseHelper.ExecuteDataTable(String strSql, String strConName, ArrayList TableParameters) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.AllInstances.ExecuteDataViewStringStringArrayList">
+            <summary>设置 DatabaseHelper.ExecuteDataView(String strSql, String strConName, ArrayList TableParameters) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.AllInstances.ExecuteInsertStringStringArrayList">
+            <summary>设置 DatabaseHelper.ExecuteInsert(String strSql, String strConName, ArrayList TableParameters) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.AllInstances.ExecuteModelObjectStringStringArrayList">
+            <summary>设置 DatabaseHelper.ExecuteModel(Object model, String strSql, String strConName, ArrayList TableParameters) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.AllInstances.ExecuteNonQueryStringStringArrayList">
+            <summary>设置 DatabaseHelper.ExecuteNonQuery(String strSql, String strConName, ArrayList TableParameters) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.AllInstances.ExecuteScalarStringStringArrayList">
+            <summary>设置 DatabaseHelper.ExecuteScalar(String strSql, String strConName, ArrayList TableParameters) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.AllInstances.ExecuteWithTransactionStringString">
+            <summary>设置 DatabaseHelper.ExecuteWithTransaction(String strSql, String strConName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.AllInstances.GetSqlConnectionString">
+            <summary>设置 DatabaseHelper.GetSqlConnection(String appSettingsName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.AllInstances.PopulateParamsSqlCommandArrayList">
+            <summary>设置 DatabaseHelper.PopulateParams(SqlCommand myCommand, ArrayList TableParameters) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.AllInstances.PopulateProcParamsSqlCommandSqlParameterArray">
+            <summary>设置 DatabaseHelper.PopulateProcParams(SqlCommand myCommand, SqlParameter[] prams) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.AllInstances.PopulateProcParamsSqlDataAdapterSqlParameterArray">
+            <summary>设置 DatabaseHelper.PopulateProcParams(SqlDataAdapter myCommand, SqlParameter[] prams) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.AllInstances.RunProcDataReaderStringString">
+            <summary>设置 DatabaseHelper.RunProcDataReader(String procName, String strConName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.AllInstances.RunProcDataReaderStringStringSqlParameterArray">
+            <summary>设置 DatabaseHelper.RunProcDataReader(String procName, String strConName, SqlParameter[] prams) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.AllInstances.RunProcDataViewStringString">
+            <summary>设置 DatabaseHelper.RunProcDataView(String procName, String strConName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.AllInstances.RunProcDataViewStringStringSqlParameterArray">
+            <summary>设置 DatabaseHelper.RunProcDataView(String procName, String strConName, SqlParameter[] prams) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.AllInstances.RunProcStringString">
+            <summary>设置 DatabaseHelper.RunProc(String procName, String strConName) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDatabaseHelper.AllInstances.RunProcStringStringSqlParameterArray">
+            <summary>设置 DatabaseHelper.RunProc(String procName, String strConName, SqlParameter[] prams) 的 填充码</summary>
+        </member>
+        <member name="T:NTDataProcessApplication.Fakes.ShimDecimalExtension">
+            <summary>NTDataProcessApplication.DecimalExtension 的填充码类型</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.ShimDecimalExtension.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.ShimDecimalExtension.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.ShimDecimalExtension.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDecimalExtension.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDecimalExtension.GetPollutantValueDecimalInt32">
+            <summary>设置 DecimalExtension.GetPollutantValue(Decimal value, Int32 decimalNum) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimDecimalExtension.GetRoundValueDecimalInt32">
+            <summary>设置 DecimalExtension.GetRoundValue(Decimal value, Int32 decimalNum) 的 填充码</summary>
+        </member>
+        <member name="T:NTDataProcessApplication.Fakes.ShimHandle">
+            <summary>NTDataProcessApplication.Handle 的填充码类型</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.ShimHandle.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.ShimHandle.#ctor(NTDataProcessApplication.Handle)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.ShimHandle.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.ShimHandle.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.AnalysisStringInt32">
+            <summary>设置 Handle.Analysis(String dateTime, Int32 n) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.AnalysisStringInt32StringStringArray">
+            <summary>设置 Handle.Analysis(String dateTime, Int32 n, String pid, String[] factory) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.AnalyzeCurrentData">
+            <summary>设置 Handle.AnalyzeCurrentData() 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.AutoFillData">
+            <summary>设置 Handle.AutoFillData() 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.BatchProcessStringInt64Int64Int64">
+            <summary>设置 Handle.BatchProcess(String DataTypeUid, Int64 BufferIDLog, Int64 OriIDLog, Int64 FlagIDLog) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.CalculateBy60DateTimeDateTimeStringArray">
+            <summary>设置 Handle.CalculateBy60(DateTime startTime, DateTime endTime, String[] pids) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.CalculateByDayDateTimeDateTimeDateTimeDateTimeStringArray">
+            <summary>设置 Handle.CalculateByDay(DateTime SMTime, DateTime EMTime, DateTime SWTime, DateTime EWTime, String[] pids) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.CalculateByMonthDateTimeDateTimeDateTimeDateTimeStringArray">
+            <summary>设置 Handle.CalculateByMonth(DateTime SSTime, DateTime ESTime, DateTime SYTime, DateTime EYTime, String[] pids) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.Constructor">
+            <summary>设置 Handle.Handle() 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.FillDataStringStringStringStringArray">
+            <summary>设置 Handle.FillData(String sTime, String eTime, String pid, String[] factory) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.FillProcessData">
+            <summary>设置 Handle.FillProcessData() 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.FlagStringInt64Int64">
+            <summary>设置 Handle.Flag(String DataTypeUid, Int64 IDLog, Int64 OriIDLog) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.GetNewDataTableDataTableString">
+            <summary>设置 Handle.GetNewDataTable(DataTable dt, String condition) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.GetWeekFirstDayMonDateTime">
+            <summary>设置 Handle.GetWeekFirstDayMon(DateTime datetime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.GetWeekLastDaySunDateTime">
+            <summary>设置 Handle.GetWeekLastDaySun(DateTime datetime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.InstrumentOnlineString">
+            <summary>设置 Handle.InstrumentOnline(String DataTypeUid) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle._FillProcessDatab__2eV_CodeMainItemEntity">
+            <summary>设置 Handle.&lt;FillProcessData&gt;b__2e(V_CodeMainItemEntity p) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle._Flagb__12V_CodeMainItemEntity">
+            <summary>设置 Handle.&lt;Flag&gt;b__12(V_CodeMainItemEntity p) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle._Flagb__13V_CodeMainItemEntity">
+            <summary>设置 Handle.&lt;Flag&gt;b__13(V_CodeMainItemEntity p) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle._Flagb__16V_CodeMainItemEntity">
+            <summary>设置 Handle.&lt;Flag&gt;b__16(V_CodeMainItemEntity p) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle._Flagb__17V_CodeMainItemEntity">
+            <summary>设置 Handle.&lt;Flag&gt;b__17(V_CodeMainItemEntity p) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle._Flagb__18V_CodeMainItemEntity">
+            <summary>设置 Handle.&lt;Flag&gt;b__18(V_CodeMainItemEntity p) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.fillhistorydataDateTimeInt32StringArrayStringArray">
+            <summary>设置 Handle.fillhistorydata(DateTime tstamp, Int32 FillDays, String[] portIds, String[] factorCodes) 的 填充码</summary>
+        </member>
+        <member name="T:NTDataProcessApplication.Fakes.ShimHandle.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.AllInstances.AnalysisStringInt32">
+            <summary>设置 Handle.Analysis(String dateTime, Int32 n) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.AllInstances.AnalysisStringInt32StringStringArray">
+            <summary>设置 Handle.Analysis(String dateTime, Int32 n, String pid, String[] factory) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.AllInstances.AnalyzeCurrentData">
+            <summary>设置 Handle.AnalyzeCurrentData() 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.AllInstances.AutoFillData">
+            <summary>设置 Handle.AutoFillData() 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.AllInstances.BatchProcessStringInt64Int64Int64">
+            <summary>设置 Handle.BatchProcess(String DataTypeUid, Int64 BufferIDLog, Int64 OriIDLog, Int64 FlagIDLog) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.AllInstances.CalculateBy60DateTimeDateTimeStringArray">
+            <summary>设置 Handle.CalculateBy60(DateTime startTime, DateTime endTime, String[] pids) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.AllInstances.CalculateByDayDateTimeDateTimeDateTimeDateTimeStringArray">
+            <summary>设置 Handle.CalculateByDay(DateTime SMTime, DateTime EMTime, DateTime SWTime, DateTime EWTime, String[] pids) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.AllInstances.CalculateByMonthDateTimeDateTimeDateTimeDateTimeStringArray">
+            <summary>设置 Handle.CalculateByMonth(DateTime SSTime, DateTime ESTime, DateTime SYTime, DateTime EYTime, String[] pids) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.AllInstances.FillDataStringStringStringStringArray">
+            <summary>设置 Handle.FillData(String sTime, String eTime, String pid, String[] factory) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.AllInstances.FillProcessData">
+            <summary>设置 Handle.FillProcessData() 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.AllInstances.FlagStringInt64Int64">
+            <summary>设置 Handle.Flag(String DataTypeUid, Int64 IDLog, Int64 OriIDLog) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.AllInstances.GetNewDataTableDataTableString">
+            <summary>设置 Handle.GetNewDataTable(DataTable dt, String condition) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.AllInstances.GetWeekFirstDayMonDateTime">
+            <summary>设置 Handle.GetWeekFirstDayMon(DateTime datetime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.AllInstances.GetWeekLastDaySunDateTime">
+            <summary>设置 Handle.GetWeekLastDaySun(DateTime datetime) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.AllInstances.InstrumentOnlineString">
+            <summary>设置 Handle.InstrumentOnline(String DataTypeUid) 的 填充码</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.ShimHandle.AllInstances.fillhistorydataDateTimeInt32StringArrayStringArray">
+            <summary>设置 Handle.fillhistorydata(DateTime tstamp, Int32 FillDays, String[] portIds, String[] factorCodes) 的 填充码</summary>
+        </member>
+        <member name="T:NTDataProcessApplication.Fakes.StubAQICalculateDAL">
+            <summary>NTDataProcessApplication.AQICalculateDAL 的存根类型</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.StubAQICalculateDAL.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.StubAQICalculateDAL.InitializeStub">
+            <summary>初始化 type StubAQICalculateDAL 的新实例</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.StubAQICalculateDAL.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.StubAQICalculateDAL.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.StubAQICalculateDAL.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:NTDataProcessApplication.Fakes.StubAQICalculateService">
+            <summary>NTDataProcessApplication.AQICalculateService 的存根类型</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.StubAQICalculateService.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.StubAQICalculateService.InitializeStub">
+            <summary>初始化 type StubAQICalculateService 的新实例</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.StubAQICalculateService.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.StubAQICalculateService.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.StubAQICalculateService.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:NTDataProcessApplication.Fakes.StubDAL">
+            <summary>NTDataProcessApplication.DAL 的存根类型</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.StubDAL.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.StubDAL.InitializeStub">
+            <summary>初始化 type StubDAL 的新实例</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.StubDAL.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.StubDAL.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.StubDAL.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:NTDataProcessApplication.Fakes.StubDatabaseHelper">
+            <summary>NTDataProcessApplication.DatabaseHelper 的存根类型</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.StubDatabaseHelper.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.StubDatabaseHelper.InitializeStub">
+            <summary>初始化 type StubDatabaseHelper 的新实例</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.StubDatabaseHelper.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.StubDatabaseHelper.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.StubDatabaseHelper.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:NTDataProcessApplication.Fakes.StubHandle">
+            <summary>NTDataProcessApplication.Handle 的存根类型</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.StubHandle.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:NTDataProcessApplication.Fakes.StubHandle.InitializeStub">
+            <summary>初始化 type StubHandle 的新实例</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.StubHandle.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.StubHandle.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:NTDataProcessApplication.Fakes.StubHandle.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:UpdateData.ServiceReference1.Fakes.ShimAirQualityWebServiceSoapClient">
+            <summary>UpdateData.ServiceReference1.AirQualityWebServiceSoapClient 的填充码类型</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimAirQualityWebServiceSoapClient.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimAirQualityWebServiceSoapClient.#ctor(UpdateData.ServiceReference1.AirQualityWebServiceSoapClient)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimAirQualityWebServiceSoapClient.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimAirQualityWebServiceSoapClient.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimAirQualityWebServiceSoapClient.Bind(System.ServiceModel.ICommunicationObject)">
+            <summary>将接口的成员绑定到此填充码。</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimAirQualityWebServiceSoapClient.Bind(UpdateData.ServiceReference1.AirQualityWebServiceSoap)">
+            <summary>将接口的成员绑定到此填充码。</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimAirQualityWebServiceSoapClient.Bind(System.IDisposable)">
+            <summary>将接口的成员绑定到此填充码。</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimAirQualityWebServiceSoapClient.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimAirQualityWebServiceSoapClient.Constructor">
+            <summary>设置 AirQualityWebServiceSoapClient.AirQualityWebServiceSoapClient() 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimAirQualityWebServiceSoapClient.ConstructorBindingEndpointAddress">
+            <summary>设置 AirQualityWebServiceSoapClient.AirQualityWebServiceSoapClient(Binding binding, EndpointAddress remoteAddress) 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimAirQualityWebServiceSoapClient.ConstructorString">
+            <summary>设置 AirQualityWebServiceSoapClient.AirQualityWebServiceSoapClient(String endpointConfigurationName) 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimAirQualityWebServiceSoapClient.ConstructorStringEndpointAddress">
+            <summary>设置 AirQualityWebServiceSoapClient.AirQualityWebServiceSoapClient(String endpointConfigurationName, EndpointAddress remoteAddress) 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimAirQualityWebServiceSoapClient.ConstructorStringString">
+            <summary>设置 AirQualityWebServiceSoapClient.AirQualityWebServiceSoapClient(String endpointConfigurationName, String remoteAddress) 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimAirQualityWebServiceSoapClient.UpdateDataServiceReference1AirQualityWebServiceSoapgetHourlyDataSetgetHourlyDataSetRequest">
+            <summary>设置 AirQualityWebServiceSoapClient.UpdateData.ServiceReference1.AirQualityWebServiceSoap.getHourlyDataSet(getHourlyDataSetRequest request) 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimAirQualityWebServiceSoapClient.UpdateDataServiceReference1AirQualityWebServiceSoapgetHourlyDataXmlgetHourlyDataXmlRequest">
+            <summary>设置 AirQualityWebServiceSoapClient.UpdateData.ServiceReference1.AirQualityWebServiceSoap.getHourlyDataXml(getHourlyDataXmlRequest request) 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimAirQualityWebServiceSoapClient.getHourlyDataSetMySoapHeaderStringString">
+            <summary>设置 AirQualityWebServiceSoapClient.getHourlyDataSet(MySoapHeader MySoapHeader, String pollutantNames, String dataTime) 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimAirQualityWebServiceSoapClient.getHourlyDataXmlMySoapHeaderStringString">
+            <summary>设置 AirQualityWebServiceSoapClient.getHourlyDataXml(MySoapHeader MySoapHeader, String pollutantNames, String dataTime) 的 填充码</summary>
+        </member>
+        <member name="T:UpdateData.ServiceReference1.Fakes.ShimAirQualityWebServiceSoapClient.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimAirQualityWebServiceSoapClient.AllInstances.UpdateDataServiceReference1AirQualityWebServiceSoapgetHourlyDataSetgetHourlyDataSetRequest">
+            <summary>设置 AirQualityWebServiceSoapClient.UpdateData.ServiceReference1.AirQualityWebServiceSoap.getHourlyDataSet(getHourlyDataSetRequest request) 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimAirQualityWebServiceSoapClient.AllInstances.UpdateDataServiceReference1AirQualityWebServiceSoapgetHourlyDataXmlgetHourlyDataXmlRequest">
+            <summary>设置 AirQualityWebServiceSoapClient.UpdateData.ServiceReference1.AirQualityWebServiceSoap.getHourlyDataXml(getHourlyDataXmlRequest request) 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimAirQualityWebServiceSoapClient.AllInstances.getHourlyDataSetMySoapHeaderStringString">
+            <summary>设置 AirQualityWebServiceSoapClient.getHourlyDataSet(MySoapHeader MySoapHeader, String pollutantNames, String dataTime) 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimAirQualityWebServiceSoapClient.AllInstances.getHourlyDataXmlMySoapHeaderStringString">
+            <summary>设置 AirQualityWebServiceSoapClient.getHourlyDataXml(MySoapHeader MySoapHeader, String pollutantNames, String dataTime) 的 填充码</summary>
+        </member>
+        <member name="T:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader">
+            <summary>UpdateData.ServiceReference1.MySoapHeader 的填充码类型</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.#ctor(UpdateData.ServiceReference1.MySoapHeader)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.Bind(System.ComponentModel.INotifyPropertyChanged)">
+            <summary>将接口的成员绑定到此填充码。</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.AnyAttrGet">
+            <summary>设置 MySoapHeader.get_AnyAttr() 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.AnyAttrSetXmlAttributeArray">
+            <summary>设置 MySoapHeader.set_AnyAttr(XmlAttribute[] value) 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.Constructor">
+            <summary>设置 MySoapHeader.MySoapHeader() 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.PasswordGet">
+            <summary>设置 MySoapHeader.get_Password() 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.PasswordSetString">
+            <summary>设置 MySoapHeader.set_Password(String value) 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.PropertyChangedAddPropertyChangedEventHandler">
+            <summary>设置 MySoapHeader.add_PropertyChanged(PropertyChangedEventHandler value) 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.PropertyChangedRemovePropertyChangedEventHandler">
+            <summary>设置 MySoapHeader.remove_PropertyChanged(PropertyChangedEventHandler value) 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.RaisePropertyChangedString">
+            <summary>设置 MySoapHeader.RaisePropertyChanged(String propertyName) 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.UserIdGet">
+            <summary>设置 MySoapHeader.get_UserId() 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.UserIdSetString">
+            <summary>设置 MySoapHeader.set_UserId(String value) 的 填充码</summary>
+        </member>
+        <member name="T:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.AllInstances.AnyAttrGet">
+            <summary>设置 MySoapHeader.get_AnyAttr() 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.AllInstances.AnyAttrSetXmlAttributeArray">
+            <summary>设置 MySoapHeader.set_AnyAttr(XmlAttribute[] value) 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.AllInstances.PasswordGet">
+            <summary>设置 MySoapHeader.get_Password() 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.AllInstances.PasswordSetString">
+            <summary>设置 MySoapHeader.set_Password(String value) 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.AllInstances.PropertyChangedAddPropertyChangedEventHandler">
+            <summary>设置 MySoapHeader.add_PropertyChanged(PropertyChangedEventHandler value) 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.AllInstances.PropertyChangedRemovePropertyChangedEventHandler">
+            <summary>设置 MySoapHeader.remove_PropertyChanged(PropertyChangedEventHandler value) 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.AllInstances.RaisePropertyChangedString">
+            <summary>设置 MySoapHeader.RaisePropertyChanged(String propertyName) 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.AllInstances.UserIdGet">
+            <summary>设置 MySoapHeader.get_UserId() 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimMySoapHeader.AllInstances.UserIdSetString">
+            <summary>设置 MySoapHeader.set_UserId(String value) 的 填充码</summary>
+        </member>
+        <member name="T:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataSetRequest">
+            <summary>UpdateData.ServiceReference1.getHourlyDataSetRequest 的填充码类型</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataSetRequest.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataSetRequest.#ctor(UpdateData.ServiceReference1.getHourlyDataSetRequest)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataSetRequest.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataSetRequest.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataSetRequest.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataSetRequest.Constructor">
+            <summary>设置 getHourlyDataSetRequest.getHourlyDataSetRequest() 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataSetRequest.ConstructorMySoapHeaderStringString">
+            <summary>设置 getHourlyDataSetRequest.getHourlyDataSetRequest(MySoapHeader MySoapHeader, String pollutantNames, String dataTime) 的 填充码</summary>
+        </member>
+        <member name="T:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataSetRequest.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="T:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataSetResponse">
+            <summary>UpdateData.ServiceReference1.getHourlyDataSetResponse 的填充码类型</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataSetResponse.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataSetResponse.#ctor(UpdateData.ServiceReference1.getHourlyDataSetResponse)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataSetResponse.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataSetResponse.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataSetResponse.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataSetResponse.Constructor">
+            <summary>设置 getHourlyDataSetResponse.getHourlyDataSetResponse() 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataSetResponse.ConstructorDataSet">
+            <summary>设置 getHourlyDataSetResponse.getHourlyDataSetResponse(DataSet getHourlyDataSetResult) 的 填充码</summary>
+        </member>
+        <member name="T:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataSetResponse.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="T:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataXmlRequest">
+            <summary>UpdateData.ServiceReference1.getHourlyDataXmlRequest 的填充码类型</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataXmlRequest.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataXmlRequest.#ctor(UpdateData.ServiceReference1.getHourlyDataXmlRequest)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataXmlRequest.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataXmlRequest.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataXmlRequest.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataXmlRequest.Constructor">
+            <summary>设置 getHourlyDataXmlRequest.getHourlyDataXmlRequest() 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataXmlRequest.ConstructorMySoapHeaderStringString">
+            <summary>设置 getHourlyDataXmlRequest.getHourlyDataXmlRequest(MySoapHeader MySoapHeader, String pollutantNames, String dataTime) 的 填充码</summary>
+        </member>
+        <member name="T:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataXmlRequest.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="T:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataXmlResponse">
+            <summary>UpdateData.ServiceReference1.getHourlyDataXmlResponse 的填充码类型</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataXmlResponse.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataXmlResponse.#ctor(UpdateData.ServiceReference1.getHourlyDataXmlResponse)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataXmlResponse.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataXmlResponse.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataXmlResponse.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataXmlResponse.Constructor">
+            <summary>设置 getHourlyDataXmlResponse.getHourlyDataXmlResponse() 的 填充码</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataXmlResponse.ConstructorString">
+            <summary>设置 getHourlyDataXmlResponse.getHourlyDataXmlResponse(String getHourlyDataXmlResult) 的 填充码</summary>
+        </member>
+        <member name="T:UpdateData.ServiceReference1.Fakes.ShimgetHourlyDataXmlResponse.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="T:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoap">
+            <summary>UpdateData.ServiceReference1.AirQualityWebServiceSoap 的存根类型</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoap.#ctor">
+            <summary>初始化 type StubAirQualityWebServiceSoap 的新实例</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoap.GetHourlyDataSetgetHourlyDataSetRequest">
+            <summary>设置 AirQualityWebServiceSoap.getHourlyDataSet(getHourlyDataSetRequest request) 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoap.GetHourlyDataXmlgetHourlyDataXmlRequest">
+            <summary>设置 AirQualityWebServiceSoap.getHourlyDataXml(getHourlyDataXmlRequest request) 的 stub</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoap.ud::UpdateData#ServiceReference1#AirQualityWebServiceSoap#getHourlyDataSet(UpdateData.ServiceReference1.getHourlyDataSetRequest)">
+            <summary>设置 AirQualityWebServiceSoap.getHourlyDataSet(getHourlyDataSetRequest request) 的 存根</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoap.ud::UpdateData#ServiceReference1#AirQualityWebServiceSoap#getHourlyDataXml(UpdateData.ServiceReference1.getHourlyDataXmlRequest)">
+            <summary>设置 AirQualityWebServiceSoap.getHourlyDataXml(getHourlyDataXmlRequest request) 的 存根</summary>
+        </member>
+        <member name="T:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel">
+            <summary>UpdateData.ServiceReference1.AirQualityWebServiceSoapChannel 的存根类型</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.#ctor">
+            <summary>初始化 type StubAirQualityWebServiceSoapChannel 的新实例</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.Abort">
+            <summary>设置 ICommunicationObject.Abort() 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.AllowInitializationUIGet">
+            <summary>设置 IClientChannel.get_AllowInitializationUI() 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.AllowInitializationUISetBoolean">
+            <summary>设置 IClientChannel.set_AllowInitializationUI(Boolean value) 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.AllowOutputBatchingGet">
+            <summary>设置 IContextChannel.get_AllowOutputBatching() 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.AllowOutputBatchingSetBoolean">
+            <summary>设置 IContextChannel.set_AllowOutputBatching(Boolean value) 的 stub</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.AttachBackingFieldToAllowInitializationUI">
+            <summary>附加委托以将 StubAirQualityWebServiceSoapChannel.AllowInitializationUI 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.AttachBackingFieldToAllowOutputBatching">
+            <summary>附加委托以将 StubAirQualityWebServiceSoapChannel.AllowOutputBatching 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.AttachBackingFieldToOperationTimeout">
+            <summary>附加委托以将 StubAirQualityWebServiceSoapChannel.OperationTimeout 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.BeginCloseAsyncCallbackObject">
+            <summary>设置 ICommunicationObject.BeginClose(AsyncCallback callback, Object state) 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.BeginCloseTimeSpanAsyncCallbackObject">
+            <summary>设置 ICommunicationObject.BeginClose(TimeSpan timeout, AsyncCallback callback, Object state) 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.BeginDisplayInitializationUIAsyncCallbackObject">
+            <summary>设置 IClientChannel.BeginDisplayInitializationUI(AsyncCallback callback, Object state) 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.BeginOpenAsyncCallbackObject">
+            <summary>设置 ICommunicationObject.BeginOpen(AsyncCallback callback, Object state) 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.BeginOpenTimeSpanAsyncCallbackObject">
+            <summary>设置 ICommunicationObject.BeginOpen(TimeSpan timeout, AsyncCallback callback, Object state) 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.Close">
+            <summary>设置 ICommunicationObject.Close() 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.CloseTimeSpan">
+            <summary>设置 ICommunicationObject.Close(TimeSpan timeout) 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.DidInteractiveInitializationGet">
+            <summary>设置 IClientChannel.get_DidInteractiveInitialization() 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.DisplayInitializationUI">
+            <summary>设置 IClientChannel.DisplayInitializationUI() 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.Dispose">
+            <summary>设置 IDisposable.Dispose() 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.EndCloseIAsyncResult">
+            <summary>设置 ICommunicationObject.EndClose(IAsyncResult result) 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.EndDisplayInitializationUIIAsyncResult">
+            <summary>设置 IClientChannel.EndDisplayInitializationUI(IAsyncResult result) 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.EndOpenIAsyncResult">
+            <summary>设置 ICommunicationObject.EndOpen(IAsyncResult result) 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ExtensionsGet">
+            <summary>设置 IExtensibleObject`1.get_Extensions() 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.GetHourlyDataSetgetHourlyDataSetRequest">
+            <summary>设置 AirQualityWebServiceSoap.getHourlyDataSet(getHourlyDataSetRequest request) 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.GetHourlyDataXmlgetHourlyDataXmlRequest">
+            <summary>设置 AirQualityWebServiceSoap.getHourlyDataXml(getHourlyDataXmlRequest request) 的 stub</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.GetPropertyOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{``0})">
+            <summary>设置 GetProperty() 的存根</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.InputSessionGet">
+            <summary>设置 IContextChannel.get_InputSession() 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.LocalAddressGet">
+            <summary>设置 IContextChannel.get_LocalAddress() 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.Open">
+            <summary>设置 ICommunicationObject.Open() 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.OpenTimeSpan">
+            <summary>设置 ICommunicationObject.Open(TimeSpan timeout) 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.OperationTimeoutGet">
+            <summary>设置 IContextChannel.get_OperationTimeout() 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.OperationTimeoutSetTimeSpan">
+            <summary>设置 IContextChannel.set_OperationTimeout(TimeSpan value) 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.OutputSessionGet">
+            <summary>设置 IContextChannel.get_OutputSession() 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.RemoteAddressGet">
+            <summary>设置 IContextChannel.get_RemoteAddress() 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.SessionIdGet">
+            <summary>设置 IContextChannel.get_SessionId() 的 stub</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.StateGet">
+            <summary>设置 ICommunicationObject.get_State() 的 stub</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.global::System#IDisposable#Dispose">
+            <summary>设置 IDisposable.Dispose() 的 存根</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#Channels#IChannel#GetProperty``1">
+            <summary>设置 IChannel.GetProperty() 的 存根</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#IClientChannel#BeginDisplayInitializationUI(System.AsyncCallback,System.Object)">
+            <summary>设置 IClientChannel.BeginDisplayInitializationUI(AsyncCallback callback, Object state) 的 存根</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#IClientChannel#DisplayInitializationUI">
+            <summary>设置 IClientChannel.DisplayInitializationUI() 的 存根</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#IClientChannel#EndDisplayInitializationUI(System.IAsyncResult)">
+            <summary>设置 IClientChannel.EndDisplayInitializationUI(IAsyncResult result) 的 存根</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#ICommunicationObject#Abort">
+            <summary>设置 ICommunicationObject.Abort() 的 存根</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#ICommunicationObject#BeginClose(System.AsyncCallback,System.Object)">
+            <summary>设置 ICommunicationObject.BeginClose(AsyncCallback callback, Object state) 的 存根</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#ICommunicationObject#BeginClose(System.TimeSpan,System.AsyncCallback,System.Object)">
+            <summary>设置 ICommunicationObject.BeginClose(TimeSpan timeout, AsyncCallback callback, Object state) 的 存根</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#ICommunicationObject#BeginOpen(System.AsyncCallback,System.Object)">
+            <summary>设置 ICommunicationObject.BeginOpen(AsyncCallback callback, Object state) 的 存根</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#ICommunicationObject#BeginOpen(System.TimeSpan,System.AsyncCallback,System.Object)">
+            <summary>设置 ICommunicationObject.BeginOpen(TimeSpan timeout, AsyncCallback callback, Object state) 的 存根</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#ICommunicationObject#Close">
+            <summary>设置 ICommunicationObject.Close() 的 存根</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#ICommunicationObject#Close(System.TimeSpan)">
+            <summary>设置 ICommunicationObject.Close(TimeSpan timeout) 的 存根</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#ICommunicationObject#EndClose(System.IAsyncResult)">
+            <summary>设置 ICommunicationObject.EndClose(IAsyncResult result) 的 存根</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#ICommunicationObject#EndOpen(System.IAsyncResult)">
+            <summary>设置 ICommunicationObject.EndOpen(IAsyncResult result) 的 存根</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#ICommunicationObject#Open">
+            <summary>设置 ICommunicationObject.Open() 的 存根</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#ICommunicationObject#Open(System.TimeSpan)">
+            <summary>设置 ICommunicationObject.Open(TimeSpan timeout) 的 存根</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ud::UpdateData#ServiceReference1#AirQualityWebServiceSoap#getHourlyDataSet(UpdateData.ServiceReference1.getHourlyDataSetRequest)">
+            <summary>设置 AirQualityWebServiceSoap.getHourlyDataSet(getHourlyDataSetRequest request) 的 存根</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ud::UpdateData#ServiceReference1#AirQualityWebServiceSoap#getHourlyDataXml(UpdateData.ServiceReference1.getHourlyDataXmlRequest)">
+            <summary>设置 AirQualityWebServiceSoap.getHourlyDataXml(getHourlyDataXmlRequest request) 的 存根</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ViaGet">
+            <summary>设置 IClientChannel.get_Via() 的 stub</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#IClientChannel#AllowInitializationUI">
+            <summary>设置 IClientChannel.get_AllowInitializationUI() 的 stub</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#IContextChannel#AllowOutputBatching">
+            <summary>设置 IContextChannel.get_AllowOutputBatching() 的 stub</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#IClientChannel#DidInteractiveInitialization">
+            <summary>设置 IClientChannel.get_DidInteractiveInitialization() 的 stub</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#IExtensibleObject{System#ServiceModel#IContextChannel}#Extensions">
+            <summary>设置 IExtensibleObject`1.get_Extensions() 的 stub</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#IContextChannel#InputSession">
+            <summary>设置 IContextChannel.get_InputSession() 的 stub</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#IContextChannel#LocalAddress">
+            <summary>设置 IContextChannel.get_LocalAddress() 的 stub</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#IContextChannel#OperationTimeout">
+            <summary>设置 IContextChannel.get_OperationTimeout() 的 stub</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#IContextChannel#OutputSession">
+            <summary>设置 IContextChannel.get_OutputSession() 的 stub</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#IContextChannel#RemoteAddress">
+            <summary>设置 IContextChannel.get_RemoteAddress() 的 stub</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#IContextChannel#SessionId">
+            <summary>设置 IContextChannel.get_SessionId() 的 stub</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#ICommunicationObject#State">
+            <summary>设置 ICommunicationObject.get_State() 的 stub</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapChannel.ssm::System#ServiceModel#IClientChannel#Via">
+            <summary>设置 IClientChannel.get_Via() 的 stub</summary>
+        </member>
+        <member name="T:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapClient">
+            <summary>UpdateData.ServiceReference1.AirQualityWebServiceSoapClient 的存根类型</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapClient.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapClient.#ctor(System.String)">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapClient.#ctor(System.ServiceModel.Channels.Binding,System.ServiceModel.EndpointAddress)">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapClient.#ctor(System.String,System.ServiceModel.EndpointAddress)">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapClient.#ctor(System.String,System.String)">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapClient.CreateChannel">
+            <summary>设置 ClientBase`1.CreateChannel() 的 存根</summary>
+        </member>
+        <member name="F:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapClient.CreateChannel01">
+            <summary>设置 ClientBase`1.CreateChannel() 的 stub</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapClient.InitializeStub">
+            <summary>初始化 type StubAirQualityWebServiceSoapClient 的新实例</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapClient.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapClient.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubAirQualityWebServiceSoapClient.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:UpdateData.ServiceReference1.Fakes.StubMySoapHeader">
+            <summary>UpdateData.ServiceReference1.MySoapHeader 的存根类型</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubMySoapHeader.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubMySoapHeader.InitializeStub">
+            <summary>初始化 type StubMySoapHeader 的新实例</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubMySoapHeader.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubMySoapHeader.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubMySoapHeader.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataSetRequest">
+            <summary>UpdateData.ServiceReference1.getHourlyDataSetRequest 的存根类型</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataSetRequest.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataSetRequest.#ctor(UpdateData.ServiceReference1.MySoapHeader,System.String,System.String)">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataSetRequest.InitializeStub">
+            <summary>初始化 type StubgetHourlyDataSetRequest 的新实例</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataSetRequest.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataSetRequest.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataSetRequest.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataSetResponse">
+            <summary>UpdateData.ServiceReference1.getHourlyDataSetResponse 的存根类型</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataSetResponse.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataSetResponse.#ctor(System.Data.DataSet)">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataSetResponse.InitializeStub">
+            <summary>初始化 type StubgetHourlyDataSetResponse 的新实例</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataSetResponse.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataSetResponse.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataSetResponse.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataXmlRequest">
+            <summary>UpdateData.ServiceReference1.getHourlyDataXmlRequest 的存根类型</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataXmlRequest.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataXmlRequest.#ctor(UpdateData.ServiceReference1.MySoapHeader,System.String,System.String)">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataXmlRequest.InitializeStub">
+            <summary>初始化 type StubgetHourlyDataXmlRequest 的新实例</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataXmlRequest.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataXmlRequest.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataXmlRequest.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="T:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataXmlResponse">
+            <summary>UpdateData.ServiceReference1.getHourlyDataXmlResponse 的存根类型</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataXmlResponse.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataXmlResponse.#ctor(System.String)">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataXmlResponse.InitializeStub">
+            <summary>初始化 type StubgetHourlyDataXmlResponse 的新实例</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataXmlResponse.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataXmlResponse.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:UpdateData.ServiceReference1.Fakes.StubgetHourlyDataXmlResponse.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+    </members>
+</doc>

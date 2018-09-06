@@ -1,0 +1,73 @@
+﻿
+
+
+.RadSplitter_Neptune {
+  font-size: 12px;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  /* Borders */
+  /* When ShowContentDuringLoad="false" */
+  /* RadSplitBar/RadSlidingPane resize elements */
+  /* RadSlidingPane tab */
+  /* RadSlidingPane tab */
+  /* RadSplitBar buttons */
+  /* RadSlidingPane buttons */
+  /* RadSlidingPane header */
+  /* RadSlidingPane header elements */
+  /* RadSlidingPane title text */ }
+  .RadSplitter_Neptune,
+  .RadSplitter_Neptune .rspPaneTabContainer,
+  .RadSplitter_Neptune .rspPane,
+  .RadSplitter_Neptune .rspResizeBar,
+  .RadSplitter_Neptune .rspSlideContainerResize,
+  .RadSplitter_Neptune .rspPaneHorizontal,
+  .RadSplitter_Neptune .rspResizeBarHorizontal,
+  .RadSplitter_Neptune .rspSlideContainerResizeHorizontal {
+    border-color: #6788be; }
+  .RadSplitter_Neptune .rspLoading {
+    background-image: url('Common/loading.gif'); }
+  .RadSplitter_Neptune .rspResizeBar,
+  .RadSplitter_Neptune .rspSlideContainerResize,
+  .RadSplitter_Neptune .rspResizeBarOver,
+  .RadSplitter_Neptune .rspSlideContainerResizeOver {
+    background-image: url('Splitter/ResizeBarVerticalSprites.gif');
+    background-color: white;
+    border-right-color: #6788be; }
+  .RadSplitter_Neptune .rspResizeBarHorizontal,
+  .RadSplitter_Neptune .rspSlideContainerResizeHorizontal,
+  .RadSplitter_Neptune .rspResizeBarOverHorizontal,
+  .RadSplitter_Neptune .rspSlideContainerResizeOverHorizontal {
+    background-image: url('Splitter/ResizeBarHorizontalSprites.gif');
+    background-color: white;
+    border-bottom-color: #6788be; }
+  .RadSplitter_Neptune .rspPaneTabContainer,
+  .RadSplitter_Neptune .rspSlideHeaderDockIcon,
+  .RadSplitter_Neptune .rspSlideHeaderUndockIcon,
+  .RadSplitter_Neptune .rspSlideHeaderCollapseIcon,
+  .RadSplitter_Neptune .rspCollapseBarExpand,
+  .RadSplitter_Neptune .rspCollapseBarCollapse,
+  .RadSplitter_Neptune .rspCollapseBarHorizontalExpand,
+  .RadSplitter_Neptune .rspCollapseBarHorizontalCollapse {
+    background-image: url('Splitter/ExpandCollapseBarsCommands.gif'); }
+  .RadSplitter_Neptune .RadSplitter_Neptune .rspPaneTabContainer {
+    background-color: white; }
+  .RadSplitter_Neptune .rspSlideHeader,
+  .RadSplitter_Neptune .rspSlideTitleContainer,
+  .RadSplitter_Neptune .rspBottom .rspPaneTabContainer,
+  .RadSplitter_Neptune .rspTop .rspPaneTabContainer {
+    background-image: url('Splitter/slideTitleContainerBgr.gif');
+    background-repeat: repeat-x; }
+  .RadSplitter_Neptune .rspBottom .rspPaneTabContainer,
+  .RadSplitter_Neptune .rspTop .rspPaneTabContainer {
+    background-position: 0 -1px; }
+  .RadSplitter_Neptune .rspTabsContainer .rspPaneTabContainerDocked {
+    background: white none; }
+  .RadSplitter_Neptune .rspSlideTitleContainer,
+  .RadSplitter_Neptune .rspSlideHeaderIconWrapper {
+    border-bottom: 1px solid #6788be; }
+  .RadSplitter_Neptune .rspSlideTitle,
+  .RadSplitter_Neptune .rspPaneTabText {
+    color: #fff; }
+  .RadSplitter_Neptune .rspPaneTabContainerDocked .rspPaneTabText {
+    color: #4e75b3; }
+
+

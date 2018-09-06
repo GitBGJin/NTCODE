@@ -1,0 +1,58 @@
+Time:    2017/9/12 14:58:37
+Action:  数据异常
+Message: System.ArgumentException: 列“PollutantCode”不属于表 。
+   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.get_Item(String columnName)
+   在 WebServiceForData.WebServiceForData.GetInstrumentsFactorsData(String instrumentUid, String startTime) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 890
+-----------------------------------------------------------
+
+Time:    2017/9/12 14:59:12
+Action:  数据异常
+Message: System.ArgumentException: 列“PollutantCode”不属于表 。
+   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.get_Item(String columnName)
+   在 WebServiceForData.WebServiceForData.GetInstrumentsFactorsData(String instrumentUid, String startTime) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 890
+-----------------------------------------------------------
+
+Time:    2017/9/12 17:35:32
+Action:  数据异常
+Message: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebServiceForData.WebServiceForData.PutInDt(String name, String startTime, DataTable dt) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 784
+   在 WebServiceForData.WebServiceForData.GetVocData(String startTime, String type) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 427
+-----------------------------------------------------------
+
+Time:    2017/9/12 17:36:01
+Action:  数据异常
+Message: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebServiceForData.WebServiceForData.PutInDt(String name, String startTime, DataTable dt) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 784
+   在 WebServiceForData.WebServiceForData.GetVocData(String startTime, String type) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 427
+-----------------------------------------------------------
+
+Time:    2017/9/12 17:37:23
+Action:  数据异常
+Message: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebServiceForData.WebServiceForData.PutInDt(String name, String startTime, DataTable dt) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 784
+   在 WebServiceForData.WebServiceForData.GetVocData(String startTime, String type) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 427
+-----------------------------------------------------------
+
+Time:    2017/9/12 20:01:33
+Action:  数据异常
+Message: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebServiceForData.WebServiceForData.PutInDt(String name, String startTime, DataTable dt) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 827
+   在 WebServiceForData.WebServiceForData.GetVocData(String startTime, String type) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 415
+-----------------------------------------------------------
+
+Time:    2017/9/12 20:02:34
+Action:  数据异常
+Message: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebServiceForData.WebServiceForData.PutInDt(String name, String startTime, DataTable dt) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 827
+   在 WebServiceForData.WebServiceForData.GetVocData(String startTime, String type) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 415
+-----------------------------------------------------------
+
+Time:    2017/9/12 20:04:09
+Action:  数据异常
+Message: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebServiceForData.WebServiceForData.PutInDt(String name, String startTime, DataTable dt) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 827
+   在 WebServiceForData.WebServiceForData.GetVocData(String startTime, String type) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 415
+-----------------------------------------------------------
+

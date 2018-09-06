@@ -1,0 +1,12 @@
+D:\NTCODE\Web\WebServiceForMobile\WebServiceForMobile\AQIWS\bin\AQIWS.dll
+D:\NTCODE\Web\WebServiceForMobile\WebServiceForMobile\AQIWS\bin\AQIWS.pdb
+D:\NTCODE\Web\WebServiceForMobile\WebServiceForMobile\AQIWS\bin\ChnCharInfo.dll
+D:\NTCODE\Web\WebServiceForMobile\WebServiceForMobile\AQIWS\bin\SmartEP.Utilities.dll
+D:\NTCODE\Web\WebServiceForMobile\WebServiceForMobile\AQIWS\bin\ICSharpCode.SharpZipLib.dll
+D:\NTCODE\Web\WebServiceForMobile\WebServiceForMobile\AQIWS\bin\Aspose.Cells.dll
+D:\NTCODE\Web\WebServiceForMobile\WebServiceForMobile\AQIWS\bin\Aspose.Words.dll
+D:\NTCODE\Web\WebServiceForMobile\WebServiceForMobile\AQIWS\bin\ChnCharInfo.xml
+D:\NTCODE\Web\WebServiceForMobile\WebServiceForMobile\AQIWS\bin\SmartEP.Utilities.pdb
+D:\NTCODE\Web\WebServiceForMobile\WebServiceForMobile\AQIWS\obj\Debug\AQIWS.dll
+D:\NTCODE\Web\WebServiceForMobile\WebServiceForMobile\AQIWS\obj\Debug\AQIWS.pdb
+D:\NTCODE\Web\WebServiceForMobile\WebServiceForMobile\AQIWS\obj\Debug\AQIWS.csprojResolveAssemblyReference.cache

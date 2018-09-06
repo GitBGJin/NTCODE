@@ -1,0 +1,32 @@
+.RadSiteMap_Outlook {
+  color: black;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif; }
+  .RadSiteMap_Outlook .rsmTwoLevels .rsmLink, .RadSiteMap_Outlook .rsmThreeLevels .rsmLink, .RadSiteMap_Outlook .rsmManyLevels .rsmLink {
+    border-bottom: 0;
+    background-color: #adc9f7; }
+  .RadSiteMap_Outlook .rsmManyLevels .rsmLevel1 .rsmLink {
+    border-bottom: 0;
+    color: #225edb;
+    background-color: transparent; }
+    .RadSiteMap_Outlook .rsmManyLevels .rsmLevel1 .rsmLink:hover {
+      color: #000000; }
+  .RadSiteMap_Outlook .rsmOneLevel .rsmLink, .RadSiteMap_Outlook .rsmTwoLevels .rsmLevel1 .rsmLink, .RadSiteMap_Outlook .rsmThreeLevels .rsmLevel1 .rsmLink, .RadSiteMap_Outlook .rsmManyLevels .rsmLevel2 .rsmLink {
+    border: 0;
+    border-radius: 3px;
+    color: #000000;
+    background-color: transparent; }
+    .RadSiteMap_Outlook .rsmOneLevel .rsmLink:hover, .RadSiteMap_Outlook .rsmTwoLevels .rsmLevel1 .rsmLink:hover, .RadSiteMap_Outlook .rsmThreeLevels .rsmLevel1 .rsmLink:hover, .RadSiteMap_Outlook .rsmManyLevels .rsmLevel2 .rsmLink:hover {
+      color: black;
+      background-color: #ffd294;
+      background-position: 0 -1000px; }
+  .RadSiteMap_Outlook .rsmLink,
+  .RadSiteMap_Outlook .rsmTemplate {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #003cbb; }
+  .RadSiteMap_Outlook .rsmLink {
+    background-image: url('Common/radGradientListSprite.png'); }
+  .RadSiteMap_Outlook .rsmLink:hover {
+    color: #000000; }
+  .RadSiteMap_Outlook .rsmLevel .rsmNodeLines .rsmItem {
+    background-image: url('SiteMap/NodeLines.png'); }

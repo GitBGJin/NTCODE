@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInsTypeByObjectID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInsTypeByObjectIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInsTypeByObjectIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReagentByRowGuid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReagentGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReagentByRowGuidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReagentByRowGuidResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReagentByidOrName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReagentGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReagentName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReagentByidOrNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReagentByidOrNameResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFittingInstenceByObjectID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFittingInstenceByObjectIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFittingInstenceByObjectIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConsumptiveByObjectID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConsumptiveByObjectIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetConsumptiveByObjectIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFittingInfoByInstence">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FixedAssetNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFittingInfoByInstenceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFittingInfoByInstenceResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInstenceInfoByFixedAssetNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FixedAssetNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInstenceInfoByFixedAssetNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInstenceInfoByFixedAssetNumberResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFittingInstenceInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FittingInstenceguid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFittingInstenceInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFittingInstenceInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConsumptiveByType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetConsumptiveByTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetConsumptiveByTypeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInstanceTimeType">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetInstanceTimeTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInstanceTimeTypeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInstanceStatus">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetInstanceStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInstanceStatusResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateInstanceStatusRecord">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FixedAssetNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="statusguid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="timetypeguid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OperateContent" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Note" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FormUrl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="changetype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deviceguid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OperateResault" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IsReagent" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReagentGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateInstanceStatusRecordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateInstanceStatusRecordResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateFittingInstanceStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FittingInstanceGuid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateFittingInstanceStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateFittingInstanceStatusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReagentByReagentType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="typename" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReagentByReagentTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReagentByReagentTypeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReagentTypeAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetReagentTypeAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReagentTypeAllResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUseingReagentByInstence">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="objectID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUseingReagentByInstenceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUseingReagentByInstenceResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReagentInfoByInsID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReagentInfoByInsIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReagentInfoByInsIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInsTypeByObjectIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInsTypeByObjectID" />
+  </wsdl:message>
+  <wsdl:message name="GetInsTypeByObjectIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInsTypeByObjectIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReagentByRowGuidSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReagentByRowGuid" />
+  </wsdl:message>
+  <wsdl:message name="GetReagentByRowGuidSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReagentByRowGuidResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReagentByidOrNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReagentByidOrName" />
+  </wsdl:message>
+  <wsdl:message name="GetReagentByidOrNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReagentByidOrNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFittingInstenceByObjectIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFittingInstenceByObjectID" />
+  </wsdl:message>
+  <wsdl:message name="GetFittingInstenceByObjectIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFittingInstenceByObjectIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetConsumptiveByObjectIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetConsumptiveByObjectID" />
+  </wsdl:message>
+  <wsdl:message name="GetConsumptiveByObjectIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetConsumptiveByObjectIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFittingInfoByInstenceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFittingInfoByInstence" />
+  </wsdl:message>
+  <wsdl:message name="GetFittingInfoByInstenceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFittingInfoByInstenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInstenceInfoByFixedAssetNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInstenceInfoByFixedAssetNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetInstenceInfoByFixedAssetNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInstenceInfoByFixedAssetNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFittingInstenceInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFittingInstenceInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetFittingInstenceInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFittingInstenceInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetConsumptiveByTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetConsumptiveByType" />
+  </wsdl:message>
+  <wsdl:message name="GetConsumptiveByTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetConsumptiveByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInstanceTimeTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInstanceTimeType" />
+  </wsdl:message>
+  <wsdl:message name="GetInstanceTimeTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInstanceTimeTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInstanceStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInstanceStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetInstanceStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInstanceStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateInstanceStatusRecordSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateInstanceStatusRecord" />
+  </wsdl:message>
+  <wsdl:message name="UpdateInstanceStatusRecordSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateInstanceStatusRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFittingInstanceStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateFittingInstanceStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFittingInstanceStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateFittingInstanceStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReagentByReagentTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReagentByReagentType" />
+  </wsdl:message>
+  <wsdl:message name="GetReagentByReagentTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReagentByReagentTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReagentTypeAllSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReagentTypeAll" />
+  </wsdl:message>
+  <wsdl:message name="GetReagentTypeAllSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReagentTypeAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUseingReagentByInstenceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUseingReagentByInstence" />
+  </wsdl:message>
+  <wsdl:message name="GetUseingReagentByInstenceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUseingReagentByInstenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReagentInfoByInsIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReagentInfoByInsID" />
+  </wsdl:message>
+  <wsdl:message name="GetReagentInfoByInsIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReagentInfoByInsIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TempGetDataWebServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Hello World OK</wsdl:documentation>
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsTypeByObjectID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询某个站点拥有的仪器类型</wsdl:documentation>
+      <wsdl:input message="tns:GetInsTypeByObjectIDSoapIn" />
+      <wsdl:output message="tns:GetInsTypeByObjectIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReagentByRowGuid">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> 通过标液ID查询标液信息</wsdl:documentation>
+      <wsdl:input message="tns:GetReagentByRowGuidSoapIn" />
+      <wsdl:output message="tns:GetReagentByRowGuidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReagentByidOrName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过标液ID,标液名称查询标液信息</wsdl:documentation>
+      <wsdl:input message="tns:GetReagentByidOrNameSoapIn" />
+      <wsdl:output message="tns:GetReagentByidOrNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFittingInstenceByObjectID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过站点标识获取相应备件信息</wsdl:documentation>
+      <wsdl:input message="tns:GetFittingInstenceByObjectIDSoapIn" />
+      <wsdl:output message="tns:GetFittingInstenceByObjectIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConsumptiveByObjectID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询某个站点里面涉及到的耗材</wsdl:documentation>
+      <wsdl:input message="tns:GetConsumptiveByObjectIDSoapIn" />
+      <wsdl:output message="tns:GetConsumptiveByObjectIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFittingInfoByInstence">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查询仪器对应备件清单</wsdl:documentation>
+      <wsdl:input message="tns:GetFittingInfoByInstenceSoapIn" />
+      <wsdl:output message="tns:GetFittingInfoByInstenceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInstenceInfoByFixedAssetNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取仪器清单</wsdl:documentation>
+      <wsdl:input message="tns:GetInstenceInfoByFixedAssetNumberSoapIn" />
+      <wsdl:output message="tns:GetInstenceInfoByFixedAssetNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFittingInstenceInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取备品备件清单</wsdl:documentation>
+      <wsdl:input message="tns:GetFittingInstenceInfoSoapIn" />
+      <wsdl:output message="tns:GetFittingInstenceInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConsumptiveByType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过耗材类型获取耗材信息</wsdl:documentation>
+      <wsdl:input message="tns:GetConsumptiveByTypeSoapIn" />
+      <wsdl:output message="tns:GetConsumptiveByTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInstanceTimeType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取仪器状态类型(全生命周期) 父节点：ParentGuid=0 </wsdl:documentation>
+      <wsdl:input message="tns:GetInstanceTimeTypeSoapIn" />
+      <wsdl:output message="tns:GetInstanceTimeTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInstanceStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> 获取仪器状态(实例)</wsdl:documentation>
+      <wsdl:input message="tns:GetInstanceStatusSoapIn" />
+      <wsdl:output message="tns:GetInstanceStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInstanceStatusRecord">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新仪器状态</wsdl:documentation>
+      <wsdl:input message="tns:UpdateInstanceStatusRecordSoapIn" />
+      <wsdl:output message="tns:UpdateInstanceStatusRecordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFittingInstanceStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新备品备件状态</wsdl:documentation>
+      <wsdl:input message="tns:UpdateFittingInstanceStatusSoapIn" />
+      <wsdl:output message="tns:UpdateFittingInstanceStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReagentByReagentType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过标液类型名称查找标液信息</wsdl:documentation>
+      <wsdl:input message="tns:GetReagentByReagentTypeSoapIn" />
+      <wsdl:output message="tns:GetReagentByReagentTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReagentTypeAll">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">查找所有标液类型</wsdl:documentation>
+      <wsdl:input message="tns:GetReagentTypeAllSoapIn" />
+      <wsdl:output message="tns:GetReagentTypeAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUseingReagentByInstence">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">通过站点id、仪器id(固定资产编号)获取正在使用中的标液信息</wsdl:documentation>
+      <wsdl:input message="tns:GetUseingReagentByInstenceSoapIn" />
+      <wsdl:output message="tns:GetUseingReagentByInstenceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReagentInfoByInsID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"> 通过仪器ID获取适用于该类仪器的所有标液信息</wsdl:documentation>
+      <wsdl:input message="tns:GetReagentInfoByInsIDSoapIn" />
+      <wsdl:output message="tns:GetReagentInfoByInsIDSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TempGetDataWebServiceSoap" type="tns:TempGetDataWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsTypeByObjectID">
+      <soap:operation soapAction="http://tempuri.org/GetInsTypeByObjectID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReagentByRowGuid">
+      <soap:operation soapAction="http://tempuri.org/GetReagentByRowGuid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReagentByidOrName">
+      <soap:operation soapAction="http://tempuri.org/GetReagentByidOrName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFittingInstenceByObjectID">
+      <soap:operation soapAction="http://tempuri.org/GetFittingInstenceByObjectID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConsumptiveByObjectID">
+      <soap:operation soapAction="http://tempuri.org/GetConsumptiveByObjectID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFittingInfoByInstence">
+      <soap:operation soapAction="http://tempuri.org/GetFittingInfoByInstence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInstenceInfoByFixedAssetNumber">
+      <soap:operation soapAction="http://tempuri.org/GetInstenceInfoByFixedAssetNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFittingInstenceInfo">
+      <soap:operation soapAction="http://tempuri.org/GetFittingInstenceInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConsumptiveByType">
+      <soap:operation soapAction="http://tempuri.org/GetConsumptiveByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInstanceTimeType">
+      <soap:operation soapAction="http://tempuri.org/GetInstanceTimeType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInstanceStatus">
+      <soap:operation soapAction="http://tempuri.org/GetInstanceStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInstanceStatusRecord">
+      <soap:operation soapAction="http://tempuri.org/UpdateInstanceStatusRecord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFittingInstanceStatus">
+      <soap:operation soapAction="http://tempuri.org/UpdateFittingInstanceStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReagentByReagentType">
+      <soap:operation soapAction="http://tempuri.org/GetReagentByReagentType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReagentTypeAll">
+      <soap:operation soapAction="http://tempuri.org/GetReagentTypeAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUseingReagentByInstence">
+      <soap:operation soapAction="http://tempuri.org/GetUseingReagentByInstence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReagentInfoByInsID">
+      <soap:operation soapAction="http://tempuri.org/GetReagentInfoByInsID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TempGetDataWebServiceSoap12" type="tns:TempGetDataWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsTypeByObjectID">
+      <soap12:operation soapAction="http://tempuri.org/GetInsTypeByObjectID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReagentByRowGuid">
+      <soap12:operation soapAction="http://tempuri.org/GetReagentByRowGuid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReagentByidOrName">
+      <soap12:operation soapAction="http://tempuri.org/GetReagentByidOrName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFittingInstenceByObjectID">
+      <soap12:operation soapAction="http://tempuri.org/GetFittingInstenceByObjectID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConsumptiveByObjectID">
+      <soap12:operation soapAction="http://tempuri.org/GetConsumptiveByObjectID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFittingInfoByInstence">
+      <soap12:operation soapAction="http://tempuri.org/GetFittingInfoByInstence" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInstenceInfoByFixedAssetNumber">
+      <soap12:operation soapAction="http://tempuri.org/GetInstenceInfoByFixedAssetNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFittingInstenceInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetFittingInstenceInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConsumptiveByType">
+      <soap12:operation soapAction="http://tempuri.org/GetConsumptiveByType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInstanceTimeType">
+      <soap12:operation soapAction="http://tempuri.org/GetInstanceTimeType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInstanceStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetInstanceStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInstanceStatusRecord">
+      <soap12:operation soapAction="http://tempuri.org/UpdateInstanceStatusRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFittingInstanceStatus">
+      <soap12:operation soapAction="http://tempuri.org/UpdateFittingInstanceStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReagentByReagentType">
+      <soap12:operation soapAction="http://tempuri.org/GetReagentByReagentType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReagentTypeAll">
+      <soap12:operation soapAction="http://tempuri.org/GetReagentTypeAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUseingReagentByInstence">
+      <soap12:operation soapAction="http://tempuri.org/GetUseingReagentByInstence" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReagentInfoByInsID">
+      <soap12:operation soapAction="http://tempuri.org/GetReagentInfoByInsID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TempGetDataWebService">
+    <wsdl:port name="TempGetDataWebServiceSoap" binding="tns:TempGetDataWebServiceSoap">
+      <soap:address location="http://192.168.11.65/OMMP/WebService/TempGetDataWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TempGetDataWebServiceSoap12" binding="tns:TempGetDataWebServiceSoap12">
+      <soap12:address location="http://192.168.11.65/OMMP/WebService/TempGetDataWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

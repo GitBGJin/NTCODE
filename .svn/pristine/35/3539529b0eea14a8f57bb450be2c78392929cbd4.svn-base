@@ -1,0 +1,163 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DayReportDBFUpload.aspx.cs" Inherits="SmartEP.WebUI.Pages.EnvAir.Exchange.DayReportDBFUpload" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="textml; charset=utf-8" />
+    <title>DBF上报</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ss" runat="server" />
+        <telerik:RadAjaxPanel ID="RadAjaxPanel1" runat="server">
+            <table>
+                <tr>
+                    <td class="title" style="width: 100px;">FTP地址</td>
+                    <td class="content" style="width: 150px;">
+                        <telerik:RadComboBox runat="server" ID="ApproveCbx" AutoPostBack="true" OnSelectedIndexChanged="ApproveCbx_SelectedIndexChanged"></telerik:RadComboBox>
+                    </td>
+                    <td class="title" style="width: 55px;">文件日期</td>
+                    <td class="content" style="width: 120px;">
+                        <telerik:RadDatePicker ID="RadFtpDate" runat="server" Width="120px" MinDate="1900-01-01"
+                            DateInput-Font-Size="10" DateInput-Font-Bold="true" DateInput-DateFormat="yyyy-MM-dd"
+                            DatePopupButton-ToolTip="打开日历选择" TimePopupButton-ToolTip="打开小时选择" Calendar-FirstDayOfWeek="Monday"
+                            Calendar-FastNavigationSettings-TodayButtonCaption="当前年月" Calendar-FastNavigationSettings-OkButtonCaption="确定"
+                            Calendar-FastNavigationSettings-CancelButtonCaption="取消" Timeview-HeaderText="小时" />
+                    </td>
+                    <td class="title" style="width: 55px;">文件类型</td>
+                    <td class="content" style="width: 260px;">
+                        <asp:CheckBox ID="jswx" Text="国控点" runat="server" Checked="true" />
+                        <asp:CheckBox ID="xjswx" Text="省控点" runat="server" />
+                          <asp:CheckBox ID="xjss" Text="20个省站" runat="server" />
+                        <asp:CheckBox ID="AQIDayReport" Text="AQI日报" runat="server" Checked="false" Visible="false" />
+                    </td>
+                    <td class="btns" style="text-align: left; width: 200px;">
+                        <asp:Button ID="btnBTF" runat="server" Text="重新生成"  OnClick="btnBTF_Click" /></td>
+                    <td class="btns" style="text-align: left; width: 80px;">
+                        <telerik:RadButton runat="server" ID="RadBtnFTP" Width="80px" Text=" FTP上传 "
+                            OnClick="RadBtnFTP_Click" Icon-PrimaryIconUrl="~/Img/TelerikImg/Doc_Publish.gif" UseSubmitBehavior="false" />
+                    </td>
+                </tr>
+            </table>
+        </telerik:RadAjaxPanel>
+        <telerik:RadCodeBlock ID="RadCodeBlock1" runat="server">
+            <script type="text/javascript" src="../../../Resources/JavaScript/JQuery/jquery-1.9.0.js"></script>
+            <script type="text/javascript">
+                function OnClientDropDownClosed(sender, args) {
+                    //alert(sender.get_id().indexOf("RadCBoxPoint") );
+                    if (sender.get_id().indexOf("RadCBoxPoint") >= 0) {
+                        var RadTreeViewFactor = sender.get_items().getItem(0).findControl("RadTreeViewPoint");
+                    }
+                    else {
+                        var RadTreeViewFactor = sender.get_items().getItem(0).findControl("RadTreeViewFactor");
+                    }
+                    var checkedNodesFactor = RadTreeViewFactor.get_checkedNodes();
+                    if (checkedNodesFactor != null) {
+                        var i, FactorName = '';
+                        for (i = 0; i < checkedNodesFactor.length; i++) {
+                            if (checkedNodesFactor[i].get_value() != null) {
+                                if (FactorName == '') {
+                                    FactorName = checkedNodesFactor[i].get_text();
+                                }
+                                else {
+                                    FactorName = FactorName + ';' + checkedNodesFactor[i].get_text();
+                                }
+                            }
+                        }
+                    }
+                    sender.set_text(FactorName);
+                    sender.hideDropDown();
+                }
+
+                function onRequestStart(sender, args) {
+                    if (args.get_eventTarget().indexOf("ExportToExcelButton") >= 0
+                    || args.get_eventTarget().indexOf("ExportToWordButton") >= 0
+                    || args.get_eventTarget().indexOf("ExportToCsvButton") >= 0
+                    || args.get_eventTarget().indexOf("CmdCountry") >= 0
+                    || args.get_eventTarget().indexOf("CmdProvince") >= 0
+                    || args.get_eventTarget().indexOf("CmdMonth") >= 0
+                    ) {
+
+                        args.set_enableAjax(false);
+                    }
+                }
+
+                function OnClientFileOpen(sender, args) {
+                    var item = args.get_item();
+                    if (item && !item.isDirectory() && (item.get_extension() == "txt" || item.get_extension() == "dbf")) {
+                        //file is a MS Office document, do not open a new window.  
+                        args.set_cancel(true);
+
+                        //tell browser to open file directly
+                        __doPostBack('BtnDownLoad', item.get_url());
+                        //window.location.href = item.get_url();
+                    }
+                }
+
+                function OnClientItemSelected(sender, args) {
+                    var item = args.get_item();
+                    var fileExtension = item.get_extension();
+
+                    if (fileExtension == "Txt") {// Download the file 
+                        // File is a image document, do not open a new window
+                        args.set_cancel(true);
+
+                        window.open(item.get_url(), "");
+
+                        // Tell browser to open file directly
+                        //var requestImage = "Handler.ashx?path=" + item.get_url();
+                        //document.location = requestImage;
+                    }
+                }
+            </script>
+            <script type="text/javascript">
+                function OnClientNewClicking() {
+                    $('#AuditSubmitDiv').css("display", "");
+                }
+                $(document).ready(function () {
+                    ResizePageDiv();//设置蒙版div的高度、宽度
+                });
+                function ResizePageDiv() {
+                    var bodyWidth = document.body.clientWidth;
+                    var bodyHeight = document.body.clientHeight;
+                    $('#pagediv').css("height", bodyHeight);
+                    $('#pagediv').css("width", bodyWidth);
+                    $('#AuditSubmitDiv').css("height", bodyHeight);
+                    $('#AuditSubmitDiv').css("width", bodyWidth);
+                }
+            </script>
+        </telerik:RadCodeBlock>
+        <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server">
+            <AjaxSettings>
+                <telerik:AjaxSetting AjaxControlID="RadBtnSearch">
+                    <UpdatedControls>
+                        <telerik:AjaxUpdatedControl ControlID="RadGrid1" />
+                    </UpdatedControls>
+                </telerik:AjaxSetting>
+                <telerik:AjaxSetting AjaxControlID="btnBTF">
+                    <UpdatedControls>
+                        <telerik:AjaxUpdatedControl ControlID="AuditSubmitDiv" LoadingPanelID="RadAjaxLoadingPanel1"></telerik:AjaxUpdatedControl>
+                    </UpdatedControls>
+                </telerik:AjaxSetting>
+                <telerik:AjaxSetting AjaxControlID="ApproveCbx">
+                    <UpdatedControls>
+                        <telerik:AjaxUpdatedControl ControlID="RadTxtFtpServerIP" />
+                        <telerik:AjaxUpdatedControl ControlID="RadTxtFtpUID" />
+                        <telerik:AjaxUpdatedControl ControlID="RadTxtFtpPWD" />
+                    </UpdatedControls>
+                </telerik:AjaxSetting>
+            </AjaxSettings>
+            <ClientEvents OnRequestStart="onRequestStart" />
+        </telerik:RadAjaxManager>
+        <div runat="server" id="pagediv" style="position: absolute; z-index: -1;"></div>
+        <div id="AuditSubmitDiv" style="display: none; vertical-align: middle; text-align: center; background-color: white; opacity: 0.7; filter: alpha(opacity=70); z-index: 100; position: absolute;">
+            <p style="text-align: center; vertical-align: middle; padding-top: 20%; font-weight: bold; font-size: 18px; color: #b4aa38;">重新生成中...</p>
+        </div>
+        <telerik:RadFileExplorer runat="server" ID="RadFileExplorer1" Width="99.8%" Height="580px"
+            EnableOpenFile="true" ExplorerMode="Default" OnClientFileOpen="OnClientFileOpen" OnItemCommand="RadFileExplorer1_ItemCommand">
+        </telerik:RadFileExplorer>
+    </form>
+</body>
+</html>
+

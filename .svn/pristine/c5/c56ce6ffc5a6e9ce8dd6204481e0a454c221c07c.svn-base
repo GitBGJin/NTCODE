@@ -1,0 +1,86 @@
+﻿.rspSlideTitleContainer {
+    background-color: #3A94D3 !important;
+}
+
+.rspSlideTitle {
+    background-color: #3A94D3 !important;
+    color: #fff !important;
+}
+
+.RadSplitter .rspSlideHeader table {
+    background-color: #3A94D3 !important;
+}
+
+.RadSplitter_Neptune .rspSlideTitleContainer {
+    background: #3A94D3 !important;
+}
+
+#RAD_SPLITTER_PANE_CONTENT_MiddlePane {
+    border-left: 3px solid #3A94D3 !important;
+}
+/*.rspPane .rspFirstItem {
+          border-right:3px solid #167cd3 !important;
+        }*/
+#RAD_SLIDING_PANE_TAB_RadSlidingPane_Point {
+    display: none;
+    background-color: #3A94D3 !important;
+    color: #fff !important;
+}
+
+.rspPaneTabText .rspRotatedTabText {
+    background-color: #3A94D3 !important;
+    color: #fff !important;
+}
+
+.rspPaneTabText .rspRotatedTabText {
+    background-color: #3A94D3 !important;
+    color: #fff !important;
+}
+
+#RAD_SLIDING_PANE_TEXT_RadSlidingPane_Point {
+    background-color: #3A94D3 !important;
+    color: #fff !important;
+}
+
+.RadSplitter_Neptune .rspSlideContainerResize {
+    background: #3A94D3 !important;
+}
+
+.RadSplitter_Neptune .rspPaneTabContainer {
+    background: #3A94D3 !important;
+}
+
+.RadSplitter_Neptune .rspPaneTabContainer {
+    background: #3A94D3 !important;
+}
+
+#RAD_SLIDING_ZONE_PANES_CONTAINER_RadSlidingZone1 {
+    border-right: 3px solid #3A94D3 !important;
+}
+
+.rspSlideHeaderUndockIcon {
+    display:none !important;
+}
+
+.RadSplitter_Neptune .rspSlideHeaderCollapseIcon, .RadSplitter_Neptune .rspCollapseBarCollapse, .RadSplitter_Neptune .rspCollapseBarHorizontalCollapse {
+    background-image: url('Splitter/top.png')!important;
+    height: 12px !important;
+    background-position:center !important;
+    /*position: fixed !important;*/
+    background-repeat: no-repeat !important;
+}
+
+.RadSplitter_Neptune .rspCollapseBarExpand, .RadSplitter_Neptune .rspCollapseBarHorizontalExpand {
+    background-image: url('Splitter/bottom.png')!important;
+    height: 12px !important;
+     background-position: center !important;
+    /*position: fixed !important;*/
+    background-repeat: no-repeat !important;
+}
+
+.RadSplitter_Neptune .rspResizeBarHorizontal {
+    /*height:8px !important;*/
+    /*background-image:none !important;*/
+    background-image: none!important; 
+      background-color:#FAFAFA!important;
+}

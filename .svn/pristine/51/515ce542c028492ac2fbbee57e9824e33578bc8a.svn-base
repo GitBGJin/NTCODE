@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityDiagrams>
+  <entityDiagramsDiagram dslVersion="2.0.0.0" absoluteBounds="0, 0, 11, 20.5" name="AirAutoMonitorModel" isDefault="true">
+    <DomainModelMoniker name="/AirAutoMonitorModel" />
+    <nestedChildShapes>
+      <classShape Id="1541f5bd-5b0b-4b76-a266-3bd0311b680f" absoluteBounds="0.75, 0.75, 1.5, 4.428716227213541">
+        <DomainClassMoniker name="/AirAutoMonitorModel/TB_InfectantBy60Buffer" />
+        <nestedChildShapes>
+          <elementListCompartment Id="a104c0df-2957-42fa-97aa-6f1e24c46ea5" absoluteBounds="0.765, 1.2599999999999998, 1.4700000000000002, 3.3037821451822915" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="37348e68-b608-4600-acdd-4f36ca948637" absoluteBounds="0.765, 4.5737821451822915, 1.4700000000000002, 0.247467041015625" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="f687b79a-e028-49b4-bc08-f630b0035f30" absoluteBounds="0.765, 4.8312491861979163, 1.4700000000000002, 0.247467041015625" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+      <classShape Id="61493728-79ee-4155-a29c-72a3e24b9b3d" absoluteBounds="2.75, 1.5, 1.5, 4.428716227213541">
+        <DomainClassMoniker name="/AirAutoMonitorModel/TB_InfectantBy5Buffer" />
+        <nestedChildShapes>
+          <elementListCompartment Id="844ba3aa-8210-4cc8-8135-c4dde0a35cc3" absoluteBounds="2.765, 2.01, 1.4700000000000002, 3.303782145182292" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="c15d9861-6637-4af8-bd3b-c8b4b936b5fa" absoluteBounds="2.765, 5.3237821451822915, 1.4700000000000002, 0.247467041015625" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="71d80f0a-22c7-4020-bebd-ca9141fa6828" absoluteBounds="2.765, 5.5812491861979163, 1.4700000000000002, 0.247467041015625" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+      <classShape Id="8ffac081-a3d6-4dc1-8a82-d1ff8f1a11f9" absoluteBounds="2.75, 0.5, 1.5, 4.428716227213541">
+        <DomainClassMoniker name="/AirAutoMonitorModel/TB_InfectantBy1Buffer" />
+        <nestedChildShapes>
+          <elementListCompartment Id="155b1b2f-ef0a-41d3-aeb7-357df80ad353" absoluteBounds="2.765, 1.01, 1.4700000000000002, 3.303782145182292" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="9dc108b6-a128-4f54-a776-853dfec4d6ee" absoluteBounds="2.765, 4.3237821451822915, 1.4700000000000002, 0.247467041015625" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="b4b4db72-15dc-465a-954a-b3b591d66e92" absoluteBounds="2.765, 4.5812491861979163, 1.4700000000000002, 0.247467041015625" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+      <classShape Id="04aab34f-e2c0-44f0-9b0f-7bb2a8df57e3" absoluteBounds="4.75, 0.5, 1.5, 8.6311494954427079">
+        <DomainClassMoniker name="/AirAutoMonitorModel/TB_OriHourAQI" />
+        <nestedChildShapes>
+          <elementListCompartment Id="32e2c5a0-3e9b-48cf-a4cf-b42b95281a71" absoluteBounds="4.765, 1.01, 1.4700000000000002, 7.506215413411458" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="baaf3870-f63f-4e68-8378-4feccb94e683" absoluteBounds="4.765, 8.5262154134114585, 1.4700000000000002, 0.247467041015625" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="7fcb5658-89ae-4636-b300-ecf9aaa3a1a4" absoluteBounds="4.765, 8.7836824544270833, 1.4700000000000002, 0.247467041015625" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+      <classShape Id="912ef407-7aed-46c3-8eb7-22374e193588" absoluteBounds="2.5, 6.375, 1.5, 4.6197359212239579">
+        <DomainClassMoniker name="/AirAutoMonitorModel/TB_InfectantByMonth" />
+        <nestedChildShapes>
+          <elementListCompartment Id="b46e3d4c-542a-4e03-bc81-c6466b889e49" absoluteBounds="2.515, 6.885, 1.4700000000000002, 3.494801839192708" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="67888833-8bc8-4e7f-a44a-eca82ca73171" absoluteBounds="2.515, 10.389801839192707, 1.4700000000000002, 0.247467041015625" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="de5d5d18-54e2-4927-8878-915cc5270b31" absoluteBounds="2.515, 10.647268880208333, 1.4700000000000002, 0.247467041015625" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+      <classShape Id="1da7ec78-d23e-4f9d-a78c-b141570ec37e" absoluteBounds="0.5, 5.625, 1.5, 4.42871622721354">
+        <DomainClassMoniker name="/AirAutoMonitorModel/TB_InfectantByDay" />
+        <nestedChildShapes>
+          <elementListCompartment Id="e10bf42b-d801-4446-a22a-72ff7ba0f050" absoluteBounds="0.515, 6.135, 1.4700000000000002, 3.303782145182292" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="b1fef9d2-bc3c-46ee-9773-7f3cea720054" absoluteBounds="0.515, 9.4487821451822924, 1.4700000000000002, 0.247467041015625" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="37e36de6-12c8-4daa-9f71-4076d55fd894" absoluteBounds="0.515, 9.7062491861979154, 1.4700000000000002, 0.247467041015625" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+      <classShape Id="ebcb291b-1297-4bbd-a91f-43047a0550e7" absoluteBounds="6.75, 0.5, 1.5, 7.485031331380207">
+        <DomainClassMoniker name="/AirAutoMonitorModel/TB_OriDayAQI" />
+        <nestedChildShapes>
+          <elementListCompartment Id="a423bfd3-c4ab-4df3-9f63-fb68ab4cff64" absoluteBounds="6.765, 1.01, 1.4700000000000002, 6.360097249348958" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="933bd188-ccbe-44da-bf1f-3e4bc0038675" absoluteBounds="6.765, 7.3800972493489576, 1.4700000000000002, 0.247467041015625" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="5f02103b-b563-4573-a530-b7ad49b172fa" absoluteBounds="6.765, 7.6375642903645824, 1.4700000000000002, 0.247467041015625" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+      <classShape Id="1832146d-fda3-4ade-a73f-b13247fc80e5" absoluteBounds="6.75, 8.375, 1.5, 4.6197359212239579">
+        <DomainClassMoniker name="/AirAutoMonitorModel/TB_InfectantBy60" />
+        <nestedChildShapes>
+          <elementListCompartment Id="de6efbd4-ae70-40be-8ef8-2cc01cbdc076" absoluteBounds="6.765, 8.885, 1.4700000000000002, 3.494801839192708" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="18348409-818c-484b-89bb-23caaaef785a" absoluteBounds="6.765, 12.389801839192707, 1.4700000000000002, 0.247467041015625" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="04955f46-bc8b-4195-916b-8c79050e378b" absoluteBounds="6.765, 12.647268880208333, 1.4700000000000002, 0.247467041015625" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+      <classShape Id="a40ec640-8f05-4632-a680-d900d5a9aeca" absoluteBounds="8.75, 0.5, 1.5, 4.619735921223957">
+        <DomainClassMoniker name="/AirAutoMonitorModel/TB_InfectantBy5" />
+        <nestedChildShapes>
+          <elementListCompartment Id="d6683fe9-6b40-4beb-88cb-2dac7443de4c" absoluteBounds="8.765, 1.01, 1.4700000000000002, 3.494801839192708" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="0885b616-a86e-4b24-aa7e-ef1893e42ad9" absoluteBounds="8.765, 4.5148018391927076, 1.4700000000000002, 0.247467041015625" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="3bb8da55-278f-451b-a83b-28e32c7367a9" absoluteBounds="8.765, 4.7722688802083324, 1.4700000000000002, 0.247467041015625" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+      <classShape Id="b8571f1b-135c-4666-a91a-811539df276f" absoluteBounds="8.75, 1.5, 1.5, 4.619735921223957">
+        <DomainClassMoniker name="/AirAutoMonitorModel/TB_InfectantBy1" />
+        <nestedChildShapes>
+          <elementListCompartment Id="8e78f9e5-89b7-42ca-adcb-98f7459b10b8" absoluteBounds="8.765, 2.01, 1.4700000000000002, 3.494801839192708" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="ce28335e-9ac9-47ba-b53f-432386134cdf" absoluteBounds="8.765, 5.5148018391927076, 1.4700000000000002, 0.247467041015625" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="ac262a39-3f7d-48f1-a516-e2ca666f5b56" absoluteBounds="8.765, 5.7722688802083324, 1.4700000000000002, 0.247467041015625" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+      <classShape Id="f327052a-2c19-435b-af4a-dff5953b1cbe" absoluteBounds="2.5, 11.375, 1.5, 8.8221691894531276">
+        <DomainClassMoniker name="/AirAutoMonitorModel/TB_OriRegionHourAQI" />
+        <nestedChildShapes>
+          <elementListCompartment Id="eb68a5a6-ab9f-4b63-80ff-08c0637d66c6" absoluteBounds="2.515, 11.885, 1.4700000000000002, 7.697235107421875" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="582bf3cb-83ee-4371-b84b-62b56ae642b6" absoluteBounds="2.515, 19.592235107421875, 1.4700000000000002, 0.247467041015625" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="19389567-7ab8-40ee-835d-6af520264239" absoluteBounds="2.515, 19.8497021484375, 1.4700000000000002, 0.247467041015625" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+      <classShape Id="053a73f5-963f-4f6c-a343-060b89e452bd" absoluteBounds="2.5, 12.375, 1.5, 7.8670707194010419">
+        <DomainClassMoniker name="/AirAutoMonitorModel/TB_OriRegionDayAQIReport" />
+        <nestedChildShapes>
+          <elementListCompartment Id="974e2fe1-bfb5-4a46-b6b3-65ecc2164e6a" absoluteBounds="2.515, 12.885, 1.4700000000000002, 6.7421366373697911" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="20603aac-cf9b-42b8-b481-a9e8343ed2db" absoluteBounds="2.515, 19.637136637369792, 1.4700000000000002, 0.247467041015625" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="461079f9-e6c9-413f-8e1c-3411f4e2f00d" absoluteBounds="2.515, 19.894603678385415, 1.4700000000000002, 0.247467041015625" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+      <classShape Id="3e53faec-4d20-48ab-b2a9-30447165da66" absoluteBounds="4.5, 9.625, 1.5, 3.28259806315104">
+        <DomainClassMoniker name="/AirAutoMonitorModel/TB_RealAQINearby" />
+        <nestedChildShapes>
+          <elementListCompartment Id="85c1d379-e0b4-45d4-a24d-255820a95d89" absoluteBounds="4.515, 10.135, 1.4700000000000002, 2.157663981119792" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="57938807-7fbb-4f9b-a940-521e89c8728c" absoluteBounds="4.515, 12.302663981119792, 1.4700000000000002, 0.247467041015625" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="d97c6f22-2f79-4c0a-80ce-9132de788465" absoluteBounds="4.515, 12.560131022135415, 1.4700000000000002, 0.247467041015625" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+    </nestedChildShapes>
+  </entityDiagramsDiagram>
+</EntityDiagrams>

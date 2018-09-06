@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A6823FB0-0511-48C1-92AF-A94437484D43}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartEP.MonitoringBusinessRepository</RootNamespace>
+    <AssemblyName>SmartEP.MonitoringBusinessRepository</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\SmartEP.MonitoringBusinessRepository.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\代码库\ITOMMP\Vendor\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartEP.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Vendor\SmartEP\SmartEP.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.OpenAccess, Version=2015.1.225.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Vendor\Telerik Control\Telerik ORM\Telerik.OpenAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.35.Extensions, Version=2015.1.225.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Vendor\Telerik Control\Telerik ORM\Telerik.OpenAccess.35.Extensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Air\AQIForcastConsultationSheetRepository.cs" />
+    <Compile Include="Air\AQIForcastDescRepository.cs" />
+    <Compile Include="Air\AQIForcastRepository.cs" />
+    <Compile Include="Air\AQIForcastWarningReportRepository.cs" />
+    <Compile Include="Air\AuditAirInfectantByHourRepository.cs" />
+    <Compile Include="Air\AuditAirInfectantByMinuteRepository.cs" />
+    <Compile Include="Air\AuditAirLogRepository.cs" />
+    <Compile Include="Air\AuditAirStatusForHourRepository.cs" />
+    <Compile Include="Air\CalibrationReportRepository.cs" />
+    <Compile Include="Air\DayAPIRepository.cs" />
+    <Compile Include="Air\DayAQIRepository.cs" />
+    <Compile Include="Air\DayReportRepository.cs" />
+    <Compile Include="Air\DustHazeDayRepository.cs" />
+    <Compile Include="Air\GranuleSpecialRepository.cs" />
+    <Compile Include="Air\HourAPIRepository.cs" />
+    <Compile Include="Air\HourAQIRepository.cs" />
+    <Compile Include="Air\HourReportForUpLoadRepository.cs" />
+    <Compile Include="Air\HourReportForUpLoadSZRepository.cs" />
+    <Compile Include="Air\HourReportRepository.cs" />
+    <Compile Include="Air\RealTimeHourRepository.cs" />
+    <Compile Include="Air\RegionDayAPIRepository.cs" />
+    <Compile Include="Air\RegionDayAQIRepository.cs" />
+    <Compile Include="Air\RegionHourAQIRepository.cs" />
+    <Compile Include="Air\RPT_AQIForecastRepository.cs" />
+    <Compile Include="Air\SuperStationInterfaceRepository.cs" />
+    <Compile Include="Air\SyncGuoJiaDataRepository.cs" />
+    <Compile Include="Air\WeatherForcastRepository.cs" />
+    <Compile Include="Air\WeekReportRepository.cs" />
+    <Compile Include="Air\MonthReportRepository.cs" />
+    <Compile Include="Air\SeasonReportRepository.cs" />
+    <Compile Include="Air\YearReportRepository.cs" />
+    <Compile Include="Common\AuditDataRepository.cs" />
+    <Compile Include="Common\AuditMonitoringPointPollutantRepository.cs" />
+    <Compile Include="Common\AuditMonitoringPointRepository.cs" />
+    <Compile Include="Common\AuditOperatorSettingRepository.cs" />
+    <Compile Include="Common\AuditPollutantRepository.cs" />
+    <Compile Include="Common\AuditPreDatarRepository.cs" />
+    <Compile Include="Common\AuditReasonRepository.cs" />
+    <Compile Include="Common\AuditStatusForDayRepository.cs" />
+    <Compile Include="Common\AuditStatusMappingRepository.cs" />
+    <Compile Include="Common\CalibrationReportRepository.cs" />
+    <Compile Include="Common\DataOnlineRepository.cs" />
+    <Compile Include="Common\DataSamplingConditionRepository.cs" />
+    <Compile Include="Common\ELMAHRepository.cs" />
+    <Compile Include="Common\OperationLogRepository.cs" />
+    <Compile Include="Common\ReportLogRepository.cs" />
+    <Compile Include="Common\ReportQualifiedRateByDayRepository.cs" />
+    <Compile Include="Common\ReportQualifiedRateByHourRepository.cs" />
+    <Compile Include="Common\ReportSamplingRateByDayRepository.cs" />
+    <Compile Include="Common\ReportSamplingRateByHourRepository.cs" />
+    <Compile Include="Common\WaterMonthRunReportSettingRepository.cs" />
+    <Compile Include="FrequencyRepository.cs" />
+    <Compile Include="MessageTextRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Public\PublicReportRepository.cs" />
+    <Compile Include="QualityControlOperation\Air\InstrumentFaultRepository.cs" />
+    <Compile Include="QualityControlOperation\Air\InstrumentOPDataRepository.cs" />
+    <Compile Include="QualityControlOperation\Air\MaintenanceRepository.cs" />
+    <Compile Include="QualityControlOperation\Air\OM_DeviceRepairDetailRepository.cs" />
+    <Compile Include="QualityControlOperation\Air\OM_DeviceRepairRepository.cs" />
+    <Compile Include="QualityControlOperation\Air\OM_TaskItemConfigRepository.cs" />
+    <Compile Include="QualityControlOperation\Air\OM_TaskItemDataRepository.cs" />
+    <Compile Include="QualityControlOperation\Air\QualityControlDataSearchRepository.cs" />
+    <Compile Include="QualityControlOperation\Water\AbnormalConfigRepository.cs" />
+    <Compile Include="QualityControlOperation\Water\AbnormalRepository.cs" />
+    <Compile Include="QualityControlOperation\Water\ActionConfigRepository.cs" />
+    <Compile Include="QualityControlOperation\Water\DutyRepository.cs" />
+    <Compile Include="QualityControlOperation\Water\ElectrodeCalibrationRepository.cs" />
+    <Compile Include="QualityControlOperation\Water\InstrumentFittingInstanceRepository.cs" />
+    <Compile Include="QualityControlOperation\Water\InstrumentUsedRecordRepository.cs" />
+    <Compile Include="QualityControlOperation\Water\MaintainInstrumentRepository.cs" />
+    <Compile Include="QualityControlOperation\Water\MaterialRigisterRepository.cs" />
+    <Compile Include="QualityControlOperation\Water\PartChangeRepository.cs" />
+    <Compile Include="QualityControlOperation\Water\ReagentFormulaRepository.cs" />
+    <Compile Include="QualityControlOperation\Water\RealSamplesRepository.cs" />
+    <Compile Include="QualityControlOperation\Water\SampleCompareRepository.cs" />
+    <Compile Include="QualityControlOperation\Water\SamplingRecordDetailRepository.cs" />
+    <Compile Include="QualityControlOperation\Water\SamplingRecordRepository.cs" />
+    <Compile Include="QualityControlOperation\Water\ScrappedRepository.cs" />
+    <Compile Include="QualityControlOperation\Water\StandardizationRepository.cs" />
+    <Compile Include="QualityControlOperation\Water\StandardSolutionChangeRepository.cs" />
+    <Compile Include="QualityControlOperation\Water\StandardSolutionCheckRepository.cs" />
+    <Compile Include="QualityControlOperation\Water\StatusRepository.cs" />
+    <Compile Include="QualityControlOperation\Water\TaskActionConfigRepository.cs" />
+    <Compile Include="QualityControlOperation\Water\TaskConfigRepository.cs" />
+    <Compile Include="QualityControlOperation\Water\TaskFileInfoRepository.cs" />
+    <Compile Include="QualityControlOperation\Water\UrbanRiverCourseInspectRepository.cs" />
+    <Compile Include="QualityControlOperation\Water\WaterInspectionBase2Repository.cs" />
+    <Compile Include="QualityControlOperation\Water\WaterInspectionBaseRepository.cs" />
+    <Compile Include="ReportContentRepository.cs" />
+    <Compile Include="ReportSummaryRepository.cs" />
+    <Compile Include="WaterLZ\DayReportBlueAlgaeRepository.cs" />
+    <Compile Include="WaterLZ\LZRepository.cs" />
+    <Compile Include="Water\AuditWaterInfectantByHourRepository.cs" />
+    <Compile Include="Water\AuditWaterInfectantByMinuteRepository.cs" />
+    <Compile Include="Water\AuditWaterLogRepository.cs" />
+    <Compile Include="Water\AuditWaterStatusForHourRepository.cs" />
+    <Compile Include="Water\AutoMonitoringMonthSummaryRepository.cs" />
+    <Compile Include="Water\AutoPointMonthReportRepository.cs" />
+    <Compile Include="Water\BlueAlgaeEarlyWarningMonitoringRepository.cs" />
+    <Compile Include="Water\BlueAlgaeRespository.cs" />
+    <Compile Include="Water\CalibrationReportRepository.cs" />
+    <Compile Include="Water\DayReportBlueAlgaeRepository.cs" />
+    <Compile Include="Water\DayReportManualRepository.cs" />
+    <Compile Include="Water\DayReportRepository.cs" />
+    <Compile Include="Water\DrySeasonReportRepository.cs" />
+    <Compile Include="Water\HourReportRepository.cs" />
+    <Compile Include="Water\MaintainFileManageRepository.cs" />
+    <Compile Include="Water\MaintenanceDataRepository.cs" />
+    <Compile Include="Water\MonthReportRepository.cs" />
+    <Compile Include="Water\OM_ReagentInBillItemRepository.cs" />
+    <Compile Include="Water\RealTimeHourRepository.cs" />
+    <Compile Include="Water\SeasonReportRepository.cs" />
+    <Compile Include="Water\WaterPointOnlineRateRepository.cs" />
+    <Compile Include="Water\WeekReportRepository.cs" />
+    <Compile Include="Water\YearReportRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DAL\SmartEP.Data\SmartEP.Data.csproj">
+      <Project>{89b8d570-dcfe-4265-b804-537324de6745}</Project>
+      <Name>SmartEP.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DomainModel\SmartEP.DomainModel\SmartEP.DomainModel.csproj">
+      <Project>{891378ea-1395-47f0-8b3b-14f35c6126a5}</Project>
+      <Name>SmartEP.DomainModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

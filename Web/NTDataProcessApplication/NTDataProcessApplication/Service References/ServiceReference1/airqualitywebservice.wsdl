@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="Envisys.Aqms.WebService" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="Envisys.Aqms.WebService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="Envisys.Aqms.WebService">
+      <s:element name="getHourlyDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pollutantNames" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getHourlyDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getHourlyDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MySoapHeader" type="tns:MySoapHeader" />
+      <s:complexType name="MySoapHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getHourlyDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:getHourlyDataSet" />
+  </wsdl:message>
+  <wsdl:message name="getHourlyDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:getHourlyDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="getHourlyDataSetMySoapHeader">
+    <wsdl:part name="MySoapHeader" element="tns:MySoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="getHourlyDataXmlSoapIn">
+    <wsdl:part name="pollutantNames" type="s:string" />
+    <wsdl:part name="dataTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getHourlyDataXmlSoapOut">
+    <wsdl:part name="getHourlyDataXmlResult" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getHourlyDataXmlMySoapHeader">
+    <wsdl:part name="MySoapHeader" element="tns:MySoapHeader" />
+  </wsdl:message>
+  <wsdl:portType name="AirQualityWebServiceSoap">
+    <wsdl:operation name="getHourlyDataSet">
+      <wsdl:input message="tns:getHourlyDataSetSoapIn" />
+      <wsdl:output message="tns:getHourlyDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getHourlyDataXml">
+      <wsdl:input message="tns:getHourlyDataXmlSoapIn" />
+      <wsdl:output message="tns:getHourlyDataXmlSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AirQualityWebServiceSoap" type="tns:AirQualityWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getHourlyDataSet">
+      <soap:operation soapAction="Envisys.Aqms.WebService/getHourlyDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getHourlyDataSetMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHourlyDataXml">
+      <soap:operation soapAction="Envisys.Aqms.WebService/getHourlyDataXml" style="rpc" />
+      <wsdl:input>
+        <soap:body use="literal" namespace="Envisys.Aqms.WebService" />
+        <soap:header message="tns:getHourlyDataXmlMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" namespace="Envisys.Aqms.WebService" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AirQualityWebServiceSoap12" type="tns:AirQualityWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getHourlyDataSet">
+      <soap12:operation soapAction="Envisys.Aqms.WebService/getHourlyDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getHourlyDataSetMySoapHeader" part="MySoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHourlyDataXml">
+      <soap12:operation soapAction="Envisys.Aqms.WebService/getHourlyDataXml" style="rpc" />
+      <wsdl:input>
+        <soap12:body use="literal" namespace="Envisys.Aqms.WebService" />
+        <soap12:header message="tns:getHourlyDataXmlMySoapHeader" part="MySoapHeader" use="literal" namespace="Envisys.Aqms.WebService" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" namespace="Envisys.Aqms.WebService" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AirQualityWebService">
+    <wsdl:port name="AirQualityWebServiceSoap" binding="tns:AirQualityWebServiceSoap">
+      <soap:address location="http://218.91.209.251:9000/public/airqualitywebservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AirQualityWebServiceSoap12" binding="tns:AirQualityWebServiceSoap12">
+      <soap12:address location="http://218.91.209.251:9000/public/airqualitywebservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

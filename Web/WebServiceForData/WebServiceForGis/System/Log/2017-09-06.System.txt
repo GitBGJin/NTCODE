@@ -1,0 +1,174 @@
+Time:    2017/9/6 9:11:23
+Action:  数据异常
+Message: System.FormatException: 该字符串未被识别为有效的 DateTime。
+   在 System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   在 System.Convert.ToDateTime(String value)
+   在 WebServiceForData.WebServiceForData.GetVOCsKQYDataPager(List`1 listFactor, String startTime, DataTable dtFactor) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 833
+   在 WebServiceForData.WebServiceForData.PutInDt(String name, String startTime, DataTable dt) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 525
+   在 WebServiceForData.WebServiceForData.GetVocData(String startTime, String type) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 258
+-----------------------------------------------------------
+
+Time:    2017/9/6 9:43:35
+Action:  数据异常
+Message: System.ArgumentOutOfRangeException: StartIndex 不能小于 0。
+参数名: startIndex
+   在 System.String.Remove(Int32 startIndex, Int32 count)
+   在 WebServiceForData.WebServiceForData.GetVOCsKQYDataPager(List`1 listFactor, String startTime, DataTable dtFactor) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 847
+   在 WebServiceForData.WebServiceForData.GetVocData(String startTime, String type) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 389
+-----------------------------------------------------------
+
+Time:    2017/9/6 9:45:17
+Action:  数据异常
+Message: System.ArgumentOutOfRangeException: StartIndex 不能小于 0。
+参数名: startIndex
+   在 System.String.Remove(Int32 startIndex, Int32 count)
+   在 WebServiceForData.WebServiceForData.GetVOCsKQYDataPager(List`1 listFactor, String startTime, DataTable dtFactor) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 847
+   在 WebServiceForData.WebServiceForData.PutInDt(String name, String startTime, DataTable dt) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 526
+   在 WebServiceForData.WebServiceForData.GetVocData(String startTime, String type) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 258
+-----------------------------------------------------------
+
+Time:    2017/9/6 9:45:25
+Action:  数据异常
+Message: System.ArgumentOutOfRangeException: StartIndex 不能小于 0。
+参数名: startIndex
+   在 System.String.Remove(Int32 startIndex, Int32 count)
+   在 WebServiceForData.WebServiceForData.GetVOCsKQYDataPager(List`1 listFactor, String startTime, DataTable dtFactor) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 847
+   在 WebServiceForData.WebServiceForData.PutInDt(String name, String startTime, DataTable dt) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 526
+   在 WebServiceForData.WebServiceForData.GetVocData(String startTime, String type) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 258
+-----------------------------------------------------------
+
+Time:    2017/9/6 9:49:09
+Action:  数据异常
+Message: System.ArgumentOutOfRangeException: StartIndex 不能小于 0。
+参数名: startIndex
+   在 System.String.Remove(Int32 startIndex, Int32 count)
+   在 WebServiceForData.WebServiceForData.GetVOCsKQYDataPager(List`1 listFactor, String startTime, DataTable dtFactor) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 847
+   在 WebServiceForData.WebServiceForData.PutInDt(String name, String startTime, DataTable dt) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 526
+   在 WebServiceForData.WebServiceForData.GetVocData(String startTime, String type) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 258
+-----------------------------------------------------------
+
+Time:    2017/9/6 10:37:44
+Action:  数据异常
+Message: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebServiceForData.WebServiceForData.PutInDt(String name, String startTime, DataTable dt) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 527
+   在 WebServiceForData.WebServiceForData.GetVocData(String startTime, String type) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 258
+-----------------------------------------------------------
+
+Time:    2017/9/6 10:43:35
+Action:  数据异常
+Message: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebServiceForData.WebServiceForData.PutInDt(String name, String startTime, DataTable dt) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 527
+   在 WebServiceForData.WebServiceForData.GetVocData(String startTime, String type) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 262
+-----------------------------------------------------------
+
+Time:    2017/9/6 10:43:35
+Action:  数据异常
+Message: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebServiceForData.WebServiceForData.PutInDt(String name, String startTime, DataTable dt) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 527
+   在 WebServiceForData.WebServiceForData.GetVocData(String startTime, String type) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 258
+-----------------------------------------------------------
+
+Time:    2017/9/6 10:45:35
+Action:  数据异常
+Message: System.ArgumentNullException: “name”参数不能为空。
+参数名: name
+   在 System.Data.DataColumnCollection.get_Item(String name)
+   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.set_Item(String columnName, Object value)
+   在 WebServiceForData.WebServiceForData.GetDataTable(String columnName, DataTable auDT, DataTable dt) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 714
+   在 WebServiceForData.WebServiceForData.PutInDt(String name, String startTime, DataTable dt) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 529
+   在 WebServiceForData.WebServiceForData.GetVocData(String startTime, String type) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 270
+-----------------------------------------------------------
+
+Time:    2017/9/6 11:02:57
+Action:  数据异常
+Message: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebServiceForData.WebServiceForData.PutInDt(String name, String startTime, DataTable dt) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 528
+   在 WebServiceForData.WebServiceForData.GetVocData(String startTime, String type) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 262
+-----------------------------------------------------------
+
+Time:    2017/9/6 11:07:20
+Action:  数据异常
+Message: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebServiceForData.WebServiceForData.PutInDt(String name, String startTime, DataTable dt) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 528
+   在 WebServiceForData.WebServiceForData.GetVocData(String startTime, String type) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 258
+-----------------------------------------------------------
+
+Time:    2017/9/6 11:09:33
+Action:  数据异常
+Message: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebServiceForData.WebServiceForData.PutInDt(String name, String startTime, DataTable dt) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 528
+   在 WebServiceForData.WebServiceForData.GetVocData(String startTime, String type) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 258
+-----------------------------------------------------------
+
+Time:    2017/9/6 11:10:29
+Action:  数据异常
+Message: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebServiceForData.WebServiceForData.PutInDt(String name, String startTime, DataTable dt) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 528
+   在 WebServiceForData.WebServiceForData.GetVocData(String startTime, String type) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 258
+-----------------------------------------------------------
+
+Time:    2017/9/6 12:31:43
+Action:  数据异常
+Message: System.ArgumentException: 列“PollutantName”不属于表 。
+   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.get_Item(String columnName)
+   在 WebServiceForData.WebServiceForData.GetVocData(String startTime, String type) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 421
+-----------------------------------------------------------
+
+Time:    2017/9/6 12:33:46
+Action:  数据异常
+Message: System.ArgumentException: 列“PollutantName”不属于表 。
+   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.get_Item(String columnName)
+   在 WebServiceForData.WebServiceForData.GetVocData(String startTime, String type) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 421
+-----------------------------------------------------------
+
+Time:    2017/9/6 12:34:51
+Action:  数据异常
+Message: System.ArgumentException: 列“PollutantName”不属于表 。
+   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.get_Item(String columnName)
+   在 WebServiceForData.WebServiceForData.GetVocData(String startTime, String type) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 421
+-----------------------------------------------------------
+
+Time:    2017/9/6 12:35:49
+Action:  数据异常
+Message: System.ArgumentException: 列“PollutantName”不属于表 。
+   在 System.Data.DataRow.GetDataColumn(String columnName)
+   在 System.Data.DataRow.get_Item(String columnName)
+   在 WebServiceForData.WebServiceForData.GetVocData(String startTime, String type) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 421
+-----------------------------------------------------------
+
+Time:    2017/9/6 12:55:26
+Action:  数据异常
+Message: System.FormatException: 该字符串未被识别为有效的 DateTime。
+   在 System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   在 System.Convert.ToDateTime(String value)
+   在 WebServiceForData.WebServiceForData.GetVOCsKQYDataPager(List`1 listFactor, String startTime, DataTable dtFactor) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 845
+   在 WebServiceForData.WebServiceForData.PutInDtSecond(String name, String factorType, String startTime, DataTable dt) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 486
+   在 WebServiceForData.WebServiceForData.GetVocData(String startTime, String type) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 301
+-----------------------------------------------------------
+
+Time:    2017/9/6 12:56:17
+Action:  数据异常
+Message: System.FormatException: 该字符串未被识别为有效的 DateTime。
+   在 System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   在 System.Convert.ToDateTime(String value)
+   在 WebServiceForData.WebServiceForData.GetVOCsKQYDataPager(List`1 listFactor, String startTime, DataTable dtFactor) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 845
+   在 WebServiceForData.WebServiceForData.PutInDtSecond(String name, String factorType, String startTime, DataTable dt) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 486
+   在 WebServiceForData.WebServiceForData.GetVocData(String startTime, String type) 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 301
+-----------------------------------------------------------
+
+Time:    2017/9/6 14:17:57
+Action:  数据异常
+Message: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebServiceForData.WebServiceForData.GetAllUsingInstruments() 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 54
+-----------------------------------------------------------
+
+Time:    2017/9/6 14:19:35
+Action:  数据异常
+Message: System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 WebServiceForData.WebServiceForData.GetAllUsingInstruments() 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 54
+-----------------------------------------------------------
+

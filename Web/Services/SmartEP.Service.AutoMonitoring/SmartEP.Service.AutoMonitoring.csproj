@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8C480E7E-F681-4F44-883B-4DA02F7BF38B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartEP.Service.AutoMonitoring</RootNamespace>
+    <AssemblyName>SmartEP.Service.AutoMonitoring</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\..\南通\Vendor\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartEP.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\南通\Src\Services\SmartEP.Service.DataAnalyze\bin\Release\SmartEP.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.OpenAccess, Version=2013.3.1014.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Vendor\Telerik Control\Telerik ORM\Telerik.OpenAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.35.Extensions, Version=2013.3.1014.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Vendor\Telerik Control\Telerik ORM\Telerik.OpenAccess.35.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\..\..\..\Vendor\Telerik Control\Telerik Ajax 2015Q1\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Air\AirDataEffectRateNewService.cs" />
+    <Compile Include="Air\AirDataEffectRateService.cs" />
+    <Compile Include="Air\AirDataSamplingRateNewService.cs" />
+    <Compile Include="Air\AirDataSamplingRateService.cs" />
+    <Compile Include="Air\InfectantBy1Service.cs" />
+    <Compile Include="Air\InfectantBy5Service.cs" />
+    <Compile Include="Air\InfectantBy60Service.cs" />
+    <Compile Include="Air\InfectantByDayService.cs" />
+    <Compile Include="Air\InfectantByMonthService.cs" />
+    <Compile Include="Air\InstrumentDataBy60Service.cs" />
+    <Compile Include="Air\MicrowaveRadiationService.cs" />
+    <Compile Include="Air\MonitoringDataAir.cs" />
+    <Compile Include="Air\InfectantByRTService.cs" />
+    <Compile Include="Air\OriginalPacketRequestService.cs" />
+    <Compile Include="Air\OrigionAQIService.cs" />
+    <Compile Include="Air\SuperStation_lijingpuService.cs" />
+    <Compile Include="common\AuditMonitoringPointService.cs" />
+    <Compile Include="Interfaces\IDataEffectRate.cs" />
+    <Compile Include="Interfaces\IDataSamplingRate.cs" />
+    <Compile Include="Interfaces\IInfectantDALService.cs" />
+    <Compile Include="Interfaces\IMonitoringData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IPointOnlineRate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WaterLZ\InfectantBy60Service.cs" />
+    <Compile Include="Water\InfectantBy1Service.cs" />
+    <Compile Include="Water\InfectantBy5Service.cs" />
+    <Compile Include="Water\InfectantBy60Service.cs" />
+    <Compile Include="Water\InstrumentDataBy60Service.cs" />
+    <Compile Include="Water\MaintenanceDataService.cs" />
+    <Compile Include="Water\MonitoringDataWater.cs" />
+    <Compile Include="Water\InfectantByRTService.cs" />
+    <Compile Include="Water\OperationNewService.cs" />
+    <Compile Include="Water\OriginalPacketRequestService.cs" />
+    <Compile Include="Water\WaterDataEffectRateNewService.cs" />
+    <Compile Include="Water\WaterDataEffectRateService.cs" />
+    <Compile Include="Water\WaterDataSamplingRateNewService.cs" />
+    <Compile Include="Water\WaterDataSamplingRateService.cs" />
+    <Compile Include="Water\WaterPointOnlineRateService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AQIReport\" />
+    <Folder Include="BasicInfos\" />
+    <Folder Include="Enums\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DAL\SmartEP.Data\SmartEP.Data.csproj">
+      <Project>{89b8d570-dcfe-4265-b804-537324de6745}</Project>
+      <Name>SmartEP.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DomainModel\SmartEP.DomainModel\SmartEP.DomainModel.csproj">
+      <Project>{891378ea-1395-47f0-8b3b-14f35c6126a5}</Project>
+      <Name>SmartEP.DomainModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Repositories\SmartEP.AMSRepository\SmartEP.AMSRepository.csproj">
+      <Project>{0122fc5b-a008-4294-abea-7fd7edf6eb4e}</Project>
+      <Name>SmartEP.AMSRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Repositories\SmartEP.BaseInfoRepository\SmartEP.BaseInfoRepository.csproj">
+      <Project>{ae87814a-691a-4172-af21-0f0586b0a560}</Project>
+      <Name>SmartEP.BaseInfoRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Repositories\SmartEP.MonitorBusinessRepository\SmartEP.MonitoringBusinessRepository.csproj">
+      <Project>{a6823fb0-0511-48c1-92af-a94437484d43}</Project>
+      <Name>SmartEP.MonitoringBusinessRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SmartEP.Utilities\SmartEP.Utilities.csproj">
+      <Project>{fa8bdea2-3a34-4817-9db9-8bbc1a307dbc}</Project>
+      <Name>SmartEP.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartEP.Service.BaseData\SmartEP.Service.BaseData.csproj">
+      <Project>{3f49afcf-cd84-4d83-8ad2-0916a8c002a5}</Project>
+      <Name>SmartEP.Service.BaseData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartEP.Service.Core\SmartEP.Service.Core.csproj">
+      <Project>{fd64a4be-1f1a-4398-b37f-2276f6714869}</Project>
+      <Name>SmartEP.Service.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartEP.Service.Frame\SmartEP.Service.Frame.csproj">
+      <Project>{d3b242d8-3784-4170-92c4-cd0db2ca748f}</Project>
+      <Name>SmartEP.Service.Frame</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Fakes Include="Fakes\SmartEP.Service.BaseData.fakes" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

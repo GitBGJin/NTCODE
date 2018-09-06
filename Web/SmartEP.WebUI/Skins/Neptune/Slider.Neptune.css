@@ -1,0 +1,58 @@
+.RadSlider_Neptune {
+  /* horizontal slider */
+  /* end horizontal slider */
+  /* vertical slider */
+  /* end vertical slider */
+  /* horizontal slider - TrackPosition=Top/Bottom */
+  /* vertical slider - TrackPosition=Left/Right */
+  /* horizontal slider - TrackPosition=Center */
+  /* vertical slider - TrackPosition=Center */ }
+  .RadSlider_Neptune .rslTrack {
+    border-color: #abc1de; }
+  .RadSlider_Neptune .rslHorizontal a.rslHandle {
+    background-image: url('Slider/Handles.gif'); }
+  .RadSlider_Neptune .rslHorizontal a.rslDraghandle {
+    background-image: url('Slider/DragHandle.gif'); }
+  .RadSlider_Neptune .rslHorizontal .rslTrack {
+    background: url('Slider/TrackBgr.gif') repeat-x; }
+  .RadSlider_Neptune .rslHorizontal .rslSelectedregion {
+    background: url('Slider/SelectedRegionHorizontalBgr.gif') right top; }
+  .RadSlider_Neptune .rslHorizontal .rslItem {
+    background-image: url('Slider/ItemHorizontalBgr.gif'); }
+  .RadSlider_Neptune .rslVertical a.rslHandle {
+    background-image: url('Slider/HandlesVertical.gif'); }
+  .RadSlider_Neptune .rslVertical .rslTrack {
+    background: url('Slider/TrackVerticalBgr.gif') repeat-y; }
+  .RadSlider_Neptune .rslVertical .rslSelectedregion {
+    background: url('Slider/SelectedRegionVerticalBgr.gif') left bottom; }
+  .RadSlider_Neptune .rslVertical a.rslDraghandle {
+    background: url('Slider/DragVerticalHandle.gif') no-repeat; }
+  .RadSlider_Neptune .rslVertical .rslItem {
+    background-image: url('Slider/ItemVerticalBgr.gif'); }
+  .RadSlider_Neptune .rslLeft a.rslDraghandle {
+    background: url('Slider/DragVerticalHandleRight.gif') no-repeat; }
+  .RadSlider_Neptune .rslItem,
+  .RadSlider_Neptune .rslLargeTick span {
+    color: #00156e; }
+  .RadSlider_Neptune .rslItemsWrapper .rslItemSelected {
+    color: black; }
+  .RadSlider_Neptune .rslTop .rslSmallTick,
+  .RadSlider_Neptune .rslBottom .rslSmallTick {
+    background-image: url('Slider/SmallChangeHorizontal.gif'); }
+  .RadSlider_Neptune .rslTop .rslLargeTick,
+  .RadSlider_Neptune .rslBottom .rslLargeTick {
+    background-image: url('Slider/LargeChangeHorizontal.gif'); }
+  .RadSlider_Neptune .rslLeft .rslSmallTick,
+  .RadSlider_Neptune .rslRight .rslSmallTick {
+    background-image: url('Slider/SmallChangeVertical.gif'); }
+  .RadSlider_Neptune .rslLeft .rslLargeTick,
+  .RadSlider_Neptune .rslRight .rslLargeTick {
+    background-image: url('Slider/LargelChangeVertical.gif'); }
+  .RadSlider_Neptune .rslMiddle .rslSmallTick {
+    background-image: url('Slider/SmallChangeMiddleHorizontal.gif'); }
+  .RadSlider_Neptune .rslLargeTick {
+    background-image: url('Slider/LargeChangeMiddleHorizontal.gif'); }
+  .RadSlider_Neptune .rslCenter .rslSmallTick {
+    background-image: url('Slider/SmallChangeCenterVertical.gif'); }
+  .RadSlider_Neptune .rslCenter .rslLargeTick {
+    background-image: url('Slider/LargelChangeCenterVertical.gif'); }

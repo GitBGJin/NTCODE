@@ -1,0 +1,201 @@
+.RadRibbonBar_Neptune {
+  font: 11px "Segoe UI", Arial, sans-serif; }
+  .RadRibbonBar_Neptune .rrbContentWrapIn {
+    border-color: #8db2e3;
+    background-color: #c8d9ed;
+    background-image: url('RibbonBar/rrbGradients.png'); }
+
+.RadRibbonBar_Neptune .rrbDecoration, .RadRibbonBar_Neptune .rrbDecoration .rrbButtonMid, .RadRibbonBar_Neptune .rrbButtonArea .rrbCollapsedGroup, .RadRibbonBar_Neptune .rrbCollapsedGroup .rrbButtonMid {
+  background-color: #c8d9ed;
+  border-color: #8db2e3; }
+
+.RadRibbonBar_Neptune .rrbTabs {
+  border-bottom-color: #8db2e3; }
+.RadRibbonBar_Neptune .rrbApplicationTab .rrbTabLabel {
+  border-color: #a7bedb;
+  color: #00156e;
+  background-color: #d2e1f4; }
+.RadRibbonBar_Neptune .rrbHeaderBar {
+  border-color: #abc1de;
+  background-color: #c3d8f1; }
+.RadRibbonBar_Neptune .rrbContextualTab .rrbContextualTabLabel {
+  color: #ffffff; }
+.RadRibbonBar_Neptune .rrbTab .rrbTabLabel {
+  border-color: transparent;
+  color: #00156e;
+  border-radius: 5px 5px 0 0; }
+.RadRibbonBar_Neptune .rrbHoveredTab .rrbTabLabel {
+  border-color: #8db2e3;
+  background-color: #dbe6f4;
+  background-image: linear-gradient(#f2f8fe, #dbe6f4); }
+.RadRibbonBar_Neptune .rrbSelectedTab .rrbTabLabel {
+  border-color: #8db2e3;
+  background: #dbe6f4; }
+.RadRibbonBar_Neptune .rrbMenu .rrbMenuLabel {
+  color: #00156e;
+  background-color: #c3d8f1; }
+.RadRibbonBar_Neptune .rrbToolTip {
+  border-color: #688caf;
+  border-radius: 3px;
+  color: #00156e;
+  background-color: #d6e5f3; }
+.RadRibbonBar_Neptune .rrbToggleHandle {
+  background-position: -2px -622px; }
+.RadRibbonBar_Neptune.rrbMinimized .rrbToggleHandle, .RadRibbonBar_Neptune.rrbExtendedChromeMinimized .rrbToggleHandle {
+  background-position: -2px -662px; }
+.RadRibbonBar_Neptune .rrbButtonArea {
+  background-color: #c8d9ed;
+  background-image: url('RibbonBar/rrbGradients.png'); }
+.RadRibbonBar_Neptune .rrbResizeHandle {
+  background-position: -5px -885px; }
+.RadRibbonBar_Neptune .rrbGroupTitle {
+  color: #15428b;
+  background-color: #c0d8ef; }
+.RadRibbonBar_Neptune .rrbGroupLauncher {
+  background-position: -6px -1926px; }
+.RadRibbonBar_Neptune .rrbButtonGroupIn {
+  border-color: #8db2e3;
+  border-radius: 3px;
+  background-color: #c8d9ed;
+  background-image: url('RibbonBar/rrbGradients.png');
+  background-position: 0 0; }
+.RadRibbonBar_Neptune .rrbButtonGroupHover .rrbButtonGroupIn {
+  background-color: #b8c9dd; }
+.RadRibbonBar_Neptune .rrbCollapsedGroup .rrbGroupToggleIcon {
+  background-position: -2px -422px; }
+.RadRibbonBar_Neptune .rrbCollapsedGroup .rrbGroupIcon {
+  border-color: #a7bedb; }
+
+.RadRibbonBar_Neptune .rrbQatButton, .RadRibbonBar_Neptune .rrbButtonOut, .RadRibbonBar_Neptune .rrbSplitButton:hover .rrbButtonArrow, .RadRibbonBar_Neptune .rrbButtonStripPart, .RadRibbonBar_Neptune .rrbComboBox .rrbActionButton, .RadRibbonBar_Neptune .rrbDropDown .rrbActionButton, .RadRibbonBar_Neptune .rrbNumericTextBox .rrbActionButton, .RadRibbonBar_Neptune .rrbColorPicker .rrbActionButton, .RadRibbonBar_Neptune .rrbDropDown .rrbDDInner, .RadRibbonBar_Neptune .rrbColorPicker .rrbCPInner, .RadRibbonBar_Neptune .rrbGalleryAction {
+  background-image: url('Common/radGradientButtonSprite.png');
+  border-color: #a7bedb;
+  color: #00156e;
+  background-color: #d2e1f4;
+  background-image: linear-gradient(#e8f1fc 0%, #e9f1fc 50%, #d2e1f4 50%, #e8f1fc 100%); }
+
+.RadRibbonBar_Neptune .rrbQatButton, .RadRibbonBar_Neptune .rrbButtonOut {
+  border-color: transparent;
+  background-color: transparent; }
+
+.RadRibbonBar_Neptune .rrbQatButton:hover, .RadRibbonBar_Neptune .rrbButtonOut:hover, .RadRibbonBar_Neptune .rrbButtonOut.rrbButtonHovered, .RadRibbonBar_Neptune .rrbSplitButton .rrbButtonArrow:hover, .RadRibbonBar_Neptune .rrbButtonStripPart:hover, .RadRibbonBar_Neptune .rrbComboBox .rrbActionButton:hover, .RadRibbonBar_Neptune .rrbDropDown .rrbActionButton:hover, .RadRibbonBar_Neptune .rrbNumericTextBox .rrbActionButton:hover, .RadRibbonBar_Neptune .rrbColorPicker .rrbActionButton:hover, .RadRibbonBar_Neptune .rrbDropDown .rrbDDInner:hover, .RadRibbonBar_Neptune .rrbColorPicker .rrbCPInner:hover, .RadRibbonBar_Neptune .rrbGalleryAction:hover, .RadRibbonBar_Neptune .rrbGalleryItemHovered, .rrbSlide_Neptune .rrbGalleryItemHovered {
+  border-color: #c6ba9d;
+  color: #000000;
+  background-color: #ffd563;
+  background-image: linear-gradient(#fffce8 0%, #ffedb3 50%, #ffd563 50%, #ffe18a 100%); }
+
+.RadRibbonBar_Neptune .rrbQatButton:active, .RadRibbonBar_Neptune .rrbButtonOut.rrbButtonClicked, .RadRibbonBar_Neptune .rrbButtonOut.rrbButtonPressed, .RadRibbonBar_Neptune .rrbButtonOut.rrbToggled, .RadRibbonBar_Neptune .rrbExpanded .rrbSplitButton .rrbButtonArrow, .RadRibbonBar_Neptune .rrbButtonClicked .rrbSplitButton .rrbButtonArrow, .RadRibbonBar_Neptune .rrbButtonStripPart:active, .RadRibbonBar_Neptune .rrbButtonStripPart.rrbButtonClicked, .RadRibbonBar_Neptune .rrbButtonStripPart.rrbButtonPressed, .RadRibbonBar_Neptune .rrbComboBox .rrbActionButton:active, .RadRibbonBar_Neptune .rrbDropDown .rrbActionButton:active, .RadRibbonBar_Neptune .rrbNumericTextBox .rrbActionButton:active, .RadRibbonBar_Neptune .rrbColorPicker .rrbActionButton:active, .RadRibbonBar_Neptune .rrbDropDown .rrbDDInner:active, .RadRibbonBar_Neptune .rrbColorPicker .rrbCPInner:active, .RadRibbonBar_Neptune .rrbGalleryAction:active, .RadRibbonBar_Neptune .rrbGalleryItemSelected, .rrbSlide_Neptune .rrbGalleryItemSelected {
+  border-color: #c3bdae;
+  color: #000000;
+  background-color: #f99631;
+  background-image: linear-gradient(#ebc59b 0%, #faad60 50%, #f99631 50%, #fde292 100%); }
+
+.RadRibbonBar_Neptune .rrbMenu, .RadRibbonBar_Neptune .rrbMenuGroupMid, .rrbDropDownSlide_Neptune .rrbPopup, .rrbSlide_Neptune .rrbPopup, .rrbPopup_Neptune, .rrbPopup_Neptune .rrbPopup {
+  border-color: #9eb6ce;
+  color: #00156e;
+  background-color: #ffffff; }
+
+.RadRibbonBar_Neptune .rrbMenu, .RadRibbonBar_Neptune .rrbMenuGroupMid, .rrbDropDownSlide_Neptune .rrbPopup, .rrbSlide_Neptune .rrbPopup, .rrbPopup_Neptune, .rrbPopup_Neptune .rrbPopup {
+  border-color: #9eb6ce;
+  color: #00156e;
+  background-color: #ffffff;
+  border-color: #8db2e3;
+  background-color: #f0f9ff; }
+
+.RadRibbonBar_Neptune .rrbMenu .rrbMenuItem, .RadRibbonBar_Neptune .rrbMenuGroupOut .rrbButtonOut, .rrbPopup_Neptune .rrbMenuItem .rrbMIInner, .rrbPopup_Neptune .rrbMenuItem .rrbMIToggle {
+  color: #00156e;
+  background-image: url('Common/radGradientListSprite.png');
+  background-repeat: repeat-x;
+  background-position: 0 0; }
+
+.RadRibbonBar_Neptune .rrbMenu .rrbMenuItem:hover, .RadRibbonBar_Neptune .rrbMenu .rrbMenuItemHovered, .RadRibbonBar_Neptune .rrbMenuGroupOut .rrbButtonOut:hover, .rrbPopup_Neptune .rrbMIHovered > .rrbMIInner, .rrbPopup_Neptune .rrbMIHovered > .rrbMIInner .rrbMIToggle, .rrbPopup_Neptune .rrbMIExpanded > .rrbMIInner {
+  background-position: 0 -1000px\9; }
+
+.RadRibbonBar_Neptune .rrbMenuGroupOut .rrbButtonOut.rrbExpanded, .RadRibbonBar_Neptune .rrbMenuGroupOut .rrbButtonOut.rrbButtonClicked, .rrbPopup_Neptune .rrbMIExpanded > .rrbMIInner .rrbMIToggle {
+  background-position: 0 -2000px\9; }
+
+.RadRibbonBar_Neptune .rrbIcon, .RadRibbonBar_Neptune .rrbToggleHandle, .RadRibbonBar_Neptune .rrbResizeHandle, .RadRibbonBar_Neptune .rrbGroupLauncher, .RadRibbonBar_Neptune .rrbGroupToggleIcon {
+  background-image: url('Common/radActionsSprite.png'); }
+.RadRibbonBar_Neptune .rrbButtonOut {
+  border-radius: 3px; }
+  .RadRibbonBar_Neptune .rrbButtonOut .rrbIcon {
+    background-position: -2px -422px; }
+.RadRibbonBar_Neptune .rrbMenuGroupMid {
+  box-shadow: 3px 2px 3px #888; }
+.RadRibbonBar_Neptune .rrbComboBox .rrbCBInner {
+  border-color: #abc1de;
+  background-color: #ffffff; }
+.RadRibbonBar_Neptune .rrbComboBox .rrbCBInput {
+  color: #333333; }
+.RadRibbonBar_Neptune .rrbComboBox .rrbIcon {
+  background-position: -2px -422px; }
+.RadRibbonBar_Neptune .rrbDropDown .rrbActionButton, .RadRibbonBar_Neptune .rrbDropDown .rrbActionButton:hover {
+  background: none; }
+.RadRibbonBar_Neptune .rrbDropDown .rrbIcon {
+  background-position: -2px -422px; }
+.RadRibbonBar_Neptune .rrbNumericTextBox .rrbNTBInner {
+  border-color: #abc1de;
+  background-color: #ffffff; }
+.RadRibbonBar_Neptune .rrbNumericTextBox .rrbNTBInput {
+  color: #333333; }
+.RadRibbonBar_Neptune .rrbNumericTextBox .rrbActionButtonUp .rrbIcon {
+  background-position: -2px -402px; }
+.RadRibbonBar_Neptune .rrbNumericTextBox .rrbActionButtonDown .rrbIcon {
+  background-position: -2px -422px; }
+.RadRibbonBar_Neptune .rrbColorPicker .rrbActionButton, .RadRibbonBar_Neptune .rrbColorPicker .rrbActionButton:hover {
+  background: none; }
+.RadRibbonBar_Neptune .rrbColorPicker .rrbIcon {
+  background-position: -2px -422px; }
+.RadRibbonBar_Neptune .rrbGallery {
+  border-color: #a7bedb;
+  background-color: #ffffff; }
+.RadRibbonBar_Neptune .rrbGalleryActionUp .rrbIcon {
+  background-position: -2px -2px; }
+.RadRibbonBar_Neptune .rrbGalleryActionDown .rrbIcon {
+  background-position: -2px -22px; }
+.RadRibbonBar_Neptune .rrbGalleryActionExpand .rrbIcon {
+  background-position: -2px -182px; }
+.RadRibbonBar_Neptune .rrbCategoryTitle {
+  color: #00156e;
+  background-color: #c3d8f1; }
+.RadRibbonBar_Neptune .rrbGalleryItemInner {
+  color: #000000;
+  background-color: #ffffff; }
+
+.rrbDropDownSlide_Neptune .rrbPopup {
+  font: 11px "Segoe UI", Arial, Helvetica, sans-serif; }
+.rrbDropDownSlide_Neptune .rrbListItem:hover {
+  color: #00156e;
+  background-color: #ffe27b; }
+
+.rrbSlide_Neptune .rrbPopup {
+  font: 11px "Segoe UI", Arial, Helvetica, sans-serif; }
+.rrbSlide_Neptune .rrbGallery {
+  background-color: #ffffff; }
+.rrbSlide_Neptune .rrbCategoryTitle {
+  color: #00156e;
+  background-color: #c3d8f1; }
+.rrbSlide_Neptune .rrbGalleryItemInner {
+  color: #000000;
+  background-color: #ffffff; }
+
+.rrbPopup_Neptune {
+  font: 11px "Segoe UI", Arial, Helvetica, sans-serif; }
+  .rrbPopup_Neptune .rrbHeaderBar {
+    border-color: #a7bedb;
+    color: #00156e;
+    background-color: #d2e1f4;
+    background-image: linear-gradient(#e8f1fc 0%, #e9f1fc 50%, #d2e1f4 50%, #e8f1fc 100%); }
+  .rrbPopup_Neptune .rrbMenuItem .rrbMIToggle .rrbIcon {
+    background-image: url('Common/radActionsSprite.png'); }
+  .rrbPopup_Neptune .rrbDisabled > .rrbMIInner {
+    color: #8d8d8d;
+     }
+  .rrbPopup_Neptune .rrbHeader {
+    border-color: #c5c5c5;
+    background: #ebebeb; }
+  .rrbPopup_Neptune .rrbAuxiliaryPane {
+    background: #eeeeee;
+    border-color: #8a8a8a; }
+  .rrbPopup_Neptune .rrbFooterPane {
+    border-color: #c5c5c5;
+    background: #ebebeb; }

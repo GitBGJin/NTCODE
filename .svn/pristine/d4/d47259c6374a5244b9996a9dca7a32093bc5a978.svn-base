@@ -1,0 +1,2033 @@
+﻿using SmartEP.MonitoringBusinessRepository.Air;
+using SmartEP.Service.BaseData.MPInfo;
+using SmartEP.Service.DataAnalyze.Interfaces;
+using SmartEP.Service.Frame;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using SmartEP.Utilities.DataTypes.ExtensionMethods;
+using SmartEP.Core.Generic;
+using SmartEP.Service.BaseData.Standard;
+using SmartEP.Service.DataAnalyze.Air.DataQuery;
+
+namespace SmartEP.Service.DataAnalyze.Air.AQIReport
+{
+    /// <summary>
+    /// 名称：ConcentrationAQIService.cs
+    /// 创建人：刘长敏
+    /// 创建日期：2016-1-21
+    /// 维护人员：
+    /// 最新维护人员：
+    /// 最新维护日期：
+    /// 功能摘要：浓度_AQI综合查询
+    /// 虚拟分页类
+    /// 版权所有(C)：江苏远大信息股份有限公司
+    /// </summary>
+    public class ConcentrationAQIService : IDayAQI
+    {
+        /// <summary>
+        /// 测点类
+        /// </summary>
+        MonitoringPointAirService g_MonitoringPointAir = null;
+        private AQICalculateService m_AQICalculateService=new AQICalculateService();
+        /// <summary>
+        /// 点位日AQI
+        /// </summary>
+        DayAQIRepository pointDayAQI = null;
+
+        /// <summary>
+        /// 空气站点信息服务
+        /// </summary>
+        MonitoringPointAirService pointAirService = new MonitoringPointAirService();
+        /// <summary>
+        /// 区域日AQI
+        /// </summary>
+        RegionDayAQIRepository regionDayAQI = null;
+
+        /// <summary>
+        /// 区域名称
+        /// </summary>
+        DictionaryService g_DictionaryService = new DictionaryService();
+        //获取因子小数位
+
+        DayAQIService dayAQI = new DayAQIService();
+        DataQueryByDayService m_DataQueryByDayService = Singleton<DataQueryByDayService>.GetInstance();
+        /// <summary>
+        /// 空气污染指数
+        /// </summary>
+        AQIService s_AQIService = new AQIService();
+
+        #region 根据站点统计
+        /// <summary>
+        /// 根据key主键判断记录是否存在
+        /// </summary>
+        /// <param name="strKey">主键值</param>
+        /// <returns></returns>
+        public bool PIsExist(string strKey)
+        {
+            pointDayAQI = Singleton<DayAQIRepository>.GetInstance();
+            if (pointDayAQI != null)
+                return pointDayAQI.IsExist(strKey);
+            return false;
+        }
+        /// <summary>
+        /// 取得虚拟分页查询数据和总行数(行转列数据)
+        /// </summary>
+        /// <param name="portIds">测点数据</param>
+        /// <param name="dtStart">开始时间</param>
+        /// <param name="dtEnd">结束时间</param>
+        /// <param name="pageSize">每页记录数</param>
+        /// <param name="pageNo">当前页（从0开始）</param>
+        /// <param name="recordTotal">总行数</param>
+        /// <param name="orderBy">排序方式（字段：MonitoringRegionUid）</param>
+        /// <returns></returns>
+        public DataView GetPortDataPager(string[] portIds, DateTime dtStart, DateTime dtEnd, int pageSize
+            , int pageNo, out int recordTotal, string orderBy = "DateTime,MonitoringRegionUid")
+        {
+            pointDayAQI = Singleton<DayAQIRepository>.GetInstance();
+            recordTotal = 0;
+            if (pointDayAQI != null)
+                return pointDayAQI.GetDataPager(portIds, dtStart, dtEnd, pageSize, pageNo, out recordTotal, orderBy);
+            return null;
+        }
+        /// <summary>
+        /// 取得虚拟分页查询数据和总行数(行转列数据)
+        /// </summary>
+        /// <param name="portIds">测点数据</param>
+        /// <param name="dtStart">开始时间</param>
+        /// <param name="dtEnd">结束时间</param>
+        /// <param name="pageSize">每页记录数</param>
+        /// <param name="pageNo">当前页（从0开始）</param>
+        /// <param name="recordTotal">总行数</param>
+        /// <param name="orderBy">排序方式（字段：PointId,DateTime）</param>
+        /// <returns></returns>
+        public DataView GetPortDataPagerDayAQI(string[] portIds, DateTime dtStart, DateTime dtEnd, int pageSize
+            , int pageNo, out int recordTotal, string orderBy = "PointId")
+        {
+            pointDayAQI = Singleton<DayAQIRepository>.GetInstance();
+            recordTotal = 0;
+            if (pointDayAQI != null)
+                return pointDayAQI.GetConcentrationDay(portIds, dtStart, dtEnd, pageSize, pageNo, out recordTotal, orderBy);
+            return null;
+        }
+        /// <summary>
+        /// 取得导出数据（行转列数据）
+        /// </summary>
+        /// <param name="portIds">测点数据</param>
+        /// <param name="dtStart">开始时间</param>
+        /// <param name="dtEnd">结束时间</param>
+        /// <param name="orderBy">排序方式（字段：PointId,DateTime）</param>
+        /// <returns></returns>
+        public DataView GetPortExportData(string[] portIds, DateTime dtStart, DateTime dtEnd, string orderBy = "DateTime,PointId")
+        {
+            pointDayAQI = Singleton<DayAQIRepository>.GetInstance();
+            if (pointDayAQI != null)
+                return pointDayAQI.GetExportData(portIds, dtStart, dtEnd, orderBy);
+            return null;
+        }
+
+        /// <summary>
+        /// 取得虚拟分页查询数据和总行数(行转列数据)
+        /// </summary>
+        /// <param name="portIds">测点数据</param>
+        /// <param name="dtStart">开始时间</param>
+        /// <param name="dtEnd">结束时间</param>
+        /// <param name="pageSize">每页记录数</param>
+        /// <param name="pageNo">当前页（从0开始）</param>
+        /// <param name="recordTotal">总行数</param>
+        /// <param name="orderBy">排序方式（字段：PointId,DateTime）</param>
+        /// <returns></returns>
+        public DataView GetConcentrationDataPager(string[] portIds, string[] factorCodes, DateTime dtStart, DateTime dtEnd, string[] year, string[] years, int pageSize
+         , int pageNo, out int recordTotal, string COnAQI, string orderBy = "PointId")
+        {
+            recordTotal = 0;
+            DateTime mBegion = Convert.ToDateTime(dtStart.ToString("yyyy-MM-dd"));  //本期第一天
+            DateTime mEnd = Convert.ToDateTime(dtEnd.ToString("yyyy-MM-dd"));   //本期当天
+            string monthB = mBegion.ToString("MM-dd");
+            string monthE = mEnd.ToString("MM-dd");
+
+            g_MonitoringPointAir = Singleton<MonitoringPointAirService>.GetInstance();
+            DataQueryByDayService m_DataQueryByDayService = Singleton<DataQueryByDayService>.GetInstance();
+
+            DataView dv = new DataView();
+            DataView dvT = new DataView();
+            DataView dvN = new DataView();
+
+            DataTable newdtb = new DataTable();
+            newdtb.Columns.Add("PointId", typeof(int));
+            newdtb.Columns.Add("PointName", typeof(string));
+            string cf = mBegion.Year.ToString() + "年" + mBegion.Month.ToString() + "月" + mBegion.Day.ToString() + "日" + "~" + mEnd.Month.ToString() + "月" + mEnd.Day.ToString() + "日";
+            if (COnAQI == "1")
+            {
+                foreach (string factor in factorCodes)
+                {
+
+                    newdtb.Columns.Add(factor + cf, typeof(string));
+                    for (int i = 0; i < years.Length; i++)
+                    {
+                        if (years[i] != "" && Convert.ToInt32(years[i]) != mBegion.Year)
+                        {
+                            string str = years[i] + "年" + mBegion.Month.ToString() + "月" + mBegion.Day.ToString() + "日" + "~" + mEnd.Month.ToString() + "月" + mEnd.Day.ToString() + "日";
+                            newdtb.Columns.Add(factor + str, typeof(string));
+                        }
+                    }
+                    for (int m = 0; m < year.Length; m++)
+                    {
+                        if (year[m] != "")
+                            newdtb.Columns.Add(factor + year[m] + "考核基数", typeof(string));
+
+                    }
+                    for (int j = 0; j < years.Length; j++)
+                    {
+                        if (years[j] != "" && Convert.ToInt32(years[j]) != mBegion.Year)
+                        {
+                            newdtb.Columns.Add(factor + "与" + years[j].ToString() + "年比较", typeof(string));
+                        }
+                    }
+
+                    for (int m = 0; m < year.Length; m++)
+                    {
+                        if (year[m] != "")
+                            newdtb.Columns.Add(factor + "与" + year[m] + "考核基数比较", typeof(string));
+
+                    }
+                }
+            }
+            else
+            {
+                newdtb.Columns.Add(cf, typeof(string));
+                for (int i = 0; i < years.Length; i++)
+                {
+                    if (years[i] != "" && Convert.ToInt32(years[i]) != mBegion.Year)
+                    {
+                        string str = years[i] + "年" + mBegion.Month.ToString() + "月" + mBegion.Day.ToString() + "日" + "~" + mEnd.Month.ToString() + "月" + mEnd.Day.ToString() + "日";
+                        newdtb.Columns.Add(str, typeof(string));
+                    }
+                }
+                for (int m = 0; m < year.Length; m++)
+                {
+                    if (year[m] != "")
+                        newdtb.Columns.Add(year[m] + "考核基数", typeof(string));
+
+                }
+                for (int j = 0; j < years.Length; j++)
+                {
+                    if (years[j] != "" && Convert.ToInt32(years[j]) != mBegion.Year)
+                    {
+                        newdtb.Columns.Add("与" + years[j].ToString() + "年比较", typeof(string));
+                    }
+                }
+
+                for (int m = 0; m < year.Length; m++)
+                {
+                    if (year[m] != "")
+                        newdtb.Columns.Add("与" + year[m] + "考核基数比较", typeof(string));
+
+                }
+            }
+            dv = GetPortDataPagerDayAQI(portIds, mBegion, mEnd, pageSize, pageNo, out recordTotal, orderBy);  // 本期
+
+            DataTable dt = dv.ToTable();   //本期
+            DataRow[] Rowdt;
+            for (int i = 0; i < portIds.Length; i++)
+            {
+                string PointName = "";
+                decimal CurrentFactorCon = -1000;
+                decimal SameFactorCon = -1000;
+                decimal BaseFactorCon = -1000;
+                decimal PM25CurrentFactorCon = -1000;
+                decimal PM25SameFactorCon = -1000;
+                decimal PM25BaseFactorCon = -1000;
+                decimal PM10CurrentFactorCon = -1000;
+                decimal PM10SameFactorCon = -1000;
+                decimal PM10BaseFactorCon = -1000;
+                decimal SO2CurrentFactorCon = -1000;
+                decimal SO2SameFactorCon = -1000;
+                decimal SO2BaseFactorCon = -1000;
+                decimal NO2CurrentFactorCon = -1000;
+                decimal NO2SameFactorCon = -1000;
+                decimal NO2BaseFactorCon = -1000;
+                decimal COCurrentFactorCon = -1000;
+                decimal COSameFactorCon = -1000;
+                decimal COBaseFactorCon = -1000;
+                decimal O3CurrentFactorCon = -1000;
+                decimal O3SameFactorCon = -1000;
+                decimal O3BaseFactorCon = -1000;
+                DataRow newRow = newdtb.NewRow();
+                PointName = g_MonitoringPointAir.RetrieveEntityByPointId(Convert.ToInt32(portIds[i])).MonitoringPointName;
+
+
+                Rowdt = dt.Select("PointId='" + portIds[i] + "'");   //2015
+
+                if (Rowdt.Length > 0)
+                {
+
+                    if (COnAQI == "1")
+                    {
+                        foreach (string factor in factorCodes)
+                        {
+                            if (Rowdt[0][factor].IsNotNullOrDBNull())
+                            {
+                                switch (factor)
+                                {
+                                    case "a34004":
+                                        PM25CurrentFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(Rowdt[0][factor]) * 1000, 0);
+                                        break;
+                                    case "a34002":
+                                        PM10CurrentFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(Rowdt[0][factor]) * 1000, 0);
+                                        break;
+                                    case "a21004":
+                                        NO2CurrentFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(Rowdt[0][factor]) * 1000, 0);
+                                        break;
+                                    case "a21026":
+                                        SO2CurrentFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(Rowdt[0][factor]) * 1000, 0);
+                                        break;
+                                    case "a21005":
+                                        COCurrentFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(Rowdt[0][factor]), 1);
+                                        break;
+                                    case "a05024":
+                                        O3CurrentFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(Rowdt[0][factor]) * 1000, 0);
+                                        break;
+                                }
+                            }
+
+                        }
+                    }
+                    else
+                    {
+                        for (int j = 1; j < 6; j++)
+                        {
+                            string factors = dt.Columns[j].ColumnName;
+                            int count = 24;
+                            if (factors == "a05024")
+                            {
+                                count = 8;
+                            }
+                            if (Rowdt[0][j].IsNotNullOrDBNull())
+                            {
+                                decimal Con = DecimalExtension.GetRoundValue(Convert.ToDecimal(Rowdt[0][j]), 4);
+                                decimal temp = DecimalExtension.GetRoundValue(s_AQIService.GetAQI(factors, Con, count), 0);
+                                if (CurrentFactorCon < temp)
+                                {
+                                    CurrentFactorCon = temp;
+                                }
+                            }
+                        }
+                    }
+                }
+                for (int j = 0; j < years.Length; j++)
+                {
+                    DataRow[] RowdtN;
+                    if (years[j] != "" && Convert.ToInt32(years[j]) != mBegion.Year)
+                    {
+                        DateTime smBegion = Convert.ToDateTime(years[j] + "-" + monthB);   //基数第一天
+                        DateTime smEnd = Convert.ToDateTime(years[j] + "-" + monthE);   //基数当天
+                        //  同期
+                        dvT = GetPortDataPagerDayAQI(portIds, smBegion, smEnd, pageSize, pageNo, out recordTotal, orderBy);
+                        DataTable dtN = dvT.ToTable();   //同期
+                        RowdtN = dtN.Select("PointId='" + portIds[i] + "'");   //2014
+                        if (RowdtN.Length > 0)
+                        {
+                            if (COnAQI == "1")
+                            {
+                                foreach (string factor in factorCodes)
+                                {
+                                    if (RowdtN[0][factor].IsNotNullOrDBNull())
+                                    {
+                                        switch (factor)
+                                        {
+                                            case "a34004":
+                                                PM25SameFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtN[0][factor]) * 1000, 0);
+                                                break;
+                                            case "a34002":
+                                                PM10SameFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtN[0][factor]) * 1000, 0);
+                                                break;
+                                            case "a21004":
+                                                NO2SameFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtN[0][factor]) * 1000, 0);
+                                                break;
+                                            case "a21026":
+                                                SO2SameFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtN[0][factor]) * 1000, 0);
+                                                break;
+                                            case "a21005":
+                                                COSameFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtN[0][factor]), 1);
+                                                break;
+                                            case "a05024":
+                                                O3SameFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtN[0][factor]) * 1000, 0);
+                                                break;
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                for (int n = 1; n < 6; n++)
+                                {
+                                    string factors = dtN.Columns[n].ColumnName;
+                                    int count = 24;
+                                    if (factors == "a05024")
+                                    {
+                                        count = 8;
+                                    }
+                                    if (RowdtN[0][n].IsNotNullOrDBNull())
+                                    {
+                                        decimal Con = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtN[0][n]), 4);
+                                        decimal temp = DecimalExtension.GetRoundValue(s_AQIService.GetAQI(factors, Con, count), 0);
+                                        if (SameFactorCon < temp)
+                                        {
+                                            SameFactorCon = temp;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        if (RowdtN.Length == 0)
+                            ;
+                        else
+                        {
+                            string str = years[j] + "年" + mBegion.Month.ToString() + "月" + mBegion.Day.ToString() + "日" + "~" + mEnd.Month.ToString() + "月" + mEnd.Day.ToString() + "日";
+                            string sr = "与" + years[j].ToString() + "年比较";
+
+                            if (COnAQI == "1")
+                            {
+                                foreach (string factor in factorCodes)
+                                {
+                                    switch (factor)
+                                    {
+                                        case "a34004":
+                                            if (PM25SameFactorCon != -1000)
+                                                newRow[factor + str] = PM25SameFactorCon.ToString();
+
+                                            if (PM25SameFactorCon != 0 && PM25SameFactorCon != -1000 && PM25CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + sr] = DecimalExtension.GetRoundValue((PM25CurrentFactorCon - PM25SameFactorCon) / PM25SameFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a34002":
+                                            if (PM10SameFactorCon != -1000)
+                                                newRow[factor + str] = PM10SameFactorCon.ToString();
+
+                                            if (PM10SameFactorCon != 0 && PM10SameFactorCon != -1000 && PM10CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + sr] = DecimalExtension.GetRoundValue((PM10CurrentFactorCon - PM10SameFactorCon) / PM10SameFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a21004":
+                                            if (NO2SameFactorCon != -1000)
+                                                newRow[factor + str] = NO2SameFactorCon.ToString();
+
+                                            if (NO2SameFactorCon != 0 && NO2SameFactorCon != -1000 && NO2CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + sr] = DecimalExtension.GetRoundValue((NO2CurrentFactorCon - NO2SameFactorCon) / NO2SameFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a21026":
+                                            if (SO2SameFactorCon != -1000)
+                                                newRow[factor + str] = SO2SameFactorCon.ToString();
+
+                                            if (SO2SameFactorCon != 0 && SO2SameFactorCon != -1000 && SO2CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + sr] = DecimalExtension.GetRoundValue((SO2CurrentFactorCon - SO2SameFactorCon) / SO2SameFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a21005":
+                                            if (COSameFactorCon != -1000)
+                                                newRow[factor + str] = COSameFactorCon.ToString();
+
+                                            if (COSameFactorCon != 0 && COSameFactorCon != -1000 && COCurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + sr] = DecimalExtension.GetRoundValue((COCurrentFactorCon - COSameFactorCon) / COSameFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a05024":
+                                            if (O3SameFactorCon != -1000)
+                                                newRow[factor + str] = O3SameFactorCon.ToString();
+
+                                            if (O3SameFactorCon != 0 && O3SameFactorCon != -1000 && O3CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + sr] = DecimalExtension.GetRoundValue((O3CurrentFactorCon - O3SameFactorCon) / O3SameFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                if (SameFactorCon != -1000)
+                                    newRow[str] = SameFactorCon.ToString();
+
+                                if (SameFactorCon != 0 && SameFactorCon != -1000 && CurrentFactorCon != -1000)
+                                {
+                                    newRow[sr] = DecimalExtension.GetRoundValue((CurrentFactorCon - SameFactorCon) / SameFactorCon * 100, 1) + "%";
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                for (int j = 0; j < year.Length; j++)
+                {
+                    if (year[j] != "")
+                    {
+                        DataRow[] RowdtNew;
+                        //基数
+                        dvN = m_DataQueryByDayService.GetConcentrationDay(portIds, dtStart, dtEnd, year[j]);
+                        DataTable dtNew = dvN.ToTable();  //基数
+                        RowdtNew = dtNew.Select("PointId='" + portIds[i] + "'");   //2013               
+                        if (RowdtNew.Length > 0)
+                        {
+                            if (COnAQI == "1")
+                            {
+                                foreach (string factor in factorCodes)
+                                {
+                                    if (RowdtNew[0][factor].IsNotNullOrDBNull())
+                                    {
+                                        switch (factor)
+                                        {
+                                            case "a34004":
+                                                PM25BaseFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtNew[0][factor]) * 1000, 0);
+                                                break;
+                                            case "a34002":
+                                                PM10BaseFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtNew[0][factor]) * 1000, 0);
+                                                break;
+                                            case "a21004":
+                                                NO2BaseFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtNew[0][factor]) * 1000, 0);
+                                                break;
+                                            case "a21026":
+                                                SO2BaseFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtNew[0][factor]) * 1000, 0);
+                                                break;
+                                            case "a21005":
+                                                COBaseFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtNew[0][factor]), 1);
+                                                break;
+                                            case "a05024":
+                                                O3BaseFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtNew[0][factor]) * 1000, 0);
+                                                break;
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                for (int m = 1; m < 6; m++)
+                                {
+                                    string factors = dtNew.Columns[m].ColumnName;
+                                    int count = 24;
+                                    if (factors == "a05024")
+                                    {
+                                        count = 8;
+                                    }
+                                    if (RowdtNew[0][m].IsNotNullOrDBNull())
+                                    {
+                                        decimal Con = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtNew[0][m]), 4);
+                                        decimal temp = DecimalExtension.GetRoundValue(s_AQIService.GetAQI(factors, Con, count), 0);
+                                        if (BaseFactorCon < temp)
+                                        {
+                                            BaseFactorCon = temp;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        if (RowdtNew.Length == 0)
+                            ;
+                        else
+                        {
+                            if (COnAQI == "1")
+                            {
+                                foreach (string factor in factorCodes)
+                                {
+                                    switch (factor)
+                                    {
+                                        case "a34004":
+                                            if (PM25BaseFactorCon != -1000)
+                                                newRow[factor + year[j] + "考核基数"] = PM25BaseFactorCon.ToString();
+                                            if (PM25BaseFactorCon != 0 && PM25BaseFactorCon != -1000 && PM25CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + "与" + year[j] + "考核基数比较"] = DecimalExtension.GetRoundValue((PM25CurrentFactorCon - PM25BaseFactorCon) / PM25BaseFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a34002":
+                                            if (PM10BaseFactorCon != -1000)
+                                                newRow[factor + year[j] + "考核基数"] = PM10BaseFactorCon.ToString();
+                                            if (PM10BaseFactorCon != 0 && PM10BaseFactorCon != -1000 && PM10CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + "与" + year[j] + "考核基数比较"] = DecimalExtension.GetRoundValue((PM10CurrentFactorCon - PM10BaseFactorCon) / PM10BaseFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a21004":
+                                            if (NO2BaseFactorCon != -1000)
+                                                newRow[factor + year[j] + "考核基数"] = NO2BaseFactorCon.ToString();
+                                            if (NO2BaseFactorCon != 0 && NO2BaseFactorCon != -1000 && NO2CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + "与" + year[j] + "考核基数比较"] = DecimalExtension.GetRoundValue((NO2CurrentFactorCon - NO2BaseFactorCon) / NO2BaseFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a21026":
+                                            if (SO2BaseFactorCon != -1000)
+                                                newRow[factor + year[j] + "考核基数"] = SO2BaseFactorCon.ToString();
+                                            if (SO2BaseFactorCon != 0 && SO2BaseFactorCon != -1000 && SO2CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + "与" + year[j] + "考核基数比较"] = DecimalExtension.GetRoundValue((SO2CurrentFactorCon - SO2BaseFactorCon) / SO2BaseFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a21005":
+                                            if (COBaseFactorCon != -1000)
+                                                newRow[factor + year[j] + "考核基数"] = COBaseFactorCon.ToString();
+                                            if (COBaseFactorCon != 0 && COBaseFactorCon != -1000 && COCurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + "与" + year[j] + "考核基数比较"] = DecimalExtension.GetRoundValue((COCurrentFactorCon - COBaseFactorCon) / COBaseFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a05024":
+                                            if (O3BaseFactorCon != -1000)
+                                                newRow[factor + year[j] + "考核基数"] = O3BaseFactorCon.ToString();
+                                            if (O3BaseFactorCon != 0 && O3BaseFactorCon != -1000 && O3CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + "与" + year[j] + "考核基数比较"] = DecimalExtension.GetRoundValue((O3CurrentFactorCon - O3BaseFactorCon) / O3BaseFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                if (BaseFactorCon != -1000)
+                                    newRow[year[j] + "考核基数"] = BaseFactorCon.ToString();
+                                if (BaseFactorCon != 0 && BaseFactorCon != -1000 && CurrentFactorCon != -1000)
+                                {
+                                    newRow["与" + year[j] + "考核基数比较"] = DecimalExtension.GetRoundValue((CurrentFactorCon - BaseFactorCon) / BaseFactorCon * 100, 1) + "%";
+                                }
+                            }
+                        }
+
+                    }
+                    if (Rowdt.Length == 0)
+                    {
+                        newRow["PointId"] = Convert.ToInt32(portIds[i]);
+                        newRow["PointName"] = PointName;
+                        newdtb.Rows.Add(newRow);
+                    }
+                    else
+                    {
+                        newRow["PointId"] = Convert.ToInt32(portIds[i]);
+                        newRow["PointName"] = PointName;
+                        if (COnAQI == "1")
+                        {
+                            foreach (string factor in factorCodes)
+                            {
+                                switch (factor)
+                                {
+                                    case "a34004":
+                                        if (PM25CurrentFactorCon != -1000)
+                                            newRow[factor + cf] = PM25CurrentFactorCon.ToString();
+                                        break;
+                                    case "a34002":
+                                        if (PM10CurrentFactorCon != -1000)
+                                            newRow[factor + cf] = PM10CurrentFactorCon.ToString();
+                                        break;
+                                    case "a21004":
+                                        if (NO2CurrentFactorCon != -1000)
+                                            newRow[factor + cf] = NO2CurrentFactorCon.ToString();
+                                        break;
+                                    case "a21026":
+                                        if (SO2CurrentFactorCon != -1000)
+                                            newRow[factor + cf] = SO2CurrentFactorCon.ToString();
+                                        break;
+                                    case "a21005":
+                                        if (COCurrentFactorCon != -1000)
+                                            newRow[factor + cf] = COCurrentFactorCon.ToString();
+                                        break;
+                                    case "a05024":
+                                        if (O3CurrentFactorCon != -1000)
+                                            newRow[factor + cf] = O3CurrentFactorCon.ToString();
+                                        break;
+                                }
+                            }
+                        }
+                        else
+                            newRow[cf] = CurrentFactorCon.ToString();
+
+                        newdtb.Rows.Add(newRow);
+                    }
+                }
+            }
+            return newdtb.DefaultView;
+        }
+
+
+
+        #endregion
+        #region 根据区域统计
+        /// <summary>
+        /// 根据key主键判断记录是否存在
+        /// </summary>
+        /// <param name="strKey">主键值</param>
+        /// <returns></returns>
+        public bool RIsExist(string strKey)
+        {
+            regionDayAQI = Singleton<RegionDayAQIRepository>.GetInstance();
+            if (regionDayAQI != null)
+                return regionDayAQI.IsExist(strKey);
+            return false;
+        }
+
+        /// <summary>
+        /// 取得虚拟分页查询数据和总行数(行转列数据)
+        /// </summary>
+        /// <param name="portIds">测点数据</param>
+        /// <param name="dtStart">开始时间</param>
+        /// <param name="dtEnd">结束时间</param>
+        /// <param name="pageSize">每页记录数</param>
+        /// <param name="pageNo">当前页（从0开始）</param> 
+        /// <param name="recordTotal">总行数</param>
+        /// <param name="orderBy">排序方式（字段：PointId,DateTime）</param>
+        /// <returns></returns> 
+        public DataView GetAreaDataPager(string[] regionGuids, string[] factorCodes, DateTime dtStart, DateTime dtEnd, string[] year, string[] years, int pageSize
+        , int pageNo, out int recordTotal, string COnAQI)
+        {
+            recordTotal = 0;
+            DateTime mBegion = Convert.ToDateTime(dtStart.ToString("yyyy-MM-dd"));  //本期第一天
+            DateTime mEnd = Convert.ToDateTime(dtEnd.ToString("yyyy-MM-dd"));   //本期当天
+            string monthB = mBegion.ToString("MM-dd");
+            string monthE = mEnd.ToString("MM-dd");
+
+            regionDayAQI = Singleton<RegionDayAQIRepository>.GetInstance();
+
+            DataView dv = new DataView();
+            DataView dvT = new DataView();
+            DataView dvN = new DataView();
+
+            DataTable newdtb = new DataTable();
+            newdtb.Columns.Add("PointId", typeof(int));
+            newdtb.Columns.Add("PointName", typeof(string));
+            string cf = mBegion.Year.ToString() + "年" + mBegion.Month.ToString() + "月" + mBegion.Day.ToString() + "日" + "~" + mEnd.Month.ToString() + "月" + mEnd.Day.ToString() + "日";
+            if (COnAQI == "1")
+            {
+                foreach (string factor in factorCodes)
+                {
+
+                    newdtb.Columns.Add(factor + cf, typeof(string));
+                    for (int i = 0; i < years.Length; i++)
+                    {
+                        if (years[i] != "" && Convert.ToInt32(years[i]) != mBegion.Year)
+                        {
+                            string str = years[i] + "年" + mBegion.Month.ToString() + "月" + mBegion.Day.ToString() + "日" + "~" + mEnd.Month.ToString() + "月" + mEnd.Day.ToString() + "日";
+                            newdtb.Columns.Add(factor + str, typeof(string));
+                        }
+                    }
+                    for (int m = 0; m < year.Length; m++)
+                    {
+                        if (year[m] != "")
+                            newdtb.Columns.Add(factor + year[m] + "考核基数", typeof(string));
+
+                    }
+                    for (int j = 0; j < years.Length; j++)
+                    {
+                        if (years[j] != "" && Convert.ToInt32(years[j]) != mBegion.Year)
+                        {
+                            newdtb.Columns.Add(factor + "与" + years[j].ToString() + "年比较", typeof(string));
+                        }
+                    }
+
+                    for (int m = 0; m < year.Length; m++)
+                    {
+                        if (year[m] != "")
+                            newdtb.Columns.Add(factor + "与" + year[m] + "考核基数比较", typeof(string));
+                    }
+                }
+            }
+            else
+            {
+                newdtb.Columns.Add(cf, typeof(string));
+                for (int i = 0; i < years.Length; i++)
+                {
+                    if (years[i] != "" && Convert.ToInt32(years[i]) != mBegion.Year)
+                    {
+                        string str = years[i] + "年" + mBegion.Month.ToString() + "月" + mBegion.Day.ToString() + "日" + "~" + mEnd.Month.ToString() + "月" + mEnd.Day.ToString() + "日";
+                        newdtb.Columns.Add(str, typeof(string));
+                    }
+                }
+                for (int m = 0; m < year.Length; m++)
+                {
+                    if (year[m] != "")
+                        newdtb.Columns.Add(year[m] + "考核基数", typeof(string));
+
+                }
+                for (int j = 0; j < years.Length; j++)
+                {
+                    if (years[j] != "" && Convert.ToInt32(years[j]) != mBegion.Year)
+                    {
+                        newdtb.Columns.Add("与" + years[j].ToString() + "年比较", typeof(string));
+                    }
+                }
+
+                for (int m = 0; m < year.Length; m++)
+                {
+                    if (year[m] != "")
+                        newdtb.Columns.Add("与" + year[m] + "考核基数比较", typeof(string));
+
+                }
+            }
+            dv = regionDayAQI.GetAreaDataPager(regionGuids, mBegion, mEnd, pageSize, pageNo, out recordTotal);  // 本期
+            DataTable dt = dv.ToTable();   //本期         
+            DataRow[] Rowdt;
+
+
+
+            string quanshi = "";
+            for (int i = 0; i < regionGuids.Length; i++)
+            {
+
+                string PointName = "";
+                decimal CurrentFactorCon = -1000;
+                decimal SameFactorCon = -1000;
+                decimal BaseFactorCon = -1000;
+                decimal PM25CurrentFactorCon = -1000;
+                decimal PM25SameFactorCon = -1000;
+                decimal PM25BaseFactorCon = -1000;
+                decimal PM10CurrentFactorCon = -1000;
+                decimal PM10SameFactorCon = -1000;
+                decimal PM10BaseFactorCon = -1000;
+                decimal SO2CurrentFactorCon = -1000;
+                decimal SO2SameFactorCon = -1000;
+                decimal SO2BaseFactorCon = -1000;
+                decimal NO2CurrentFactorCon = -1000;
+                decimal NO2SameFactorCon = -1000;
+                decimal NO2BaseFactorCon = -1000;
+                decimal COCurrentFactorCon = -1000;
+                decimal COSameFactorCon = -1000;
+                decimal COBaseFactorCon = -1000;
+                decimal O3CurrentFactorCon = -1000;
+                decimal O3SameFactorCon = -1000;
+                decimal O3BaseFactorCon = -1000;
+
+                DataRow newRow = newdtb.NewRow();
+                PointName = g_DictionaryService.GetCodeDictionaryTextByValue(regionGuids[i]);
+
+
+                Rowdt = dt.Select("MonitoringRegionUid='" + regionGuids[i] + "'");   //2015
+
+                if (Rowdt.Length > 0)
+                {
+                    if (COnAQI == "1")
+                    {
+                        foreach (string factor in factorCodes)
+                        {
+                            if (Rowdt[0][factor].IsNotNullOrDBNull())
+                            {
+                                switch (factor)
+                                {
+                                    case "a34004":
+                                        PM25CurrentFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(Rowdt[0][factor]) * 1000, 0);
+                                        break;
+                                    case "a34002":
+                                        PM10CurrentFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(Rowdt[0][factor]) * 1000, 0);
+                                        break;
+                                    case "a21004":
+                                        NO2CurrentFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(Rowdt[0][factor]) * 1000, 0);
+                                        break;
+                                    case "a21026":
+                                        SO2CurrentFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(Rowdt[0][factor]) * 1000, 0);
+                                        break;
+                                    case "a21005":
+                                        COCurrentFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(Rowdt[0][factor]), 1);
+                                        break;
+                                    case "a05024":
+                                        O3CurrentFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(Rowdt[0][factor]) * 1000, 0);
+                                        break;
+                                }
+                            }
+
+                        }
+                    }
+                    else
+                    {
+                        for (int j = 1; j < 7; j++)
+                        {
+                            string factors = dt.Columns[j].ColumnName;
+                            int count = 24;
+                            if (factors == "a05024")
+                            {
+                                count = 8;
+                            }
+                            if (Rowdt[0][j].IsNotNullOrDBNull())
+                            {
+                                decimal Con = DecimalExtension.GetRoundValue(Convert.ToDecimal(Rowdt[0][j]), 4);
+                                decimal temp = DecimalExtension.GetRoundValue(s_AQIService.GetAQI(factors, Con, count), 0);
+                                if (CurrentFactorCon < temp)
+                                {
+                                    CurrentFactorCon = temp;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                for (int j = 0; j < years.Length; j++)
+                {
+                    DataRow[] RowdtN;
+                    if (years[j] != "" && Convert.ToInt32(years[j]) != mBegion.Year)
+                    {
+                        DateTime smBegion = Convert.ToDateTime(years[j] + "-" + monthB);   //基数第一天
+                        DateTime smEnd = DateTime.Parse((years[j].ToString() + "-" + monthE).ToString());    //基数当天
+                        //  同期
+                        dvT = regionDayAQI.GetAreaDataPager(regionGuids, smBegion, smEnd, pageSize, pageNo, out recordTotal);  //  同期
+                        DataTable dtN = dvT.ToTable();   //同期
+                        RowdtN = dtN.Select("MonitoringRegionUid='" + regionGuids[i] + "'");   //2014
+                        if (RowdtN.Length > 0)
+                        {
+                            if (COnAQI == "1")
+                            {
+                                foreach (string factor in factorCodes)
+                                {
+                                    if (RowdtN[0][factor].IsNotNullOrDBNull())
+                                    {
+                                        switch (factor)
+                                        {
+                                            case "a34004":
+                                                PM25SameFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtN[0][factor]) * 1000, 0);
+                                                break;
+                                            case "a34002":
+                                                PM10SameFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtN[0][factor]) * 1000, 0);
+                                                break;
+                                            case "a21004":
+                                                NO2SameFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtN[0][factor]) * 1000, 0);
+                                                break;
+                                            case "a21026":
+                                                SO2SameFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtN[0][factor]) * 1000, 0);
+                                                break;
+                                            case "a21005":
+                                                COSameFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtN[0][factor]), 1);
+                                                break;
+                                            case "a05024":
+                                                O3SameFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtN[0][factor]) * 1000, 0);
+                                                break;
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                for (int n = 1; n < 7; n++)
+                                {
+                                    string factors = dtN.Columns[n].ColumnName;
+                                    int count = 24;
+                                    if (factors == "a05024")
+                                    {
+                                        count = 8;
+                                    }
+                                    if (RowdtN[0][n].IsNotNullOrDBNull())
+                                    {
+                                        decimal Con = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtN[0][n]), 4);
+                                        decimal temp = DecimalExtension.GetRoundValue(s_AQIService.GetAQI(factors, Con, count), 0);
+                                        if (SameFactorCon < temp)
+                                        {
+                                            SameFactorCon = temp;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        if (RowdtN.Length == 0)
+                            ;
+                        else
+                        {
+
+                            string str = years[j] + "年" + mBegion.Month.ToString() + "月" + mBegion.Day.ToString() + "日" + "~" + mEnd.Month.ToString() + "月" + mEnd.Day.ToString() + "日";
+                            string sr = "与" + years[j].ToString() + "年比较";
+                            if (COnAQI == "1")
+                            {
+                                foreach (string factor in factorCodes)
+                                {
+                                    switch (factor)
+                                    {
+                                        case "a34004":
+                                            if (PM25SameFactorCon != -1000)
+                                                newRow[factor + str] = PM25SameFactorCon.ToString();
+
+                                            if (PM25SameFactorCon != 0 && PM25SameFactorCon != -1000 && PM25CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + sr] = DecimalExtension.GetRoundValue((PM25CurrentFactorCon - PM25SameFactorCon) / PM25SameFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a34002":
+                                            if (PM10SameFactorCon != -1000)
+                                                newRow[factor + str] = PM10SameFactorCon.ToString();
+
+                                            if (PM10SameFactorCon != 0 && PM10SameFactorCon != -1000 && PM10CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + sr] = DecimalExtension.GetRoundValue((PM10CurrentFactorCon - PM10SameFactorCon) / PM10SameFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a21004":
+                                            if (NO2SameFactorCon != -1000)
+                                                newRow[factor + str] = NO2SameFactorCon.ToString();
+
+                                            if (NO2SameFactorCon != 0 && NO2SameFactorCon != -1000 && NO2CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + sr] = DecimalExtension.GetRoundValue((NO2CurrentFactorCon - NO2SameFactorCon) / NO2SameFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a21026":
+                                            if (SO2SameFactorCon != -1000)
+                                                newRow[factor + str] = SO2SameFactorCon.ToString();
+
+                                            if (SO2SameFactorCon != 0 && SO2SameFactorCon != -1000 && SO2CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + sr] = DecimalExtension.GetRoundValue((SO2CurrentFactorCon - SO2SameFactorCon) / SO2SameFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a21005":
+                                            if (COSameFactorCon != -1000)
+                                                newRow[factor + str] = COSameFactorCon.ToString();
+
+                                            if (COSameFactorCon != 0 && COSameFactorCon != -1000 && COCurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + sr] = DecimalExtension.GetRoundValue((COCurrentFactorCon - COSameFactorCon) / COSameFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a05024":
+                                            if (O3SameFactorCon != -1000)
+                                                newRow[factor + str] = O3SameFactorCon.ToString();
+
+                                            if (O3SameFactorCon != 0 && O3SameFactorCon != -1000 && O3CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + sr] = DecimalExtension.GetRoundValue((O3CurrentFactorCon - O3SameFactorCon) / O3SameFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                if (SameFactorCon != -1000)
+                                    newRow[str] = SameFactorCon.ToString();
+                                if (SameFactorCon != 0 && SameFactorCon != -1000 && CurrentFactorCon != -1000)
+                                {
+                                    newRow[sr] = DecimalExtension.GetRoundValue((CurrentFactorCon - SameFactorCon) / SameFactorCon * 100, 1) + "%";
+                                }
+                            }
+                        }
+                    }
+                }
+                for (int j = 0; j < year.Length; j++)
+                {
+                    decimal Base = 0;
+                    if (year[j] != "")
+                    {
+                        DataRow[] RowdtNew;
+                        //基数
+                        dvN = m_DataQueryByDayService.GetRegionConcentrationDay(regionGuids, dtStart, dtEnd, year[j]);   //  基数
+                        DataTable dtNew = dvN.ToTable();  //基数
+                        RowdtNew = dtNew.Select("MonitoringRegionUid='" + regionGuids[i] + "'");   //2013
+                        if (RowdtNew.Length > 0)
+                        {
+                            if (COnAQI == "1")
+                            {
+                                foreach (string factor in factorCodes)
+                                {
+                                    if (RowdtNew[0][factor].IsNotNullOrDBNull())
+                                    {
+                                        switch (factor)
+                                        {
+                                            case "a34004":
+                                                PM25BaseFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtNew[0][factor]) * 1000, 0);
+                                                break;
+                                            case "a34002":
+                                                PM10BaseFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtNew[0][factor]) * 1000, 0);
+                                                break;
+                                            case "a21004":
+                                                NO2BaseFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtNew[0][factor]) * 1000, 0);
+                                                break;
+                                            case "a21026":
+                                                SO2BaseFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtNew[0][factor]) * 1000, 0);
+                                                break;
+                                            case "a21005":
+                                                COBaseFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtNew[0][factor]), 1);
+                                                break;
+                                            case "a05024":
+                                                O3BaseFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtNew[0][factor]) * 1000, 0);
+                                                break;
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                for (int m = 1; m < 7; m++)
+                                {
+                                    string factors = dtNew.Columns[m].ColumnName;
+                                    int count = 24;
+                                    if (factors == "a05024")
+                                    {
+                                        count = 8;
+                                    }
+                                    if (RowdtNew[0][m].IsNotNullOrDBNull())
+                                    {
+                                        decimal Con = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtNew[0][m]), 4);
+                                        decimal temp = DecimalExtension.GetRoundValue(s_AQIService.GetAQI(factors, Con, count), 0);
+                                        if (BaseFactorCon < temp)
+                                        {
+                                            BaseFactorCon = temp;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        if (RowdtNew.Length == 0)
+                            ;
+                        else
+                        {
+                            if (COnAQI == "1")
+                            {
+                                foreach (string factor in factorCodes)
+                                {
+                                    switch (factor)
+                                    {
+                                        case "a34004":
+                                            if (PM25BaseFactorCon != -1000)
+                                                newRow[factor + year[j] + "考核基数"] = PM25BaseFactorCon.ToString();
+                                            if (PM25BaseFactorCon != 0 && PM25BaseFactorCon != -1000 && PM25CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + "与" + year[j] + "考核基数比较"] = DecimalExtension.GetRoundValue((PM25CurrentFactorCon - PM25BaseFactorCon) / PM25BaseFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a34002":
+                                            if (PM10BaseFactorCon != -1000)
+                                                newRow[factor + year[j] + "考核基数"] = PM10BaseFactorCon.ToString();
+                                            if (PM10BaseFactorCon != 0 && PM10BaseFactorCon != -1000 && PM10CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + "与" + year[j] + "考核基数比较"] = DecimalExtension.GetRoundValue((PM10CurrentFactorCon - PM10BaseFactorCon) / PM10BaseFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a21004":
+                                            if (NO2BaseFactorCon != -1000)
+                                                newRow[factor + year[j] + "考核基数"] = NO2BaseFactorCon.ToString();
+                                            if (NO2BaseFactorCon != 0 && NO2BaseFactorCon != -1000 && NO2CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + "与" + year[j] + "考核基数比较"] = DecimalExtension.GetRoundValue((NO2CurrentFactorCon - NO2BaseFactorCon) / NO2BaseFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a21026":
+                                            if (SO2BaseFactorCon != -1000)
+                                                newRow[factor + year[j] + "考核基数"] = SO2BaseFactorCon.ToString();
+                                            if (SO2BaseFactorCon != 0 && SO2BaseFactorCon != -1000 && SO2CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + "与" + year[j] + "考核基数比较"] = DecimalExtension.GetRoundValue((SO2CurrentFactorCon - SO2BaseFactorCon) / SO2BaseFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a21005":
+                                            if (COBaseFactorCon != -1000)
+                                                newRow[factor + year[j] + "考核基数"] = COBaseFactorCon.ToString();
+                                            if (COBaseFactorCon != 0 && COBaseFactorCon != -1000 && COCurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + "与" + year[j] + "考核基数比较"] = DecimalExtension.GetRoundValue((COCurrentFactorCon - COBaseFactorCon) / COBaseFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a05024":
+                                            if (O3BaseFactorCon != -1000)
+                                                newRow[factor + year[j] + "考核基数"] = O3BaseFactorCon.ToString();
+                                            if (O3BaseFactorCon != 0 && O3BaseFactorCon != -1000 && O3CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + "与" + year[j] + "考核基数比较"] = DecimalExtension.GetRoundValue((O3CurrentFactorCon - O3BaseFactorCon) / O3BaseFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                if (BaseFactorCon != -1000)
+                                    newRow[year[j] + "考核基数"] = BaseFactorCon.ToString();
+                                if (BaseFactorCon != 0 && BaseFactorCon != -1000 && CurrentFactorCon != -1000)
+                                {
+                                    newRow["与" + year[j] + "考核基数比较"] = DecimalExtension.GetRoundValue((CurrentFactorCon - BaseFactorCon) / BaseFactorCon * 100, 1) + "%";
+                                }
+                            }
+
+                        }
+                    }
+                }
+                if (Rowdt.Length == 0)
+                {
+                    newRow["PointName"] = PointName;
+                    newdtb.Rows.Add(newRow);
+                }
+                else
+                {
+                    newRow["PointName"] = PointName;
+                    if (COnAQI == "1")
+                    {
+                        foreach (string factor in factorCodes)
+                        {
+                            switch (factor)
+                            {
+                                case "a34004":
+                                    if (PM25CurrentFactorCon != -1000)
+                                        newRow[factor + cf] = PM25CurrentFactorCon.ToString();
+                                    break;
+                                case "a34002":
+                                    if (PM10CurrentFactorCon != -1000)
+                                        newRow[factor + cf] = PM10CurrentFactorCon.ToString();
+                                    break;
+                                case "a21004":
+                                    if (NO2CurrentFactorCon != -1000)
+                                        newRow[factor + cf] = NO2CurrentFactorCon.ToString();
+                                    break;
+                                case "a21026":
+                                    if (SO2CurrentFactorCon != -1000)
+                                        newRow[factor + cf] = SO2CurrentFactorCon.ToString();
+                                    break;
+                                case "a21005":
+                                    if (COCurrentFactorCon != -1000)
+                                        newRow[factor + cf] = COCurrentFactorCon.ToString();
+                                    break;
+                                case "a05024":
+                                    if (O3CurrentFactorCon != -1000)
+                                        newRow[factor + cf] = O3CurrentFactorCon.ToString();
+                                    break;
+                            }
+                        }
+                    }
+                    else
+                        newRow[cf] = CurrentFactorCon.ToString();
+                    newdtb.Rows.Add(newRow);
+                }
+
+            }
+            DataView newdv = new DataView();
+            newdv = new DataView(newdtb);
+            return newdv;
+        }
+        /// <summary>
+        /// 根据所选站点ID获取相应区域信息
+        /// </summary>
+        /// <param name="pointIds"></param>
+        /// <returns></returns>
+        public DataView GetRegionByPointId(string[] pointIds)
+        {
+            return pointAirService.GetRegionByPointId(pointIds);
+        }
+        /// <summary>
+        /// 取得虚拟分页查询数据和总行数(行转列数据)
+        /// </summary>
+        /// <param name="portIds">测点数据</param>
+        /// <param name="dtStart">开始时间</param>
+        /// <param name="dtEnd">结束时间</param>
+        /// <param name="pageSize">每页记录数</param>
+        /// <param name="pageNo">当前页（从0开始）</param> 
+        /// <param name="recordTotal">总行数</param>
+        /// <param name="orderBy">排序方式（字段：PointId,DateTime）</param>
+        /// <returns></returns> 
+        public DataView GetAreaDataPagerNew(string[] portIds, string[] factorCodes, DateTime dtStart, DateTime dtEnd, string[] year, string[] years, int pageSize
+        , int pageNo, out int recordTotal, string COnAQI)
+        {
+            recordTotal = 0;
+            DateTime mBegion = Convert.ToDateTime(dtStart.ToString("yyyy-MM-dd"));  //本期第一天
+            DateTime mEnd = Convert.ToDateTime(dtEnd.ToString("yyyy-MM-dd"));   //本期当天
+            string monthB = mBegion.ToString("MM-dd");
+            string monthE = mEnd.ToString("MM-dd");
+            DataView dvRegion = GetRegionByPointId(portIds);
+            /// <summary>
+            /// 区域Uid集合
+            /// </summary>
+            List<string> listRegionUids = new List<string>();
+            foreach (DataRowView dr in dvRegion)
+            {
+                string regionUid = dr["RegionUid"].ToString();
+                listRegionUids.Add(regionUid);
+            }
+            string[] regionUids = listRegionUids.ToArray();
+
+            //新建一个新的datatable,存放区域数据信息
+            DataTable dtForAQI = new DataTable();
+            DataTable dtForAQIT = new DataTable();
+            DataTable dtForAQIS = new DataTable();
+            regionDayAQI = Singleton<RegionDayAQIRepository>.GetInstance();
+
+            DataView dv = new DataView();
+            DataView dvT = new DataView();
+            DataView dvN = new DataView();
+
+            DataTable newdtb = new DataTable();
+            newdtb.Columns.Add("PointId", typeof(int));
+            newdtb.Columns.Add("PointName", typeof(string));
+            string cf = mBegion.Year.ToString() + "年" + mBegion.Month.ToString() + "月" + mBegion.Day.ToString() + "日" + "~" + mEnd.Month.ToString() + "月" + mEnd.Day.ToString() + "日";
+            if (COnAQI == "1")
+            {
+                foreach (string factor in factorCodes)
+                {
+
+                    newdtb.Columns.Add(factor + cf, typeof(string));
+                    for (int i = 0; i < years.Length; i++)
+                    {
+                        if (years[i] != "" && Convert.ToInt32(years[i]) != mBegion.Year)
+                        {
+                            string str = years[i] + "年" + mBegion.Month.ToString() + "月" + mBegion.Day.ToString() + "日" + "~" + mEnd.Month.ToString() + "月" + mEnd.Day.ToString() + "日";
+                            newdtb.Columns.Add(factor + str, typeof(string));
+                        }
+                    }
+                    for (int m = 0; m < year.Length; m++)
+                    {
+                        if (year[m] != "")
+                            newdtb.Columns.Add(factor + year[m] + "考核基数", typeof(string));
+
+                    }
+                    for (int j = 0; j < years.Length; j++)
+                    {
+                        if (years[j] != "" && Convert.ToInt32(years[j]) != mBegion.Year)
+                        {
+                            newdtb.Columns.Add(factor + "与" + years[j].ToString() + "年比较", typeof(string));
+                        }
+                    }
+
+                    for (int m = 0; m < year.Length; m++)
+                    {
+                        if (year[m] != "")
+                            newdtb.Columns.Add(factor + "与" + year[m] + "考核基数比较", typeof(string));
+                    }
+                }
+            }
+            else
+            {
+                newdtb.Columns.Add(cf, typeof(string));
+                for (int i = 0; i < years.Length; i++)
+                {
+                    if (years[i] != "" && Convert.ToInt32(years[i]) != mBegion.Year)
+                    {
+                        string str = years[i] + "年" + mBegion.Month.ToString() + "月" + mBegion.Day.ToString() + "日" + "~" + mEnd.Month.ToString() + "月" + mEnd.Day.ToString() + "日";
+                        newdtb.Columns.Add(str, typeof(string));
+                    }
+                }
+                for (int m = 0; m < year.Length; m++)
+                {
+                    if (year[m] != "")
+                        newdtb.Columns.Add(year[m] + "考核基数", typeof(string));
+
+                }
+                for (int j = 0; j < years.Length; j++)
+                {
+                    if (years[j] != "" && Convert.ToInt32(years[j]) != mBegion.Year)
+                    {
+                        newdtb.Columns.Add("与" + years[j].ToString() + "年比较", typeof(string));
+                    }
+                }
+
+                for (int m = 0; m < year.Length; m++)
+                {
+                    if (year[m] != "")
+                        newdtb.Columns.Add("与" + year[m] + "考核基数比较", typeof(string));
+
+                }
+            }
+            List<string> regionName = dvRegion.ToTable().AsEnumerable().Select(t => t.Field<string>("Region")).ToList();
+            IEnumerable<string> names = regionName.Distinct();
+            //dv = regionDayAQI.GetAreaDataPager(regionUids, mBegion, mEnd, pageSize, pageNo, out recordTotal);  // 本期
+            //DataTable dt = dv.ToTable();   //本期         
+            DataRow[] Rowdt;
+            //给datatable增加列
+            dtForAQI.Columns.Add("MonitoringRegionUid", typeof(string));
+            dtForAQI.Columns.Add("a34004", typeof(string));
+            dtForAQI.Columns.Add("a34002", typeof(string));
+            dtForAQI.Columns.Add("a21004", typeof(string));
+            dtForAQI.Columns.Add("a21026", typeof(string));
+            dtForAQI.Columns.Add("a21005", typeof(string));
+            dtForAQI.Columns.Add("a05024", typeof(string));
+            dtForAQI.Columns.Add("Max_AQI", typeof(string));
+            //给datatable增加列
+            dtForAQIT.Columns.Add("MonitoringRegionUid", typeof(string));
+            dtForAQIT.Columns.Add("a34004", typeof(string));
+            dtForAQIT.Columns.Add("a34002", typeof(string));
+            dtForAQIT.Columns.Add("a21004", typeof(string));
+            dtForAQIT.Columns.Add("a21026", typeof(string));
+            dtForAQIT.Columns.Add("a21005", typeof(string));
+            dtForAQIT.Columns.Add("a05024", typeof(string));
+            dtForAQIT.Columns.Add("Max_AQI", typeof(string));
+            foreach (string name in names)
+            {
+                List<string> list = new List<string>();
+                string[] ids = { };
+                DataRow[] drs = dvRegion.ToTable().Select("Region='" + name + "'").ToArray<DataRow>();
+                for (int j = 0; j < drs.Length; j++)
+                {
+                    list.Add(drs[j]["PortId"].ToString());
+                }
+                ids = list.ToArray();
+
+                decimal? PM25PollutantValue = m_AQICalculateService.GetRegionValueByTime(ids, "a34004", mBegion, mEnd, 24, "2");
+                decimal? PM10PollutantValue = m_AQICalculateService.GetRegionValueByTime(ids, "a34002", mBegion, mEnd, 24, "2");
+                decimal? NO2PollutantValue = m_AQICalculateService.GetRegionValueByTime(ids, "a21004", mBegion, mEnd, 24, "2");
+                decimal? SO2PollutantValue = m_AQICalculateService.GetRegionValueByTime(ids, "a21026", mBegion, mEnd, 24, "2");
+                decimal? COPollutantValue = m_AQICalculateService.GetRegionValueByTime(ids, "a21005", mBegion, mEnd, 24, "2");
+                decimal? Max8HourO3PollutantValue = m_AQICalculateService.GetRegionValueByTime(ids, "a05024", mBegion, mEnd, 8, "2");
+                int? PM25Value = m_AQICalculateService.GetIAQI("a34004", Convert.ToDouble(PM25PollutantValue), 24);
+                int? PM10Value = m_AQICalculateService.GetIAQI("a34002", Convert.ToDouble(PM10PollutantValue), 24);
+                int? NO2Value = m_AQICalculateService.GetIAQI("a21004", Convert.ToDouble(NO2PollutantValue), 24);
+                int? SO2Value = m_AQICalculateService.GetIAQI("a21026", Convert.ToDouble(SO2PollutantValue), 24);
+                int? COValue = m_AQICalculateService.GetIAQI("a21005", Convert.ToDouble(COPollutantValue), 24);
+                int? Max8HourO3Value = m_AQICalculateService.GetIAQI("a05024", Convert.ToDouble(Max8HourO3PollutantValue), 8);
+                string AQIValue = m_AQICalculateService.GetAQI_Max_CNV(PM25Value, PM10Value, NO2Value, SO2Value, COValue, Max8HourO3Value, "V");
+                
+
+                DataRow dr = dtForAQI.NewRow();
+                dr["MonitoringRegionUid"] = name;
+                dr["a34004"] = PM25PollutantValue.ToString();
+                dr["a34002"] = PM10PollutantValue.ToString();
+                dr["a21004"] = NO2PollutantValue.ToString();
+                dr["a21026"] = SO2PollutantValue.ToString();
+                dr["a21005"] = COPollutantValue.ToString();
+                dr["a05024"] = Max8HourO3PollutantValue.ToString();
+                dr["Max_AQI"] = AQIValue;
+                dtForAQI.Rows.Add(dr);
+            }
+            //}
+            //dataView = dtForAQI.AsDataView();
+            DataTable dt = dtForAQI;
+
+            string quanshi = "";
+            foreach (string name in names)
+            {
+
+                string PointName = "";
+                decimal CurrentFactorCon = -1000;
+                decimal SameFactorCon = -1000;
+                decimal BaseFactorCon = -1000;
+                decimal PM25CurrentFactorCon = -1000;
+                decimal PM25SameFactorCon = -1000;
+                decimal PM25BaseFactorCon = -1000;
+                decimal PM10CurrentFactorCon = -1000;
+                decimal PM10SameFactorCon = -1000;
+                decimal PM10BaseFactorCon = -1000;
+                decimal SO2CurrentFactorCon = -1000;
+                decimal SO2SameFactorCon = -1000;
+                decimal SO2BaseFactorCon = -1000;
+                decimal NO2CurrentFactorCon = -1000;
+                decimal NO2SameFactorCon = -1000;
+                decimal NO2BaseFactorCon = -1000;
+                decimal COCurrentFactorCon = -1000;
+                decimal COSameFactorCon = -1000;
+                decimal COBaseFactorCon = -1000;
+                decimal O3CurrentFactorCon = -1000;
+                decimal O3SameFactorCon = -1000;
+                decimal O3BaseFactorCon = -1000;
+
+                DataRow newRow = newdtb.NewRow();
+                PointName = name;
+
+
+                Rowdt = dt.Select("MonitoringRegionUid='" + name + "'");   //2015
+
+                if (Rowdt.Length > 0)
+                {
+                    if (COnAQI == "1")
+                    {
+                        foreach (string factor in factorCodes)
+                        {
+                            if (Rowdt[0][factor].IsNotNullOrDBNull() && Rowdt[0][factor].ToString()!="")
+                            {
+                                switch (factor)
+                                {
+                                    case "a34004":
+                                        PM25CurrentFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(Rowdt[0][factor]) * 1000, 0);
+                                        break;
+                                    case "a34002":
+                                        PM10CurrentFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(Rowdt[0][factor]) * 1000, 0);
+                                        break;
+                                    case "a21004":
+                                        NO2CurrentFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(Rowdt[0][factor]) * 1000, 0);
+                                        break;
+                                    case "a21026":
+                                        SO2CurrentFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(Rowdt[0][factor]) * 1000, 0);
+                                        break;
+                                    case "a21005":
+                                        COCurrentFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(Rowdt[0][factor]), 1);
+                                        break;
+                                    case "a05024":
+                                        O3CurrentFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(Rowdt[0][factor]) * 1000, 0);
+                                        break;
+                                }
+                            }
+
+                        }
+                    }
+                    else
+                    {
+                        for (int j = 1; j < 7; j++)
+                        {
+                            string factors = dt.Columns[j].ColumnName;
+                            int count = 24;
+                            if (factors == "a05024")
+                            {
+                                count = 8;
+                            }
+                            if (Rowdt[0][j].IsNotNullOrDBNull() && Rowdt[0][j].ToString()!="")
+                            {
+                                decimal Con = DecimalExtension.GetRoundValue(Convert.ToDecimal(Rowdt[0][j]), 4);
+                                decimal temp = DecimalExtension.GetRoundValue(s_AQIService.GetAQI(factors, Con, count), 0);
+                                if (CurrentFactorCon < temp)
+                                {
+                                    CurrentFactorCon = temp;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                for (int j = 0; j < years.Length; j++)
+                {
+                    DataRow[] RowdtN;
+                    if (years[j] != "" && Convert.ToInt32(years[j]) != mBegion.Year)
+                    {
+                        DateTime smBegion = Convert.ToDateTime(years[j] + "-" + monthB);   //基数第一天
+                        DateTime smEnd = DateTime.Parse((years[j].ToString() + "-" + monthE).ToString());    //基数当天
+                        //  同期
+                        foreach (string nameT in names)
+                        {
+                            List<string> list = new List<string>();
+                            string[] ids = { };
+                            DataRow[] drs = dvRegion.ToTable().Select("Region='" + name + "'").ToArray<DataRow>();
+                            for (int k = 0; k < drs.Length; k++)
+                            {
+                                list.Add(drs[k]["PortId"].ToString());
+                            }
+                            ids = list.ToArray();
+
+                            decimal? PM25PollutantValue = m_AQICalculateService.GetRegionValueByTime(ids, "a34004", smBegion, smEnd, 24, "2");
+                            decimal? PM10PollutantValue = m_AQICalculateService.GetRegionValueByTime(ids, "a34002", smBegion, smEnd, 24, "2");
+                            decimal? NO2PollutantValue = m_AQICalculateService.GetRegionValueByTime(ids, "a21004", smBegion, smEnd, 24, "2");
+                            decimal? SO2PollutantValue = m_AQICalculateService.GetRegionValueByTime(ids, "a21026", smBegion, smEnd, 24, "2");
+                            decimal? COPollutantValue = m_AQICalculateService.GetRegionValueByTime(ids, "a21005", smBegion, smEnd, 24, "2");
+                            decimal? Max8HourO3PollutantValue = m_AQICalculateService.GetRegionValueByTime(ids, "a05024", smBegion, smEnd, 8, "2");
+                            int? PM25Value = m_AQICalculateService.GetIAQI("a34004", Convert.ToDouble(PM25PollutantValue), 24);
+                            int? PM10Value = m_AQICalculateService.GetIAQI("a34002", Convert.ToDouble(PM10PollutantValue), 24);
+                            int? NO2Value = m_AQICalculateService.GetIAQI("a21004", Convert.ToDouble(NO2PollutantValue), 24);
+                            int? SO2Value = m_AQICalculateService.GetIAQI("a21026", Convert.ToDouble(SO2PollutantValue), 24);
+                            int? COValue = m_AQICalculateService.GetIAQI("a21005", Convert.ToDouble(COPollutantValue), 24);
+                            int? Max8HourO3Value = m_AQICalculateService.GetIAQI("a05024", Convert.ToDouble(Max8HourO3PollutantValue), 8);
+                            string AQIValue = m_AQICalculateService.GetAQI_Max_CNV(PM25Value, PM10Value, NO2Value, SO2Value, COValue, Max8HourO3Value, "V");
+
+
+                            DataRow dr = dtForAQIT.NewRow();
+                            dr["MonitoringRegionUid"] = name;
+                            dr["a34004"] = PM25PollutantValue.ToString();
+                            dr["a34002"] = PM10PollutantValue.ToString();
+                            dr["a21004"] = NO2PollutantValue.ToString();
+                            dr["a21026"] = SO2PollutantValue.ToString();
+                            dr["a21005"] = COPollutantValue.ToString();
+                            dr["a05024"] = Max8HourO3PollutantValue.ToString();
+                            dr["Max_AQI"] = AQIValue;
+                            dtForAQIT.Rows.Add(dr);
+                        }
+                        //dvT = regionDayAQI.GetAreaDataPager(regionUids, smBegion, smEnd, pageSize, pageNo, out recordTotal);  //  同期
+                        DataTable dtN = dtForAQIT;   //同期 
+
+                        RowdtN = dtN.Select("MonitoringRegionUid='" + name + "'");   //2014
+                        if (RowdtN.Length > 0)
+                        {
+                            if (COnAQI == "1")
+                            {
+                                foreach (string factor in factorCodes)
+                                {
+                                    if (RowdtN[0][factor].IsNotNullOrDBNull() && RowdtN[0][factor].ToString()!="")
+                                    {
+                                        switch (factor)
+                                        {
+                                            case "a34004":
+                                                PM25SameFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtN[0][factor]) * 1000, 0);
+                                                break;
+                                            case "a34002":
+                                                PM10SameFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtN[0][factor]) * 1000, 0);
+                                                break;
+                                            case "a21004":
+                                                NO2SameFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtN[0][factor]) * 1000, 0);
+                                                break;
+                                            case "a21026":
+                                                SO2SameFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtN[0][factor]) * 1000, 0);
+                                                break;
+                                            case "a21005":
+                                                COSameFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtN[0][factor]), 1);
+                                                break;
+                                            case "a05024":
+                                                O3SameFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtN[0][factor]) * 1000, 0);
+                                                break;
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                for (int n = 1; n < 7; n++)
+                                {
+                                    string factors = dtN.Columns[n].ColumnName;
+                                    int count = 24;
+                                    if (factors == "a05024")
+                                    {
+                                        count = 8;
+                                    }
+                                    if (RowdtN[0][n].IsNotNullOrDBNull() && RowdtN[0][n].ToString()!="")
+                                    {
+                                        decimal Con = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtN[0][n]), 4);
+                                        decimal temp = DecimalExtension.GetRoundValue(s_AQIService.GetAQI(factors, Con, count), 0);
+                                        if (SameFactorCon < temp)
+                                        {
+                                            SameFactorCon = temp;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        if (RowdtN.Length == 0)
+                            ;
+                        else
+                        {
+
+                            string str = years[j] + "年" + mBegion.Month.ToString() + "月" + mBegion.Day.ToString() + "日" + "~" + mEnd.Month.ToString() + "月" + mEnd.Day.ToString() + "日";
+                            string sr = "与" + years[j].ToString() + "年比较";
+                            if (COnAQI == "1")
+                            {
+                                foreach (string factor in factorCodes)
+                                {
+                                    switch (factor)
+                                    {
+                                        case "a34004":
+                                            if (PM25SameFactorCon != -1000)
+                                                newRow[factor + str] = PM25SameFactorCon.ToString();
+
+                                            if (PM25SameFactorCon != 0 && PM25SameFactorCon != -1000 && PM25CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + sr] = DecimalExtension.GetRoundValue((PM25CurrentFactorCon - PM25SameFactorCon) / PM25SameFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a34002":
+                                            if (PM10SameFactorCon != -1000)
+                                                newRow[factor + str] = PM10SameFactorCon.ToString();
+
+                                            if (PM10SameFactorCon != 0 && PM10SameFactorCon != -1000 && PM10CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + sr] = DecimalExtension.GetRoundValue((PM10CurrentFactorCon - PM10SameFactorCon) / PM10SameFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a21004":
+                                            if (NO2SameFactorCon != -1000)
+                                                newRow[factor + str] = NO2SameFactorCon.ToString();
+
+                                            if (NO2SameFactorCon != 0 && NO2SameFactorCon != -1000 && NO2CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + sr] = DecimalExtension.GetRoundValue((NO2CurrentFactorCon - NO2SameFactorCon) / NO2SameFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a21026":
+                                            if (SO2SameFactorCon != -1000)
+                                                newRow[factor + str] = SO2SameFactorCon.ToString();
+
+                                            if (SO2SameFactorCon != 0 && SO2SameFactorCon != -1000 && SO2CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + sr] = DecimalExtension.GetRoundValue((SO2CurrentFactorCon - SO2SameFactorCon) / SO2SameFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a21005":
+                                            if (COSameFactorCon != -1000)
+                                                newRow[factor + str] = COSameFactorCon.ToString();
+
+                                            if (COSameFactorCon != 0 && COSameFactorCon != -1000 && COCurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + sr] = DecimalExtension.GetRoundValue((COCurrentFactorCon - COSameFactorCon) / COSameFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a05024":
+                                            if (O3SameFactorCon != -1000)
+                                                newRow[factor + str] = O3SameFactorCon.ToString();
+
+                                            if (O3SameFactorCon != 0 && O3SameFactorCon != -1000 && O3CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + sr] = DecimalExtension.GetRoundValue((O3CurrentFactorCon - O3SameFactorCon) / O3SameFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                if (SameFactorCon != -1000)
+                                    newRow[str] = SameFactorCon.ToString();
+                                if (SameFactorCon != 0 && SameFactorCon != -1000 && CurrentFactorCon != -1000)
+                                {
+                                    newRow[sr] = DecimalExtension.GetRoundValue((CurrentFactorCon - SameFactorCon) / SameFactorCon * 100, 1) + "%";
+                                }
+                            }
+                        }
+                    }
+                }
+                for (int j = 0; j < year.Length; j++)
+                {
+                    decimal Base = 0;
+                    if (year[j] != "")
+                    {
+                        DataRow[] RowdtNew;
+                        //基数
+                        //  同期
+                        foreach (string nameT in names)
+                        {
+                            List<string> list = new List<string>();
+                            string[] ids = { };
+                            DataRow[] drs = dvRegion.ToTable().Select("Region='" + name + "'").ToArray<DataRow>();
+                            for (int k = 0; k < drs.Length; k++)
+                            {
+                                list.Add(drs[k]["PortId"].ToString());
+                            }
+                            ids = list.ToArray();
+
+                            decimal? PM25PollutantValue = m_AQICalculateService.GetRegionValueByTime(ids, "a34004", dtStart, dtEnd, 24, "2");
+                            decimal? PM10PollutantValue = m_AQICalculateService.GetRegionValueByTime(ids, "a34002", dtStart, dtEnd, 24, "2");
+                            decimal? NO2PollutantValue = m_AQICalculateService.GetRegionValueByTime(ids, "a21004", dtStart, dtEnd, 24, "2");
+                            decimal? SO2PollutantValue = m_AQICalculateService.GetRegionValueByTime(ids, "a21026", dtStart, dtEnd, 24, "2");
+                            decimal? COPollutantValue = m_AQICalculateService.GetRegionValueByTime(ids, "a21005", dtStart, dtEnd, 24, "2");
+                            decimal? Max8HourO3PollutantValue = m_AQICalculateService.GetRegionValueByTime(ids, "a05024", dtStart, dtEnd, 8, "2");
+                            int? PM25Value = m_AQICalculateService.GetIAQI("a34004", Convert.ToDouble(PM25PollutantValue), 24);
+                            int? PM10Value = m_AQICalculateService.GetIAQI("a34002", Convert.ToDouble(PM10PollutantValue), 24);
+                            int? NO2Value = m_AQICalculateService.GetIAQI("a21004", Convert.ToDouble(NO2PollutantValue), 24);
+                            int? SO2Value = m_AQICalculateService.GetIAQI("a21026", Convert.ToDouble(SO2PollutantValue), 24);
+                            int? COValue = m_AQICalculateService.GetIAQI("a21005", Convert.ToDouble(COPollutantValue), 24);
+                            int? Max8HourO3Value = m_AQICalculateService.GetIAQI("a05024", Convert.ToDouble(Max8HourO3PollutantValue), 8);
+                            string AQIValue = m_AQICalculateService.GetAQI_Max_CNV(PM25Value, PM10Value, NO2Value, SO2Value, COValue, Max8HourO3Value, "V");
+
+
+                            DataRow dr = dtForAQIS.NewRow();
+                            dr["MonitoringRegionUid"] = name;
+                            dr["a34004"] = PM25PollutantValue.ToString();
+                            dr["a34002"] = PM10PollutantValue.ToString();
+                            dr["a21004"] = NO2PollutantValue.ToString();
+                            dr["a21026"] = SO2PollutantValue.ToString();
+                            dr["a21005"] = COPollutantValue.ToString();
+                            dr["a05024"] = Max8HourO3PollutantValue.ToString();
+                            dr["Max_AQI"] = AQIValue;
+                            dtForAQIT.Rows.Add(dr);
+                        }
+                        //dvT = regionDayAQI.GetAreaDataPager(regionUids, smBegion, smEnd, pageSize, pageNo, out recordTotal);  //  同期
+                        //DataTable dtN = dtForAQIT;   //同期 
+
+                        //RowdtN = dtN.Select("MonitoringRegionUid='" + name + "'");   //2014
+                        //dvN = m_DataQueryByDayService.GetRegionConcentrationDay(regionUids, dtStart, dtEnd, year[j]);   //  基数
+                        DataTable dtNew = dtForAQIS;  //基数
+                        RowdtNew = dtNew.Select("MonitoringRegionUid='" + name + "'");   //2013
+                        if (RowdtNew.Length > 0)
+                        {
+                            if (COnAQI == "1")
+                            {
+                                foreach (string factor in factorCodes)
+                                {
+                                    if (RowdtNew[0][factor].IsNotNullOrDBNull() && RowdtNew[0][factor].ToString()!="")
+                                    {
+                                        switch (factor)
+                                        {
+                                            case "a34004":
+                                                PM25BaseFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtNew[0][factor]) * 1000, 0);
+                                                break;
+                                            case "a34002":
+                                                PM10BaseFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtNew[0][factor]) * 1000, 0);
+                                                break;
+                                            case "a21004":
+                                                NO2BaseFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtNew[0][factor]) * 1000, 0);
+                                                break;
+                                            case "a21026":
+                                                SO2BaseFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtNew[0][factor]) * 1000, 0);
+                                                break;
+                                            case "a21005":
+                                                COBaseFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtNew[0][factor]), 1);
+                                                break;
+                                            case "a05024":
+                                                O3BaseFactorCon = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtNew[0][factor]) * 1000, 0);
+                                                break;
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                for (int m = 1; m < 7; m++)
+                                {
+                                    string factors = dtNew.Columns[m].ColumnName;
+                                    int count = 24;
+                                    if (factors == "a05024")
+                                    {
+                                        count = 8;
+                                    }
+                                    if (RowdtNew[0][m].IsNotNullOrDBNull() && RowdtNew[0][m].ToString()!="")
+                                    {
+                                        decimal Con = DecimalExtension.GetRoundValue(Convert.ToDecimal(RowdtNew[0][m]), 4);
+                                        decimal temp = DecimalExtension.GetRoundValue(s_AQIService.GetAQI(factors, Con, count), 0);
+                                        if (BaseFactorCon < temp)
+                                        {
+                                            BaseFactorCon = temp;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        if (RowdtNew.Length == 0)
+                            ;
+                        else
+                        {
+                            if (COnAQI == "1")
+                            {
+                                foreach (string factor in factorCodes)
+                                {
+                                    switch (factor)
+                                    {
+                                        case "a34004":
+                                            if (PM25BaseFactorCon != -1000)
+                                                newRow[factor + year[j] + "考核基数"] = PM25BaseFactorCon.ToString();
+                                            if (PM25BaseFactorCon != 0 && PM25BaseFactorCon != -1000 && PM25CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + "与" + year[j] + "考核基数比较"] = DecimalExtension.GetRoundValue((PM25CurrentFactorCon - PM25BaseFactorCon) / PM25BaseFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a34002":
+                                            if (PM10BaseFactorCon != -1000)
+                                                newRow[factor + year[j] + "考核基数"] = PM10BaseFactorCon.ToString();
+                                            if (PM10BaseFactorCon != 0 && PM10BaseFactorCon != -1000 && PM10CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + "与" + year[j] + "考核基数比较"] = DecimalExtension.GetRoundValue((PM10CurrentFactorCon - PM10BaseFactorCon) / PM10BaseFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a21004":
+                                            if (NO2BaseFactorCon != -1000)
+                                                newRow[factor + year[j] + "考核基数"] = NO2BaseFactorCon.ToString();
+                                            if (NO2BaseFactorCon != 0 && NO2BaseFactorCon != -1000 && NO2CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + "与" + year[j] + "考核基数比较"] = DecimalExtension.GetRoundValue((NO2CurrentFactorCon - NO2BaseFactorCon) / NO2BaseFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a21026":
+                                            if (SO2BaseFactorCon != -1000)
+                                                newRow[factor + year[j] + "考核基数"] = SO2BaseFactorCon.ToString();
+                                            if (SO2BaseFactorCon != 0 && SO2BaseFactorCon != -1000 && SO2CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + "与" + year[j] + "考核基数比较"] = DecimalExtension.GetRoundValue((SO2CurrentFactorCon - SO2BaseFactorCon) / SO2BaseFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a21005":
+                                            if (COBaseFactorCon != -1000)
+                                                newRow[factor + year[j] + "考核基数"] = COBaseFactorCon.ToString();
+                                            if (COBaseFactorCon != 0 && COBaseFactorCon != -1000 && COCurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + "与" + year[j] + "考核基数比较"] = DecimalExtension.GetRoundValue((COCurrentFactorCon - COBaseFactorCon) / COBaseFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                        case "a05024":
+                                            if (O3BaseFactorCon != -1000)
+                                                newRow[factor + year[j] + "考核基数"] = O3BaseFactorCon.ToString();
+                                            if (O3BaseFactorCon != 0 && O3BaseFactorCon != -1000 && O3CurrentFactorCon != -1000)
+                                            {
+                                                newRow[factor + "与" + year[j] + "考核基数比较"] = DecimalExtension.GetRoundValue((O3CurrentFactorCon - O3BaseFactorCon) / O3BaseFactorCon * 100, 1) + "%";
+                                            }
+                                            break;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                if (BaseFactorCon != -1000)
+                                    newRow[year[j] + "考核基数"] = BaseFactorCon.ToString();
+                                if (BaseFactorCon != 0 && BaseFactorCon != -1000 && CurrentFactorCon != -1000)
+                                {
+                                    newRow["与" + year[j] + "考核基数比较"] = DecimalExtension.GetRoundValue((CurrentFactorCon - BaseFactorCon) / BaseFactorCon * 100, 1) + "%";
+                                }
+                            }
+
+                        }
+                    }
+                }
+                if (Rowdt.Length == 0)
+                {
+                    newRow["PointName"] = PointName;
+                    newdtb.Rows.Add(newRow);
+                }
+                else
+                {
+                    newRow["PointName"] = PointName;
+                    if (COnAQI == "1")
+                    {
+                        foreach (string factor in factorCodes)
+                        {
+                            switch (factor)
+                            {
+                                case "a34004":
+                                    if (PM25CurrentFactorCon != -1000)
+                                        newRow[factor + cf] = PM25CurrentFactorCon.ToString();
+                                    break;
+                                case "a34002":
+                                    if (PM10CurrentFactorCon != -1000)
+                                        newRow[factor + cf] = PM10CurrentFactorCon.ToString();
+                                    break;
+                                case "a21004":
+                                    if (NO2CurrentFactorCon != -1000)
+                                        newRow[factor + cf] = NO2CurrentFactorCon.ToString();
+                                    break;
+                                case "a21026":
+                                    if (SO2CurrentFactorCon != -1000)
+                                        newRow[factor + cf] = SO2CurrentFactorCon.ToString();
+                                    break;
+                                case "a21005":
+                                    if (COCurrentFactorCon != -1000)
+                                        newRow[factor + cf] = COCurrentFactorCon.ToString();
+                                    break;
+                                case "a05024":
+                                    if (O3CurrentFactorCon != -1000)
+                                        newRow[factor + cf] = O3CurrentFactorCon.ToString();
+                                    break;
+                            }
+                        }
+                    }
+                    else
+                        newRow[cf] = CurrentFactorCon.ToString();
+                    newdtb.Rows.Add(newRow);
+                }
+
+            }
+            DataView newdv = new DataView();
+            newdv = new DataView(newdtb);
+            return newdv;
+        }
+
+        /// <summary>
+        /// 获取指定日期内日数据均值数据
+        /// </summary>
+        /// <param name="regionGuids">区域Guid</param>
+        /// <param name="dateStart">开始时间</param>
+        /// <param name="dateEnd">结束时间</param>
+        /// <returns>
+        /// 返回字段：
+        /// MonitoringRegionUid：区域ID
+        /// PM25：PM25浓度
+        /// PM10：PM10浓度
+        /// NO2：NO2浓度
+        /// SO2：SO2浓度
+        /// CO：CO浓度
+        /// MaxOneHourO3：MaxOneHourO3浓度
+        /// Max8HourO3：Max8HourO3浓度
+        /// </returns>
+        public DataView GetRegionsAvgValue(string[] regionGuids, DateTime dateStart, DateTime dateEnd)
+        {
+            regionDayAQI = Singleton<RegionDayAQIRepository>.GetInstance();
+            if (regionDayAQI != null)
+                return regionDayAQI.GetAvgValue(regionGuids, dateStart, dateEnd);
+            return null;
+        }
+        #endregion
+
+        #region 接口实现
+        /// <summary>
+        /// 获取某段时间内某一监测点AQI
+        /// </summary>
+        /// <returns></returns>
+        public int GetTimePortAQI()
+        {
+            return 0;
+        }
+
+        /// <summary>
+        /// 获取某段时间内苏州市区所有监测点AQI
+        /// </summary>
+        /// <returns></returns>
+        public int GetTimeSzPortsAQI()
+        {
+            return 0;
+        }
+
+        /// <summary>
+        /// 获取某段时间内某一城区所有监测点AQI
+        /// </summary>
+        /// <returns></returns>
+        public int GetTimeAreaPortsAQI()
+        {
+            return 0;
+        }
+
+        /// <summary>
+        /// 获取某段时间内某一监测点AQI污染等级统计
+        /// </summary>
+        /// <returns></returns>
+        public int GetTimePortAQIGrade()
+        {
+            return 0;
+        }
+
+        /// <summary>
+        /// 获取某段时间内苏州市区所有监测点AQI污染等级统计
+        /// </summary>
+        /// <returns></returns>
+        public int GetTimeSzPortsAQIGrade()
+        {
+            return 0;
+        }
+
+        /// <summary>
+        /// 获取某段时间内某一城区所有监测点AQI污染等级统计
+        /// </summary>
+        /// <returns></returns>
+        public int GetTimeAreaPortsAQIGrade()
+        {
+            return 0;
+        }
+
+        /// <summary>
+        /// 获取某段时间内某一监测点首要污染物统计
+        /// </summary>
+        /// <returns></returns>
+        public int GetTimePortPrimaryPollutant()
+        {
+            return 0;
+        }
+
+        /// <summary>
+        /// 获取某段时间内苏州市区所有监测点首要污染物统计
+        /// </summary>
+        /// <returns></returns>
+        public int GetTimeSzPortsPrimaryPollutant()
+        {
+            return 0;
+        }
+
+        /// <summary>
+        /// 获取某段时间内某一城区所有监测点首要污染物统计
+        /// </summary>
+        /// <returns></returns>
+        public int GetTimeAreaPortsPrimaryPollutant()
+        {
+            return 0;
+        }
+
+        /// <summary>
+        /// 获取某段时间内某一监测点超标天数统计
+        /// </summary>
+        /// <returns></returns>
+        public int GetTimePortOutDay()
+        {
+            return 0;
+        }
+
+        /// <summary>
+        /// 获取某段时间内苏州市区所有监测点超标天数统计
+        /// </summary>
+        /// <returns></returns>
+        public int GetTimeSzPortsOutDay()
+        {
+            return 0;
+        }
+
+        /// <summary>
+        /// 获取某段时间内某一城区所有监测点超标天数统计
+        /// </summary>
+        /// <returns></returns>
+        public int GetTimeAreaPortsOutDay()
+        {
+            return 0;
+        }
+        #endregion
+    }
+}

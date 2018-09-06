@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityDiagrams>
+  <entityDiagramsDiagram dslVersion="2.0.0.0" absoluteBounds="0, 0, 11, 9.25" name="BaseDataModel" isDefault="true">
+    <DomainModelMoniker name="/BaseDataModel" />
+    <nestedChildShapes>
+      <classShape Id="0a4c32a3-83d7-4c4f-9dd6-ea823a01631c" absoluteBounds="0.5, 1.5, 1.5, 7.4850313313802079">
+        <DomainClassMoniker name="/BaseDataModel/TB_NotifySend" />
+        <nestedChildShapes>
+          <elementListCompartment Id="e349ae0a-a84d-4258-924c-13aa83084829" absoluteBounds="0.515, 2.01, 1.4700000000000002, 6.360097249348958" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="fb21ac6f-f31f-4c3f-9b9e-2f2702b55c95" absoluteBounds="0.515, 8.3800972493489567, 1.4700000000000002, 0.247467041015625" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="c320e99c-1a61-4352-a804-5e638c98420e" absoluteBounds="0.515, 8.6375642903645833, 1.4700000000000002, 0.247467041015625" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+      <classShape Id="fa38cc4f-e753-4fd2-a4bb-9189a8a9ab8d" absoluteBounds="2.5, 0.5, 1.5, 6.72095255533854">
+        <DomainClassMoniker name="/BaseDataModel/TB_CreatAlarm" />
+        <nestedChildShapes>
+          <elementListCompartment Id="f77bbde1-5f58-4d21-970d-b09560aed705" absoluteBounds="2.515, 1.01, 1.4700000000000002, 5.5960184733072911" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="b0229347-3b46-42a4-ac5c-fadf883741b3" absoluteBounds="2.515, 6.6160184733072906, 1.4700000000000002, 0.247467041015625" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="38a7d2a5-9443-4df2-bcf2-16bcc8bddd41" absoluteBounds="2.515, 6.8734855143229154, 1.4700000000000002, 0.247467041015625" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+    </nestedChildShapes>
+  </entityDiagramsDiagram>
+</EntityDiagrams>

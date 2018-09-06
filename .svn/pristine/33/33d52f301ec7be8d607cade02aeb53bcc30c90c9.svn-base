@@ -1,0 +1,236 @@
+[Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] 2017-08-15 14:13:40,666 [25] ERROR App.Logging [(null)]  - System.Threading.ThreadAbortException: 正在中止线程。
+   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.AbortCurrentThread()
+   在 System.Web.HttpResponse.End()
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 143
+2017-08-15 14:39:22,268 [19] ERROR App.Logging [(null)]  - System.Threading.ThreadAbortException: 正在中止线程。
+   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.AbortCurrentThread()
+   在 System.Web.HttpResponse.End()
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 143
+[Footer] [Header] 2017-08-15 14:41:44,839 [33] ERROR App.Logging [(null)]  - System.Threading.ThreadAbortException: 正在中止线程。
+   在 System.Threading.Thread.AbortInternal()
+   在 System.Threading.Thread.Abort(Object stateInfo)
+   在 System.Web.HttpResponse.AbortCurrentThread()
+   在 System.Web.HttpResponse.End()
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 143
+[Footer] [Header] 2017-08-15 15:51:21,664 [29] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 15:52:22,061 [33] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 15:53:23,106 [7] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 15:54:24,066 [33] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 15:55:25,090 [29] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 15:56:26,119 [7] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 15:57:27,080 [26] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 15:58:28,067 [47] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 15:59:29,069 [29] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 16:00:30,089 [31] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 16:01:42,191 [19] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 16:02:43,076 [24] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 16:03:44,072 [7] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 16:04:45,078 [25] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 16:05:46,079 [31] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 16:06:47,083 [19] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 16:07:48,082 [19] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 16:08:49,081 [24] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 16:09:50,082 [24] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 16:10:51,084 [29] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 16:11:52,090 [29] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 16:12:53,087 [33] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 16:13:54,088 [24] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 16:14:55,090 [7] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 16:15:56,091 [7] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 16:16:57,092 [47] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 16:17:58,095 [47] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 16:18:59,098 [24] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 16:20:00,095 [25] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 16:21:01,098 [31] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 16:22:02,095 [24] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 16:23:03,102 [19] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 16:24:04,100 [33] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+2017-08-15 16:25:05,099 [31] ERROR App.Logging [(null)]  - System.Runtime.InteropServices.ExternalException (0x80004005): GDI+ 中发生一般性错误。
+   在 System.Drawing.Image.Save(String filename, ImageCodecInfo encoder, EncoderParameters encoderParams)
+   在 System.Drawing.Image.Save(String filename, ImageFormat format)
+   在 System.Drawing.Image.Save(String filename)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 99
+[Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] [Footer] [Header] 2017-08-16 10:18:07,972 [3] INFO  App.Logging [(null)]  - 时间段：2017-08-15 10:00-----2017-08-16 10:00
+2017-08-16 10:18:11,647 [7] INFO  App.Logging [(null)]  - 时间段：2017-08-15 10:00-----2017-08-16 10:00
+2017-08-16 10:18:26,767 [7] INFO  App.Logging [(null)]  - 保存图片开始
+2017-08-16 10:18:26,812 [7] ERROR App.Logging [(null)]  - System.IO.DirectoryNotFoundException: 未能找到路径“D:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\image\”的一部分。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 67
+2017-08-16 10:19:34,582 [6] INFO  App.Logging [(null)]  - 保存图片开始
+2017-08-16 10:20:14,953 [6] ERROR App.Logging [(null)]  - System.IO.DirectoryNotFoundException: 未能找到路径“D:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\image\”的一部分。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 67
+2017-08-16 10:21:15,024 [3] INFO  App.Logging [(null)]  - 保存图片开始
+2017-08-16 10:21:15,025 [3] ERROR App.Logging [(null)]  - System.IO.DirectoryNotFoundException: 未能找到路径“D:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\image\”的一部分。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 67
+2017-08-16 10:22:15,083 [13] INFO  App.Logging [(null)]  - 保存图片开始
+2017-08-16 10:22:15,084 [13] ERROR App.Logging [(null)]  - System.IO.DirectoryNotFoundException: 未能找到路径“D:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\image\”的一部分。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+   在 System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding)
+   在 highchart_export_module_asp_net.highcharts_export.saveImage() 位置 d:\项目\南通超级站\代码\SVN\Src\Web\Highcharts导出图片.net\highchart_export_module_asp_net\highcharts_export.aspx.cs:行号 67
+[Footer] [Header] 2017-08-16 10:23:01,180 [10] INFO  App.Logging [(null)]  - 保存图片开始
+2017-08-16 10:23:26,893 [16] INFO  App.Logging [(null)]  - 时间段：2017-08-15 10:00-----2017-08-16 10:00
+2017-08-16 10:23:27,299 [10] INFO  App.Logging [(null)]  - 时间段：2017-08-15 10:00-----2017-08-16 10:00
+2017-08-16 10:23:45,297 [8] INFO  App.Logging [(null)]  - 保存图片开始
+[Footer] [Header] 2017-08-16 10:24:53,777 [10] INFO  App.Logging [(null)]  - 保存图片开始
+2017-08-16 10:25:54,316 [21] INFO  App.Logging [(null)]  - 保存图片开始
+2017-08-16 10:26:55,303 [13] INFO  App.Logging [(null)]  - 保存图片开始
+2017-08-16 10:27:56,303 [22] INFO  App.Logging [(null)]  - 保存图片开始
+2017-08-16 10:28:57,303 [10] INFO  App.Logging [(null)]  - 保存图片开始
+[Footer] 

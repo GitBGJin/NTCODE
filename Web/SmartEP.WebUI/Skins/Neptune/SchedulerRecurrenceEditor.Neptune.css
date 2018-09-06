@@ -1,0 +1,44 @@
+.RecurrenceEditor_Neptune {
+  color: #333;
+  font: normal 12px/14px "Segoe UI", Arial, sans-serif; }
+
+/* <xref input skins> */
+.RecurrenceEditor_Neptune .rsAdvInput,
+.RecurrenceEditor_Neptune select {
+  border-color: #abc1de; }
+
+.RecurrenceEditor_Neptune .rsInvalid input,
+.RecurrenceEditor_Neptune .rsAdvTimePicker .riEmpty {
+  background-image: url('Input/sprite.gif'); }
+
+.RecurrenceEditor_Neptune .rsInvalid {
+  border-color: #F32800;
+  color: #F32800; }
+
+/* </xref input skins> */
+.RecurrenceEditor_Neptune h2,
+.RecurrenceEditor_Neptune h3 {
+  color: #6d8ebb; }
+
+.RecurrenceEditor_Neptune h2 {
+  border-bottom: 1px solid #CCC; }
+
+.RecurrenceEditor_Neptune h2 span {
+  background: #fff; }
+
+.RecurrenceEditor_Neptune .rsAdvRecurrenceFreq {
+  border-right: 1px solid #fff; }
+
+.RecurrenceEditor_Neptune ul.rsRecurrenceOptionList {
+  border-right: 1px solid #CCC; }
+
+.RecurrenceEditor_Neptune div.rsAdvPatternPanel {
+  border-left: 0; }
+
+/* <date/time picker> */
+.RecurrenceEditor_Neptune .rsTimePick .RadInput_Neptune input.riEnabled,
+.RecurrenceEditor_Neptune .rsTimePick .RadInput_Neptune input.riHover,
+.RecurrenceEditor_Neptune .rsTimePick .RadInput_Neptune input.riFocused {
+  background-image: url('Scheduler/rsSprites.png'); }
+
+/* </date/time picker> */

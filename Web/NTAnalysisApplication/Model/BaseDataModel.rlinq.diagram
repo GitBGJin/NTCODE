@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityDiagrams>
+  <entityDiagramsDiagram dslVersion="2.0.0.0" absoluteBounds="0, 0, 11, 8.625" name="BaseDataModel" isDefault="true">
+    <DomainModelMoniker name="/BaseDataModel" />
+    <nestedChildShapes>
+      <classShape Id="193c0f56-e551-4ce3-b268-1ef806a2be75" absoluteBounds="0.75, 0.75, 1.5, 3.2825980631510419">
+        <DomainClassMoniker name="/BaseDataModel/SYS_Point_Mapping" />
+        <nestedChildShapes>
+          <elementListCompartment Id="f7a7b2ef-303f-4db7-ab01-3e9d56759048" absoluteBounds="0.76500000000000012, 1.26, 1.4700000000000002, 2.157663981119792" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="88828dd6-1dc7-4de0-b21f-12aef512674c" absoluteBounds="0.76500000000000012, 3.4276639811197915, 1.4700000000000002, 0.247467041015625" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="e0926aab-f6c0-4b91-a5f6-57b1d58516d8" absoluteBounds="0.76500000000000012, 3.6851310221354163, 1.4700000000000002, 0.247467041015625" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+      <classShape Id="347adafa-4622-4eca-ad17-86df3ac37290" absoluteBounds="2.75, 0.75, 1.5, 3.473617757161457">
+        <DomainClassMoniker name="/BaseDataModel/SYS_Factors_Mapping" />
+        <nestedChildShapes>
+          <elementListCompartment Id="3f71d6fa-b9fd-4069-b2d0-a26e8cf60b23" absoluteBounds="2.765, 1.2599999999999998, 1.4700000000000002, 2.348683675130208" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="cfcbba68-1692-494d-956c-e58fc586b660" absoluteBounds="2.765, 3.6186836751302076, 1.4700000000000002, 0.247467041015625" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="700d2782-40b8-4dc8-84f6-db3d2e0c47ed" absoluteBounds="2.765, 3.8761507161458324, 1.4700000000000002, 0.247467041015625" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+      <classShape Id="c170af68-cf08-4ce0-816d-3fec3bdf2b49" absoluteBounds="0.5, 4.5, 1.5, 3.85565714518229">
+        <DomainClassMoniker name="/BaseDataModel/SYS_PointsFactors_Mapping" />
+        <nestedChildShapes>
+          <elementListCompartment Id="804fcd0e-a0c5-47b8-997e-8c2cccafa45c" absoluteBounds="0.515, 5.01, 1.4700000000000002, 2.730723063151042" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="20bad76d-44d0-4ff3-b736-1a3a1d694a00" absoluteBounds="0.515, 7.7507230631510415, 1.4700000000000002, 0.247467041015625" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="265341d3-75e5-4ccb-8025-cea197a8bdef" absoluteBounds="0.515, 8.0081901041666654, 1.4700000000000002, 0.247467041015625" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+    </nestedChildShapes>
+  </entityDiagramsDiagram>
+</EntityDiagrams>

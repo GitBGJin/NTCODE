@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityDiagrams>
+  <entityDiagramsDiagram dslVersion="2.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="AirAutoMonitor" isDefault="true">
+    <DomainModelMoniker name="/AirAutoMonitor" />
+    <nestedChildShapes>
+      <classShape Id="d77a3bed-6f17-4228-ac98-6a58eee968f1" absoluteBounds="0.75, 0.75, 1.5, 4.428716227213541">
+        <DomainClassMoniker name="/AirAutoMonitor/TB_InfectantBy60Buffer" />
+        <nestedChildShapes>
+          <elementListCompartment Id="3e7eae78-de08-484f-8d65-4b9d12fe6af0" absoluteBounds="0.765, 1.2599999999999998, 1.4700000000000002, 3.303782145182292" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="9f0f4831-8619-40ba-a100-8aabf9ca5a17" absoluteBounds="0.765, 4.5737821451822915, 1.4700000000000002, 0.247467041015625" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="919883fc-89d7-4309-bc1d-63287e88b35d" absoluteBounds="0.765, 4.8312491861979163, 1.4700000000000002, 0.247467041015625" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+    </nestedChildShapes>
+  </entityDiagramsDiagram>
+</EntityDiagrams>

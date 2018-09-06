@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Body>
+  <Head fsfid="AQMS512102" jcsb="" jls="6" jsfid="AQMS512102" scsj="20161011010000" sjblx="0002" sjcssj="20161011010000" />
+  <Data>
+    <Item pollutant_code="NOx" equio_status="N" value="0.091" />
+    <Item pollutant_code="NO" equio_status="N" value="0.021" />
+    <Item pollutant_code="NO2" equio_status="N" value="0.059" />
+    <Item pollutant_code="CO" equio_status="N" value="0.9" />
+    <Item pollutant_code="SO2" equio_status="N" value="0.014" />
+    <Item pollutant_code="PM10" equio_status="N" value="0.034" />
+  </Data>
+</Body>

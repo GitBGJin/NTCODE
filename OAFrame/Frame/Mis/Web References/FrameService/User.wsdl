@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Select">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectByUserGuid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SelectByUserGuidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SelectByUserGuidResult" type="tns:VI_UserInfoAll" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="VI_UserInfoAll">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="OrgName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeptGuid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LoginID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RowGuid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmpGuid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Theme" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NavigationType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultMenuType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HardwareKey" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SortNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsEnabled" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Remark" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrgGuid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeptName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DeptSortNumber" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUserAllModuleStandard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserAllModuleStandardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserAllModuleStandardResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserAllModulePerson">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userGuid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserAllModulePersonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserAllModulePersonResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SelectSoapIn">
+    <wsdl:part name="parameters" element="tns:Select" />
+  </wsdl:message>
+  <wsdl:message name="SelectSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectResponse" />
+  </wsdl:message>
+  <wsdl:message name="SelectByUserGuidSoapIn">
+    <wsdl:part name="parameters" element="tns:SelectByUserGuid" />
+  </wsdl:message>
+  <wsdl:message name="SelectByUserGuidSoapOut">
+    <wsdl:part name="parameters" element="tns:SelectByUserGuidResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserAllModuleStandardSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserAllModuleStandard" />
+  </wsdl:message>
+  <wsdl:message name="GetUserAllModuleStandardSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserAllModuleStandardResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserAllModulePersonSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserAllModulePerson" />
+  </wsdl:message>
+  <wsdl:message name="GetUserAllModulePersonSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserAllModulePersonResponse" />
+  </wsdl:message>
+  <wsdl:portType name="UserSoap">
+    <wsdl:operation name="Select">
+      <wsdl:input message="tns:SelectSoapIn" />
+      <wsdl:output message="tns:SelectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectByUserGuid">
+      <wsdl:input message="tns:SelectByUserGuidSoapIn" />
+      <wsdl:output message="tns:SelectByUserGuidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAllModuleStandard">
+      <wsdl:input message="tns:GetUserAllModuleStandardSoapIn" />
+      <wsdl:output message="tns:GetUserAllModuleStandardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAllModulePerson">
+      <wsdl:input message="tns:GetUserAllModulePersonSoapIn" />
+      <wsdl:output message="tns:GetUserAllModulePersonSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UserSoap" type="tns:UserSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Select">
+      <soap:operation soapAction="http://tempuri.org/Select" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectByUserGuid">
+      <soap:operation soapAction="http://tempuri.org/SelectByUserGuid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAllModuleStandard">
+      <soap:operation soapAction="http://tempuri.org/GetUserAllModuleStandard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAllModulePerson">
+      <soap:operation soapAction="http://tempuri.org/GetUserAllModulePerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UserSoap12" type="tns:UserSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Select">
+      <soap12:operation soapAction="http://tempuri.org/Select" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectByUserGuid">
+      <soap12:operation soapAction="http://tempuri.org/SelectByUserGuid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAllModuleStandard">
+      <soap12:operation soapAction="http://tempuri.org/GetUserAllModuleStandard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAllModulePerson">
+      <soap12:operation soapAction="http://tempuri.org/GetUserAllModulePerson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="User">
+    <wsdl:port name="UserSoap" binding="tns:UserSoap">
+      <soap:address location="http://localhost:20000/Frame4/WebService/User.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UserSoap12" binding="tns:UserSoap12">
+      <soap12:address location="http://localhost:20000/Frame4/WebService/User.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,23 @@
+.RadTreeMap_Neptune {
+  border-color: #688caf;
+  color: black;
+  background-color: white;
+  font-size: 12px;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif; }
+  .RadTreeMap_Neptune .k-treemap-tile {
+    border-color: #688caf;
+    background-color: white; }
+  .RadTreeMap_Neptune .k-treemap-title,
+  .RadTreeMap_Neptune .k-treemap-title-vertical {
+    border-color: #688caf;
+    color: #00156e;
+    background-color: #c3d8f1; }
+  .RadTreeMap_Neptune .k-leaf {
+    border-color: #ffffff;
+    color: white;
+    background-color: black; }
+  .RadTreeMap_Neptune .k-leaf.k-inverse {
+    color: black;
+    background-color: white; }
+  .RadTreeMap_Neptune .k-leaf.k-state-hover {
+    box-shadow: inset 0 0 0 5px white; }

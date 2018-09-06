@@ -1,0 +1,33 @@
+.RadTreeView_Neptune {
+  color: black;
+  font: normal 12px/16px "Segoe UI", Arial, Helvetica, sans-serif; }
+  .RadTreeView_Neptune .rtIn {
+    background-image: url('Common/radGradientListSprite.png');
+    background-image: linear-gradient(transparent, transparent); }
+  .RadTreeView_Neptune a.rtIn {
+    *color: black; }
+  .RadTreeView_Neptune .rtHover .rtIn {
+    border-color: #d8ca95;
+    color: #00156e;
+    background-color: #ffe28e;
+    background-image: linear-gradient(#fffdeb, #ffedb3 50%, #ffd563 50%, #ffe28e); }
+  .RadTreeView_Neptune .rtSelected .rtIn {
+    border-color: #8f8267;
+    color: black;
+    background-color: #fde79a;
+    background-image: linear-gradient(#fdd3a7, #faad60 50%, #f99631 50%, #fde79a); }
+  .RadTreeView_Neptune .rtEdit .rtIn input {
+    *color: black; }
+  .RadTreeView_Neptune .rtChecked,
+  .RadTreeView_Neptune .rtUnchecked,
+  .RadTreeView_Neptune .rtIndeterminate {
+    background-image: url('Common/radFormToggleSprite.png'); }
+  .RadTreeView_Neptune .rtLoadingIcon {
+    background-image: url('Common/loading_small.gif'); }
+  .RadTreeView_Neptune .rtPlus,
+  .RadTreeView_Neptune .rtMinus {
+    background-image: url('TreeView/PlusMinus.png'); }
+
+.RadTreeView_Neptune_disabled .rtIn,
+.RadTreeView_Neptune .rtDisabled .rtIn {
+  color: #ccc; }

@@ -1,0 +1,710 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DomainModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="2.0.0.0" name="FrameworkModel" namespace="SmartEP.DomainModel" showPropertiesCompartment="true" xmlns="http://www.telerik.com/ORM">
+  <orm:orm name="FrameworkModel" backend="mssql" default-schema="dbo" xmlns:orm="http://tempuri.org/ORM">
+    <orm:namespace name="SmartEP.DomainModel" default="true">
+      <orm:class name="Frame_UserEntity" uniqueId="bd3d431d-8c52-4637-a54d-731d6ee0916a">
+        <orm:table name="TB_Frame_User" />
+        <orm:identity>
+          <orm:single-field field-name="m_rowGuid" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="m_iD" property="ID" behavior="readwrite" uniqueId="aa5abe4b-72cf-4770-bd95-09894d110ba6" type="System.Int32">
+          <orm:column name="ID" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_rowGuid" property="RowGuid" behavior="readwrite" uniqueId="c4a0d193-1737-41e8-bae1-da93b26cfd7c" type="System.String">
+          <orm:column name="RowGuid" sql-type="nvarchar" nullable="false" length="50" scale="0" primary-key="true" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_orgGuid" property="OrgGuid" behavior="readwrite" uniqueId="44ead8bc-1709-4fb1-8153-b560f17a64aa" type="System.String">
+          <orm:column name="OrgGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_deptGuid" property="DeptGuid" behavior="readwrite" uniqueId="97db3473-54af-444d-b1d5-85a6139bf0fb" type="System.String">
+          <orm:column name="DeptGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_loginID" property="LoginID" behavior="readwrite" uniqueId="436304b5-172e-4ff0-968d-09039a3ae531" type="System.String">
+          <orm:column name="LoginID" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_password" property="Password" behavior="readwrite" uniqueId="d9df6c83-225e-425d-a688-a158fc56609d" type="System.String">
+          <orm:column name="Password" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_displayName" property="DisplayName" behavior="readwrite" uniqueId="912bd9ae-69af-4eb8-8da6-9bc45072a3e9" type="System.String">
+          <orm:column name="DisplayName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_empGuid" property="EmpGuid" behavior="readwrite" uniqueId="8b236593-dca5-467b-a0f3-7dcf3b0d2e57" type="System.String">
+          <orm:column name="EmpGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_theme" property="Theme" behavior="readwrite" uniqueId="021c7e5e-a157-4c3d-b3f5-0ccae59940fa" type="System.String">
+          <orm:column name="Theme" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_navigationType" property="NavigationType" behavior="readwrite" uniqueId="a7346987-f33e-4961-b173-ebf37eb81d43" type="System.String">
+          <orm:column name="NavigationType" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_defaultMenuType" property="DefaultMenuType" behavior="readwrite" uniqueId="7cfa1ae3-fccb-4eb5-814e-b191b67fc416" type="System.String">
+          <orm:column name="DefaultMenuType" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_hardwareKey" property="HardwareKey" behavior="readwrite" uniqueId="87d4b20f-c13a-4fef-bff9-fd837f5cd1aa" type="System.String">
+          <orm:column name="HardwareKey" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_sortNumber" property="SortNumber" behavior="readwrite" uniqueId="93229695-037f-4bed-a35b-5b0adf76ce26" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="SortNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_isEnabled" property="IsEnabled" behavior="readwrite" uniqueId="11aaf44e-cb3c-4fb5-8147-bb2d5803cef2" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="IsEnabled" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_remark" property="Remark" behavior="readwrite" uniqueId="73d4dcd1-4f39-4eb4-bb84-485abb4a4d2d" type="System.String">
+          <orm:column name="Remark" sql-type="nvarchar(max)" nullable="true" length="0" scale="0" ado-type="UnicodeStringInfiniteLength" />
+        </orm:field>
+        <orm:field name="m_sex" property="Sex" behavior="readwrite" uniqueId="585745ab-a555-42de-8ec7-7b4c985b897e" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="Sex" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:implements name="SmartEP.DomainModel.IFrameInfoEntity" />
+      </orm:class>
+      <orm:class name="VI_UserInfoRoleAllEntity" uniqueId="73d046f6-d37e-4dae-8fba-a9697f78574b">
+        <orm:table name="VI_UserInfoRoleAll" view="true" />
+        <orm:identity>
+          <orm:single-field field-name="m_roleGuid" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="m_userGuid" property="UserGuid" behavior="readwrite" uniqueId="1e5d96d4-31cf-4078-96fe-fad8bfa0932f" type="System.String">
+          <orm:column name="UserGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_sortNumber" property="SortNumber" behavior="readwrite" uniqueId="eecbe773-f720-42cc-b9a2-58a09cf65980" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="SortNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_rowGuid" property="RowGuid" behavior="readwrite" uniqueId="dca2c488-17eb-44f3-9857-e3c6619c2abb" type="System.String">
+          <orm:column name="RowGuid" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_roleName" property="RoleName" behavior="readwrite" uniqueId="44521208-82ad-455f-a4a6-8e9525aecc13" type="System.String">
+          <orm:column name="RoleName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_roleGuid" property="RoleGuid" behavior="readwrite" uniqueId="b49006ad-7d0e-4fc9-8cdc-1c1e40ee8d88" type="System.String">
+          <orm:column name="RoleGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" primary-key="true" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_remark" property="Remark" behavior="readwrite" uniqueId="585abe74-600d-4f4f-9240-080cfb119201" type="System.String">
+          <orm:column name="Remark" sql-type="nvarchar(max)" nullable="true" length="0" scale="0" ado-type="UnicodeStringInfiniteLength" />
+        </orm:field>
+        <orm:field name="m_password" property="Password" behavior="readwrite" uniqueId="8fb8e17a-da08-4acc-ae03-df5bea84a6b5" type="System.String">
+          <orm:column name="Password" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_orgName" property="OrgName" behavior="readwrite" uniqueId="76d90257-e041-4967-8b38-500f36048cd6" type="System.String">
+          <orm:column name="OrgName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_orgGuid" property="OrgGuid" behavior="readwrite" uniqueId="7b86e439-5ff4-4671-8714-088cdeb43e96" type="System.String">
+          <orm:column name="OrgGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_loginID" property="LoginID" behavior="readwrite" uniqueId="790e2eee-186c-4224-86c3-414142646377" type="System.String">
+          <orm:column name="LoginID" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_isEnabled" property="IsEnabled" behavior="readwrite" uniqueId="b3661314-f1ef-4ad6-a490-08b8e3c4b0c9" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="IsEnabled" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_iD" property="ID" behavior="readwrite" uniqueId="55a887d2-bdbf-48a6-8efe-183f18990c8c" type="System.Int32">
+          <orm:column name="ID" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_empGuid" property="EmpGuid" behavior="readwrite" uniqueId="e85d6df2-77c1-4126-9d6a-f5fb21c32dd2" type="System.String">
+          <orm:column name="EmpGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_displayName" property="DisplayName" behavior="readwrite" uniqueId="89a145e7-552e-43b3-8701-ed950efce3c6" type="System.String">
+          <orm:column name="DisplayName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_deptSortNumber" property="DeptSortNumber" behavior="readwrite" uniqueId="c5a7d1fb-447b-41b6-a94b-f0724270f054" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="DeptSortNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_deptName" property="DeptName" behavior="readwrite" uniqueId="183493a8-f578-4abe-9b76-79431f129cb1" type="System.String">
+          <orm:column name="DeptName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_deptGuid" property="DeptGuid" behavior="readwrite" uniqueId="91d0b06a-365b-482f-bd0b-d59f91bf2c78" type="System.String">
+          <orm:column name="DeptGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:implements name="SmartEP.DomainModel.IFrameInfoEntity" />
+      </orm:class>
+      <orm:class name="VI_UserInfoAllEntity" uniqueId="0855714c-cf0d-4881-a03e-8a6b9b69f5b3">
+        <orm:table name="VI_UserInfoAll" view="true" />
+        <orm:identity>
+          <orm:single-field field-name="m_rowGuid" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="m_theme" property="Theme" behavior="readwrite" uniqueId="99a43a7e-8144-4ff9-a7a4-a8b9be41eafd" type="System.String">
+          <orm:column name="Theme" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_sortNumber" property="SortNumber" behavior="readwrite" uniqueId="9c2a3fea-8c91-4df1-ace5-58b34f38574d" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="SortNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_rowGuid" property="RowGuid" behavior="readwrite" uniqueId="db3f389d-790d-4f77-8f5b-73fefa4e3b08" type="System.String">
+          <orm:column name="RowGuid" sql-type="nvarchar" nullable="false" length="50" scale="0" primary-key="true" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_remark" property="Remark" behavior="readwrite" uniqueId="7116c3ce-d0a3-4b80-9896-972b1efaa680" type="System.String">
+          <orm:column name="Remark" sql-type="nvarchar(max)" nullable="true" length="0" scale="0" ado-type="UnicodeStringInfiniteLength" />
+        </orm:field>
+        <orm:field name="m_password" property="Password" behavior="readwrite" uniqueId="3ca2d252-1525-4a11-bcb7-9dea76a93d6c" type="System.String">
+          <orm:column name="Password" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_orgName" property="OrgName" behavior="readwrite" uniqueId="da5b20dc-09ec-43c3-94ef-53bf51e526c5" type="System.String">
+          <orm:column name="OrgName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_orgGuid" property="OrgGuid" behavior="readwrite" uniqueId="42181b52-f05b-42a4-bb00-bf9b86d201b0" type="System.String">
+          <orm:column name="OrgGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_navigationType" property="NavigationType" behavior="readwrite" uniqueId="c5dea834-568a-4bf8-a2b3-edca24d96881" type="System.String">
+          <orm:column name="NavigationType" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_loginID" property="LoginID" behavior="readwrite" uniqueId="4324fc5b-22fb-4f0e-b61a-a60f4c10c7a3" type="System.String">
+          <orm:column name="LoginID" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_isEnabled" property="IsEnabled" behavior="readwrite" uniqueId="447df3c6-ca73-4c9b-8ed6-3556ceab99ed" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="IsEnabled" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_hardwareKey" property="HardwareKey" behavior="readwrite" uniqueId="1a5fcfb5-4e52-443c-85f7-78361bca1682" type="System.String">
+          <orm:column name="HardwareKey" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_empGuid" property="EmpGuid" behavior="readwrite" uniqueId="59166654-8f3c-4c02-bac1-b8608cceefb2" type="System.String">
+          <orm:column name="EmpGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_displayName" property="DisplayName" behavior="readwrite" uniqueId="90f7da0c-15b8-4bc4-93a8-6e662c0350f3" type="System.String">
+          <orm:column name="DisplayName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_deptSortNumber" property="DeptSortNumber" behavior="readwrite" uniqueId="95ade13f-a655-4445-91b9-66d09696821e" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="DeptSortNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_deptName" property="DeptName" behavior="readwrite" uniqueId="ef55cbf8-fc6f-40ae-9186-65ab09741426" type="System.String">
+          <orm:column name="DeptName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_deptGuid" property="DeptGuid" behavior="readwrite" uniqueId="ee53ef64-4a39-4d44-8320-92e9e3ce0c9f" type="System.String">
+          <orm:column name="DeptGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_defaultMenuType" property="DefaultMenuType" behavior="readwrite" uniqueId="ccaa3191-f2c3-4ea8-a3d0-13d4f33c4761" type="System.String">
+          <orm:column name="DefaultMenuType" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:implements name="SmartEP.DomainModel.IFrameInfoEntity" />
+      </orm:class>
+      <orm:class name="Frame_CodeTypeEntity" uniqueId="c24c93f1-e58a-4252-ad20-f11b9afd58e0">
+        <orm:table name="TB_Frame_CodeType" />
+        <orm:identity>
+          <orm:single-field field-name="m_iD" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="m_iD" property="ID" behavior="readwrite" uniqueId="694e773a-ed6f-4f97-aeec-920c049574a5" type="System.Int32">
+          <orm:column name="ID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_rowGuid" property="RowGuid" behavior="readwrite" uniqueId="65940ee4-e1ae-4dae-9a0a-05cb310da472" type="System.String">
+          <orm:column name="RowGuid" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_typeName" property="TypeName" behavior="readwrite" uniqueId="2f36cae7-da30-4085-88b3-9b9bf549917e" type="System.String">
+          <orm:column name="TypeName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_parentGuid" property="ParentGuid" behavior="readwrite" uniqueId="f4a23267-052e-4574-bc69-218d7b401059" type="System.String">
+          <orm:column name="ParentGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_sortNumber" property="SortNumber" behavior="readwrite" uniqueId="4cfbfdeb-f307-4d9c-9185-c06019227e34" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="SortNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_note" property="Note" behavior="readwrite" uniqueId="55773950-b8eb-4a8f-8778-24ea7b2d8e6f" type="System.String">
+          <orm:column name="Note" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:implements name="SmartEP.DomainModel.IFrameInfoEntity" />
+      </orm:class>
+      <orm:class name="Frame_CodeMainEntity" uniqueId="3b0744f3-adba-42e3-ba72-e17f8f7298c0">
+        <orm:table name="TB_Frame_CodeMain" />
+        <orm:identity>
+          <orm:single-field field-name="m_iD" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="m_iD" property="ID" behavior="readwrite" uniqueId="de49ff8f-21dd-4816-8909-1f3c85e919cd" type="System.Int32">
+          <orm:column name="ID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_rowGuid" property="RowGuid" behavior="readwrite" uniqueId="5c4d6be1-9f26-4742-bdf1-d6bac06264a9" type="System.String">
+          <orm:column name="RowGuid" sql-type="nvarchar" nullable="false" length="50" scale="0" has-default-value="true" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_typeGuid" property="TypeGuid" behavior="readwrite" uniqueId="ae491157-02c2-40c2-a747-18696b7cb95d" type="System.String">
+          <orm:column name="TypeGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" has-default-value="true" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_codeName" property="CodeName" behavior="readwrite" uniqueId="227e2af8-1dec-4b57-8272-eaa678a7cf39" type="System.String">
+          <orm:column name="CodeName" sql-type="nvarchar" nullable="true" length="150" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_codeLength" property="CodeLength" behavior="readwrite" uniqueId="8c050fcf-7271-4117-80c3-fa97f468e1e2" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="CodeLength" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_sortNumber" property="SortNumber" behavior="readwrite" uniqueId="80f09061-086a-4726-8714-bed3aae15a6e" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="SortNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_isEnabled" property="IsEnabled" behavior="readwrite" uniqueId="ee0e5784-3a94-43a3-be02-52de2c31c0ac" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="IsEnabled" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_note" property="Note" behavior="readwrite" uniqueId="e53b9d0d-7989-476a-8d93-4a6557ff265a" type="System.String">
+          <orm:column name="Note" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:implements name="SmartEP.DomainModel.IFrameInfoEntity" />
+      </orm:class>
+      <orm:class name="Frame_CodeItemEntity" uniqueId="92c8a6f7-3358-4b9c-9675-5a4fbc68c371">
+        <orm:table name="TB_Frame_CodeItem" />
+        <orm:identity>
+          <orm:single-field field-name="m_iD" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="m_iD" property="ID" behavior="readwrite" uniqueId="b901c280-7d4c-42a0-87b1-4a0fbf1523a3" type="System.Int32">
+          <orm:column name="ID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_rowGuid" property="RowGuid" behavior="readwrite" uniqueId="3004fe36-51d9-4299-8b16-5b4a6a9ef3d7" type="System.String">
+          <orm:column name="RowGuid" sql-type="nvarchar" nullable="false" length="50" scale="0" has-default-value="true" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_mainGuid" property="MainGuid" behavior="readwrite" uniqueId="f5bc6141-1161-4070-bcd8-5667ecd20d8d" type="System.String">
+          <orm:column name="MainGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_itemValue" property="ItemValue" behavior="readwrite" uniqueId="a5961e40-8918-4783-83e7-07a4f7191686" type="System.String">
+          <orm:column name="ItemValue" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_itemText" property="ItemText" behavior="readwrite" uniqueId="9b4c4f9f-b157-417b-a3c3-179375071892" type="System.String">
+          <orm:column name="ItemText" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_sortNumber" property="SortNumber" behavior="readwrite" uniqueId="b5d7a1cc-3837-4368-b18d-c3fd1d75248b" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="SortNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_fullText" property="FullText" behavior="readwrite" uniqueId="57efcace-0c2a-4dd4-a409-e5e229072629" type="System.String">
+          <orm:column name="FullText" sql-type="nvarchar" nullable="true" length="150" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_itemCode" property="ItemCode" behavior="readwrite" uniqueId="041e18a0-9d61-4d51-92a2-9b068f074d2d" type="System.String">
+          <orm:column name="ItemCode" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_isEnabled" property="IsEnabled" behavior="readwrite" uniqueId="e875d51c-7c76-4413-8153-eaf999ec78a0" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="IsEnabled" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:implements name="SmartEP.DomainModel.IFrameInfoEntity" />
+      </orm:class>
+      <orm:class name="Frame_CodeDictionaryDetailEntity" uniqueId="ad5f90da-c36e-497c-bde8-0c1d39966d9b">
+        <orm:table name="TB_Frame_CodeDictionaryDetail" />
+        <orm:identity>
+          <orm:single-field field-name="m_iD" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="m_iD" property="ID" behavior="readwrite" uniqueId="2857ab6b-2dac-43a1-b8cf-74e14918ba87" type="System.Int32">
+          <orm:column name="ID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_rowGuid" property="RowGuid" behavior="readwrite" uniqueId="b54ddc29-bec7-475e-a4cc-0ea4c2be80ee" type="System.String">
+          <orm:column name="RowGuid" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_dictionaryGuid" property="DictionaryGuid" behavior="readwrite" uniqueId="25bddf0e-8e6a-4629-b0b6-b572b282b72a" type="System.String">
+          <orm:column name="DictionaryGuid" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_parentGuid" property="ParentGuid" behavior="readwrite" uniqueId="285fbd25-67e5-44cc-b69c-59472b416894" type="System.String">
+          <orm:column name="ParentGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_detailName" property="DetailName" behavior="readwrite" uniqueId="1a444722-5d52-4a24-81af-54b46d8b2e08" type="System.String">
+          <orm:column name="DetailName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_sortNumber" property="SortNumber" behavior="readwrite" uniqueId="880a4baa-2851-437a-8ad6-37dafe4db878" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="SortNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_isEnabled" property="IsEnabled" behavior="readwrite" uniqueId="188f0faf-0d5a-4047-b129-516e3627df0c" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="IsEnabled" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_note" property="Note" behavior="readwrite" uniqueId="19d92ef7-899d-4e96-b3d9-912cb340185e" type="System.String">
+          <orm:column name="Note" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:implements name="SmartEP.DomainModel.IFrameInfoEntity" />
+      </orm:class>
+      <orm:class name="Frame_CodeDictionaryEntity" uniqueId="05246a56-7cb5-43fa-b916-a8253abccc84">
+        <orm:table name="TB_Frame_CodeDictionary" />
+        <orm:identity>
+          <orm:single-field field-name="m_iD" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="m_iD" property="ID" behavior="readwrite" uniqueId="4d071de8-0b97-4f70-8545-b7d1816e7826" type="System.Int32">
+          <orm:column name="ID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_rowGuid" property="RowGuid" behavior="readwrite" uniqueId="b7f05368-d94d-4dc7-9bf4-0eb7277b5a69" type="System.String">
+          <orm:column name="RowGuid" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_codeDictionaryName" property="CodeDictionaryName" behavior="readwrite" uniqueId="3f770ad5-64b8-4383-8f04-120417f1dda4" type="System.String">
+          <orm:column name="CodeDictionaryName" sql-type="nvarchar" nullable="true" length="150" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_sortNumber" property="SortNumber" behavior="readwrite" uniqueId="25061f98-cd79-4247-afd4-3267eac43539" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="SortNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_isEnabled" property="IsEnabled" behavior="readwrite" uniqueId="ed7e9f21-91c0-4e05-abfa-87dd39e72fd5" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="IsEnabled" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_note" property="Note" behavior="readwrite" uniqueId="a888bc24-21c8-448b-a472-ccf0a8f4ccbe" type="System.String">
+          <orm:column name="Note" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:implements name="SmartEP.DomainModel.IFrameInfoEntity" />
+      </orm:class>
+      <orm:class name="V_CodeMainItemEntity" uniqueId="98142856-b0a0-419c-b314-d6f3f3402a77">
+        <orm:table name="V_CodeMainItem" view="true" />
+        <orm:identity>
+          <orm:single-field field-name="m_itemGuid" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="m_typeName" property="TypeName" behavior="readwrite" uniqueId="053396ad-b7d6-42f1-9977-7f4601998fb1" type="System.String">
+          <orm:column name="TypeName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_typeGuid" property="TypeGuid" behavior="readwrite" uniqueId="d9d25df3-7f9a-4136-a3a2-4c9f510cbc56" type="System.String">
+          <orm:column name="TypeGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_sortNumber" property="SortNumber" behavior="readwrite" uniqueId="a413a5dd-7d48-425d-83ed-97a195d594d3" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="SortNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_mainGuid" property="MainGuid" behavior="readwrite" uniqueId="00440dbd-2580-475f-9a83-2040cc6759d4" type="System.String">
+          <orm:column name="MainGuid" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_itemValue" property="ItemValue" behavior="readwrite" uniqueId="16e3b4c4-4bf2-41db-96a4-d91d53ff5413" type="System.String">
+          <orm:column name="ItemValue" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_itemText" property="ItemText" behavior="readwrite" uniqueId="aa286357-71c0-4b2d-96b8-6c944ecc46a1" type="System.String">
+          <orm:column name="ItemText" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_itemGuid" property="ItemGuid" behavior="readwrite" uniqueId="4b2e6fc3-f906-4bf4-b91c-38189b4a82e1" type="System.String">
+          <orm:column name="ItemGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" primary-key="true" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_itemCode" property="ItemCode" behavior="readwrite" uniqueId="c1d2cc97-3aa0-468b-acb3-d5eb09aa13c0" type="System.String">
+          <orm:column name="ItemCode" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_codeName" property="CodeName" behavior="readwrite" uniqueId="0979ece9-b6c2-4078-b0be-2bda3f2bc39e" type="System.String">
+          <orm:column name="CodeName" sql-type="nvarchar" nullable="true" length="150" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:implements name="SmartEP.DomainModel.IFrameInfoEntity" />
+      </orm:class>
+      <orm:class name="V_CodeDictionaryEntity" uniqueId="c4e4a89a-bfc9-4374-ba78-85718c736453">
+        <orm:table name="V_CodeDictionary" view="true" />
+        <orm:identity>
+          <orm:single-field field-name="m_itemGuid" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="m_sortNumber" property="SortNumber" behavior="readwrite" uniqueId="55e12f16-8a7f-47a7-af71-5357f6b11b36" type="System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+          <orm:column name="SortNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="m_mainGuid" property="MainGuid" behavior="readwrite" uniqueId="37b908ec-4fc0-49be-925c-478cb4549bab" type="System.String">
+          <orm:column name="MainGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_itemText" property="ItemText" behavior="readwrite" uniqueId="9ea77ad3-50e4-4fce-a2ef-8fbeeeccb31f" type="System.String">
+          <orm:column name="ItemText" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_itemGuid" property="ItemGuid" behavior="readwrite" uniqueId="941a5e0c-2aeb-47d1-b780-d57fdf11cbcd" type="System.String">
+          <orm:column name="ItemGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" primary-key="true" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_codeName" property="CodeName" behavior="readwrite" uniqueId="69f54297-8b4b-4fb1-b9e8-19b2f73911de" type="System.String">
+          <orm:column name="CodeName" sql-type="nvarchar" nullable="true" length="150" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="m_codeDictionaryName" property="CodeDictionaryName" behavior="readwrite" uniqueId="7af07b49-d86e-4f0c-aae2-352d16a5eeac" type="System.String">
+          <orm:column name="CodeDictionaryName" sql-type="nvarchar" nullable="true" length="150" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:implements name="SmartEP.DomainModel.IFrameInfoEntity" />
+      </orm:class>
+      <orm:interface name="IFrameInfoEntity" uniqueId="d04082ee-fd05-4620-a7d6-ea782e303875" />
+    </orm:namespace>
+    <orm:schema schema="">
+      <orm:table name="TB_Frame_User">
+        <orm:column name="ID" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="RowGuid" sql-type="nvarchar" nullable="false" length="50" scale="0" primary-key="true" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="OrgGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="DeptGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="LoginID" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="Password" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="DisplayName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="EmpGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="Theme" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="NavigationType" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="DefaultMenuType" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="HardwareKey" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="SortNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="IsEnabled" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Remark" sql-type="nvarchar(max)" nullable="true" length="0" scale="0" ado-type="UnicodeStringInfiniteLength" />
+        <orm:column name="Sex" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+      </orm:table>
+      <orm:table name="TB_Frame_CodeType">
+        <orm:column name="ID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="RowGuid" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="TypeName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ParentGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="SortNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Note" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+      </orm:table>
+      <orm:table name="TB_Frame_CodeMain">
+        <orm:column name="ID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="RowGuid" sql-type="nvarchar" nullable="false" length="50" scale="0" has-default-value="true" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="TypeGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" has-default-value="true" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CodeName" sql-type="nvarchar" nullable="true" length="150" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CodeLength" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="SortNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="IsEnabled" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Note" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+      </orm:table>
+      <orm:table name="TB_Frame_CodeItem">
+        <orm:column name="ID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="RowGuid" sql-type="nvarchar" nullable="false" length="50" scale="0" has-default-value="true" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="MainGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ItemValue" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ItemText" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="SortNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="FullText" sql-type="nvarchar" nullable="true" length="150" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ItemCode" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="IsEnabled" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+      </orm:table>
+      <orm:table name="TB_Frame_CodeDictionaryDetail">
+        <orm:column name="ID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="RowGuid" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="DictionaryGuid" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ParentGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="DetailName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="SortNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="IsEnabled" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Note" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+      </orm:table>
+      <orm:table name="TB_Frame_CodeDictionary">
+        <orm:column name="ID" sql-type="int" nullable="false" length="0" scale="0" primary-key="true" ado-type="Int32" />
+        <orm:column name="RowGuid" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CodeDictionaryName" sql-type="nvarchar" nullable="true" length="150" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="SortNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="IsEnabled" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="Note" sql-type="nvarchar" nullable="true" length="500" scale="0" ado-type="UnicodeStringVariableLength" />
+      </orm:table>
+      <orm:table name="VI_UserInfoRoleAll" view="true">
+        <orm:column name="UserGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="SortNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="RowGuid" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="RoleName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="RoleGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" primary-key="true" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="Remark" sql-type="nvarchar(max)" nullable="true" length="0" scale="0" ado-type="UnicodeStringInfiniteLength" />
+        <orm:column name="Password" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="OrgName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="OrgGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="LoginID" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="IsEnabled" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="ID" sql-type="int" nullable="false" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="EmpGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="DisplayName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="DeptSortNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="DeptName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="DeptGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+      </orm:table>
+      <orm:table name="VI_UserInfoAll" view="true">
+        <orm:column name="Theme" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="SortNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="RowGuid" sql-type="nvarchar" nullable="false" length="50" scale="0" primary-key="true" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="Remark" sql-type="nvarchar(max)" nullable="true" length="0" scale="0" ado-type="UnicodeStringInfiniteLength" />
+        <orm:column name="Password" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="OrgName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="OrgGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="NavigationType" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="LoginID" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="IsEnabled" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="HardwareKey" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="EmpGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="DisplayName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="DeptSortNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="DeptName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="DeptGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="DefaultMenuType" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+      </orm:table>
+      <orm:table name="V_CodeMainItem" view="true">
+        <orm:column name="TypeName" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="TypeGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="SortNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="MainGuid" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ItemValue" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ItemText" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ItemGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" primary-key="true" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ItemCode" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CodeName" sql-type="nvarchar" nullable="true" length="150" scale="0" ado-type="UnicodeStringVariableLength" />
+      </orm:table>
+      <orm:table name="V_CodeDictionary" view="true">
+        <orm:column name="SortNumber" sql-type="int" nullable="true" length="0" scale="0" ado-type="Int32" />
+        <orm:column name="MainGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ItemText" sql-type="nvarchar" nullable="true" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="ItemGuid" sql-type="nvarchar" nullable="true" length="50" scale="0" primary-key="true" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CodeName" sql-type="nvarchar" nullable="true" length="150" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="CodeDictionaryName" sql-type="nvarchar" nullable="true" length="150" scale="0" ado-type="UnicodeStringVariableLength" />
+      </orm:table>
+    </orm:schema>
+    <orm:relational-naming-settings>
+      <orm:source-strategy>Property</orm:source-strategy>
+      <orm:remove-camel-case>False</orm:remove-camel-case>
+    </orm:relational-naming-settings>
+  </orm:orm>
+  <ModelSettings xmlns="">
+    <AppConfigConnectionPropertyName>Frame_Connection</AppConfigConnectionPropertyName>
+    <AppConfigConnectionString>data source=192.168.11.65;initial catalog=EQMS_FrameworkSZ;user id=sa;password=11111</AppConfigConnectionString>
+    <InitialCatalog>EQMS_FrameworkSZ</InitialCatalog>
+    <NamingSettings>
+      <ClassRules>
+        <AddSuffix>Entity</AddSuffix>
+        <RemovePrefix>TB_</RemovePrefix>
+        <CaseMode>PascalCase</CaseMode>
+        <PluralizationMode>Singularize</PluralizationMode>
+      </ClassRules>
+      <FieldRules>
+        <AddPrefix>m_</AddPrefix>
+        <CaseMode>CamelCase</CaseMode>
+      </FieldRules>
+      <PropertyRules>
+        <CaseMode>PascalCase</CaseMode>
+      </PropertyRules>
+      <NavigationPropertyRules />
+    </NamingSettings>
+    <CodeGenerationSettings>
+      <OutputProjectName>SmartEP.DomainModel</OutputProjectName>
+      <OutputProjectFolder>Framework\</OutputProjectFolder>
+      <OutputPath>Framework\</OutputPath>
+      <MappingDefinitionType>Xml</MappingDefinitionType>
+    </CodeGenerationSettings>
+    <SchemaUpdateSettings />
+    <BackendConfigurationSettings>
+      <BackendConfiguration>
+        <Backend>MsSql</Backend>
+        <ProviderName>System.Data.SqlClient</ProviderName>
+      </BackendConfiguration>
+    </BackendConfigurationSettings>
+  </ModelSettings>
+  <Types>
+    <DomainClass Id="bd3d431d-8c52-4637-a54d-731d6ee0916a" name="Frame_UserEntity" namespace="SmartEP.DomainModel" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="c4a0d193-1737-41e8-bae1-da93b26cfd7c" name="RowGuid" label="RowGuid : String" kind="Persistent" identity="true" fieldName="m_rowGuid" />
+      <Property Id="7cfa1ae3-fccb-4eb5-814e-b191b67fc416" name="DefaultMenuType" label="DefaultMenuType : String" kind="Persistent" fieldName="m_defaultMenuType" />
+      <Property Id="97db3473-54af-444d-b1d5-85a6139bf0fb" name="DeptGuid" label="DeptGuid : String" kind="Persistent" fieldName="m_deptGuid" />
+      <Property Id="912bd9ae-69af-4eb8-8da6-9bc45072a3e9" name="DisplayName" label="DisplayName : String" kind="Persistent" fieldName="m_displayName" />
+      <Property Id="8b236593-dca5-467b-a0f3-7dcf3b0d2e57" name="EmpGuid" label="EmpGuid : String" kind="Persistent" fieldName="m_empGuid" />
+      <Property Id="87d4b20f-c13a-4fef-bff9-fd837f5cd1aa" name="HardwareKey" label="HardwareKey : String" kind="Persistent" fieldName="m_hardwareKey" />
+      <Property Id="aa5abe4b-72cf-4770-bd95-09894d110ba6" name="ID" type="Int32" label="ID : Int32" kind="Persistent" fieldName="m_iD" />
+      <Property Id="11aaf44e-cb3c-4fb5-8147-bb2d5803cef2" name="IsEnabled" type="Int32" label="IsEnabled : Int32" nullable="true" kind="Persistent" fieldName="m_isEnabled" />
+      <Property Id="436304b5-172e-4ff0-968d-09039a3ae531" name="LoginID" label="LoginID : String" kind="Persistent" fieldName="m_loginID" />
+      <Property Id="a7346987-f33e-4961-b173-ebf37eb81d43" name="NavigationType" label="NavigationType : String" kind="Persistent" fieldName="m_navigationType" />
+      <Property Id="44ead8bc-1709-4fb1-8153-b560f17a64aa" name="OrgGuid" label="OrgGuid : String" kind="Persistent" fieldName="m_orgGuid" />
+      <Property Id="d9df6c83-225e-425d-a688-a158fc56609d" name="Password" label="Password : String" kind="Persistent" fieldName="m_password" />
+      <Property Id="73d4dcd1-4f39-4eb4-bb84-485abb4a4d2d" name="Remark" label="Remark : String" kind="Persistent" fieldName="m_remark" />
+      <Property Id="585745ab-a555-42de-8ec7-7b4c985b897e" name="Sex" type="Int32" label="Sex : Int32" nullable="true" kind="Persistent" fieldName="m_sex" />
+      <Property Id="93229695-037f-4bed-a35b-5b0adf76ce26" name="SortNumber" type="Int32" label="SortNumber : Int32" nullable="true" kind="Persistent" fieldName="m_sortNumber" />
+      <Property Id="021c7e5e-a157-4c3d-b3f5-0ccae59940fa" name="Theme" label="Theme : String" kind="Persistent" fieldName="m_theme" />
+    </DomainClass>
+    <DomainClass Id="73d046f6-d37e-4dae-8fba-a9697f78574b" name="VI_UserInfoRoleAllEntity" namespace="SmartEP.DomainModel" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="91d0b06a-365b-482f-bd0b-d59f91bf2c78" name="DeptGuid" label="DeptGuid : String" kind="Persistent" fieldName="m_deptGuid" />
+      <Property Id="183493a8-f578-4abe-9b76-79431f129cb1" name="DeptName" label="DeptName : String" kind="Persistent" fieldName="m_deptName" />
+      <Property Id="c5a7d1fb-447b-41b6-a94b-f0724270f054" name="DeptSortNumber" type="Int32" label="DeptSortNumber : Int32" nullable="true" kind="Persistent" fieldName="m_deptSortNumber" />
+      <Property Id="89a145e7-552e-43b3-8701-ed950efce3c6" name="DisplayName" label="DisplayName : String" kind="Persistent" fieldName="m_displayName" />
+      <Property Id="e85d6df2-77c1-4126-9d6a-f5fb21c32dd2" name="EmpGuid" label="EmpGuid : String" kind="Persistent" fieldName="m_empGuid" />
+      <Property Id="55a887d2-bdbf-48a6-8efe-183f18990c8c" name="ID" type="Int32" label="ID : Int32" kind="Persistent" fieldName="m_iD" />
+      <Property Id="b3661314-f1ef-4ad6-a490-08b8e3c4b0c9" name="IsEnabled" type="Int32" label="IsEnabled : Int32" nullable="true" kind="Persistent" fieldName="m_isEnabled" />
+      <Property Id="790e2eee-186c-4224-86c3-414142646377" name="LoginID" label="LoginID : String" kind="Persistent" fieldName="m_loginID" />
+      <Property Id="7b86e439-5ff4-4671-8714-088cdeb43e96" name="OrgGuid" label="OrgGuid : String" kind="Persistent" fieldName="m_orgGuid" />
+      <Property Id="76d90257-e041-4967-8b38-500f36048cd6" name="OrgName" label="OrgName : String" kind="Persistent" fieldName="m_orgName" />
+      <Property Id="8fb8e17a-da08-4acc-ae03-df5bea84a6b5" name="Password" label="Password : String" kind="Persistent" fieldName="m_password" />
+      <Property Id="585abe74-600d-4f4f-9240-080cfb119201" name="Remark" label="Remark : String" kind="Persistent" fieldName="m_remark" />
+      <Property Id="b49006ad-7d0e-4fc9-8cdc-1c1e40ee8d88" name="RoleGuid" label="RoleGuid : String" kind="Persistent" identity="true" fieldName="m_roleGuid" />
+      <Property Id="44521208-82ad-455f-a4a6-8e9525aecc13" name="RoleName" label="RoleName : String" kind="Persistent" fieldName="m_roleName" />
+      <Property Id="dca2c488-17eb-44f3-9857-e3c6619c2abb" name="RowGuid" label="RowGuid : String" kind="Persistent" fieldName="m_rowGuid" />
+      <Property Id="eecbe773-f720-42cc-b9a2-58a09cf65980" name="SortNumber" type="Int32" label="SortNumber : Int32" nullable="true" kind="Persistent" fieldName="m_sortNumber" />
+      <Property Id="1e5d96d4-31cf-4078-96fe-fad8bfa0932f" name="UserGuid" label="UserGuid : String" kind="Persistent" fieldName="m_userGuid" />
+    </DomainClass>
+    <DomainClass Id="0855714c-cf0d-4881-a03e-8a6b9b69f5b3" name="VI_UserInfoAllEntity" namespace="SmartEP.DomainModel" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="ccaa3191-f2c3-4ea8-a3d0-13d4f33c4761" name="DefaultMenuType" label="DefaultMenuType : String" kind="Persistent" fieldName="m_defaultMenuType" />
+      <Property Id="ee53ef64-4a39-4d44-8320-92e9e3ce0c9f" name="DeptGuid" label="DeptGuid : String" kind="Persistent" fieldName="m_deptGuid" />
+      <Property Id="ef55cbf8-fc6f-40ae-9186-65ab09741426" name="DeptName" label="DeptName : String" kind="Persistent" fieldName="m_deptName" />
+      <Property Id="95ade13f-a655-4445-91b9-66d09696821e" name="DeptSortNumber" type="Int32" label="DeptSortNumber : Int32" nullable="true" kind="Persistent" fieldName="m_deptSortNumber" />
+      <Property Id="90f7da0c-15b8-4bc4-93a8-6e662c0350f3" name="DisplayName" label="DisplayName : String" kind="Persistent" fieldName="m_displayName" />
+      <Property Id="59166654-8f3c-4c02-bac1-b8608cceefb2" name="EmpGuid" label="EmpGuid : String" kind="Persistent" fieldName="m_empGuid" />
+      <Property Id="1a5fcfb5-4e52-443c-85f7-78361bca1682" name="HardwareKey" label="HardwareKey : String" kind="Persistent" fieldName="m_hardwareKey" />
+      <Property Id="447df3c6-ca73-4c9b-8ed6-3556ceab99ed" name="IsEnabled" type="Int32" label="IsEnabled : Int32" nullable="true" kind="Persistent" fieldName="m_isEnabled" />
+      <Property Id="4324fc5b-22fb-4f0e-b61a-a60f4c10c7a3" name="LoginID" label="LoginID : String" kind="Persistent" fieldName="m_loginID" />
+      <Property Id="c5dea834-568a-4bf8-a2b3-edca24d96881" name="NavigationType" label="NavigationType : String" kind="Persistent" fieldName="m_navigationType" />
+      <Property Id="42181b52-f05b-42a4-bb00-bf9b86d201b0" name="OrgGuid" label="OrgGuid : String" kind="Persistent" fieldName="m_orgGuid" />
+      <Property Id="da5b20dc-09ec-43c3-94ef-53bf51e526c5" name="OrgName" label="OrgName : String" kind="Persistent" fieldName="m_orgName" />
+      <Property Id="3ca2d252-1525-4a11-bcb7-9dea76a93d6c" name="Password" label="Password : String" kind="Persistent" fieldName="m_password" />
+      <Property Id="7116c3ce-d0a3-4b80-9896-972b1efaa680" name="Remark" label="Remark : String" kind="Persistent" fieldName="m_remark" />
+      <Property Id="db3f389d-790d-4f77-8f5b-73fefa4e3b08" name="RowGuid" label="RowGuid : String" kind="Persistent" identity="true" fieldName="m_rowGuid" />
+      <Property Id="9c2a3fea-8c91-4df1-ace5-58b34f38574d" name="SortNumber" type="Int32" label="SortNumber : Int32" nullable="true" kind="Persistent" fieldName="m_sortNumber" />
+      <Property Id="99a43a7e-8144-4ff9-a7a4-a8b9be41eafd" name="Theme" label="Theme : String" kind="Persistent" fieldName="m_theme" />
+    </DomainClass>
+    <DomainClass Id="c24c93f1-e58a-4252-ad20-f11b9afd58e0" name="Frame_CodeTypeEntity" namespace="SmartEP.DomainModel" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="694e773a-ed6f-4f97-aeec-920c049574a5" name="ID" type="Int32" label="ID : Int32" kind="Persistent" identity="true" fieldName="m_iD" />
+      <Property Id="55773950-b8eb-4a8f-8778-24ea7b2d8e6f" name="Note" label="Note : String" kind="Persistent" fieldName="m_note" />
+      <Property Id="f4a23267-052e-4574-bc69-218d7b401059" name="ParentGuid" label="ParentGuid : String" kind="Persistent" fieldName="m_parentGuid" />
+      <Property Id="65940ee4-e1ae-4dae-9a0a-05cb310da472" name="RowGuid" label="RowGuid : String" kind="Persistent" fieldName="m_rowGuid" />
+      <Property Id="4cfbfdeb-f307-4d9c-9185-c06019227e34" name="SortNumber" type="Int32" label="SortNumber : Int32" nullable="true" kind="Persistent" fieldName="m_sortNumber" />
+      <Property Id="2f36cae7-da30-4085-88b3-9b9bf549917e" name="TypeName" label="TypeName : String" kind="Persistent" fieldName="m_typeName" />
+    </DomainClass>
+    <DomainClass Id="3b0744f3-adba-42e3-ba72-e17f8f7298c0" name="Frame_CodeMainEntity" namespace="SmartEP.DomainModel" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="8c050fcf-7271-4117-80c3-fa97f468e1e2" name="CodeLength" type="Int32" label="CodeLength : Int32" nullable="true" kind="Persistent" fieldName="m_codeLength" />
+      <Property Id="227e2af8-1dec-4b57-8272-eaa678a7cf39" name="CodeName" label="CodeName : String" kind="Persistent" fieldName="m_codeName" />
+      <Property Id="de49ff8f-21dd-4816-8909-1f3c85e919cd" name="ID" type="Int32" label="ID : Int32" kind="Persistent" identity="true" fieldName="m_iD" />
+      <Property Id="ee0e5784-3a94-43a3-be02-52de2c31c0ac" name="IsEnabled" type="Int32" label="IsEnabled : Int32" nullable="true" kind="Persistent" fieldName="m_isEnabled" />
+      <Property Id="e53b9d0d-7989-476a-8d93-4a6557ff265a" name="Note" label="Note : String" kind="Persistent" fieldName="m_note" />
+      <Property Id="5c4d6be1-9f26-4742-bdf1-d6bac06264a9" name="RowGuid" label="RowGuid : String" kind="Persistent" fieldName="m_rowGuid" />
+      <Property Id="80f09061-086a-4726-8714-bed3aae15a6e" name="SortNumber" type="Int32" label="SortNumber : Int32" nullable="true" kind="Persistent" fieldName="m_sortNumber" />
+      <Property Id="ae491157-02c2-40c2-a747-18696b7cb95d" name="TypeGuid" label="TypeGuid : String" kind="Persistent" fieldName="m_typeGuid" />
+    </DomainClass>
+    <DomainClass Id="92c8a6f7-3358-4b9c-9675-5a4fbc68c371" name="Frame_CodeItemEntity" namespace="SmartEP.DomainModel" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="57efcace-0c2a-4dd4-a409-e5e229072629" name="FullText" label="FullText : String" kind="Persistent" fieldName="m_fullText" />
+      <Property Id="b901c280-7d4c-42a0-87b1-4a0fbf1523a3" name="ID" type="Int32" label="ID : Int32" kind="Persistent" identity="true" fieldName="m_iD" />
+      <Property Id="e875d51c-7c76-4413-8153-eaf999ec78a0" name="IsEnabled" type="Int32" label="IsEnabled : Int32" nullable="true" kind="Persistent" fieldName="m_isEnabled" />
+      <Property Id="041e18a0-9d61-4d51-92a2-9b068f074d2d" name="ItemCode" label="ItemCode : String" kind="Persistent" fieldName="m_itemCode" />
+      <Property Id="9b4c4f9f-b157-417b-a3c3-179375071892" name="ItemText" label="ItemText : String" kind="Persistent" fieldName="m_itemText" />
+      <Property Id="a5961e40-8918-4783-83e7-07a4f7191686" name="ItemValue" label="ItemValue : String" kind="Persistent" fieldName="m_itemValue" />
+      <Property Id="f5bc6141-1161-4070-bcd8-5667ecd20d8d" name="MainGuid" label="MainGuid : String" kind="Persistent" fieldName="m_mainGuid" />
+      <Property Id="3004fe36-51d9-4299-8b16-5b4a6a9ef3d7" name="RowGuid" label="RowGuid : String" kind="Persistent" fieldName="m_rowGuid" />
+      <Property Id="b5d7a1cc-3837-4368-b18d-c3fd1d75248b" name="SortNumber" type="Int32" label="SortNumber : Int32" nullable="true" kind="Persistent" fieldName="m_sortNumber" />
+    </DomainClass>
+    <DomainClass Id="ad5f90da-c36e-497c-bde8-0c1d39966d9b" name="Frame_CodeDictionaryDetailEntity" namespace="SmartEP.DomainModel" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="1a444722-5d52-4a24-81af-54b46d8b2e08" name="DetailName" label="DetailName : String" kind="Persistent" fieldName="m_detailName" />
+      <Property Id="25bddf0e-8e6a-4629-b0b6-b572b282b72a" name="DictionaryGuid" label="DictionaryGuid : String" kind="Persistent" fieldName="m_dictionaryGuid" />
+      <Property Id="2857ab6b-2dac-43a1-b8cf-74e14918ba87" name="ID" type="Int32" label="ID : Int32" kind="Persistent" identity="true" fieldName="m_iD" />
+      <Property Id="188f0faf-0d5a-4047-b129-516e3627df0c" name="IsEnabled" type="Int32" label="IsEnabled : Int32" nullable="true" kind="Persistent" fieldName="m_isEnabled" />
+      <Property Id="19d92ef7-899d-4e96-b3d9-912cb340185e" name="Note" label="Note : String" kind="Persistent" fieldName="m_note" />
+      <Property Id="285fbd25-67e5-44cc-b69c-59472b416894" name="ParentGuid" label="ParentGuid : String" kind="Persistent" fieldName="m_parentGuid" />
+      <Property Id="b54ddc29-bec7-475e-a4cc-0ea4c2be80ee" name="RowGuid" label="RowGuid : String" kind="Persistent" fieldName="m_rowGuid" />
+      <Property Id="880a4baa-2851-437a-8ad6-37dafe4db878" name="SortNumber" type="Int32" label="SortNumber : Int32" nullable="true" kind="Persistent" fieldName="m_sortNumber" />
+    </DomainClass>
+    <DomainClass Id="05246a56-7cb5-43fa-b916-a8253abccc84" name="Frame_CodeDictionaryEntity" namespace="SmartEP.DomainModel" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="3f770ad5-64b8-4383-8f04-120417f1dda4" name="CodeDictionaryName" label="CodeDictionaryName : String" kind="Persistent" fieldName="m_codeDictionaryName" />
+      <Property Id="4d071de8-0b97-4f70-8545-b7d1816e7826" name="ID" type="Int32" label="ID : Int32" kind="Persistent" identity="true" fieldName="m_iD" />
+      <Property Id="ed7e9f21-91c0-4e05-abfa-87dd39e72fd5" name="IsEnabled" type="Int32" label="IsEnabled : Int32" nullable="true" kind="Persistent" fieldName="m_isEnabled" />
+      <Property Id="a888bc24-21c8-448b-a472-ccf0a8f4ccbe" name="Note" label="Note : String" kind="Persistent" fieldName="m_note" />
+      <Property Id="b7f05368-d94d-4dc7-9bf4-0eb7277b5a69" name="RowGuid" label="RowGuid : String" kind="Persistent" fieldName="m_rowGuid" />
+      <Property Id="25061f98-cd79-4247-afd4-3267eac43539" name="SortNumber" type="Int32" label="SortNumber : Int32" nullable="true" kind="Persistent" fieldName="m_sortNumber" />
+    </DomainClass>
+    <DomainClass Id="98142856-b0a0-419c-b314-d6f3f3402a77" name="V_CodeMainItemEntity" namespace="SmartEP.DomainModel" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="0979ece9-b6c2-4078-b0be-2bda3f2bc39e" name="CodeName" label="CodeName : String" kind="Persistent" fieldName="m_codeName" />
+      <Property Id="c1d2cc97-3aa0-468b-acb3-d5eb09aa13c0" name="ItemCode" label="ItemCode : String" kind="Persistent" fieldName="m_itemCode" />
+      <Property Id="4b2e6fc3-f906-4bf4-b91c-38189b4a82e1" name="ItemGuid" label="ItemGuid : String" kind="Persistent" identity="true" fieldName="m_itemGuid" />
+      <Property Id="aa286357-71c0-4b2d-96b8-6c944ecc46a1" name="ItemText" label="ItemText : String" kind="Persistent" fieldName="m_itemText" />
+      <Property Id="16e3b4c4-4bf2-41db-96a4-d91d53ff5413" name="ItemValue" label="ItemValue : String" kind="Persistent" fieldName="m_itemValue" />
+      <Property Id="00440dbd-2580-475f-9a83-2040cc6759d4" name="MainGuid" label="MainGuid : String" kind="Persistent" fieldName="m_mainGuid" />
+      <Property Id="a413a5dd-7d48-425d-83ed-97a195d594d3" name="SortNumber" type="Int32" label="SortNumber : Int32" nullable="true" kind="Persistent" fieldName="m_sortNumber" />
+      <Property Id="d9d25df3-7f9a-4136-a3a2-4c9f510cbc56" name="TypeGuid" label="TypeGuid : String" kind="Persistent" fieldName="m_typeGuid" />
+      <Property Id="053396ad-b7d6-42f1-9977-7f4601998fb1" name="TypeName" label="TypeName : String" kind="Persistent" fieldName="m_typeName" />
+    </DomainClass>
+    <DomainClass Id="c4e4a89a-bfc9-4374-ba78-85718c736453" name="V_CodeDictionaryEntity" namespace="SmartEP.DomainModel" showPropertiesCompartment="true" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true">
+      <Property Id="7af07b49-d86e-4f0c-aae2-352d16a5eeac" name="CodeDictionaryName" label="CodeDictionaryName : String" kind="Persistent" fieldName="m_codeDictionaryName" />
+      <Property Id="69f54297-8b4b-4fb1-b9e8-19b2f73911de" name="CodeName" label="CodeName : String" kind="Persistent" fieldName="m_codeName" />
+      <Property Id="941a5e0c-2aeb-47d1-b780-d57fdf11cbcd" name="ItemGuid" label="ItemGuid : String" kind="Persistent" identity="true" fieldName="m_itemGuid" />
+      <Property Id="9ea77ad3-50e4-4fce-a2ef-8fbeeeccb31f" name="ItemText" label="ItemText : String" kind="Persistent" fieldName="m_itemText" />
+      <Property Id="37b908ec-4fc0-49be-925c-478cb4549bab" name="MainGuid" label="MainGuid : String" kind="Persistent" fieldName="m_mainGuid" />
+      <Property Id="55e12f16-8a7f-47a7-af71-5357f6b11b36" name="SortNumber" type="Int32" label="SortNumber : Int32" nullable="true" kind="Persistent" fieldName="m_sortNumber" />
+    </DomainClass>
+    <Interface Id="d04082ee-fd05-4620-a7d6-ea782e303875" name="IFrameInfoEntity" showPropertiesCompartment="true">
+      <implementors>
+        <DomainClassMoniker name="/FrameworkModel/VI_UserInfoRoleAllEntity" />
+        <DomainClassMoniker name="/FrameworkModel/VI_UserInfoAllEntity" />
+        <DomainClassMoniker name="/FrameworkModel/Frame_CodeDictionaryDetailEntity" />
+        <DomainClassMoniker name="/FrameworkModel/V_CodeDictionaryEntity" />
+        <DomainClassMoniker name="/FrameworkModel/V_CodeMainItemEntity" />
+        <DomainClassMoniker name="/FrameworkModel/Frame_CodeTypeEntity" />
+        <DomainClassMoniker name="/FrameworkModel/Frame_CodeItemEntity" />
+        <DomainClassMoniker name="/FrameworkModel/Frame_UserEntity" />
+        <DomainClassMoniker name="/FrameworkModel/Frame_CodeMainEntity" />
+        <DomainClassMoniker name="/FrameworkModel/Frame_CodeDictionaryEntity" />
+      </implementors>
+    </Interface>
+  </Types>
+  <domainContext>
+    <domainModelHasDomainContext Id="bce19224-8175-4363-bc0a-9f3d8ddf7c48">
+      <domainContainer name="FrameworkModel" namespace="SmartEP.DomainModel" showPropertiesCompartment="true">
+        <entitySetProperty name="Frame_UserEntities" namespace="SmartEP.DomainModel" type="Frame_UserEntity" label="Frame_UserEntities : IQueryable&lt;SmartEP.DomainModel.Frame_UserEntity&gt;" />
+        <entitySetProperty name="VI_UserInfoRoleAllEntities" namespace="SmartEP.DomainModel" type="VI_UserInfoRoleAllEntity" label="VI_UserInfoRoleAllEntities : IQueryable&lt;SmartEP.DomainModel.VI_UserInfoRoleAllEntity&gt;" />
+        <entitySetProperty name="VI_UserInfoAllEntities" namespace="SmartEP.DomainModel" type="VI_UserInfoAllEntity" label="VI_UserInfoAllEntities : IQueryable&lt;SmartEP.DomainModel.VI_UserInfoAllEntity&gt;" />
+        <entitySetProperty name="Frame_CodeTypeEntities" namespace="SmartEP.DomainModel" type="Frame_CodeTypeEntity" label="Frame_CodeTypeEntities : IQueryable&lt;SmartEP.DomainModel.Frame_CodeTypeEntity&gt;" />
+        <entitySetProperty name="Frame_CodeMainEntities" namespace="SmartEP.DomainModel" type="Frame_CodeMainEntity" label="Frame_CodeMainEntities : IQueryable&lt;SmartEP.DomainModel.Frame_CodeMainEntity&gt;" />
+        <entitySetProperty name="Frame_CodeItemEntities" namespace="SmartEP.DomainModel" type="Frame_CodeItemEntity" label="Frame_CodeItemEntities : IQueryable&lt;SmartEP.DomainModel.Frame_CodeItemEntity&gt;" />
+        <entitySetProperty name="Frame_CodeDictionaryDetailEntities" namespace="SmartEP.DomainModel" type="Frame_CodeDictionaryDetailEntity" label="Frame_CodeDictionaryDetailEntities : IQueryable&lt;SmartEP.DomainModel.Frame_CodeDictionaryDetailEntity&gt;" />
+        <entitySetProperty name="Frame_CodeDictionaryEntities" namespace="SmartEP.DomainModel" type="Frame_CodeDictionaryEntity" label="Frame_CodeDictionaryEntities : IQueryable&lt;SmartEP.DomainModel.Frame_CodeDictionaryEntity&gt;" />
+        <entitySetProperty name="V_CodeMainItemEntities" namespace="SmartEP.DomainModel" type="V_CodeMainItemEntity" label="V_CodeMainItemEntities : IQueryable&lt;SmartEP.DomainModel.V_CodeMainItemEntity&gt;" />
+        <entitySetProperty name="V_CodeDictionaryEntities" namespace="SmartEP.DomainModel" type="V_CodeDictionaryEntity" label="V_CodeDictionaryEntities : IQueryable&lt;SmartEP.DomainModel.V_CodeDictionaryEntity&gt;" />
+      </domainContainer>
+    </domainModelHasDomainContext>
+  </domainContext>
+</DomainModel>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  有关如何配置 ASP.NET 应用程序的详细信息，请访问
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+  <connectionStrings>
+    <!--<add name="ApplicationServices" connectionString="data source=.\SQLEXPRESS;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnetdb.mdf;User Instance=true" providerName="System.Data.SqlClient"/>
+		-->
+    <!--<add name="ConnStrEqmsAir" connectionString="Data Source=192.168.11.65;Initial Catalog=CEMS_EnvAirKS;Persist Security Info=True;User ID=SA;Password=11111" providerName="System.Data.SqlClient"/>
+		<add name="ConnStrEqmsWater" connectionString="Data Source=192.168.11.65;Initial Catalog=CEMS_EnvWaterKS;Persist Security Info=True;User ID=SA;Password=11111" providerName="System.Data.SqlClient"/>-->
+    <!--
+    <add name="AMS_BaseDataConnection" connectionString="data source=192.168.11.65;initial catalog=AMS_BaseDataSZ;user id=sa;password=11111" providerName="System.Data.SqlClient" />
+    <add name="AMS_AirAutoMonitorConnection" connectionString="data source=192.168.11.65;initial catalog=AMS_AirAutoMonitorSZ;user id=sa;password=11111" providerName="System.Data.SqlClient" />
+    <add name="AMS_WaterAutoMonitorConnection" connectionString="data source=192.168.11.65;initial catalog=AMS_WaterAutoMonitorSZ;user id=sa;password=11111" providerName="System.Data.SqlClient" />
+    <add name="AMS_MonitoringBusinessConnection" connectionString="data source=192.168.11.65;initial catalog=AMS_MonitorBusinessSZ;user id=sa;password=11111" providerName="System.Data.SqlClient" />
+    <add name="Frame_Connection" connectionString="data source=192.168.11.65;initial catalog=EQMS_FrameworkSZ;user id=sa;password=11111" providerName="System.Data.SqlClient" />-->
+    <!--<add name="ApplicationServices" connectionString="data source=.\SQLEXPRESS;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnetdb.mdf;User Instance=true" providerName="System.Data.SqlClient"/>-->
+    <add name="Frame_Connection" connectionString="data source=192.168.90.199;initial catalog=EQMS_Framework;user id=sa;password=sinoyd123!@#" providerName="System.Data.SqlClient"/>
+    <add name="AMS_BaseDataConnection" connectionString="data source=192.168.90.199;initial catalog=AMS_BaseData;user id=sa;password=sinoyd123!@#" providerName="System.Data.SqlClient"/>
+    <add name="AMS_AirAutoMonitorConnection" connectionString="data source=192.168.90.199;initial catalog=AMS_AirAutoMonitor;user id=sa;password=sinoyd123!@#" providerName="System.Data.SqlClient"/>
+    <add name="AMS_MonitoringBusinessConnection" connectionString="data source=192.168.90.199;initial catalog=AMS_MonitorBusiness;user id=sa;password=sinoyd123!@#" providerName="System.Data.SqlClient"/>
+    
+    
+     <!--<add name="Frame_Connection" connectionString="data source=(local);initial catalog=EQMS_FrameworkNT;user id=sa;password=648712zy" providerName="System.Data.SqlClient"/>
+    <add name="AMS_BaseDataConnection" connectionString="data source=(local);initial catalog=AMS_BaseDataNT;user id=sa;password=648712zy" providerName="System.Data.SqlClient"/>
+    <add name="AMS_AirAutoMonitorConnection" connectionString="data source=(local);initial catalog=AMS_AirAutoMonitorNT;user id=sa;password=648712zy" providerName="System.Data.SqlClient"/>
+    <add name="AMS_MonitoringBusinessConnection" connectionString="data source=(local);initial catalog=AMS_MonitorBusiness;user id=sa;password=648712zy" providerName="System.Data.SqlClient"/>-->
+    <!--<add name="Frame_Connection" connectionString="data source=USER-THINK\SQLEXPRESS;initial catalog=EQMS_FrameworkSZ;user id=sa;password=11111" providerName="System.Data.SqlClient" />
+    <add name="AMS_BaseDataConnection" connectionString="data source=USER-THINK\SQLEXPRESS;initial catalog=AMS_BaseDataSZ;user id=sa;password=11111" providerName="System.Data.SqlClient" />
+    <add name="AMS_AirAutoMonitorConnection" connectionString="data source=USER-THINK\SQLEXPRESS;initial catalog=AMS_AirAutoMonitorSZ;user id=sa;password=11111" providerName="System.Data.SqlClient" />
+    <add name="AMS_WaterAutoMonitorConnection" connectionString="data source=USER-THINK\SQLEXPRESS;initial catalog=AMS_WaterAutoMonitorSZ;user id=sa;password=11111" providerName="System.Data.SqlClient" />
+    <add name="AMS_MonitoringBusinessConnection" connectionString="data source=USER-THINK\SQLEXPRESS;initial catalog=AMS_MonitorBusinessSZ;user id=sa;password=11111" providerName="System.Data.SqlClient" />-->
+    <add name="CEMS_EnvAirConnection"  connectionString="data source=192.168.90.199;initial catalog=CEMS_EnvAirKS;user id=sa;password=sinoyd123!@#" providerName="System.Data.SqlClient"/>
+    <add name="CEMS_EnvWaterConnection"  connectionString="data source=192.168.90.199;initial catalog=CEMS_EnvWaterKS;user id=sa;password=sinoyd123!@#" providerName="System.Data.SqlClient"/>
+  </connectionStrings>
+  <appSettings>
+   
+    <!--数据库链接时间-->
+    <add key="SqlCmdTimeOut" value="600" />
+    <add key="CityImageGuid" value="93c90000-e723-4a47-8a97-bffd8fcf36ca"/>
+    <add key="JGLDImageGuid" value="4dbe4c32-270b-4696-ae56-d66178a3ca78"/>
+    <add key="LZSPYGuid" value="1589850e-0df1-4d9d-b508-4a77def158ba"/>
+    <add key="TYFSYGuid" value="da4f968f-cc6e-4fec-8219-6167d100499d"/>
+    <add key="LJPYGuid" value="9ef57f3c-8cce-4fe3-980f-303bbcfde260"/>
+    <!--城市摄影/能见度图片地址-->
+    <add key="UrbanPhoto" value="D:\CSYC\00001\" />
+    <!--激光雷达消光默认图片绝对路径-->
+    <add key="NTJGLDXG" value="D:\Sinoyd\南通超级站\NTJGLDXG\image" />
+   <!--粒径普仪的分段值-->
+    <add key="ljAll" value="a51008,a51038"/>
+    <add key="ljFirst" value="a51008,a51011"/>
+    <add key="ljSecond" value="a51011,a51022"/>
+    <add key="ljThird" value="a51022,a51038"/>
+    <!--VOC种类-->
+    <add key="VOCType" value="一级类;二级类;分因子"/>
+    <add key="FirstClass" value="非甲烷碳氢化合物;卤代烃类;含氧（氮）类;TVOC"/>
+      <!--<add key="SecondClass" value="高碳烷烃C6-C12,炔烃,高碳烯烃C6-C12,低碳烯烃C2-C5,苯系物,低碳烷烃C2-C5,氟利昂,卤代芳香烃,卤代烯烃,卤代烷烃,含氮有机物,醛类有机物,酮类有机物,醚类有机物"/>-->
+    <add key="SecondClass" value="低碳烷烃C2-C5,低碳烯烃C2-C5,高碳烷烃C6-C12,高碳烯烃C6-C12,炔烃,苯系物,氟利昂,卤代烷烃,卤代烯烃,卤代芳香烃,醛类有机物,酮类有机物,醚类有机物,含氮有机物"/>
+  </appSettings>
+  <system.web>
+    <webServices>
+      <protocols>
+        <add name="HttpGet" />
+        <add name="HttpPost" />
+      </protocols>
+    </webServices>
+    <compilation debug="true" targetFramework="4.0" />
+    <authentication mode="Forms">
+      <forms loginUrl="~/Account/Login.aspx" timeout="2880" />
+    </authentication>
+    <membership>
+      <providers>
+        <clear />
+        <add name="AspNetSqlMembershipProvider" type="System.Web.Security.SqlMembershipProvider" connectionStringName="ApplicationServices" enablePasswordRetrieval="false" enablePasswordReset="true" requiresQuestionAndAnswer="false" requiresUniqueEmail="false" maxInvalidPasswordAttempts="5" minRequiredPasswordLength="6" minRequiredNonalphanumericCharacters="0" passwordAttemptWindow="10" applicationName="/" />
+      </providers>
+    </membership>
+    <profile>
+      <providers>
+        <clear />
+        <add name="AspNetSqlProfileProvider" type="System.Web.Profile.SqlProfileProvider" connectionStringName="ApplicationServices" applicationName="/" />
+      </providers>
+    </profile>
+    <roleManager enabled="false">
+      <providers>
+        <clear />
+        <add name="AspNetSqlRoleProvider" type="System.Web.Security.SqlRoleProvider" connectionStringName="ApplicationServices" applicationName="/" />
+        <add name="AspNetWindowsTokenRoleProvider" type="System.Web.Security.WindowsTokenRoleProvider" applicationName="/" />
+      </providers>
+    </roleManager>
+    <pages controlRenderingCompatibilityVersion="3.5" clientIDMode="AutoID" />
+  </system.web>
+  <system.webServer>
+    <modules runAllManagedModulesForAllRequests="true" />
+    <directoryBrowse enabled="true" />
+  </system.webServer>
+  <system.serviceModel>
+    <bindings />
+    <client />
+  </system.serviceModel>
+</configuration>
