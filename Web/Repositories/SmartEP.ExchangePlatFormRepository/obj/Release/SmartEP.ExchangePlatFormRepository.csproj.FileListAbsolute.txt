@@ -1,4 +1,0 @@
-D:\NTCODE\Web\Repositories\SmartEP.ExchangePlatFormRepository\bin\Release\SmartEP.ExchangePlatFormRepository.dll
-D:\NTCODE\Web\Repositories\SmartEP.ExchangePlatFormRepository\bin\Release\SmartEP.ExchangePlatFormRepository.pdb
-D:\NTCODE\Web\Repositories\SmartEP.ExchangePlatFormRepository\obj\Release\SmartEP.ExchangePlatFormRepository.dll
-D:\NTCODE\Web\Repositories\SmartEP.ExchangePlatFormRepository\obj\Release\SmartEP.ExchangePlatFormRepository.pdb

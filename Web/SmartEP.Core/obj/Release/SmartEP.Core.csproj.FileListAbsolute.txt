@@ -1,4 +1,0 @@
-D:\NTCODE\Web\SmartEP.Core\bin\Release\SmartEP.Core.dll
-D:\NTCODE\Web\SmartEP.Core\bin\Release\SmartEP.Core.pdb
-D:\NTCODE\Web\SmartEP.Core\obj\Release\SmartEP.Core.dll
-D:\NTCODE\Web\SmartEP.Core\obj\Release\SmartEP.Core.pdb

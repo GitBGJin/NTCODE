@@ -1,1 +1,0 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GetDoc.aspx.cs" Inherits="Com.Sinoyd.Mis.WebUI.Report.Templet.GetDoc" %>

@@ -1,8 +1,0 @@
-D:\NTCODE\Web\发邮件\G20MessageSend-2\G20MessageSend-2\G20MessageSend\Model\bin\Debug\Model.dll.config
-D:\NTCODE\Web\发邮件\G20MessageSend-2\G20MessageSend-2\G20MessageSend\Model\bin\Debug\Model.dll
-D:\NTCODE\Web\发邮件\G20MessageSend-2\G20MessageSend-2\G20MessageSend\Model\bin\Debug\Model.pdb
-D:\NTCODE\Web\发邮件\G20MessageSend-2\G20MessageSend-2\G20MessageSend\Model\bin\Debug\Telerik.OpenAccess.35.Extensions.dll
-D:\NTCODE\Web\发邮件\G20MessageSend-2\G20MessageSend-2\G20MessageSend\Model\bin\Debug\Telerik.OpenAccess.dll
-D:\NTCODE\Web\发邮件\G20MessageSend-2\G20MessageSend-2\G20MessageSend\Model\obj\Debug\Model.dll
-D:\NTCODE\Web\发邮件\G20MessageSend-2\G20MessageSend-2\G20MessageSend\Model\obj\Debug\Model.pdb
-D:\NTCODE\Web\发邮件\G20MessageSend-2\G20MessageSend-2\G20MessageSend\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache

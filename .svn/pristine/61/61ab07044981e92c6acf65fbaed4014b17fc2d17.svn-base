@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="gb2312"?>
-<Body>
-  <Head fsfid="AQMS512102" jcsb="" jls="2" jsfid="AQMS512102" scsj="20161120010000" sjblx="0002" sjcssj="20161120010000" />
-  <Data>
-    <Item pollutant_code="PM10" equio_status="N" value="0.129" />
-    <Item pollutant_code="PM2.5" equio_status="N" value="0.077" />
-  </Data>
-</Body>

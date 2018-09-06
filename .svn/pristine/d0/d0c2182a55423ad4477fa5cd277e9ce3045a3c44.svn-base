@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="gb2312"?>
-<Body>
-  <Head fsfid="AQMS512102" jcsb="" jls="1" jsfid="AQMS512102" scsj="20161120010000" sjblx="0002" sjcssj="20161120010000" />
-  <Data>
-    <Item pollutant_code="CO" equio_status="N" value="1.0" />
-  </Data>
-</Body>

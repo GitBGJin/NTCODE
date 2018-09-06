@@ -1,4 +1,0 @@
-D:\NTCODE\Web\Services\SmartEP.Service.QualityControl\bin\Debug\SmartEP.Service.QualityControl.dll
-D:\NTCODE\Web\Services\SmartEP.Service.QualityControl\bin\Debug\SmartEP.Service.QualityControl.pdb
-D:\NTCODE\Web\Services\SmartEP.Service.QualityControl\obj\x86\Debug\SmartEP.Service.QualityControl.dll
-D:\NTCODE\Web\Services\SmartEP.Service.QualityControl\obj\x86\Debug\SmartEP.Service.QualityControl.pdb

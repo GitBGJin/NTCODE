@@ -1,8 +1,0 @@
-D:\NTCODE\Web\SmartEP.Utilities\bin\Release\SmartEP.Utilities.dll
-D:\NTCODE\Web\SmartEP.Utilities\bin\Release\SmartEP.Utilities.pdb
-D:\NTCODE\Web\SmartEP.Utilities\bin\Release\Aspose.Cells.dll
-D:\NTCODE\Web\SmartEP.Utilities\bin\Release\Aspose.Words.dll
-D:\NTCODE\Web\SmartEP.Utilities\bin\Release\ICSharpCode.SharpZipLib.dll
-D:\NTCODE\Web\SmartEP.Utilities\bin\Release\log4net.dll
-D:\NTCODE\Web\SmartEP.Utilities\obj\Release\SmartEP.Utilities.dll
-D:\NTCODE\Web\SmartEP.Utilities\obj\Release\SmartEP.Utilities.pdb

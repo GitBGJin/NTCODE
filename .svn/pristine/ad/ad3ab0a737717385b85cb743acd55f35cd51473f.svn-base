@@ -1,5 +1,0 @@
-.RadTileList_Default {
-  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-  font-size: 12px; }
-  .RadTileList_Default .rtlistGroupSeparatorVisible {
-    background-color: #d9d9d9; }

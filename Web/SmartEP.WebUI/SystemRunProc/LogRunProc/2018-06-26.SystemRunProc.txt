@@ -1,6 +1,0 @@
-Time:    2018/6/26 星期二 上午 11:33:05
-Action:  执行存储过程：UP_Audit_UseColorRule，出现错误：正在中止线程。
-Message: AMS_MonitoringBusinessConnection
------------------------------------------------------------
-
-

@@ -1,6 +1,0 @@
-Time:    2017/9/5 11:55:18
-Action:  数据异常
-Message: System.NullReferenceException: 未将对象引用设置到对象的实例。
-   在 WebServiceForData.WebServiceForData.GetAllUsingInstruments() 位置 f:\南通项目\数据\WebServiceForData\WebServiceForData\WebServiceForGis\WebServiceForData.asmx.cs:行号 54
------------------------------------------------------------
-

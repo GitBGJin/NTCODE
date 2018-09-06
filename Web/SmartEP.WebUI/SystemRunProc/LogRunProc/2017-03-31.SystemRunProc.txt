@@ -1,6 +1,0 @@
-Time:    2017/3/31 15:05:36
-Action:  执行存储过程：UP_GetAdtDataFromHisTB_Water，出现错误：Thread was being aborted.
-Message: AMS_MonitoringBusinessConnection
------------------------------------------------------------
-
-

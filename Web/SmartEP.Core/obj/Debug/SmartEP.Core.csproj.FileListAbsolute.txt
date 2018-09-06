@@ -1,5 +1,0 @@
-D:\NTCODE\Web\SmartEP.Core\bin\Debug\SmartEP.Core.XML
-D:\NTCODE\Web\SmartEP.Core\bin\Debug\SmartEP.Core.dll
-D:\NTCODE\Web\SmartEP.Core\bin\Debug\SmartEP.Core.pdb
-D:\NTCODE\Web\SmartEP.Core\obj\Debug\SmartEP.Core.dll
-D:\NTCODE\Web\SmartEP.Core\obj\Debug\SmartEP.Core.pdb

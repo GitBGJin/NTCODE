@@ -1,4 +1,0 @@
-D:\NTCODE\Web\Services\SmartEP.Service.ExchangePlatForm\bin\Release\SmartEP.Service.ExchangePlatForm.dll
-D:\NTCODE\Web\Services\SmartEP.Service.ExchangePlatForm\bin\Release\SmartEP.Service.ExchangePlatForm.pdb
-D:\NTCODE\Web\Services\SmartEP.Service.ExchangePlatForm\obj\x86\Release\SmartEP.Service.ExchangePlatForm.dll
-D:\NTCODE\Web\Services\SmartEP.Service.ExchangePlatForm\obj\x86\Release\SmartEP.Service.ExchangePlatForm.pdb
